@@ -1,8 +1,9 @@
+
 'use strict';
 
 /**
  * CCW Extension Database Extractor
- * Version: 7.0.0
+ * Version: 8.0.0
  *
  * 静态分析扩展源码，不执行任何扩展代码。
  */
@@ -13,8 +14,8 @@ const os = require('os');
 const { execFileSync } = require('child_process');
 const parser = require('@babel/parser');
 
-const EXTRACTOR_VERSION = '7.0.0';
-const SCHEMA_VERSION = 6;
+const EXTRACTOR_VERSION = '8.0.0';
+const SCHEMA_VERSION = 7;
 
 const ROOT = process.cwd();
 const SOURCES_FILE = path.join(ROOT, 'sources.txt');
@@ -52,28 +53,86 @@ const ENUM_VALUES = {
   }
 };
 
-const DYNAMIC = value => ({ $dynamic: value || 'dynamic expression' });
-const UNKNOWN = value => ({ $expression: value || 'unknown expression' });
-const FUNCTION = value => ({ $function: value || 'function' });
+const DYNAMIC = value => ({
+  $dynamic: value || 'dynamic expression'
+});
+
+const UNKNOWN = value => ({
+  $expression: value || 'unknown expression'
+});
+
+const FUNCTION = value => ({
+  $function: value || 'function'
+});
 
 function isObject(value) {
-  return value !== null && typeof value === 'object' && !Array.isArray(value);
+  return value !== null &&
+    typeof value === 'object' &&
+    !Array.isArray(value);
 }
 
 function isMarker(value) {
   return isObject(value) &&
-    ('$dynamic' in value || '$expression' in value || '$function' in value);
+    (
+      '$dynamic' in value ||
+      '$expression' in value ||
+      '$function' in value
+    );
+}
+
+function isDynamicMarker(value) {
+  return isObject(value) && '$dynamic' in value;
 }
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
-function getSource(node) {
-  if (!node) return '';
-  return node.extra && node.extra.raw
-    ? node.extra.raw
-    : node.type;
+function memberName(node) {
+  if (!node) return null;
+
+  if (node.type === 'Identifier') return node.name;
+
+  if (node.type === 'StringLiteral') return node.value;
+
+  if (
+    node.type === 'MemberExpression' ||
+    node.type === 'OptionalMemberExpression'
+  ) {
+    const left = memberName(node.object);
+
+    const right = node.computed
+      ? memberName(node.property)
+      : node.property.name;
+
+    return left && right ? `${left}.${right}` : null;
+  }
+
+  return null;
+}
+
+function expressionName(node) {
+  if (!node) return 'unknown';
+
+  if (node.type === 'Identifier') return node.name;
+
+  if (node.type === 'ThisExpression') return 'this';
+
+  if (
+    node.type === 'MemberExpression' ||
+    node.type === 'OptionalMemberExpression'
+  ) {
+    return memberName(node) || 'member expression';
+  }
+
+  if (
+    node.type === 'CallExpression' ||
+    node.type === 'OptionalCallExpression'
+  ) {
+    return `${expressionName(node.callee)}(...)`;
+  }
+
+  return node.type;
 }
 
 /**
@@ -91,17 +150,21 @@ function normalizeFullWidthSemicolons(source) {
 
     if (state === 'lineComment') {
       output += c;
+
       if (c === '\n') state = 'normal';
+
       continue;
     }
 
     if (state === 'blockComment') {
       output += c;
+
       if (c === '*' && next === '/') {
         output += next;
         i++;
         state = 'normal';
       }
+
       continue;
     }
 
@@ -122,6 +185,7 @@ function normalizeFullWidthSemicolons(source) {
         state = 'normal';
         quote = '';
       }
+
       continue;
     }
 
@@ -180,48 +244,19 @@ function parseSource(source, filename) {
   });
 }
 
-function memberName(node) {
-  if (!node) return null;
-
-  if (node.type === 'Identifier') return node.name;
-
-  if (node.type === 'StringLiteral') return node.value;
-
-  if (node.type === 'MemberExpression' ||
-      node.type === 'OptionalMemberExpression') {
-    const left = memberName(node.object);
-    const right = node.computed
-      ? memberName(node.property)
-      : node.property.name;
-
-    return left && right ? `${left}.${right}` : null;
-  }
-
-  return null;
-}
-
-function expressionName(node) {
-  if (!node) return 'unknown';
-
-  if (node.type === 'Identifier') return node.name;
-
-  if (node.type === 'ThisExpression') return 'this';
-
-  if (node.type === 'MemberExpression') {
-    return memberName(node) || 'member expression';
-  }
-
-  if (node.type === 'CallExpression') {
-    return `${expressionName(node.callee)}(...)`;
-  }
-
-  return node.type;
-}
-
+/**
+ * 静态表达式求值。
+ *
+ * 只计算可以安全确定的值。
+ * 不执行函数、回调、eval 或其他运行时代码。
+ */
 function evaluate(node, env = {}, context = {}, depth = 0) {
-  if (!node || depth > 35) return UNKNOWN('maximum evaluation depth');
+  if (!node || depth > 45) {
+    return UNKNOWN('maximum evaluation depth');
+  }
 
-  const next = child => evaluate(child, env, context, depth + 1);
+  const next = child =>
+    evaluate(child, env, context, depth + 1);
 
   switch (node.type) {
     case 'StringLiteral':
@@ -238,9 +273,13 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
     case 'Identifier':
       if (node.name === 'undefined') return null;
       if (node.name === 'NaN') return null;
-      if (Object.prototype.hasOwnProperty.call(env, node.name)) {
+
+      if (
+        Object.prototype.hasOwnProperty.call(env, node.name)
+      ) {
         return env[node.name];
       }
+
       return UNKNOWN(node.name);
 
     case 'ThisExpression':
@@ -266,11 +305,17 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
           if (Array.isArray(spread)) {
             result.push(...spread);
           } else {
-            result.push(DYNAMIC(`spread: ${expressionName(element.argument)}`));
+            result.push(
+              DYNAMIC(
+                `spread: ${expressionName(element.argument)}`
+              )
+            );
           }
-        } else {
-          result.push(next(element));
+
+          continue;
         }
+
+        result.push(next(element));
       }
 
       return result;
@@ -286,13 +331,20 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
           if (isObject(spread) && !isMarker(spread)) {
             Object.assign(result, spread);
           } else {
-            result.$spread = expressionName(property.argument);
+            result.$spread = expressionName(
+              property.argument
+            );
           }
+
           continue;
         }
 
-        if (property.type !== 'ObjectProperty' &&
-            property.type !== 'ObjectMethod') continue;
+        if (
+          property.type !== 'ObjectProperty' &&
+          property.type !== 'ObjectMethod'
+        ) {
+          continue;
+        }
 
         const key = property.computed
           ? next(property.key)
@@ -300,7 +352,12 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
             ? property.key.name
             : property.key.value;
 
-        if (typeof key !== 'string' && typeof key !== 'number') continue;
+        if (
+          typeof key !== 'string' &&
+          typeof key !== 'number'
+        ) {
+          continue;
+        }
 
         result[key] = property.type === 'ObjectMethod'
           ? FUNCTION('object method')
@@ -319,10 +376,15 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
         if (i < node.expressions.length) {
           const value = next(node.expressions[i]);
 
-          if (typeof value === 'string' || typeof value === 'number') {
+          if (
+            typeof value === 'string' ||
+            typeof value === 'number'
+          ) {
             result += value;
           } else {
-            return DYNAMIC('template literal with dynamic expression');
+            return DYNAMIC(
+              'template literal with dynamic expression'
+            );
           }
         }
       }
@@ -336,12 +398,23 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
       if (isMarker(value)) return value;
 
       switch (node.operator) {
-        case '!': return !value;
-        case '+': return Number(value);
-        case '-': return -Number(value);
-        case '~': return ~Number(value);
-        case 'void': return null;
-        default: return UNKNOWN(`unary ${node.operator}`);
+        case '!':
+          return !value;
+
+        case '+':
+          return Number(value);
+
+        case '-':
+          return -Number(value);
+
+        case '~':
+          return ~Number(value);
+
+        case 'void':
+          return null;
+
+        default:
+          return UNKNOWN(`unary ${node.operator}`);
       }
     }
 
@@ -350,30 +423,87 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
       const left = next(node.left);
       const right = next(node.right);
 
+      if (
+        node.operator === '+' &&
+        Array.isArray(left) &&
+        Array.isArray(right)
+      ) {
+        return [...left, ...right];
+      }
+
+      if (
+        node.operator === '+' &&
+        (
+          typeof left === 'string' ||
+          typeof right === 'string'
+        )
+      ) {
+        if (isMarker(left) || isMarker(right)) {
+          return DYNAMIC('string concatenation');
+        }
+
+        return String(left) + String(right);
+      }
+
       if (isMarker(left) || isMarker(right)) {
         return DYNAMIC('binary expression');
       }
 
       try {
         switch (node.operator) {
-          case '+': return left + right;
-          case '-': return left - right;
-          case '*': return left * right;
-          case '/': return left / right;
-          case '%': return left % right;
-          case '**': return left ** right;
-          case '===': return left === right;
-          case '!==': return left !== right;
-          case '==': return left == right; // 静态分析
-          case '!=': return left != right;
-          case '>': return left > right;
-          case '<': return left < right;
-          case '>=': return left >= right;
-          case '<=': return left <= right;
-          case '&&': return left && right;
-          case '||': return left || right;
-          case '??': return left ?? right;
-          default: return UNKNOWN(`operator ${node.operator}`);
+          case '+':
+            return left + right;
+
+          case '-':
+            return left - right;
+
+          case '*':
+            return left * right;
+
+          case '/':
+            return left / right;
+
+          case '%':
+            return left % right;
+
+          case '**':
+            return left ** right;
+
+          case '===':
+            return left === right;
+
+          case '!==':
+            return left !== right;
+
+          case '==':
+            return left == right;
+
+          case '!=':
+            return left != right;
+
+          case '>':
+            return left > right;
+
+          case '<':
+            return left < right;
+
+          case '>=':
+            return left >= right;
+
+          case '<=':
+            return left <= right;
+
+          case '&&':
+            return left && right;
+
+          case '||':
+            return left || right;
+
+          case '??':
+            return left ?? right;
+
+          default:
+            return UNKNOWN(`operator ${node.operator}`);
         }
       } catch {
         return UNKNOWN('binary expression');
@@ -383,9 +513,13 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
     case 'ConditionalExpression': {
       const test = next(node.test);
 
-      if (isMarker(test)) return DYNAMIC('conditional expression');
+      if (isMarker(test)) {
+        return DYNAMIC('conditional expression');
+      }
 
-      return test ? next(node.consequent) : next(node.alternate);
+      return test
+        ? next(node.consequent)
+        : next(node.alternate);
     }
 
     case 'MemberExpression':
@@ -394,37 +528,64 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
 
       if (fullName) {
         const parts = fullName.split('.');
-        const enumIndex = parts.length - 2;
-        const enumName = parts[enumIndex];
+        const enumName = parts.length >= 2
+          ? parts[parts.length - 2]
+          : null;
+
         const member = parts[parts.length - 1];
 
-        if (ENUM_VALUES[enumName] &&
-            Object.prototype.hasOwnProperty.call(ENUM_VALUES[enumName], member)) {
+        if (
+          ENUM_VALUES[enumName] &&
+          Object.prototype.hasOwnProperty.call(
+            ENUM_VALUES[enumName],
+            member
+          )
+        ) {
           return ENUM_VALUES[enumName][member];
         }
 
-        if (parts.length === 2 &&
-            Object.prototype.hasOwnProperty.call(env, parts[0])) {
+        if (
+          parts.length === 2 &&
+          Object.prototype.hasOwnProperty.call(
+            env,
+            parts[0]
+          )
+        ) {
           const object = env[parts[0]];
 
-          if (isObject(object) &&
-              Object.prototype.hasOwnProperty.call(object, parts[1])) {
+          if (
+            isObject(object) &&
+            Object.prototype.hasOwnProperty.call(
+              object,
+              parts[1]
+            )
+          ) {
             return object[parts[1]];
           }
         }
       }
 
       const object = next(node.object);
+
       const property = node.computed
         ? next(node.property)
         : node.property.name;
 
-      if (isObject(object) && !isMarker(object) &&
-          Object.prototype.hasOwnProperty.call(object, property)) {
+      if (
+        isObject(object) &&
+        !isMarker(object) &&
+        Object.prototype.hasOwnProperty.call(
+          object,
+          property
+        )
+      ) {
         return object[property];
       }
 
-      if (Array.isArray(object) && property === 'length') {
+      if (
+        Array.isArray(object) &&
+        property === 'length'
+      ) {
         return object.length;
       }
 
@@ -433,7 +594,12 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
 
     case 'CallExpression':
     case 'OptionalCallExpression':
-      return evaluateCall(node, env, context, depth + 1);
+      return evaluateCall(
+        node,
+        env,
+        context,
+        depth + 1
+      );
 
     case 'TSAsExpression':
     case 'TSTypeAssertion':
@@ -444,6 +610,14 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
     case 'SpreadElement':
       return next(node.argument);
 
+    case 'SequenceExpression': {
+      if (!node.expressions.length) return null;
+
+      return next(
+        node.expressions[node.expressions.length - 1]
+      );
+    }
+
     default:
       return UNKNOWN(node.type);
   }
@@ -451,52 +625,85 @@ function evaluate(node, env = {}, context = {}, depth = 0) {
 
 /**
  * 只处理可安全静态推导的函数调用。
- * 不执行源码中的任何函数。
  */
 function evaluateCall(node, env, context, depth) {
   const callee = node.callee;
-  const name = memberName(callee) || expressionName(callee);
+
+  const name =
+    memberName(callee) ||
+    expressionName(callee);
 
   // Biter：this.b(blockObject, function)
-  // 只解析第一个参数，绝不处理第二个函数。
+  // 只读取第一个参数，不执行第二个参数。
   if (name === 'this.b' || name === 'b') {
     if (node.arguments.length >= 1) {
-      return evaluate(node.arguments[0], env, context, depth + 1);
+      return evaluate(
+        node.arguments[0],
+        env,
+        context,
+        depth + 1
+      );
     }
   }
 
   // Feishu：cloneReporterBlocks(...)
-  if (name.endsWith('cloneReporterBlocks') ||
-      name === 'cloneReporterBlocks') {
-    return expandCloneReporterBlocks(node, env, context, depth + 1);
+  if (
+    name.endsWith('cloneReporterBlocks') ||
+    name === 'cloneReporterBlocks'
+  ) {
+    return expandCloneReporterBlocks(
+      node,
+      env,
+      context,
+      depth + 1
+    );
   }
 
   // 常见本地化函数
   const isTranslation =
-    /(^|\.)(formatMessage|fm|translate|getText|format)$/.test(name);
+    /(^|\.)(formatMessage|fm|translate|getText|format)$/.test(
+      name
+    );
 
   if (isTranslation) {
     const first = node.arguments[0];
 
     if (first && first.type === 'StringLiteral') {
       const key = first.value;
-      const translated = context.messages && context.messages[key];
 
-      if (translated !== undefined) return translated;
+      const translated =
+        context.messages &&
+        context.messages[key];
+
+      if (translated !== undefined) {
+        return translated;
+      }
 
       return DYNAMIC(`translation:${key}`);
     }
 
     if (first && first.type === 'ObjectExpression') {
-      const object = evaluate(first, env, context, depth + 1);
+      const object = evaluate(
+        first,
+        env,
+        context,
+        depth + 1
+      );
 
       if (isObject(object)) {
-        const key = object.id || object.default || object.message;
+        const key =
+          object.id ||
+          object.default ||
+          object.message;
 
         if (typeof key === 'string') {
-          const translated = context.messages && context.messages[key];
+          const translated =
+            context.messages &&
+            context.messages[key];
 
-          if (translated !== undefined) return translated;
+          if (translated !== undefined) {
+            return translated;
+          }
 
           return DYNAMIC(`translation:${key}`);
         }
@@ -506,18 +713,31 @@ function evaluateCall(node, env, context, depth) {
     return DYNAMIC(`translation call: ${name}`);
   }
 
-  // 静态字符串拼接
-  if (name.endsWith('.concat') || name === 'concat') {
+  // 静态字符串 concat
+  if (
+    name.endsWith('.concat') ||
+    name === 'concat'
+  ) {
     const object = callee.type === 'MemberExpression'
-      ? evaluate(callee.object, env, context, depth + 1)
+      ? evaluate(
+          callee.object,
+          env,
+          context,
+          depth + 1
+        )
       : null;
 
     const args = node.arguments.map(arg =>
       evaluate(arg, env, context, depth + 1)
     );
 
-    if (typeof object === 'string' &&
-        args.every(v => typeof v === 'string' || typeof v === 'number')) {
+    if (
+      typeof object === 'string' &&
+      args.every(value =>
+        typeof value === 'string' ||
+        typeof value === 'number'
+      )
+    ) {
       return object + args.join('');
     }
   }
@@ -525,11 +745,37 @@ function evaluateCall(node, env, context, depth) {
   return DYNAMIC(`call: ${name}`);
 }
 
-function expandCloneReporterBlocks(node, env, context, depth) {
+/**
+ * 静态展开 Feishu cloneReporterBlocks。
+ */
+function expandCloneReporterBlocks(
+  node,
+  env,
+  context,
+  depth
+) {
   const args = node.arguments;
 
-  const sourceBlocks = evaluate(args[0], env, context, depth + 1);
-  const blockTypes = evaluate(args[1], env, context, depth + 1);
+  if (args.length < 2) {
+    return DYNAMIC(
+      'cloneReporterBlocks missing arguments'
+    );
+  }
+
+  const sourceBlocks = evaluate(
+    args[0],
+    env,
+    context,
+    depth + 1
+  );
+
+  const blockTypes = evaluate(
+    args[1],
+    env,
+    context,
+    depth + 1
+  );
+
   const hiddenTypes = args[2]
     ? evaluate(args[2], env, context, depth + 1)
     : [];
@@ -538,19 +784,47 @@ function expandCloneReporterBlocks(node, env, context, depth) {
     ? evaluate(args[3], env, context, depth + 1)
     : null;
 
-  if (!Array.isArray(sourceBlocks) || !Array.isArray(blockTypes)) {
-    return DYNAMIC('cloneReporterBlocks arguments are not static arrays');
+  if (
+    !Array.isArray(sourceBlocks) ||
+    !Array.isArray(blockTypes)
+  ) {
+    return DYNAMIC(
+      'cloneReporterBlocks arguments are not static arrays'
+    );
   }
 
-  if (!blockTypes.every(type => typeof type === 'string')) {
-    return DYNAMIC('cloneReporterBlocks blockTypes are dynamic');
+  if (
+    !blockTypes.every(type =>
+      typeof type === 'string'
+    )
+  ) {
+    return DYNAMIC(
+      'cloneReporterBlocks blockTypes are dynamic'
+    );
   }
 
-  const hidden = Array.isArray(hiddenTypes) ? hiddenTypes : [];
+  const hidden = Array.isArray(hiddenTypes)
+    ? hiddenTypes
+    : [];
+
   const result = [];
 
   for (const block of sourceBlocks) {
-    if (!isObject(block) || typeof block.opcode !== 'string') continue;
+    if (
+      !isObject(block) ||
+      isMarker(block) ||
+      typeof block.opcode !== 'string' ||
+      !block.opcode
+    ) {
+      continue;
+    }
+
+    if (
+      typeof block.blockType !== 'string' &&
+      isMarker(block.blockType)
+    ) {
+      continue;
+    }
 
     for (const type of blockTypes) {
       if (!type) continue;
@@ -584,7 +858,9 @@ function extractMessages(ast) {
       const properties = {};
 
       for (const property of node.properties) {
-        if (property.type !== 'ObjectProperty') continue;
+        if (property.type !== 'ObjectProperty') {
+          continue;
+        }
 
         const key = property.key.name !== undefined
           ? property.key.name
@@ -598,9 +874,15 @@ function extractMessages(ast) {
           properties[key] = value.value;
         } else if (
           value.type === 'ArrayExpression' &&
-          value.elements.every(e => e && e.type === 'StringLiteral')
+          value.elements.every(
+            element =>
+              element &&
+              element.type === 'StringLiteral'
+          )
         ) {
-          properties[key] = value.elements.map(e => e.value);
+          properties[key] = value.elements.map(
+            element => element.value
+          );
         }
       }
 
@@ -608,31 +890,51 @@ function extractMessages(ast) {
     }
 
     for (const key of Object.keys(node)) {
-      if (key === 'loc' || key === 'start' || key === 'end') continue;
+      if (
+        key === 'loc' ||
+        key === 'start' ||
+        key === 'end'
+      ) {
+        continue;
+      }
 
       const value = node[key];
 
       if (Array.isArray(value)) {
         for (const child of value) {
-          if (child && typeof child.type === 'string') walk(child);
+          if (
+            child &&
+            typeof child.type === 'string'
+          ) {
+            walk(child);
+          }
         }
-      } else if (value && typeof value.type === 'string') {
+      } else if (
+        value &&
+        typeof value.type === 'string'
+      ) {
         walk(value);
       }
     }
   }
 
   walk(ast);
+
   return messages;
 }
 
+/**
+ * 建立顶层变量符号表。
+ */
 function buildTopLevelSymbols(ast, context) {
   const env = {};
 
   for (const statement of ast.program.body) {
     if (statement.type === 'VariableDeclaration') {
       for (const declaration of statement.declarations) {
-        if (declaration.id.type !== 'Identifier') continue;
+        if (declaration.id.type !== 'Identifier') {
+          continue;
+        }
 
         env[declaration.id.name] = evaluate(
           declaration.init,
@@ -644,10 +946,16 @@ function buildTopLevelSymbols(ast, context) {
 
     if (statement.type === 'ImportDeclaration') {
       for (const specifier of statement.specifiers) {
-        if (specifier.type === 'ImportDefaultSpecifier') {
-          env[specifier.local.name] = DYNAMIC('imported default');
-        } else if (specifier.type === 'ImportSpecifier') {
-          env[specifier.local.name] = DYNAMIC('imported symbol');
+        if (
+          specifier.type === 'ImportDefaultSpecifier'
+        ) {
+          env[specifier.local.name] =
+            DYNAMIC('imported default');
+        } else if (
+          specifier.type === 'ImportSpecifier'
+        ) {
+          env[specifier.local.name] =
+            DYNAMIC('imported symbol');
         }
       }
     }
@@ -656,47 +964,82 @@ function buildTopLevelSymbols(ast, context) {
   return env;
 }
 
-function collectLocalSymbols(functionNode, parentEnv, context) {
+/**
+ * 收集 getInfo 方法中的局部变量。
+ */
+function collectLocalSymbols(
+  functionNode,
+  parentEnv,
+  context
+) {
   const env = { ...parentEnv };
 
-  if (!functionNode || !functionNode.body) return env;
+  if (!functionNode || !functionNode.body) {
+    return env;
+  }
 
   function walk(node) {
     if (!node || typeof node !== 'object') return;
 
-    if (node !== functionNode.body &&
-        (
-          node.type === 'FunctionDeclaration' ||
-          node.type === 'FunctionExpression' ||
-          node.type === 'ArrowFunctionExpression'
-        )) {
+    if (
+      node !== functionNode.body &&
+      (
+        node.type === 'FunctionDeclaration' ||
+        node.type === 'FunctionExpression' ||
+        node.type === 'ArrowFunctionExpression'
+      )
+    ) {
       return;
     }
 
-    if (node.type === 'VariableDeclarator' &&
-        node.id.type === 'Identifier') {
-      env[node.id.name] = evaluate(node.init, env, context);
+    if (
+      node.type === 'VariableDeclarator' &&
+      node.id.type === 'Identifier'
+    ) {
+      env[node.id.name] = evaluate(
+        node.init,
+        env,
+        context
+      );
     }
 
     for (const key of Object.keys(node)) {
-      if (key === 'loc' || key === 'start' || key === 'end') continue;
+      if (
+        key === 'loc' ||
+        key === 'start' ||
+        key === 'end'
+      ) {
+        continue;
+      }
 
       const value = node[key];
 
       if (Array.isArray(value)) {
         for (const child of value) {
-          if (child && typeof child.type === 'string') walk(child);
+          if (
+            child &&
+            typeof child.type === 'string'
+          ) {
+            walk(child);
+          }
         }
-      } else if (value && typeof value.type === 'string') {
+      } else if (
+        value &&
+        typeof value.type === 'string'
+      ) {
         walk(value);
       }
     }
   }
 
   walk(functionNode.body);
+
   return env;
 }
 
+/**
+ * 查找 getInfo 方法。
+ */
 function findGetInfoMethods(ast) {
   const found = [];
 
@@ -704,9 +1047,11 @@ function findGetInfoMethods(ast) {
     if (!node || typeof node !== 'object') return;
 
     if (
-      (node.type === 'ClassMethod' ||
-       node.type === 'ObjectMethod' ||
-       node.type === 'ClassPrivateMethod') &&
+      (
+        node.type === 'ClassMethod' ||
+        node.type === 'ObjectMethod' ||
+        node.type === 'ClassPrivateMethod'
+      ) &&
       node.key &&
       node.key.name === 'getInfo'
     ) {
@@ -727,60 +1072,100 @@ function findGetInfoMethods(ast) {
     }
 
     for (const key of Object.keys(node)) {
-      if (key === 'loc' || key === 'start' || key === 'end') continue;
+      if (
+        key === 'loc' ||
+        key === 'start' ||
+        key === 'end'
+      ) {
+        continue;
+      }
 
       const value = node[key];
 
       if (Array.isArray(value)) {
         for (const child of value) {
-          if (child && typeof child.type === 'string') walk(child);
+          if (
+            child &&
+            typeof child.type === 'string'
+          ) {
+            walk(child);
+          }
         }
-      } else if (value && typeof value.type === 'string') {
+      } else if (
+        value &&
+        typeof value.type === 'string'
+      ) {
         walk(value);
       }
     }
   }
 
   walk(ast);
+
   return found;
 }
 
+/**
+ * 收集 return 表达式。
+ */
 function collectReturnObjects(functionNode) {
   const results = [];
 
   function walk(node) {
     if (!node || typeof node !== 'object') return;
 
-    if (node !== functionNode.body &&
-        (
-          node.type === 'FunctionDeclaration' ||
-          node.type === 'FunctionExpression' ||
-          node.type === 'ArrowFunctionExpression'
-        )) {
+    if (
+      node !== functionNode.body &&
+      (
+        node.type === 'FunctionDeclaration' ||
+        node.type === 'FunctionExpression' ||
+        node.type === 'ArrowFunctionExpression'
+      )
+    ) {
       return;
     }
 
-    if (node.type === 'ReturnStatement' && node.argument) {
+    if (
+      node.type === 'ReturnStatement' &&
+      node.argument
+    ) {
       results.push(node.argument);
       return;
     }
 
     for (const key of Object.keys(node)) {
-      if (key === 'loc' || key === 'start' || key === 'end') continue;
+      if (
+        key === 'loc' ||
+        key === 'start' ||
+        key === 'end'
+      ) {
+        continue;
+      }
 
       const value = node[key];
 
       if (Array.isArray(value)) {
         for (const child of value) {
-          if (child && typeof child.type === 'string') walk(child);
+          if (
+            child &&
+            typeof child.type === 'string'
+          ) {
+            walk(child);
+          }
         }
-      } else if (value && typeof value.type === 'string') {
+      } else if (
+        value &&
+        typeof value.type === 'string'
+      ) {
         walk(value);
       }
     }
   }
 
-  if (functionNode.body && functionNode.body.type === 'BlockStatement') {
+  if (
+    functionNode.body &&
+    functionNode.body.type === 'BlockStatement'
+  ) {
     walk(functionNode.body);
   } else if (functionNode.body) {
     results.push(functionNode.body);
@@ -791,81 +1176,50 @@ function collectReturnObjects(functionNode) {
 
 function findProperty(object, key) {
   if (!isObject(object)) return undefined;
+
   return object[key];
 }
 
+/**
+ * 获取 getInfo 返回对象。
+ */
 function getInfoObjects(ast, env, context) {
   const methods = findGetInfoMethods(ast);
   const objects = [];
 
   for (const method of methods) {
-    const localEnv = collectLocalSymbols(method, env, context);
+    const localEnv = collectLocalSymbols(
+      method,
+      env,
+      context
+    );
+
     const returns = collectReturnObjects(method);
 
     for (const expression of returns) {
-      const value = evaluate(expression, localEnv, context);
+      const value = evaluate(
+        expression,
+        localEnv,
+        context
+      );
 
-      if (isObject(value)) objects.push(value);
+      if (isObject(value)) {
+        objects.push(value);
+      }
     }
   }
 
   return objects;
 }
 
-function normalizeBlock(block, extension, filePath, index) {
-  if (!isObject(block)) {
-    return {
-      index,
-      invalidBlock: true,
-      raw: block
-    };
-  }
-
-  const result = clone(block);
-
-  result.extensionName = extension.name;
-  result.extensionId = extension.id;
-  result.sourceFile = filePath;
-  result.index = index;
-
-  if (typeof result.opcode !== 'string') {
-    result.opcode = null;
-  }
-
-  if (typeof result.text !== 'string') {
-    if (result.text === undefined) result.text = null;
-  }
-
-  if (typeof result.text_en !== 'string' &&
-      result.text_en !== null &&
-      result.text_en !== undefined) {
-    result.text_en = null;
-  }
-
-  if (typeof result.category !== 'string' &&
-      result.category !== null &&
-      result.category !== undefined) {
-    result.category = null;
-  }
-
-  if (typeof result.category_en !== 'string' &&
-      result.category_en !== null &&
-      result.category_en !== undefined) {
-    result.category_en = null;
-  }
-
-  if (result.arguments === undefined) {
-    result.arguments = {};
-  }
-
-  if (result.tooltip === undefined) result.tooltip = null;
-  if (result.tooltip_en === undefined) result.tooltip_en = null;
-
-  return result;
-}
-
+/**
+ * 扩展信息。
+ */
 function getExtensionInfo(info, relativePath) {
-  const basename = path.basename(relativePath, path.extname(relativePath));
+  const basename = path.basename(
+    relativePath,
+    path.extname(relativePath)
+  );
 
   const id = typeof info.id === 'string'
     ? info.id
@@ -881,39 +1235,99 @@ function getExtensionInfo(info, relativePath) {
 /**
  * LPP 专用静态注册链分析。
  *
- * 只识别 Extension.register / Category.register / Button /
- * Reporter / Command 的结构，不执行任何函数。
+ * 只识别 Extension.register / Category.register /
+ * Button / Reporter / Command 的结构。
+ *
+ * 不执行任何函数。
  */
-function evaluateLppExpression(node, env, depth = 0) {
-  if (!node || depth > 60) return DYNAMIC('LPP expression depth');
+function evaluateLppExpression(
+  node,
+  env,
+  depth = 0
+) {
+  if (!node || depth > 60) {
+    return DYNAMIC('LPP expression depth');
+  }
 
   if (node.type === 'ParenthesizedExpression') {
-    return evaluateLppExpression(node.expression, env, depth + 1);
+    return evaluateLppExpression(
+      node.expression,
+      env,
+      depth + 1
+    );
   }
 
   if (node.type === 'Identifier') {
-    return env[node.name] || UNKNOWN(node.name);
+    return Object.prototype.hasOwnProperty.call(
+      env,
+      node.name
+    )
+      ? env[node.name]
+      : UNKNOWN(node.name);
   }
 
-  if (node.type === 'StringLiteral') return node.value;
+  if (node.type === 'StringLiteral') {
+    return node.value;
+  }
 
   if (node.type === 'ArrayExpression') {
-    return node.elements.map(element =>
-      evaluateLppExpression(element, env, depth + 1)
-    );
+    const result = [];
+
+    for (const element of node.elements) {
+      if (!element) {
+        result.push(null);
+        continue;
+      }
+
+      if (element.type === 'SpreadElement') {
+        const spread = evaluateLppExpression(
+          element.argument,
+          env,
+          depth + 1
+        );
+
+        if (Array.isArray(spread)) {
+          result.push(...spread);
+        } else {
+          result.push(
+            DYNAMIC('LPP array spread')
+          );
+        }
+      } else {
+        result.push(
+          evaluateLppExpression(
+            element,
+            env,
+            depth + 1
+          )
+        );
+      }
+    }
+
+    return result;
   }
 
   if (node.type === 'NewExpression') {
     const name = expressionName(node.callee);
+
     const args = node.arguments.map(arg =>
-      arg.type === 'ArrowFunctionExpression' ||
-      arg.type === 'FunctionExpression'
+      (
+        arg.type === 'ArrowFunctionExpression' ||
+        arg.type === 'FunctionExpression'
+      )
         ? FUNCTION('LPP lazy function')
-        : evaluateLppExpression(arg, env, depth + 1)
+        : evaluateLppExpression(
+            arg,
+            env,
+            depth + 1
+          )
     );
 
     if (name.endsWith('Extension')) {
-      return { __lpp: 'Extension', blocks: [] };
+      return {
+        __lpp: 'Extension',
+        blocks: []
+      };
     }
 
     if (name.endsWith('Category')) {
@@ -941,8 +1355,10 @@ function evaluateLppExpression(node, env, depth = 0) {
   if (node.type === 'CallExpression') {
     const callee = node.callee;
 
-    if (callee.type === 'MemberExpression' &&
-        callee.property.name === 'register') {
+    if (
+      callee.type === 'MemberExpression' &&
+      callee.property.name === 'register'
+    ) {
       const target = evaluateLppExpression(
         callee.object,
         env,
@@ -950,26 +1366,43 @@ function evaluateLppExpression(node, env, depth = 0) {
       );
 
       const args = node.arguments.map(arg =>
-        evaluateLppExpression(arg, env, depth + 1)
+        evaluateLppExpression(
+          arg,
+          env,
+          depth + 1
+        )
       );
 
-      if (isObject(target) && target.__lpp === 'Extension') {
+      if (
+        isObject(target) &&
+        target.__lpp === 'Extension'
+      ) {
         const item = args[0];
 
-        if (item && item.__lpp === 'Category') {
-          target.blocks.push(item);
-        } else if (item && item.__lpp === 'Button') {
+        if (
+          item &&
+          (
+            item.__lpp === 'Category' ||
+            item.__lpp === 'Button'
+          )
+        ) {
           target.blocks.push(item);
         }
 
         return target;
       }
 
-      if (isObject(target) && target.__lpp === 'Category') {
+      if (
+        isObject(target) &&
+        target.__lpp === 'Category'
+      ) {
         const opcode = args[0];
         const block = args[1];
 
-        if (typeof opcode === 'string' && isObject(block)) {
+        if (
+          typeof opcode === 'string' &&
+          isObject(block)
+        ) {
           target.entries.push({
             opcode,
             block
@@ -995,10 +1428,16 @@ function evaluateLppExpression(node, env, depth = 0) {
         __lpp: 'Block',
         type: name,
         args: node.arguments.map(arg =>
-          arg.type === 'ArrowFunctionExpression' ||
-          arg.type === 'FunctionExpression'
+          (
+            arg.type === 'ArrowFunctionExpression' ||
+            arg.type === 'FunctionExpression'
+          )
             ? FUNCTION('LPP block function')
-            : evaluateLppExpression(arg, env, depth + 1)
+            : evaluateLppExpression(
+                arg,
+                env,
+                depth + 1
+              )
         )
       };
     }
@@ -1010,19 +1449,30 @@ function evaluateLppExpression(node, env, depth = 0) {
     return expressionName(node);
   }
 
-  if (node.type === 'ArrowFunctionExpression' ||
-      node.type === 'FunctionExpression') {
+  if (
+    node.type === 'ArrowFunctionExpression' ||
+    node.type === 'FunctionExpression'
+  ) {
     return FUNCTION('LPP lazy function');
   }
 
   return DYNAMIC(`LPP ${node.type}`);
 }
 
+/**
+ * 查找 defineExtension。
+ */
 function findDefineExtension(ast) {
   let found = null;
 
   function walk(node) {
-    if (!node || typeof node !== 'object' || found) return;
+    if (
+      !node ||
+      typeof node !== 'object' ||
+      found
+    ) {
+      return;
+    }
 
     if (
       node.type === 'FunctionDeclaration' &&
@@ -1048,22 +1498,37 @@ function findDefineExtension(ast) {
     }
 
     for (const key of Object.keys(node)) {
-      if (key === 'loc' || key === 'start' || key === 'end') continue;
+      if (
+        key === 'loc' ||
+        key === 'start' ||
+        key === 'end'
+      ) {
+        continue;
+      }
 
       const value = node[key];
 
       if (Array.isArray(value)) {
-        for (const child of value) walk(child);
-      } else if (value && typeof value.type === 'string') {
+        for (const child of value) {
+          walk(child);
+        }
+      } else if (
+        value &&
+        typeof value.type === 'string'
+      ) {
         walk(value);
       }
     }
   }
 
   walk(ast);
+
   return found;
 }
 
+/**
+ * 提取 LPP 积木。
+ */
 function extractLppBlocks(ast) {
   const defineExtension = findDefineExtension(ast);
 
@@ -1074,13 +1539,22 @@ function extractLppBlocks(ast) {
     };
   }
 
-  const returns = collectReturnObjects(defineExtension);
+  const returns = collectReturnObjects(
+    defineExtension
+  );
+
   let extension = null;
 
   for (const expression of returns) {
-    const result = evaluateLppExpression(expression, {});
+    const result = evaluateLppExpression(
+      expression,
+      {}
+    );
 
-    if (isObject(result) && result.__lpp === 'Extension') {
+    if (
+      isObject(result) &&
+      result.__lpp === 'Extension'
+    ) {
       extension = result;
       break;
     }
@@ -1102,14 +1576,23 @@ function extractLppBlocks(ast) {
         : null;
 
       blocks.push({
-        opcode: typeof id === 'string' ? id : null,
+        opcode: typeof id === 'string'
+          ? id
+          : null,
+
         blockType: 'button',
-        text: null,
+
+        text: DYNAMIC(
+          'LPP button lazy text'
+        ),
+
         arguments: {},
+
         fieldStatus: {
           dynamic: ['text'],
           functions: [],
-          unknown: []
+          unknown: [],
+          spreads: []
         }
       });
 
@@ -1120,14 +1603,24 @@ function extractLppBlocks(ast) {
 
     blocks.push({
       opcode: null,
+
       blockType: 'label',
-      text: null,
+
+      text: DYNAMIC(
+        'LPP lazy category label'
+      ),
+
       arguments: {},
-      category: null,
+
+      category: DYNAMIC(
+        'LPP lazy category label'
+      ),
+
       fieldStatus: {
-        dynamic: ['text'],
+        dynamic: ['text', 'category'],
         functions: [],
-        unknown: []
+        unknown: [],
+        spreads: []
       }
     });
 
@@ -1136,21 +1629,34 @@ function extractLppBlocks(ast) {
 
       let blockType = null;
 
-      if (/Reporter/i.test(typeName)) blockType = 'reporter';
-      else if (/Command/i.test(typeName)) blockType = 'command';
-      else if (/Boolean/i.test(typeName)) blockType = 'Boolean';
-      else if (/Hat/i.test(typeName)) blockType = 'hat';
-      else if (/Loop/i.test(typeName)) blockType = 'loop';
+      if (/Reporter/i.test(typeName)) {
+        blockType = 'reporter';
+      } else if (/Command/i.test(typeName)) {
+        blockType = 'command';
+      } else if (/Boolean/i.test(typeName)) {
+        blockType = 'Boolean';
+      } else if (/Hat/i.test(typeName)) {
+        blockType = 'hat';
+      } else if (/Loop/i.test(typeName)) {
+        blockType = 'loop';
+      }
 
       blocks.push({
         opcode: entry.opcode,
+
         blockType,
+
         text: '',
+
         arguments: {},
+
         fieldStatus: {
           dynamic: [],
           functions: [],
-          unknown: blockType ? [] : ['blockType']
+          unknown: blockType
+            ? []
+            : ['blockType'],
+          spreads: []
         }
       });
     }
@@ -1162,6 +1668,9 @@ function extractLppBlocks(ast) {
   };
 }
 
+/**
+ * 分析字段中的动态值、函数、未知表达式和 spread。
+ */
 function inspectFields(block) {
   const status = {
     dynamic: [],
@@ -1172,37 +1681,92 @@ function inspectFields(block) {
 
   function walk(value, prefix) {
     if (isMarker(value)) {
-      if ('$dynamic' in value) status.dynamic.push(prefix);
-      else if ('$function' in value) status.functions.push(prefix);
-      else status.unknown.push(prefix);
+      if ('$dynamic' in value) {
+        status.dynamic.push(prefix);
+      } else if ('$function' in value) {
+        status.functions.push(prefix);
+      } else {
+        status.unknown.push(prefix);
+      }
+
       return;
     }
 
     if (Array.isArray(value)) {
-      value.forEach((item, index) => walk(item, `${prefix}[${index}]`));
+      value.forEach((item, index) => {
+        walk(item, `${prefix}[${index}]`);
+      });
+
       return;
     }
 
     if (isObject(value)) {
-      if (value.$spread) status.spreads.push(prefix);
+      if (value.$spread) {
+        status.spreads.push(prefix);
+      }
 
       for (const [key, child] of Object.entries(value)) {
-        if (key === '$spread') continue;
-        walk(child, prefix ? `${prefix}.${key}` : key);
+        if (
+          key === '$spread' ||
+          key === 'fieldStatus'
+        ) {
+          continue;
+        }
+
+        walk(
+          child,
+          prefix
+            ? `${prefix}.${key}`
+            : key
+        );
       }
     }
   }
 
   walk(block, '');
 
-  status.dynamic = [...new Set(status.dynamic)];
-  status.functions = [...new Set(status.functions)];
-  status.unknown = [...new Set(status.unknown)];
-  status.spreads = [...new Set(status.spreads)];
+  for (const key of Object.keys(status)) {
+    status[key] = [...new Set(status[key])];
+  }
 
   return status;
 }
 
+/**
+ * 合并解析器自带的 fieldStatus。
+ *
+ * 用于 LPP 等专用解析器。
+ */
+function mergeFieldStatus(inspected, declared) {
+  if (!isObject(declared)) return inspected;
+
+  const result = {};
+
+  for (const key of [
+    'dynamic',
+    'functions',
+    'unknown',
+    'spreads'
+  ]) {
+    const a = Array.isArray(inspected[key])
+      ? inspected[key]
+      : [];
+
+    const b = Array.isArray(declared[key])
+      ? declared[key]
+      : [];
+
+    result[key] = [...new Set([...a, ...b])];
+  }
+
+  return result;
+}
+
+/**
+ * 从输出数据中清理函数标记。
+ *
+ * 函数不会被序列化为可执行代码。
+ */
 function cleanFunctions(value) {
   if (Array.isArray(value)) {
     return value.map(cleanFunctions);
@@ -1216,45 +1780,218 @@ function cleanFunctions(value) {
 
   for (const [key, child] of Object.entries(value)) {
     if (key === '$function') continue;
+
     result[key] = cleanFunctions(child);
   }
 
   return result;
 }
 
+/**
+ * 标准化积木记录。
+ */
+function normalizeBlock(
+  block,
+  extension,
+  filePath,
+  index
+) {
+  if (!isObject(block)) {
+    return {
+      index,
+      invalidBlock: true,
+      raw: block
+    };
+  }
+
+  const result = clone(block);
+
+  result.extensionName = extension.name;
+  result.extensionId = extension.id;
+  result.sourceFile = filePath;
+  result.index = index;
+
+  if (typeof result.opcode !== 'string') {
+    result.opcode = null;
+  }
+
+  if (
+    typeof result.text !== 'string' &&
+    result.text === undefined
+  ) {
+    result.text = null;
+  }
+
+  if (
+    typeof result.text_en !== 'string' &&
+    result.text_en !== null &&
+    result.text_en !== undefined
+  ) {
+    result.text_en = null;
+  }
+
+  if (
+    typeof result.category !== 'string' &&
+    result.category !== null &&
+    result.category !== undefined &&
+    !isMarker(result.category)
+  ) {
+    result.category = null;
+  }
+
+  if (
+    typeof result.category_en !== 'string' &&
+    result.category_en !== null &&
+    result.category_en !== undefined
+  ) {
+    result.category_en = null;
+  }
+
+  if (result.arguments === undefined) {
+    result.arguments = {};
+  }
+
+  if (result.tooltip === undefined) {
+    result.tooltip = null;
+  }
+
+  if (result.tooltip_en === undefined) {
+    result.tooltip_en = null;
+  }
+
+  return result;
+}
+
+/**
+ * 递归整理 blocks 数组。
+ *
+ * 规则：
+ * - 字符串分类分隔符不计入积木。
+ * - 嵌套数组递归展开。
+ * - 动态表达式不伪装成积木。
+ * - 无效值记录到 omittedDynamicBlocks。
+ */
+function flattenBlockEntries(
+  input,
+  output = [],
+  omitted = [],
+  indexPath = ''
+) {
+  if (Array.isArray(input)) {
+    for (let i = 0; i < input.length; i++) {
+      flattenBlockEntries(
+        input[i],
+        output,
+        omitted,
+        indexPath
+          ? `${indexPath}.${i}`
+          : String(i)
+      );
+    }
+
+    return { output, omitted };
+  }
+
+  if (typeof input === 'string') {
+    return { output, omitted };
+  }
+
+  if (isMarker(input)) {
+    omitted.push({
+      index: indexPath,
+      reason:
+        input.$dynamic ||
+        input.$expression ||
+        input.$function ||
+        'unresolved expression'
+    });
+
+    return { output, omitted };
+  }
+
+  if (!isObject(input)) {
+    omitted.push({
+      index: indexPath,
+      reason: 'invalid block value'
+    });
+
+    return { output, omitted };
+  }
+
+  if (input.invalidBlock) {
+    omitted.push({
+      index: indexPath,
+      reason: 'invalid block object'
+    });
+
+    return { output, omitted };
+  }
+
+  output.push({
+    block: input,
+    indexPath
+  });
+
+  return { output, omitted };
+}
+
+/**
+ * 扫描单个 JS 文件。
+ */
 function scanFile(filePath, repositoryPath) {
-  const relativePath = path.relative(repositoryPath, filePath)
-    .split(path.sep)
-    .join('/');
+  const relativePath = path.relative(
+    repositoryPath,
+    filePath
+  ).split(path.sep).join('/');
 
   const result = {
     file: relativePath,
     status: 'no_static_getInfo',
+
     blockCount: 0,
+
     dynamicFieldCount: 0,
     functionFieldCount: 0,
     unknownFieldCount: 0,
+
     omittedDynamicBlockCount: 0,
+    omittedDynamicBlocks: [],
+
     errors: []
   };
 
   try {
-    const source = fs.readFileSync(filePath, 'utf8');
-    const ast = parseSource(source, relativePath);
+    const source = fs.readFileSync(
+      filePath,
+      'utf8'
+    );
+
+    const ast = parseSource(
+      source,
+      relativePath
+    );
+
     const messages = extractMessages(ast);
     const context = { messages };
-    const env = buildTopLevelSymbols(ast, context);
 
-    const infoObjects = getInfoObjects(ast, env, context);
-    let info = infoObjects[0] || null;
+    const env = buildTopLevelSymbols(
+      ast,
+      context
+    );
 
-    let rawBlocks = null;
+    const infoObjects = getInfoObjects(
+      ast,
+      env,
+      context
+    );
 
-    if (info) {
-      rawBlocks = findProperty(info, 'blocks');
-    }
+    const info = infoObjects[0] || null;
 
-    // LPP：blocks: this.extension.export()
+    let rawBlocks = info
+      ? findProperty(info, 'blocks')
+      : null;
+
+    // LPP 专用静态解析。
     if (
       !Array.isArray(rawBlocks) &&
       /FurryR[\\/]lpp\.js$/i.test(filePath)
@@ -1269,42 +2006,89 @@ function scanFile(filePath, repositoryPath) {
 
     if (!info && !rawBlocks) {
       result.status = 'no_static_getInfo';
-      return { result, blocks: [] };
+
+      return {
+        result,
+        blocks: []
+      };
     }
 
     if (!Array.isArray(rawBlocks)) {
       result.status = 'dynamic_blocks';
       result.omittedDynamicBlockCount = 1;
-      return { result, blocks: [] };
+
+      result.omittedDynamicBlocks.push({
+        index: null,
+        reason: isMarker(rawBlocks)
+          ? (
+              rawBlocks.$dynamic ||
+              rawBlocks.$expression ||
+              'dynamic blocks expression'
+            )
+          : 'blocks is not a static array'
+      });
+
+      return {
+        result,
+        blocks: []
+      };
     }
 
-    const extension = getExtensionInfo(info || {}, relativePath);
+    const extension = getExtensionInfo(
+      info || {},
+      relativePath
+    );
+
+    const flattened = flattenBlockEntries(
+      rawBlocks
+    );
+
+    const entries = flattened.output;
+
+    result.omittedDynamicBlocks =
+      flattened.omitted;
+
+    result.omittedDynamicBlockCount =
+      flattened.omitted.length;
+
     const blocks = [];
 
-    for (let i = 0; i < rawBlocks.length; i++) {
-      const rawBlock = rawBlocks[i];
+    for (const entry of entries) {
+      const rawBlock = entry.block;
 
-      // 分类分隔符不是积木元数据。
-      if (typeof rawBlock === 'string') continue;
+      const originalIndex = Number.isInteger(
+        Number(entry.indexPath)
+      )
+        ? Number(entry.indexPath)
+        : entry.indexPath;
 
-      if (!isObject(rawBlock)) {
-        result.omittedDynamicBlockCount++;
-        continue;
-      }
+      const inspected = inspectFields(rawBlock);
 
-      const fieldStatus = inspectFields(rawBlock);
+      // 保留专用解析器提供的字段状态。
+      const fieldStatus = mergeFieldStatus(
+        inspected,
+        rawBlock.fieldStatus
+      );
+
+      const cleaned = cleanFunctions(rawBlock);
+
       const normalized = normalizeBlock(
-        cleanFunctions(rawBlock),
+        cleaned,
         extension,
         relativePath,
-        i
+        originalIndex
       );
 
       normalized.fieldStatus = fieldStatus;
 
-      result.dynamicFieldCount += fieldStatus.dynamic.length;
-      result.functionFieldCount += fieldStatus.functions.length;
-      result.unknownFieldCount += fieldStatus.unknown.length;
+      result.dynamicFieldCount +=
+        fieldStatus.dynamic.length;
+
+      result.functionFieldCount +=
+        fieldStatus.functions.length;
+
+      result.unknownFieldCount +=
+        fieldStatus.unknown.length;
 
       blocks.push(normalized);
     }
@@ -1322,38 +2106,69 @@ function scanFile(filePath, repositoryPath) {
       result.status = 'success';
     }
 
-    return { result, blocks };
+    return {
+      result,
+      blocks
+    };
 
   } catch (error) {
     result.status = 'error';
+
     result.errors.push({
       message: error.message,
       name: error.name
     });
 
-    return { result, blocks: [] };
+    return {
+      result,
+      blocks: []
+    };
   }
 }
 
+/**
+ * 读取 sources.txt。
+ */
 function readSources() {
   if (!fs.existsSync(SOURCES_FILE)) {
     throw new Error('找不到 sources.txt');
   }
 
-  return fs.readFileSync(SOURCES_FILE, 'utf8')
+  return fs.readFileSync(
+    SOURCES_FILE,
+    'utf8'
+  )
     .split(/\r?\n/)
     .map(line => line.trim())
-    .filter(line => line && !line.startsWith('#'));
+    .filter(
+      line =>
+        line &&
+        !line.startsWith('#')
+    );
 }
 
+/**
+ * 克隆官方仓库。
+ */
 function cloneRepository(url, destination) {
   execFileSync(
     'git',
-    ['clone', '--depth', '1', url, destination],
-    { stdio: 'inherit' }
+    [
+      'clone',
+      '--depth',
+      '1',
+      url,
+      destination
+    ],
+    {
+      stdio: 'inherit'
+    }
   );
 }
 
+/**
+ * 查找 JavaScript 文件。
+ */
 function findJavaScriptFiles(directory) {
   const results = [];
 
@@ -1371,38 +2186,65 @@ function findJavaScriptFiles(directory) {
   function walk(current) {
     if (!fs.existsSync(current)) return;
 
-    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
-      const fullPath = path.join(current, entry.name);
+    for (const entry of fs.readdirSync(
+      current,
+      { withFileTypes: true }
+    )) {
+      const fullPath = path.join(
+        current,
+        entry.name
+      );
 
       if (entry.isDirectory()) {
-        if (!ignoredDirectories.has(entry.name)) walk(fullPath);
+        if (!ignoredDirectories.has(entry.name)) {
+          walk(fullPath);
+        }
+
         continue;
       }
 
       if (!entry.isFile()) continue;
-      if (!/\.(js|cjs|mjs)$/.test(entry.name)) continue;
+
+      if (!/\.(js|cjs|mjs)$/.test(entry.name)) {
+        continue;
+      }
 
       results.push(fullPath);
     }
   }
 
   walk(directory);
+
   return results;
 }
 
+/**
+ * 统计重复 opcode。
+ */
 function buildDuplicateReport(blocks) {
   const globalMap = new Map();
   const namespacedMap = new Map();
 
   for (const block of blocks) {
-    if (typeof block.opcode !== 'string' || !block.opcode) continue;
+    if (
+      typeof block.opcode !== 'string' ||
+      !block.opcode
+    ) {
+      continue;
+    }
 
     const globalKey = block.opcode;
+
     const namespaceKey =
       `${block.extensionId || 'unknown'}::${block.opcode}`;
 
-    if (!globalMap.has(globalKey)) globalMap.set(globalKey, []);
-    if (!namespacedMap.has(namespaceKey)) namespacedMap.set(namespaceKey, []);
+    if (!globalMap.has(globalKey)) {
+      globalMap.set(globalKey, []);
+    }
+
+    if (!namespacedMap.has(namespaceKey)) {
+      namespacedMap.set(namespaceKey, []);
+    }
 
     globalMap.get(globalKey).push(block);
     namespacedMap.get(namespaceKey).push(block);
@@ -1417,7 +2259,11 @@ function buildDuplicateReport(blocks) {
       result.push({
         key,
         count: values.length,
-        files: [...new Set(values.map(v => v.sourceFile))]
+        files: [
+          ...new Set(
+            values.map(value => value.sourceFile)
+          )
+        ]
       });
     }
 
@@ -1430,6 +2276,9 @@ function buildDuplicateReport(blocks) {
   };
 }
 
+/**
+ * 统计缺失字段。
+ */
 function countMissingFields(blocks) {
   const fields = [
     'opcode',
@@ -1445,18 +2294,36 @@ function countMissingFields(blocks) {
 
   for (const field of fields) {
     result[field] = blocks.filter(block =>
-      block[field] === null || block[field] === undefined
+      block[field] === null ||
+      block[field] === undefined
     ).length;
   }
 
   return result;
 }
 
+/**
+ * 统计包含动态标记的积木数量。
+ */
+function countBlocksWithDynamicFields(blocks) {
+  return blocks.filter(block =>
+    block.fieldStatus &&
+    block.fieldStatus.dynamic &&
+    block.fieldStatus.dynamic.length > 0
+  ).length;
+}
+
+/**
+ * 主程序。
+ */
 function main() {
   const sources = readSources();
 
   const tempRoot = fs.mkdtempSync(
-    path.join(os.tmpdir(), 'ccw-extension-db-')
+    path.join(
+      os.tmpdir(),
+      'ccw-extension-db-'
+    )
   );
 
   const allBlocks = [];
@@ -1464,36 +2331,58 @@ function main() {
   const repositoryReports = [];
 
   try {
-    for (let sourceIndex = 0; sourceIndex < sources.length; sourceIndex++) {
+    for (
+      let sourceIndex = 0;
+      sourceIndex < sources.length;
+      sourceIndex++
+    ) {
       const sourceUrl = sources[sourceIndex];
+
       const repositoryPath = path.join(
         tempRoot,
         `repository-${sourceIndex}`
       );
 
-      console.log(`\n[${sourceIndex + 1}/${sources.length}] ${sourceUrl}`);
+      console.log(
+        `\n[${sourceIndex + 1}/${sources.length}] ${sourceUrl}`
+      );
 
       try {
-        cloneRepository(sourceUrl, repositoryPath);
+        cloneRepository(
+          sourceUrl,
+          repositoryPath
+        );
 
         const extensionDirectory = path.join(
           repositoryPath,
           'extensions'
         );
 
-        const scanDirectory = fs.existsSync(extensionDirectory)
-          ? extensionDirectory
-          : repositoryPath;
+        const scanDirectory =
+          fs.existsSync(extensionDirectory)
+            ? extensionDirectory
+            : repositoryPath;
 
-        const files = findJavaScriptFiles(scanDirectory);
+        const files = findJavaScriptFiles(
+          scanDirectory
+        );
+
         const repositoryBlocks = [];
         const repositoryFileReports = [];
 
         for (const file of files) {
-          const scanned = scanFile(file, repositoryPath);
+          const scanned = scanFile(
+            file,
+            repositoryPath
+          );
 
-          repositoryFileReports.push(scanned.result);
-          repositoryBlocks.push(...scanned.blocks);
+          repositoryFileReports.push(
+            scanned.result
+          );
+
+          repositoryBlocks.push(
+            ...scanned.blocks
+          );
         }
 
         allBlocks.push(...repositoryBlocks);
@@ -1513,59 +2402,95 @@ function main() {
       }
     }
 
+    // 文件状态统计。
     const statusCounts = {};
+
     for (const report of fileReports) {
       statusCounts[report.status] =
         (statusCounts[report.status] || 0) + 1;
     }
 
-    const successfulFiles = statusCounts.success || 0;
-    const dynamicFiles = statusCounts.dynamic_blocks || 0;
-    const dynamicFieldFiles = statusCounts.dynamic_fields || 0;
-    const unknownFiles = statusCounts.unknown_fields || 0;
-    const errorFiles = statusCounts.error || 0;
-    const unrecognizedFiles = statusCounts.no_static_getInfo || 0;
+    const successfulFiles =
+      statusCounts.success || 0;
 
+    const dynamicFiles =
+      statusCounts.dynamic_blocks || 0;
+
+    const dynamicFieldFiles =
+      statusCounts.dynamic_fields || 0;
+
+    const unknownFiles =
+      statusCounts.unknown_fields || 0;
+
+    const errorFiles =
+      statusCounts.error || 0;
+
+    const unrecognizedFiles =
+      statusCounts.no_static_getInfo || 0;
+
+    // 字段统计。
     const dynamicFieldCount = fileReports.reduce(
-      (sum, item) => sum + item.dynamicFieldCount,
+      (sum, item) =>
+        sum + item.dynamicFieldCount,
       0
     );
 
     const functionFieldCount = fileReports.reduce(
-      (sum, item) => sum + item.functionFieldCount,
+      (sum, item) =>
+        sum + item.functionFieldCount,
       0
     );
 
     const unknownFieldCount = fileReports.reduce(
-      (sum, item) => sum + item.unknownFieldCount,
+      (sum, item) =>
+        sum + item.unknownFieldCount,
       0
     );
 
-    const omittedDynamicBlockCount = fileReports.reduce(
-      (sum, item) => sum + item.omittedDynamicBlockCount,
-      0
-    );
+    const omittedDynamicBlockCount =
+      fileReports.reduce(
+        (sum, item) =>
+          sum + item.omittedDynamicBlockCount,
+        0
+      );
 
+    const blocksWithDynamicFields =
+      countBlocksWithDynamicFields(allBlocks);
+
+    // 数据库。
     const database = {
       schemaVersion: SCHEMA_VERSION,
       extractorVersion: EXTRACTOR_VERSION,
+
       generatedAt: new Date().toISOString(),
+
       sourceCount: sources.length,
       blockCount: allBlocks.length,
+
       blocks: allBlocks,
-      duplicateOpcodes: buildDuplicateReport(allBlocks),
+
+      duplicateOpcodes:
+        buildDuplicateReport(allBlocks),
+
       quality: {
-        missingFields: countMissingFields(allBlocks),
+        missingFields:
+          countMissingFields(allBlocks),
+
         dynamicFieldCount,
+        blocksWithDynamicFields,
+
         functionFieldCount,
         unknownFieldCount,
+
         omittedDynamicBlockCount
       }
     };
 
+    // 提取报告。
     const extractionReport = {
       schemaVersion: SCHEMA_VERSION,
       extractorVersion: EXTRACTOR_VERSION,
+
       generatedAt: new Date().toISOString(),
 
       sourceCount: sources.length,
@@ -1580,22 +2505,30 @@ function main() {
       errorFiles,
 
       dynamicFieldCount,
+      blocksWithDynamicFields,
+
       functionFieldCount,
       unknownFieldCount,
+
       omittedDynamicBlockCount,
 
       statusCounts,
+
       repositories: repositoryReports,
       files: fileReports
     };
 
+    // 版本报告。
     const versionReport = {
       generatedAt: new Date().toISOString(),
+
       extractorVersion: EXTRACTOR_VERSION,
       schemaVersion: SCHEMA_VERSION,
+
       sources
     };
 
+    // 写入 JSON。
     fs.writeFileSync(
       OUTPUT_DATABASE,
       JSON.stringify(database, null, 2) + '\n'
@@ -1611,23 +2544,53 @@ function main() {
       JSON.stringify(versionReport, null, 2) + '\n'
     );
 
-    console.log('\n========== Extraction Summary ==========');
+    // 控制台报告。
+    console.log(
+      '\n========== Extraction Summary =========='
+    );
+
     console.log(`Files: ${fileReports.length}`);
     console.log(`Blocks: ${allBlocks.length}`);
+
     console.log(`Successful: ${successfulFiles}`);
     console.log(`Dynamic blocks: ${dynamicFiles}`);
-    console.log(`Dynamic fields: ${dynamicFieldFiles}`);
-    console.log(`Unknown fields: ${unknownFiles}`);
+    console.log(`Dynamic field files: ${dynamicFieldFiles}`);
+    console.log(`Unknown field files: ${unknownFiles}`);
     console.log(`Unrecognized: ${unrecognizedFiles}`);
     console.log(`Errors: ${errorFiles}`);
-    console.log(`Dynamic field count: ${dynamicFieldCount}`);
-    console.log(`Function field count: ${functionFieldCount}`);
-    console.log(`Unknown field count: ${unknownFieldCount}`);
-    console.log(`Omitted dynamic blocks: ${omittedDynamicBlockCount}`);
-    console.log('========================================');
+
+    console.log(
+      `Dynamic field count: ${dynamicFieldCount}`
+    );
+
+    console.log(
+      `Blocks with dynamic fields: ${blocksWithDynamicFields}`
+    );
+
+    console.log(
+      `Function field count: ${functionFieldCount}`
+    );
+
+    console.log(
+      `Unknown field count: ${unknownFieldCount}`
+    );
+
+    console.log(
+      `Omitted dynamic blocks: ${omittedDynamicBlockCount}`
+    );
+
+    console.log(
+      '========================================'
+    );
 
   } finally {
-    fs.rmSync(tempRoot, { recursive: true, force: true });
+    fs.rmSync(
+      tempRoot,
+      {
+        recursive: true,
+        force: true
+      }
+    );
   }
 }
 
