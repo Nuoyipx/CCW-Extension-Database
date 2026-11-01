@@ -1,9 +1,8 @@
-[
-  {
-    "repository": "https://github.com/Gandi-IDE/custom-extension",
-    "commit": "708f0a7052e1e012cc97a1f9fe5ba9c4c451318b",
-    "extractorVersion": "6.0.0",
-    "versionStatus": "default_branch_only",
-    "note": "Only the repository default branch was scanned."
-  }
-]
+{
+  "generatedAt": "2026-11-01T18:41:37.056Z",
+  "extractorVersion": "7.0.0",
+  "schemaVersion": 6,
+  "sources": [
+    "https://github.com/Gandi-IDE/custom-extension"
+  ]
+}

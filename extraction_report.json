@@ -1,1435 +1,875 @@
 {
-  "schemaVersion": 5,
-  "extractorVersion": "6.0.0",
-  "generatedAt": "2026-11-01T18:33:00.112Z",
-  "fileCount": 72,
-  "blockCount": 971,
-  "unresolvedFieldCount": 0,
-  "dynamicFieldCount": 84,
-  "functionFieldCount": 29,
-  "successfulFiles": 35,
-  "partialFiles": 0,
+  "schemaVersion": 6,
+  "extractorVersion": "7.0.0",
+  "generatedAt": "2026-11-01T18:41:37.056Z",
+  "sourceCount": 1,
+  "fileCount": 84,
+  "blockCount": 1097,
+  "successfulFiles": 10,
   "dynamicFiles": 1,
-  "dynamicFieldFiles": 16,
-  "unrecognizedFiles": 20,
+  "dynamicFieldFiles": 29,
+  "unknownFiles": 13,
+  "unrecognizedFiles": 31,
   "errorFiles": 0,
+  "dynamicFieldCount": 1090,
+  "functionFieldCount": 29,
+  "unknownFieldCount": 45,
+  "omittedDynamicBlockCount": 1,
   "statusCounts": {
-    "success": 35,
-    "no_static_getInfo": 20,
-    "dynamic_fields": 16,
+    "dynamic_fields": 29,
+    "no_static_getInfo": 31,
+    "unknown_fields": 13,
+    "success": 10,
     "dynamic_blocks": 1
   },
+  "repositories": [
+    {
+      "source": "https://github.com/Gandi-IDE/custom-extension",
+      "fileCount": 84,
+      "blockCount": 1097
+    }
+  ],
   "files": [
     {
-      "file": "extensions/Arkos/advancedControls.js",
-      "status": "success",
-      "blocksFound": 10,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
       "file": "extensions/Arkos/Archivecode.js",
-      "status": "success",
-      "blocksFound": 22,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 25,
+      "dynamicFieldCount": 25,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/Archivecode新版.js",
-      "status": "success",
-      "blocksFound": 22,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 25,
+      "dynamicFieldCount": 25,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/Archivecode旧版.js",
-      "status": "success",
-      "blocksFound": 21,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 21,
+      "dynamicFieldCount": 21,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/Arkos/advancedControls.js",
+      "status": "dynamic_fields",
+      "blockCount": 11,
+      "dynamicFieldCount": 15,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/arkosExtension.js",
-      "status": "success",
-      "blocksFound": 69,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/moreDataTypes/l10n.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "status": "dynamic_fields",
-      "blocksFound": 59,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 25,
-      "functionFieldCount": 7,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[17].dynamicArgsInfo.defaultValues",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[25].text",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[26].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[27].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[28].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[29].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[30].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[31].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[32].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[33].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[38].text",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[39].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[40].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[41].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[42].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[43].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[44].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[45].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[46].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[47].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[48].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[50].arguments.ON.defaultValue",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[52].arguments.ON.defaultValue",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[53].arguments.IDX.defaultValue",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[54].arguments.ON.defaultValue",
-          "expression": "ConditionalExpression"
-        }
-      ],
-      "functionFields": [
-        {
-          "path": "blocks[16].dynamicArgsInfo.preText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[16].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[16].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[17].dynamicArgsInfo.preText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[18].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[25].onClick",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[38].onClick",
-          "expression": "<function>"
-        }
-      ],
-      "message": "25 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "blockCount": 82,
+      "dynamicFieldCount": 77,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/moreDataTypes/SafeObject.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/Arkos/moreDataTypes/l10n.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "status": "unknown_fields",
+      "blockCount": 64,
+      "dynamicFieldCount": 115,
+      "functionFieldCount": 7,
+      "unknownFieldCount": 18,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/moreSensing.js",
-      "status": "success",
-      "blocksFound": 20,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 20,
+      "dynamicFieldCount": 34,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Arkos/test.js",
       "status": "success",
-      "blocksFound": 2,
-      "unresolvedFieldCount": 0,
+      "blockCount": 2,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/dannydev/scCOM.js",
-      "status": "success",
-      "blocksFound": 26,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/DilemmaGX/3DMath/Three.js",
-      "status": "success",
-      "blocksFound": 62,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 69,
+      "dynamicFieldCount": 69,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/DilemmaGX/Animator/Animator.js",
-      "status": "dynamic_fields",
-      "blocksFound": 6,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
+      "status": "unknown_fields",
+      "blockCount": 8,
+      "dynamicFieldCount": 8,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/DilemmaGX/rxfs/rxFS.js",
-      "status": "success",
-      "blocksFound": 12,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 12,
+      "dynamicFieldCount": 14,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/DollyPro/dollytest.js",
-      "status": "dynamic_fields",
-      "blocksFound": 50,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 17,
+      "status": "unknown_fields",
+      "blockCount": 58,
+      "dynamicFieldCount": 90,
       "functionFieldCount": 2,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].hideFromPalette",
-          "expression": "UnaryExpression"
-        },
-        {
-          "path": "blocks[1].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[9].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[10].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[11].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[12].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[18].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[33].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[42].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[43].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[47].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[50].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[51].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[57]",
-          "expression": "ConditionalExpression"
-        },
-        {
-          "path": "blocks[58].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[59].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        },
-        {
-          "path": "blocks[60].hideFromPalette",
-          "expression": "this.hideExtraBlocks"
-        }
-      ],
-      "functionFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[1].onClick",
-          "expression": "<function>"
-        }
-      ],
-      "message": "17 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/example/example-ext.js",
-      "status": "success",
-      "blocksFound": 9,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 1,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "<function>"
-        }
-      ],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 16,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Fath/CocreaFetch.js",
-      "status": "success",
-      "blocksFound": 1,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 1,
+      "dynamicFieldCount": 1,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Fath/comment blocks.js",
-      "status": "success",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Fath/Turbowarp/BigInt.js",
-      "status": "success",
-      "blocksFound": 21,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 21,
+      "dynamicFieldCount": 21,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Fath/Turbowarp/comment blocks.js",
       "status": "success",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
+      "blockCount": 5,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/Fath/comment blocks.js",
+      "status": "success",
+      "blockCount": 5,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/FurryR/lpp.js",
-      "status": "dynamic_blocks",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "status": "success",
+      "blockCount": 25,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "The blocks property is not a statically readable array.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": [],
+      "lppStaticExtraction": true
     },
     {
       "file": "extensions/FurryR/not.js.js",
-      "status": "dynamic_fields",
-      "blocksFound": 14,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
+      "status": "unknown_fields",
+      "blockCount": 17,
+      "dynamicFieldCount": 17,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.getHelp"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/extension.js",
-      "status": "success",
-      "blocksFound": 28,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 1,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [
-        {
-          "path": "blocks[16].onClick",
-          "expression": "<function>"
-        }
-      ],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/extension.js",
-      "status": "success",
-      "blocksFound": 8,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Nights/stats.js/src/block-info.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Nights/stats.js/src/lang.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Nights/stats.js/src/main.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Nights/stats.js/src/stats.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/Nights/stats.js/vite.config.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Nights/tilemap/tilemap.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "status": "dynamic_blocks",
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "errors": []
     },
     {
       "file": "extensions/PortFromTurboWarp/NOname-awa/Morecomparison.js",
       "status": "success",
-      "blocksFound": 21,
-      "unresolvedFieldCount": 0,
+      "blockCount": 21,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/PortFromTurboWarp/stretch.js",
-      "status": "success",
-      "blocksFound": 8,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
-      "status": "success",
-      "blocksFound": 7,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 8,
+      "dynamicFieldCount": 8,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/PortFromTurboWarp/stretch.js",
+      "status": "dynamic_fields",
+      "blockCount": 9,
+      "dynamicFieldCount": 9,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/Project/Project.js",
       "status": "success",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
+      "blockCount": 5,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
-      "status": "success",
-      "blocksFound": 19,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
+      "status": "dynamic_fields",
+      "blockCount": 19,
+      "dynamicFieldCount": 15,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/data-analysis.js",
-      "status": "success",
-      "blocksFound": 20,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "normalizationNote": "Full-width semicolons outside strings/comments were normalized.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/easy-struct.js",
-      "status": "success",
-      "blocksFound": 22,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/matrix.js",
-      "status": "success",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/str-mani.js",
-      "status": "success",
-      "blocksFound": 48,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/var-and-list.js",
-      "status": "success",
-      "blocksFound": 42,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/SimonShiki/scopeVar.js",
-      "status": "success",
-      "blocksFound": 9,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
-      "status": "success",
-      "blocksFound": 19,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/Consoles/Consoles.js",
-      "status": "success",
-      "blocksFound": 12,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/Recording/Recording.js",
-      "status": "success",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/six-6/datetime.js",
       "status": "dynamic_fields",
-      "blocksFound": 11,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 13,
+      "blockCount": 9,
+      "dynamicFieldCount": 8,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].arguments.YEAR.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[0].arguments.MONTH.defaultValue",
-          "expression": "BinaryExpression"
-        },
-        {
-          "path": "blocks[0].arguments.DATE.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[1].arguments.YEAR.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[1].arguments.MONTH.defaultValue",
-          "expression": "BinaryExpression"
-        },
-        {
-          "path": "blocks[1].arguments.DATE.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[1].arguments.HOUR.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[1].arguments.MINUTE.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[1].arguments.SECOND.defaultValue",
-          "expression": "(...)"
-        },
-        {
-          "path": "blocks[4].arguments.DAYS.defaultValue",
-          "expression": "this.diff(...)"
-        },
-        {
-          "path": "blocks[5].arguments.TIME.defaultValue",
-          "expression": "this.now(...)"
-        },
-        {
-          "path": "blocks[6].arguments.TIME2.defaultValue",
-          "expression": "this.now(...)"
-        },
-        {
-          "path": "blocks[8].arguments.TIME.defaultValue",
-          "expression": "this.now(...)"
-        }
-      ],
-      "functionFields": [],
-      "message": "13 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
-      "file": "extensions/six-6/regexp.js",
-      "status": "success",
-      "blocksFound": 20,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/BBcode/bbcode.js",
+      "file": "extensions/YUEN/FeishuExtension/.eslintrc.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/BBcode/htmlToBBCode.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/BBcode/index.js",
-      "status": "dynamic_fields",
-      "blocksFound": 31,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/BBcode/MarkDown.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/BBcode/prism.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/File_Helper/base64.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/File_Helper/File_Helper.js",
-      "status": "dynamic_fields",
-      "blocksFound": 29,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/FPS.js",
-      "status": "dynamic_fields",
-      "blocksFound": 9,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/GamePad.js",
-      "status": "success",
-      "blocksFound": 6,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/IndexedDB.js",
-      "status": "dynamic_fields",
-      "blocksFound": 21,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 1,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [
-        {
-          "path": "blocks[1].onClick",
-          "expression": "<function>"
-        }
-      ],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Input.js",
-      "status": "dynamic_fields",
-      "blocksFound": 29,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Interpreter/Interpreter.js",
-      "status": "dynamic_fields",
-      "blocksFound": 14,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 17,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [
-        {
-          "path": "blocks[2].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[2].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[2].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[3].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[3].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[3].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[4].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[4].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[4].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[6].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[6].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[6].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[7].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[7].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[7].dynamicArgsInfo.defaultValues",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[14].dynamicArgsInfo.endText",
-          "expression": "<function>"
-        },
-        {
-          "path": "blocks[14].dynamicArgsInfo.joinCh",
-          "expression": "<function>"
-        }
-      ],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Interpreter/math.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/MarkDown/index.js",
-      "status": "dynamic_fields",
-      "blocksFound": 26,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/MarkDown/MarkDown.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/MarkDown/prism.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/More_Mouse.js",
-      "status": "dynamic_fields",
-      "blocksFound": 31,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 2,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        },
-        {
-          "path": "blocks[17].onClick",
-          "expression": "this.url.bind(...)"
-        }
-      ],
-      "functionFields": [],
-      "message": "2 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Sensory_Control.js",
-      "status": "success",
-      "blocksFound": 3,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Zip/extension.js",
-      "status": "dynamic_fields",
-      "blocksFound": 11,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 1,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[0].onClick",
-          "expression": "this.docs"
-        }
-      ],
-      "functionFields": [],
-      "message": "1 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Zip/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wtkzq/complex/Complex.js",
-      "status": "success",
-      "blocksFound": 11,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 0,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/x10clkz/Biter.js",
-      "status": "dynamic_fields",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 15,
-      "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[1]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[2]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[3]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[4]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[5]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[6]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[8]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[9]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[10]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[11]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[12]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[13]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[14]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[15]",
-          "expression": "this.b(...)"
-        },
-        {
-          "path": "blocks[16]",
-          "expression": "this.b(...)"
-        }
-      ],
-      "functionFields": [],
-      "message": "15 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/constants.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/extension.js",
       "status": "dynamic_fields",
-      "blocksFound": 5,
-      "unresolvedFieldCount": 0,
-      "dynamicFieldCount": 2,
+      "blockCount": 10,
+      "dynamicFieldCount": 10,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [
-        {
-          "path": "blocks[2]",
-          "expression": "this.cloneReporterBlocks(...)"
-        },
-        {
-          "path": "blocks[9]",
-          "expression": "this.cloneReporterBlocks(...)"
-        }
-      ],
-      "functionFields": [],
-      "message": "2 runtime-dependent field(s).",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/index.js",
       "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "unresolvedFieldCount": 0,
+      "blockCount": 0,
       "dynamicFieldCount": 0,
       "functionFieldCount": 0,
-      "unresolvedFields": [],
-      "dynamicFields": [],
-      "functionFields": [],
-      "message": "No statically readable getInfo() return object.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/YUEN/FeishuExtension/webpack.config.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/dannydev/scCOM.js",
+      "status": "dynamic_fields",
+      "blockCount": 31,
+      "dynamicFieldCount": 31,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/example/example-ext.js",
+      "status": "success",
+      "blockCount": 9,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 1,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/extension.js",
+      "status": "dynamic_fields",
+      "blockCount": 28,
+      "dynamicFieldCount": 27,
+      "functionFieldCount": 1,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/webpack.config.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/WebHook/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/WebHook/extension.js",
+      "status": "dynamic_fields",
+      "blockCount": 10,
+      "dynamicFieldCount": 10,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/WebHook/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/kukemc/WebHook/webpack.config.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/qxsck/data-analysis.js",
+      "status": "dynamic_fields",
+      "blockCount": 20,
+      "dynamicFieldCount": 20,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/qxsck/easy-struct.js",
+      "status": "dynamic_fields",
+      "blockCount": 22,
+      "dynamicFieldCount": 22,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/qxsck/matrix.js",
+      "status": "dynamic_fields",
+      "blockCount": 5,
+      "dynamicFieldCount": 5,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/qxsck/str-mani.js",
+      "status": "dynamic_fields",
+      "blockCount": 48,
+      "dynamicFieldCount": 48,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/qxsck/var-and-list.js",
+      "status": "dynamic_fields",
+      "blockCount": 43,
+      "dynamicFieldCount": 43,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
+      "status": "success",
+      "blockCount": 19,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/sipc.ink/Consoles/Consoles.js",
+      "status": "success",
+      "blockCount": 12,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/sipc.ink/Recording/Recording.js",
+      "status": "success",
+      "blockCount": 5,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/six-6/datetime.js",
+      "status": "dynamic_fields",
+      "blockCount": 11,
+      "dynamicFieldCount": 24,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/six-6/regexp.js",
+      "status": "dynamic_fields",
+      "blockCount": 22,
+      "dynamicFieldCount": 22,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/MarkDown.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/bbcode.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/htmlToBBCode.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/index.js",
+      "status": "unknown_fields",
+      "blockCount": 32,
+      "dynamicFieldCount": 32,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/prism.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/FPS.js",
+      "status": "unknown_fields",
+      "blockCount": 12,
+      "dynamicFieldCount": 12,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/File_Helper.js",
+      "status": "unknown_fields",
+      "blockCount": 32,
+      "dynamicFieldCount": 32,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/base64.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/GamePad.js",
+      "status": "dynamic_fields",
+      "blockCount": 6,
+      "dynamicFieldCount": 6,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/IndexedDB.js",
+      "status": "unknown_fields",
+      "blockCount": 25,
+      "dynamicFieldCount": 25,
+      "functionFieldCount": 1,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Input.js",
+      "status": "unknown_fields",
+      "blockCount": 33,
+      "dynamicFieldCount": 33,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Interpreter/Interpreter.js",
+      "status": "unknown_fields",
+      "blockCount": 17,
+      "dynamicFieldCount": 18,
+      "functionFieldCount": 17,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Interpreter/math.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/MarkDown.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/index.js",
+      "status": "unknown_fields",
+      "blockCount": 27,
+      "dynamicFieldCount": 27,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/prism.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/More_Mouse.js",
+      "status": "unknown_fields",
+      "blockCount": 33,
+      "dynamicFieldCount": 34,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Sensory_Control.js",
+      "status": "dynamic_fields",
+      "blockCount": 3,
+      "dynamicFieldCount": 3,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/extension.js",
+      "status": "unknown_fields",
+      "blockCount": 12,
+      "dynamicFieldCount": 12,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 1,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/webpack.config.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wtkzq/complex/Complex.js",
+      "status": "dynamic_fields",
+      "blockCount": 11,
+      "dynamicFieldCount": 5,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/wtkzq/complex/assets/index.js",
+      "status": "no_static_getInfo",
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
+    },
+    {
+      "file": "extensions/x10clkz/Biter.js",
+      "status": "dynamic_fields",
+      "blockCount": 17,
+      "dynamicFieldCount": 17,
+      "functionFieldCount": 0,
+      "unknownFieldCount": 0,
+      "omittedDynamicBlockCount": 0,
+      "errors": []
     }
   ]
 }
