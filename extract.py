@@ -1,65 +1,108 @@
+
+import ast
 import json
 import re
 import subprocess
 import tempfile
-import shutil
 from pathlib import Path
 from datetime import datetime, timezone
+
 
 DATABASE_FILE = "blocks_database.json"
 REPORT_FILE = "extraction_report.json"
 VERSION_FILE = "version_report.json"
 
 EXCLUDED_DIRS = {
-    ".git", "node_modules", "__pycache__",
-    "dist", "build", ".github"
+    ".git",
+    "node_modules",
+    "__pycache__",
+    "dist",
+    "build",
+    "assets",
+    "coverage",
 }
 
+EXCLUDED_FILES = {
+    "webpack.config.js",
+    "vite.config.js",
+    ".eslintrc.js",
+    "babel.config.js",
+    "jest.config.js",
+}
 
-# --------------------------------------------------
-# JavaScript tokenizer
-# --------------------------------------------------
-
-TOKEN_PATTERN = re.compile(
+TOKEN_RE = re.compile(
     r"""
     (?P<space>\s+)
-    |(?P<linecomment>//[^\n]*)
-    |(?P<blockcomment>/\*[\s\S]*?\*/)
+    |(?P<line_comment>//[^\n]*)
+    |(?P<block_comment>/\*[\s\S]*?\*/)
     |(?P<string>'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*")
     |(?P<template>`(?:\\.|[^`\\])*`)
-    |(?P<number>-?\d+(?:\.\d+)?)
+    |(?P<number>\d+(?:\.\d+)?)
     |(?P<identifier>[A-Za-z_$][A-Za-z0-9_$]*)
-    |(?P<operator>=>|\.\.\.|\?\?|&&|\|\||===|!==|==|!=|<=|>=)
-    |(?P<punctuation>[{}\[\]():,.;])
+    |(?P<operator>=>|\.\.\.|\?\?=|\?\?|\?\.|&&|\|\||===|!==|==|!=|<=|>=|\+=)
+    |(?P<punctuation>[{}\[\]():,;.=+\-*/!?<>])
     |(?P<other>.)
     """,
-    re.VERBOSE
+    re.VERBOSE,
 )
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
 
 
 def tokenize(source):
     tokens = []
 
-    for match in TOKEN_PATTERN.finditer(source):
+    for match in TOKEN_RE.finditer(source):
         kind = match.lastgroup
-        value = match.group()
 
-        if kind in ("space", "linecomment", "blockcomment"):
+        if kind in ("space", "line_comment", "block_comment"):
             continue
 
-        tokens.append(value)
+        tokens.append(match.group())
 
     return tokens
 
 
-# --------------------------------------------------
-# JavaScript literal parser
-# --------------------------------------------------
+def decode_string(token):
+    if token.startswith("`"):
+        return token[1:-1]
+
+    body = token[1:-1]
+
+    replacements = {
+        r"\n": "\n",
+        r"\r": "\r",
+        r"\t": "\t",
+        r"\\": "\\",
+        r"\'": "'",
+        r'\"': '"',
+    }
+
+    for old, new in replacements.items():
+        body = body.replace(old, new)
+
+    body = re.sub(
+        r"\\u([0-9a-fA-F]{4})",
+        lambda m: chr(int(m.group(1), 16)),
+        body,
+    )
+
+    body = re.sub(
+        r"\\x([0-9a-fA-F]{2})",
+        lambda m: chr(int(m.group(1), 16)),
+        body,
+    )
+
+    return body
+
 
 class JSParser:
-    def __init__(self, tokens):
+    def __init__(self, tokens, symbols=None):
         self.tokens = tokens
         self.pos = 0
+        self.symbols = symbols or {}
 
     def peek(self):
         if self.pos >= len(self.tokens):
@@ -68,38 +111,52 @@ class JSParser:
 
     def take(self):
         value = self.peek()
+
         if value is not None:
             self.pos += 1
+
         return value
 
-    def skip_expression(self):
-        depth = 0
+    def collect_expression(self, stops):
+        start = self.pos
+
+        paren = 0
+        bracket = 0
+        brace = 0
 
         while self.pos < len(self.tokens):
             token = self.peek()
 
-            if depth == 0 and token in (",", "}", "]"):
-                return
+            if paren == 0 and bracket == 0 and brace == 0:
+                if token in stops:
+                    break
 
-            if token in ("(", "[", "{"):
-                depth += 1
-            elif token in (")", "]", "}"):
-                if depth == 0:
-                    return
-                depth -= 1
+            if token == "(":
+                paren += 1
+            elif token == ")":
+                if paren == 0:
+                    break
+                paren -= 1
+
+            elif token == "[":
+                bracket += 1
+            elif token == "]":
+                if bracket == 0:
+                    break
+                bracket -= 1
+
+            elif token == "{":
+                brace += 1
+            elif token == "}":
+                if brace == 0:
+                    break
+                brace -= 1
 
             self.pos += 1
 
-    def parse_string(self, token):
-        if token.startswith("`"):
-            return token[1:-1]
+        return self.tokens[start:self.pos]
 
-        try:
-            return json.loads(token.replace("'", '"'))
-        except Exception:
-            return token[1:-1]
-
-    def parse_value(self):
+    def parse_expression(self, stops):
         token = self.peek()
 
         if token is None:
@@ -111,35 +168,39 @@ class JSParser:
         if token == "[":
             return self.parse_array()
 
-        if token.startswith(("'", '"', "`")):
-            self.take()
-            return self.parse_string(token)
+        expression = self.collect_expression(stops)
 
-        if token in ("true", "false", "null", "undefined"):
-            self.take()
-            return {
-                "true": True,
-                "false": False,
-                "null": None,
-                "undefined": None
-            }[token]
+        if not expression:
+            return None
 
-        if re.fullmatch(r"-?\d+(?:\.\d+)?", token):
-            self.take()
-            return float(token) if "." in token else int(token)
+        if len(expression) == 1:
+            value = expression[0]
 
-        if token == "-" and self.pos + 1 < len(self.tokens):
-            if re.fullmatch(r"\d+(?:\.\d+)?", self.tokens[self.pos + 1]):
-                self.take()
-                number = self.take()
-                return -float(number) if "." in number else -int(number)
+            if value.startswith(("'", '"', "`")):
+                return decode_string(value)
 
-        # Constants and expressions are not evaluated.
-        self.skip_expression()
-        return None
+            if value == "true":
+                return True
+
+            if value == "false":
+                return False
+
+            if value in ("null", "undefined"):
+                return None
+
+            if re.fullmatch(r"\d+(?:\.\d+)?", value):
+                return float(value) if "." in value else int(value)
+
+            if value in self.symbols:
+                return self.symbols[value]
+
+        return {
+            "$expression": " ".join(expression)
+        }
 
     def parse_object(self):
         result = {}
+
         self.take()  # {
 
         while self.pos < len(self.tokens):
@@ -156,18 +217,41 @@ class JSParser:
             if token is None:
                 break
 
+            if token == "...":
+                self.collect_expression({",", "}"})
+                continue
+
             key = self.take()
 
             if key.startswith(("'", '"', "`")):
-                key = self.parse_string(key)
+                key = decode_string(key)
+
+            if key == "[":
+                self.collect_expression({"]"})
+                if self.peek() == "]":
+                    self.take()
+
+                self.collect_expression({",", "}"})
+                continue
 
             if self.peek() == ":":
                 self.take()
-                result[str(key)] = self.parse_value()
+
+                value = self.parse_expression({",", "}"})
+                result[str(key)] = value
 
             else:
-                # Shorthand properties and methods are not evaluated.
-                self.skip_expression()
+                if key in self.symbols:
+                    result[str(key)] = self.symbols[key]
+
+                else:
+                    result[str(key)] = {
+                        "$expression": str(key)
+                    }
+
+                # Skip method bodies and other shorthand syntax.
+                if self.peek() == "(":
+                    self.collect_expression({",", "}"})
 
             if self.peek() == ",":
                 self.take()
@@ -176,6 +260,7 @@ class JSParser:
 
     def parse_array(self):
         result = []
+
         self.take()  # [
 
         while self.pos < len(self.tokens):
@@ -189,7 +274,22 @@ class JSParser:
                 self.take()
                 continue
 
-            result.append(self.parse_value())
+            if token is None:
+                break
+
+            if token == "...":
+                self.take()
+
+                expression = self.parse_expression({",", "]"})
+
+                result.append({
+                    "$spread": expression
+                })
+
+            else:
+                result.append(
+                    self.parse_expression({",", "]"})
+                )
 
             if self.peek() == ",":
                 self.take()
@@ -197,76 +297,194 @@ class JSParser:
         return result
 
 
-# --------------------------------------------------
-# Find getInfo() metadata
-# --------------------------------------------------
+def matching_brace(tokens, start):
+    if start >= len(tokens) or tokens[start] != "{":
+        return None
 
-def extract_getinfo(source):
-    tokens = tokenize(source)
+    depth = 0
 
-    for i in range(len(tokens) - 2):
-        if tokens[i] != "getInfo":
-            continue
+    for index in range(start, len(tokens)):
+        if tokens[index] == "{":
+            depth += 1
 
-        if tokens[i + 1] != "(":
-            continue
+        elif tokens[index] == "}":
+            depth -= 1
 
-        # Find the method body.
-        j = i + 2
-        paren_depth = 1
-
-        while j < len(tokens) and paren_depth:
-            if tokens[j] == "(":
-                paren_depth += 1
-            elif tokens[j] == ")":
-                paren_depth -= 1
-            j += 1
-
-        if j >= len(tokens) or tokens[j] != "{":
-            continue
-
-        body_start = j
-        depth = 0
-        body_end = None
-
-        for k in range(body_start, len(tokens)):
-            if tokens[k] == "{":
-                depth += 1
-            elif tokens[k] == "}":
-                depth -= 1
-                if depth == 0:
-                    body_end = k
-                    break
-
-        if body_end is None:
-            continue
-
-        body = tokens[body_start + 1:body_end]
-
-        for r in range(len(body) - 1):
-            if body[r] == "return" and body[r + 1] == "{":
-                parser = JSParser(body[r + 1:])
-                try:
-                    info = parser.parse_value()
-                    if isinstance(info, dict):
-                        return info
-                except Exception:
-                    pass
+            if depth == 0:
+                return index
 
     return None
 
 
-# --------------------------------------------------
-# Normalize block information
-# --------------------------------------------------
+def find_getinfo_bodies(tokens):
+    bodies = []
 
-def normalize_block(block, extension_id, extension_name, file_path):
+    for i, token in enumerate(tokens):
+        if token != "getInfo":
+            continue
+
+        if i > 0 and tokens[i - 1] in (".", "?."):
+            continue
+
+        j = i + 1
+
+        if j >= len(tokens) or tokens[j] != "(":
+            continue
+
+        # Find the end of the parameter list.
+        depth = 0
+        end_params = None
+
+        for k in range(j, len(tokens)):
+            if tokens[k] == "(":
+                depth += 1
+
+            elif tokens[k] == ")":
+                depth -= 1
+
+                if depth == 0:
+                    end_params = k
+                    break
+
+        if end_params is None:
+            continue
+
+        # Find the method or arrow-function body.
+        body_start = None
+
+        for k in range(end_params + 1, min(end_params + 12, len(tokens))):
+            if tokens[k] == "{":
+                body_start = k
+                break
+
+            if tokens[k] == ";":
+                break
+
+        if body_start is None:
+            continue
+
+        body_end = matching_brace(tokens, body_start)
+
+        if body_end is None:
+            continue
+
+        bodies.append(
+            tokens[body_start + 1:body_end]
+        )
+
+    return bodies
+
+
+def collect_local_symbols(body):
+    symbols = {}
+
+    for i, token in enumerate(body):
+        if token not in ("const", "let", "var"):
+            continue
+
+        if i + 2 >= len(body):
+            continue
+
+        name = body[i + 1]
+
+        if not re.fullmatch(r"[A-Za-z_$][A-Za-z0-9_$]*", name):
+            continue
+
+        if body[i + 2] != "=":
+            continue
+
+        parser = JSParser(
+            body[i + 3:],
+            symbols,
+        )
+
+        try:
+            value = parser.parse_expression({";", ","})
+
+            if isinstance(value, (dict, list, str, int, float, bool)):
+                symbols[name] = value
+
+        except Exception:
+            continue
+
+    return symbols
+
+
+def extract_info_from_body(body):
+    symbols = collect_local_symbols(body)
+
+    for i, token in enumerate(body):
+        if token != "return":
+            continue
+
+        if i + 1 >= len(body):
+            continue
+
+        if body[i + 1] != "{":
+            continue
+
+        parser = JSParser(
+            body[i + 1:],
+            symbols,
+        )
+
+        try:
+            info = parser.parse_expression({";"})
+
+            if isinstance(info, dict):
+                return info
+
+        except Exception:
+            continue
+
+    return None
+
+
+def extract_getinfo(source):
+    tokens = tokenize(source)
+    bodies = find_getinfo_bodies(tokens)
+
+    for body in bodies:
+        info = extract_info_from_body(body)
+
+        if info is not None:
+            return info
+
+    return None
+
+
+def contains_expression(value):
+    if isinstance(value, dict):
+        if "$expression" in value or "$spread" in value:
+            return True
+
+        return any(
+            contains_expression(v)
+            for v in value.values()
+        )
+
+    if isinstance(value, list):
+        return any(
+            contains_expression(v)
+            for v in value
+        )
+
+    return False
+
+
+def normalize_block(block, info, source_file, repository):
     if not isinstance(block, dict):
         return None
 
+    if not any(
+        key in block
+        for key in ("opcode", "blockType", "text")
+    ):
+        return None
+
     return {
-        "extensionId": extension_id,
-        "extensionName": extension_name,
+        "extensionId": info.get("id"),
+        "extensionName": info.get("name"),
         "opcode": block.get("opcode"),
         "text": block.get("text"),
         "blockType": block.get("blockType"),
@@ -274,79 +492,110 @@ def normalize_block(block, extension_id, extension_name, file_path):
         "branchCount": block.get("branchCount"),
         "terminal": block.get("terminal"),
         "filter": block.get("filter"),
-        "sourceFile": file_path
+        "sourceFile": source_file,
+        "repository": repository,
     }
 
 
-# --------------------------------------------------
-# Scan one JavaScript file
-# --------------------------------------------------
+def scan_file(file_path, repository_root, repository_url):
+    relative_path = str(
+        file_path.relative_to(repository_root)
+    )
 
-def scan_file(file_path, source_root):
-    relative_path = str(file_path.relative_to(source_root))
-
-    result = {
+    report = {
         "file": relative_path,
         "status": "unknown",
         "blocksFound": 0,
-        "message": ""
+        "message": "",
     }
 
     try:
-        source = file_path.read_text(encoding="utf-8", errors="replace")
+        source = file_path.read_text(
+            encoding="utf-8",
+            errors="replace",
+        )
+
         info = extract_getinfo(source)
 
         if not info:
-            result["status"] = "no_static_getInfo"
-            result["message"] = "No statically readable getInfo() metadata."
-            return [], result
+            report["status"] = "no_static_getInfo"
+            report["message"] = (
+                "No statically readable getInfo() return object."
+            )
 
-        extension_id = info.get("id")
-        extension_name = info.get("name")
-        blocks = info.get("blocks", [])
+            return [], report
+
+        blocks = info.get("blocks")
+
+        if isinstance(blocks, dict) and "$expression" in blocks:
+            report["status"] = "dynamic_blocks"
+            report["message"] = (
+                "The blocks property is generated by an expression."
+            )
+
+            return [], report
 
         if not isinstance(blocks, list):
-            result["status"] = "dynamic_blocks"
-            result["message"] = "The blocks property is not a static array."
-            return [], result
+            report["status"] = "dynamic_blocks"
+            report["message"] = (
+                "The blocks property is not a static array."
+            )
+
+            return [], report
 
         extracted = []
 
         for block in blocks:
+            if isinstance(block, dict) and "$spread" in block:
+                continue
+
             normalized = normalize_block(
                 block,
-                extension_id,
-                extension_name,
-                relative_path
+                info,
+                relative_path,
+                repository_url,
             )
 
             if normalized:
                 extracted.append(normalized)
 
-        result["status"] = "success"
-        result["blocksFound"] = len(extracted)
+        report["blocksFound"] = len(extracted)
 
-        return extracted, result
+        if any(
+            contains_expression(block)
+            for block in blocks
+        ):
+            report["status"] = "partial"
+            report["message"] = (
+                "Some block entries contain unresolved expressions."
+            )
+
+        else:
+            report["status"] = "success"
+
+        return extracted, report
 
     except Exception as error:
-        result["status"] = "error"
-        result["message"] = str(error)
-        return [], result
+        report["status"] = "error"
+        report["message"] = str(error)
 
+        return [], report
 
-# --------------------------------------------------
-# Clone source repositories
-# --------------------------------------------------
 
 def read_sources():
     path = Path("sources.txt")
 
     if not path.exists():
-        raise FileNotFoundError("sources.txt was not found.")
+        raise FileNotFoundError(
+            "sources.txt was not found."
+        )
 
     sources = []
 
-    for line in path.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(
+        encoding="utf-8"
+    ).splitlines():
+
         line = line.strip()
 
         if line and not line.startswith("#"):
@@ -357,28 +606,70 @@ def read_sources():
 
 def clone_repository(url, destination):
     subprocess.run(
-        ["git", "clone", "--depth", "1", url, str(destination)],
+        [
+            "git",
+            "clone",
+            "--depth",
+            "1",
+            url,
+            str(destination),
+        ],
         check=True,
         capture_output=True,
-        text=True
+        text=True,
     )
 
 
-# --------------------------------------------------
-# Main extraction
-# --------------------------------------------------
+def get_commit(repository_path):
+    result = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(repository_path),
+            "rev-parse",
+            "HEAD",
+        ],
+        capture_output=True,
+        text=True,
+    )
+
+    return result.stdout.strip()
+
+
+def should_scan(path, extensions_root):
+    if not path.is_file():
+        return False
+
+    if path.suffix.lower() != ".js":
+        return False
+
+    if path.name in EXCLUDED_FILES:
+        return False
+
+    relative = path.relative_to(extensions_root)
+
+    if any(
+        part in EXCLUDED_DIRS
+        for part in relative.parts
+    ):
+        return False
+
+    return True
+
 
 def main():
     print("Starting CCW extension extraction...")
 
-    all_blocks = []
-    all_reports = []
-    version_reports = []
-
     sources = read_sources()
 
     if not sources:
-        raise RuntimeError("No source repositories found in sources.txt.")
+        raise RuntimeError(
+            "No source repositories found in sources.txt."
+        )
+
+    all_blocks = []
+    all_reports = []
+    version_reports = []
 
     with tempfile.TemporaryDirectory() as temporary:
         temporary_path = Path(temporary)
@@ -386,93 +677,173 @@ def main():
         for index, url in enumerate(sources):
             print(f"Cloning source {index + 1}: {url}")
 
-            repository_path = temporary_path / f"source_{index}"
+            repository_path = (
+                temporary_path / f"source_{index}"
+            )
 
             try:
-                clone_repository(url, repository_path)
+                clone_repository(
+                    url,
+                    repository_path,
+                )
 
             except Exception as error:
                 all_reports.append({
                     "repository": url,
                     "status": "clone_error",
-                    "message": str(error)
+                    "blocksFound": 0,
+                    "message": str(error),
                 })
+
                 continue
 
-            commit = subprocess.run(
-                ["git", "-C", str(repository_path), "rev-parse", "HEAD"],
-                capture_output=True,
-                text=True
-            ).stdout.strip()
+            commit = get_commit(repository_path)
 
             version_reports.append({
                 "repository": url,
                 "commit": commit,
                 "versionStatus": "unknown",
-                "note": "Only the default branch was scanned."
+                "note": (
+                    "Only the default branch was scanned. "
+                    "Other branches and historical commits "
+                    "have not been scanned."
+                ),
             })
 
-            for file_path in repository_path.rglob("*.js"):
-                if any(part in EXCLUDED_DIRS for part in file_path.parts):
+            extensions_root = repository_path / "extensions"
+
+            if not extensions_root.is_dir():
+                all_reports.append({
+                    "repository": url,
+                    "status": "missing_extensions_directory",
+                    "blocksFound": 0,
+                    "message": (
+                        "The repository has no extensions/ directory."
+                    ),
+                })
+
+                continue
+
+            files = sorted(
+                extensions_root.rglob("*.js")
+            )
+
+            for file_path in files:
+                if not should_scan(
+                    file_path,
+                    extensions_root,
+                ):
                     continue
 
-                blocks, report = scan_file(file_path, repository_path)
+                blocks, report = scan_file(
+                    file_path,
+                    repository_path,
+                    url,
+                )
 
                 report["repository"] = url
+
                 all_reports.append(report)
                 all_blocks.extend(blocks)
 
-    # Detect duplicate opcodes.
+                print(
+                    f"{report['status']}: "
+                    f"{report['file']} "
+                    f"({report['blocksFound']} blocks)"
+                )
+
+    # Duplicate opcode report.
     opcode_map = {}
 
     for block in all_blocks:
         opcode = block.get("opcode")
 
-        if opcode:
-            opcode_map.setdefault(opcode, []).append(block["sourceFile"])
+        if isinstance(opcode, str) and opcode:
+            opcode_map.setdefault(
+                opcode,
+                [],
+            ).append({
+                "sourceFile": block["sourceFile"],
+                "repository": block["repository"],
+            })
 
     duplicates = {
-        opcode: files
-        for opcode, files in opcode_map.items()
-        if len(files) > 1
+        opcode: locations
+        for opcode, locations in opcode_map.items()
+        if len(locations) > 1
     }
+
+    status_counts = {}
+
+    for report in all_reports:
+        status = report.get("status", "unknown")
+
+        status_counts[status] = (
+            status_counts.get(status, 0) + 1
+        )
+
+    generated_at = now()
 
     database = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "generatedAt": generated_at,
         "sourceCount": len(sources),
+        "fileCount": len(all_reports),
         "blockCount": len(all_blocks),
         "blocks": all_blocks,
-        "duplicateOpcodes": duplicates
+        "duplicateOpcodes": duplicates,
     }
 
-    report_data = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
+    extraction_report = {
+        "generatedAt": generated_at,
         "fileCount": len(all_reports),
-        "successfulFiles": sum(
-            1 for item in all_reports
-            if item.get("status") == "success"
+        "successfulFiles": status_counts.get("success", 0),
+        "partialFiles": status_counts.get("partial", 0),
+        "dynamicFiles": status_counts.get("dynamic_blocks", 0),
+        "unrecognizedFiles": status_counts.get(
+            "no_static_getInfo", 0
         ),
-        "files": all_reports
+        "errorFiles": status_counts.get("error", 0),
+        "statusCounts": status_counts,
+        "files": all_reports,
     }
 
     Path(DATABASE_FILE).write_text(
-        json.dumps(database, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        json.dumps(
+            database,
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
     )
 
     Path(REPORT_FILE).write_text(
-        json.dumps(report_data, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        json.dumps(
+            extraction_report,
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
     )
 
     Path(VERSION_FILE).write_text(
-        json.dumps(version_reports, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        json.dumps(
+            version_reports,
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
     )
 
+    print("")
     print("Extraction finished.")
-    print(f"Blocks extracted: {len(all_blocks)}")
+    print(f"Repositories: {len(sources)}")
     print(f"Files scanned: {len(all_reports)}")
+    print(f"Blocks extracted: {len(all_blocks)}")
+    print(f"Successful files: {status_counts.get('success', 0)}")
+    print(f"Partial files: {status_counts.get('partial', 0)}")
+    print(f"Dynamic files: {status_counts.get('dynamic_blocks', 0)}")
+    print(f"Unrecognized files: {status_counts.get('no_static_getInfo', 0)}")
+    print(f"Errors: {status_counts.get('error', 0)}")
     print(f"Duplicate opcodes: {len(duplicates)}")
 
 
