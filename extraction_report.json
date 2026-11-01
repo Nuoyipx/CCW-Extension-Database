@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-11-01T18:15:21.083Z",
+  "schemaVersion": 4,
+  "extractorVersion": "5.0.0",
+  "generatedAt": "2026-11-01T18:24:38.670Z",
   "fileCount": 72,
-  "successfulFiles": 15,
-  "partialFiles": 33,
-  "dynamicFiles": 3,
+  "blockCount": 911,
+  "unresolvedFieldCount": 83,
+  "successfulFiles": 33,
+  "partialFiles": 17,
+  "dynamicFiles": 2,
   "unrecognizedFiles": 20,
-  "errorFiles": 1,
+  "errorFiles": 0,
   "statusCounts": {
-    "success": 15,
+    "success": 33,
     "no_static_getInfo": 20,
-    "dynamic_blocks": 3,
-    "partial": 33,
-    "error": 1
+    "dynamic_blocks": 2,
+    "partial": 17
   },
   "files": [
     {
       "file": "extensions/Arkos/advancedControls.js",
       "status": "success",
       "blocksFound": 10,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -25,6 +30,8 @@
       "file": "extensions/Arkos/Archivecode.js",
       "status": "success",
       "blocksFound": 22,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -32,6 +39,8 @@
       "file": "extensions/Arkos/Archivecode新版.js",
       "status": "success",
       "blocksFound": 22,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -39,6 +48,8 @@
       "file": "extensions/Arkos/Archivecode旧版.js",
       "status": "success",
       "blocksFound": 21,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -46,6 +57,8 @@
       "file": "extensions/Arkos/arkosExtension.js",
       "status": "success",
       "blocksFound": 69,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -53,6 +66,8 @@
       "file": "extensions/Arkos/moreDataTypes/l10n.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -60,27 +75,40 @@
       "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "status": "dynamic_blocks",
       "blocksFound": 0,
-      "message": "The blocks property is not a static array.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks",
+          "expression": "blocks"
+        }
+      ],
+      "message": "The blocks property is not a statically readable array.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Arkos/moreDataTypes/SafeObject.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Arkos/moreSensing.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 20,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Arkos/test.js",
       "status": "success",
       "blocksFound": 2,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -88,111 +116,245 @@
       "file": "extensions/dannydev/scCOM.js",
       "status": "success",
       "blocksFound": 26,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DilemmaGX/3DMath/Three.js",
-      "status": "dynamic_blocks",
-      "blocksFound": 0,
-      "message": "The blocks property is not a static array.",
+      "status": "success",
+      "blocksFound": 62,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DilemmaGX/Animator/Animator.js",
       "status": "partial",
       "blocksFound": 6,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DilemmaGX/rxfs/rxFS.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 12,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DollyPro/dollytest.js",
       "status": "partial",
       "blocksFound": 50,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 19,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].hideFromPalette",
+          "expression": "UnaryExpression"
+        },
+        {
+          "path": "blocks[0].onClick",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[1].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[1].onClick",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[9].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[10].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[11].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[12].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[18].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[33].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[42].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[43].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[47].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[50].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[51].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[57]",
+          "expression": "unresolved spread element"
+        },
+        {
+          "path": "blocks[58].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[59].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        },
+        {
+          "path": "blocks[60].hideFromPalette",
+          "expression": "this.hideExtraBlocks"
+        }
+      ],
+      "message": "19 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/example/example-ext.js",
       "status": "partial",
       "blocksFound": 9,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "ArrowFunctionExpression"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/CocreaFetch.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 1,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/comment blocks.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/Turbowarp/BigInt.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 21,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/Turbowarp/comment blocks.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/FurryR/lpp.js",
       "status": "dynamic_blocks",
       "blocksFound": 0,
-      "message": "The blocks property is not a static array.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks",
+          "expression": "this.extension.export(...)"
+        }
+      ],
+      "message": "The blocks property is not a statically readable array.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/FurryR/not.js.js",
       "status": "partial",
       "blocksFound": 14,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.getHelp"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/kukemc/I18n/extension.js",
       "status": "partial",
-      "blocksFound": 7,
-      "message": "Some block entries contain unresolved expressions.",
+      "blocksFound": 27,
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[16]",
+          "expression": "printSupportedLanguages"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/kukemc/I18n/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/kukemc/WebHook/extension.js",
-      "status": "partial",
-      "blocksFound": 0,
-      "message": "Some block entries contain unresolved expressions.",
+      "status": "success",
+      "blocksFound": 8,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/kukemc/WebHook/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -200,6 +362,8 @@
       "file": "extensions/Nights/stats.js/src/block-info.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -207,6 +371,8 @@
       "file": "extensions/Nights/stats.js/src/lang.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -214,6 +380,8 @@
       "file": "extensions/Nights/stats.js/src/main.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -221,6 +389,8 @@
       "file": "extensions/Nights/stats.js/src/stats.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -228,55 +398,72 @@
       "file": "extensions/Nights/tilemap/tilemap.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/PortFromTurboWarp/NOname-awa/Morecomparison.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 21,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/PortFromTurboWarp/stretch.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 8,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 7,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Project/Project.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 19,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/qxsck/data-analysis.js",
-      "status": "error",
-      "blocksFound": 0,
-      "message": "Unexpected character '；'. (6:26)",
+      "status": "success",
+      "blocksFound": 20,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
+      "normalizationNote": "Full-width semicolons outside strings/comments were normalized for parsing.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/qxsck/easy-struct.js",
       "status": "success",
       "blocksFound": 22,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -284,6 +471,8 @@
       "file": "extensions/qxsck/matrix.js",
       "status": "success",
       "blocksFound": 5,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -291,6 +480,8 @@
       "file": "extensions/qxsck/str-mani.js",
       "status": "success",
       "blocksFound": 48,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -298,6 +489,8 @@
       "file": "extensions/qxsck/var-and-list.js",
       "status": "success",
       "blocksFound": 42,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -305,41 +498,106 @@
       "file": "extensions/SimonShiki/scopeVar.js",
       "status": "success",
       "blocksFound": 9,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 19,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/sipc.ink/Consoles/Consoles.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 12,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/sipc.ink/Recording/Recording.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/six-6/datetime.js",
       "status": "partial",
       "blocksFound": 11,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 13,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].arguments.YEAR.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[0].arguments.MONTH.defaultValue",
+          "expression": "BinaryExpression"
+        },
+        {
+          "path": "blocks[0].arguments.DATE.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[1].arguments.YEAR.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[1].arguments.MONTH.defaultValue",
+          "expression": "BinaryExpression"
+        },
+        {
+          "path": "blocks[1].arguments.DATE.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[1].arguments.HOUR.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[1].arguments.MINUTE.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[1].arguments.SECOND.defaultValue",
+          "expression": "(...)"
+        },
+        {
+          "path": "blocks[4].arguments.DAYS.defaultValue",
+          "expression": "this.diff(...)"
+        },
+        {
+          "path": "blocks[5].arguments.TIME.defaultValue",
+          "expression": "this.now(...)"
+        },
+        {
+          "path": "blocks[6].arguments.TIME2.defaultValue",
+          "expression": "this.now(...)"
+        },
+        {
+          "path": "blocks[8].arguments.TIME.defaultValue",
+          "expression": "this.now(...)"
+        }
+      ],
+      "message": "13 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/six-6/regexp.js",
       "status": "success",
       "blocksFound": 20,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -347,6 +605,8 @@
       "file": "extensions/wit_cat/BBcode/bbcode.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -354,6 +614,8 @@
       "file": "extensions/wit_cat/BBcode/htmlToBBCode.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -361,13 +623,22 @@
       "file": "extensions/wit_cat/BBcode/index.js",
       "status": "partial",
       "blocksFound": 31,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/MarkDown.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -375,6 +646,8 @@
       "file": "extensions/wit_cat/BBcode/prism.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -382,6 +655,8 @@
       "file": "extensions/wit_cat/File_Helper/base64.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -389,20 +664,36 @@
       "file": "extensions/wit_cat/File_Helper/File_Helper.js",
       "status": "partial",
       "blocksFound": 29,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/FPS.js",
       "status": "partial",
       "blocksFound": 9,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/GamePad.js",
       "status": "success",
       "blocksFound": 6,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -410,27 +701,122 @@
       "file": "extensions/wit_cat/IndexedDB.js",
       "status": "partial",
       "blocksFound": 21,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 2,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        },
+        {
+          "path": "blocks[1].onClick",
+          "expression": "ArrowFunctionExpression"
+        }
+      ],
+      "message": "2 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Input.js",
       "status": "partial",
       "blocksFound": 29,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Interpreter/Interpreter.js",
       "status": "partial",
       "blocksFound": 14,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 18,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        },
+        {
+          "path": "blocks[2].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[2].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[2].dynamicArgsInfo.defaultValues",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[3].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[3].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[3].dynamicArgsInfo.defaultValues",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[4].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[4].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[4].dynamicArgsInfo.defaultValues",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[6].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[6].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[6].dynamicArgsInfo.defaultValues",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[7].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[7].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[7].dynamicArgsInfo.defaultValues",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[14].dynamicArgsInfo.endText",
+          "expression": "ArrowFunctionExpression"
+        },
+        {
+          "path": "blocks[14].dynamicArgsInfo.joinCh",
+          "expression": "ArrowFunctionExpression"
+        }
+      ],
+      "message": "18 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Interpreter/math.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -438,13 +824,22 @@
       "file": "extensions/wit_cat/MarkDown/index.js",
       "status": "partial",
       "blocksFound": 26,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/MarkDown/MarkDown.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -452,6 +847,8 @@
       "file": "extensions/wit_cat/MarkDown/prism.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -459,13 +856,26 @@
       "file": "extensions/wit_cat/More_Mouse.js",
       "status": "partial",
       "blocksFound": 31,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 2,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        },
+        {
+          "path": "blocks[17].onClick",
+          "expression": "this.url.bind(...)"
+        }
+      ],
+      "message": "2 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Sensory_Control.js",
       "status": "success",
       "blocksFound": 3,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -473,48 +883,137 @@
       "file": "extensions/wit_cat/Zip/extension.js",
       "status": "partial",
       "blocksFound": 11,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 1,
+      "unresolvedFields": [
+        {
+          "path": "blocks[0].onClick",
+          "expression": "this.docs"
+        }
+      ],
+      "message": "1 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Zip/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wtkzq/complex/Complex.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 11,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/x10clkz/Biter.js",
       "status": "partial",
       "blocksFound": 0,
-      "message": "Some block entries contain unresolved expressions.",
+      "unresolvedFieldCount": 15,
+      "unresolvedFields": [
+        {
+          "path": "blocks[1]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[2]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[3]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[4]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[5]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[6]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[8]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[9]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[10]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[11]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[12]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[13]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[14]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[15]",
+          "expression": "this.b(...)"
+        },
+        {
+          "path": "blocks[16]",
+          "expression": "this.b(...)"
+        }
+      ],
+      "message": "15 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/constants.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/extension.js",
       "status": "partial",
-      "blocksFound": 0,
-      "message": "Some block entries contain unresolved expressions.",
+      "blocksFound": 5,
+      "unresolvedFieldCount": 2,
+      "unresolvedFields": [
+        {
+          "path": "blocks[2]",
+          "expression": "unresolved spread element"
+        },
+        {
+          "path": "blocks[9]",
+          "expression": "unresolved spread element"
+        }
+      ],
+      "message": "2 unresolved field(s).",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
+      "unresolvedFieldCount": 0,
+      "unresolvedFields": [],
       "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     }
