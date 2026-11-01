@@ -1,0 +1,43 @@
+name: Extract CCW Extension Database
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - "sources.txt"
+      - "extract.py"
+      - ".github/workflows/extract.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout database repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run extractor
+        run: python extract.py
+
+      - name: Save generated database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add blocks_database.json extraction_report.json version_report.json
+
+          if git diff --cached --quiet; then
+            echo "No database changes."
+          else
+            git commit -m "Update extension database"
+            git push
+          fi
