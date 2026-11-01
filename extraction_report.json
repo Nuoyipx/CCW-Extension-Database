@@ -1,55 +1,79 @@
 {
-  "generatedAt": "2026-11-01T16:42:42.611290+00:00",
-  "fileCount": 91,
-  "successfulFiles": 52,
+  "generatedAt": "2026-11-01T17:02:55.408430+00:00",
+  "fileCount": 72,
+  "successfulFiles": 1,
+  "partialFiles": 49,
+  "dynamicFiles": 1,
+  "unrecognizedFiles": 21,
+  "errorFiles": 0,
+  "statusCounts": {
+    "partial": 49,
+    "no_static_getInfo": 21,
+    "success": 1,
+    "dynamic_blocks": 1
+  },
   "files": [
     {
-      "file": ".eslintrc.js",
+      "file": "extensions/Arkos/Archivecode.js",
+      "status": "partial",
+      "blocksFound": 22,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Arkos/Archivecode新版.js",
+      "status": "partial",
+      "blocksFound": 22,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Arkos/Archivecode旧版.js",
+      "status": "partial",
+      "blocksFound": 21,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Arkos/advancedControls.js",
+      "status": "partial",
+      "blocksFound": 10,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Arkos/arkosExtension.js",
+      "status": "partial",
+      "blocksFound": 69,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Arkos/moreDataTypes/SafeObject.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "utils/cast.js",
+      "file": "extensions/Arkos/moreDataTypes/l10n.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "utils/color.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "status": "partial",
+      "blocksFound": 12,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "utils/use-expandable-blocks.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "utils/extendable_example.js",
-      "status": "success",
-      "blocksFound": 7,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "docs/example-extension.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/dannydev/scCOM.js",
-      "status": "success",
-      "blocksFound": 26,
-      "message": "",
+      "file": "extensions/Arkos/moreSensing.js",
+      "status": "partial",
+      "blocksFound": 20,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -60,584 +84,437 @@
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/Arkos/Archivecode.js",
-      "status": "success",
-      "blocksFound": 22,
-      "message": "",
+      "file": "extensions/DilemmaGX/3DMath/Three.js",
+      "status": "partial",
+      "blocksFound": 62,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/Arkos/moreSensing.js",
-      "status": "success",
-      "blocksFound": 20,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/arkosExtension.js",
-      "status": "success",
-      "blocksFound": 69,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/Archivecode旧版.js",
-      "status": "success",
-      "blocksFound": 21,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/Archivecode新版.js",
-      "status": "success",
-      "blocksFound": 22,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/advancedControls.js",
-      "status": "success",
-      "blocksFound": 10,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/easy-struct.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/matrix.js",
-      "status": "success",
-      "blocksFound": 5,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/var-and-list.js",
-      "status": "success",
-      "blocksFound": 42,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/str-mani.js",
-      "status": "success",
-      "blocksFound": 48,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/qxsck/data-analysis.js",
-      "status": "success",
-      "blocksFound": 20,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Project/Project.js",
-      "status": "success",
-      "blocksFound": 5,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/x10clkz/Biter.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/IndexedDB.js",
-      "status": "success",
-      "blocksFound": 21,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/More_Mouse.js",
-      "status": "success",
-      "blocksFound": 31,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/GamePad.js",
-      "status": "success",
+      "file": "extensions/DilemmaGX/Animator/Animator.js",
+      "status": "partial",
       "blocksFound": 6,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/Sensory_Control.js",
-      "status": "success",
-      "blocksFound": 3,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/FPS.js",
-      "status": "success",
-      "blocksFound": 9,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/Input.js",
-      "status": "success",
-      "blocksFound": 29,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/example/example-ext.js",
-      "status": "success",
-      "blocksFound": 9,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/six-6/regexp.js",
-      "status": "success",
-      "blocksFound": 20,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/six-6/datetime.js",
-      "status": "success",
-      "blocksFound": 11,
-      "message": "",
+      "file": "extensions/DilemmaGX/rxfs/rxFS.js",
+      "status": "partial",
+      "blocksFound": 12,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DollyPro/dollytest.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 50,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/CocreaFetch.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 1,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Fath/Turbowarp/BigInt.js",
+      "status": "partial",
+      "blocksFound": 21,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Fath/Turbowarp/comment blocks.js",
+      "status": "partial",
+      "blocksFound": 5,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/comment blocks.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 5,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/PortFromTurboWarp/stretch.js",
-      "status": "success",
-      "blocksFound": 8,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/FurryR/lpp.js",
       "status": "dynamic_blocks",
       "blocksFound": 0,
-      "message": "The blocks property is not a static array.",
+      "message": "The blocks property is generated by an expression.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/FurryR/not.js.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 14,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Nights/stats.js",
-      "status": "error",
-      "blocksFound": 0,
-      "message": "[Errno 21] Is a directory: '/tmp/tmprpjcmfq0/source_0/extensions/Nights/stats.js'",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/SimonShiki/scopeVar.js",
-      "status": "success",
-      "blocksFound": 9,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/extension.js",
-      "status": "success",
-      "blocksFound": 7,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/webpack.config.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/extension.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/webpack.config.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/WebHook/assets/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/kukemc/I18n/assets/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Nights/stats.js/vite.config.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Nights/tilemap/tilemap.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Nights/stats.js/src/stats.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Nights/stats.js/src/main.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Nights/stats.js/src/block-info.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Nights/stats.js/src/lang.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/main.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/stats.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/Nights/tilemap/tilemap.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/PortFromTurboWarp/NOname-awa/Morecomparison.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 21,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 7,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/YUEN/FeishuExtension/webpack.config.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/PortFromTurboWarp/stretch.js",
+      "status": "partial",
+      "blocksFound": 8,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/YUEN/FeishuExtension/.eslintrc.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/Project/Project.js",
+      "status": "partial",
+      "blocksFound": 5,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/YUEN/FeishuExtension/src/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "status": "partial",
+      "blocksFound": 19,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
+      "file": "extensions/SimonShiki/scopeVar.js",
+      "status": "partial",
+      "blocksFound": 9,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/constants.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/Fath/Turbowarp/BigInt.js",
-      "status": "success",
-      "blocksFound": 21,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Fath/Turbowarp/comment blocks.js",
-      "status": "success",
+      "file": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "status": "partial",
       "blocksFound": 5,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
-      "status": "success",
-      "blocksFound": 19,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/File_Helper/base64.js",
+      "file": "extensions/YUEN/FeishuExtension/src/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/File_Helper/File_Helper.js",
-      "status": "success",
-      "blocksFound": 29,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/MarkDown/MarkDown.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/wit_cat/MarkDown/index.js",
-      "status": "success",
+      "file": "extensions/dannydev/scCOM.js",
+      "status": "partial",
       "blocksFound": 26,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/MarkDown/prism.js",
+      "file": "extensions/example/example-ext.js",
+      "status": "partial",
+      "blocksFound": 9,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/kukemc/I18n/extension.js",
+      "status": "partial",
+      "blocksFound": 28,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/kukemc/I18n/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/Zip/index.js",
+      "file": "extensions/kukemc/WebHook/extension.js",
+      "status": "partial",
+      "blocksFound": 8,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/kukemc/WebHook/index.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/Zip/extension.js",
-      "status": "success",
+      "file": "extensions/qxsck/data-analysis.js",
+      "status": "partial",
+      "blocksFound": 20,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/qxsck/easy-struct.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/qxsck/matrix.js",
+      "status": "partial",
+      "blocksFound": 5,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/qxsck/str-mani.js",
+      "status": "partial",
+      "blocksFound": 48,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/qxsck/var-and-list.js",
+      "status": "partial",
+      "blocksFound": 42,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
+      "status": "partial",
+      "blocksFound": 19,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/sipc.ink/Consoles/Consoles.js",
+      "status": "partial",
+      "blocksFound": 12,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/sipc.ink/Recording/Recording.js",
+      "status": "partial",
+      "blocksFound": 5,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/six-6/datetime.js",
+      "status": "partial",
       "blocksFound": 11,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/Zip/webpack.config.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/six-6/regexp.js",
+      "status": "partial",
+      "blocksFound": 20,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/MarkDown.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/bbcode.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/htmlToBBCode.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/index.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 31,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/BBcode/prism.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/FPS.js",
+      "status": "partial",
+      "blocksFound": 9,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/File_Helper.js",
+      "status": "partial",
+      "blocksFound": 29,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/base64.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/GamePad.js",
+      "status": "partial",
+      "blocksFound": 6,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/IndexedDB.js",
+      "status": "partial",
+      "blocksFound": 21,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/Input.js",
+      "status": "partial",
+      "blocksFound": 29,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Interpreter/Interpreter.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 14,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wit_cat/Interpreter/math.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/BBcode/assets/index.js",
+      "file": "extensions/wit_cat/MarkDown/MarkDown.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/Zip/assets/index.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "file": "extensions/wit_cat/MarkDown/index.js",
+      "status": "partial",
+      "blocksFound": 26,
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wit_cat/MarkDown/assets/index.js",
+      "file": "extensions/wit_cat/MarkDown/prism.js",
       "status": "no_static_getInfo",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
+      "message": "No statically readable getInfo() return object.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/More_Mouse.js",
+      "status": "partial",
+      "blocksFound": 31,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/Sensory_Control.js",
+      "status": "partial",
+      "blocksFound": 3,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/Zip/extension.js",
+      "status": "partial",
+      "blocksFound": 11,
+      "message": "Some block entries contain unresolved expressions.",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "file": "extensions/wit_cat/Zip/index.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "message": "No statically readable getInfo() return object.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/wtkzq/complex/Complex.js",
-      "status": "success",
+      "status": "partial",
       "blocksFound": 11,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
-      "file": "extensions/wtkzq/complex/assets/index.js",
-      "status": "no_static_getInfo",
+      "file": "extensions/x10clkz/Biter.js",
+      "status": "partial",
       "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/Consoles/Consoles.js",
-      "status": "success",
-      "blocksFound": 12,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/Recording/Recording.js",
-      "status": "success",
-      "blocksFound": 5,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
-      "status": "success",
-      "blocksFound": 19,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/moreDataTypes/SafeObject.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/Arkos/moreDataTypes/l10n.js",
-      "status": "no_static_getInfo",
-      "blocksFound": 0,
-      "message": "No statically readable getInfo() metadata.",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/DilemmaGX/3DMath/Three.js",
-      "status": "success",
-      "blocksFound": 0,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/DilemmaGX/rxfs/rxFS.js",
-      "status": "success",
-      "blocksFound": 12,
-      "message": "",
-      "repository": "https://github.com/Gandi-IDE/custom-extension"
-    },
-    {
-      "file": "extensions/DilemmaGX/Animator/Animator.js",
-      "status": "success",
-      "blocksFound": 6,
-      "message": "",
+      "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     }
   ]
