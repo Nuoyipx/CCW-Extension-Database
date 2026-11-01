@@ -1,1 +1,1 @@
-https://github.com/Nuoyipx/CCW-Extension-Database
+https://github.com/Gandi-IDE/custom-extension
