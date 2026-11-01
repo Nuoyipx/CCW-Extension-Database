@@ -1,53 +1,82 @@
 {
-  "schemaVersion": 6,
-  "extractorVersion": "7.0.0",
-  "generatedAt": "2026-11-01T18:41:37.056Z",
+  "schemaVersion": 7,
+  "extractorVersion": "8.0.0",
+  "generatedAt": "2026-11-01T18:56:14.548Z",
   "sourceCount": 1,
   "fileCount": 84,
-  "blockCount": 1097,
-  "successfulFiles": 10,
+  "blockCount": 996,
+  "successfulFiles": 9,
   "dynamicFiles": 1,
-  "dynamicFieldFiles": 29,
+  "dynamicFieldFiles": 30,
   "unknownFiles": 13,
   "unrecognizedFiles": 31,
   "errorFiles": 0,
-  "dynamicFieldCount": 1090,
+  "dynamicFieldCount": 998,
+  "blocksWithDynamicFields": 876,
   "functionFieldCount": 29,
   "unknownFieldCount": 45,
-  "omittedDynamicBlockCount": 1,
+  "omittedDynamicBlockCount": 102,
   "statusCounts": {
-    "dynamic_fields": 29,
+    "dynamic_fields": 30,
     "no_static_getInfo": 31,
     "unknown_fields": 13,
-    "success": 10,
+    "success": 9,
     "dynamic_blocks": 1
   },
   "repositories": [
     {
       "source": "https://github.com/Gandi-IDE/custom-extension",
       "fileCount": 84,
-      "blockCount": 1097
+      "blockCount": 996
     }
   ],
   "files": [
     {
       "file": "extensions/Arkos/Archivecode.js",
       "status": "dynamic_fields",
-      "blockCount": 25,
-      "dynamicFieldCount": 25,
+      "blockCount": 22,
+      "dynamicFieldCount": 22,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "17",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "19",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/Arkos/Archivecode新版.js",
       "status": "dynamic_fields",
-      "blockCount": 25,
-      "dynamicFieldCount": 25,
+      "blockCount": 22,
+      "dynamicFieldCount": 22,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "17",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "19",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -58,26 +87,87 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/Arkos/advancedControls.js",
       "status": "dynamic_fields",
-      "blockCount": 11,
-      "dynamicFieldCount": 15,
+      "blockCount": 10,
+      "dynamicFieldCount": 14,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "7",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/Arkos/arkosExtension.js",
       "status": "dynamic_fields",
-      "blockCount": 82,
-      "dynamicFieldCount": 77,
+      "blockCount": 69,
+      "dynamicFieldCount": 64,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 13,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "5",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "9",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "24",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "28",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "36",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "44",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "49",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "53",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "63",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "72",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "73",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "79",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -88,6 +178,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -98,16 +189,39 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "status": "unknown_fields",
-      "blockCount": 64,
-      "dynamicFieldCount": 115,
+      "blockCount": 59,
+      "dynamicFieldCount": 110,
       "functionFieldCount": 7,
       "unknownFieldCount": 18,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 5,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "7",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "15",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "34",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "49",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -118,6 +232,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -128,26 +243,67 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/DilemmaGX/3DMath/Three.js",
       "status": "dynamic_fields",
-      "blockCount": 69,
-      "dynamicFieldCount": 69,
+      "blockCount": 62,
+      "dynamicFieldCount": 62,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 7,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "7",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "20",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "28",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "40",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "56",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/DilemmaGX/Animator/Animator.js",
       "status": "unknown_fields",
-      "blockCount": 8,
-      "dynamicFieldCount": 8,
+      "blockCount": 6,
+      "dynamicFieldCount": 6,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 2,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "6",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -158,16 +314,51 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/DollyPro/dollytest.js",
       "status": "unknown_fields",
-      "blockCount": 58,
-      "dynamicFieldCount": 90,
+      "blockCount": 50,
+      "dynamicFieldCount": 82,
       "functionFieldCount": 2,
       "unknownFieldCount": 16,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 8,
+      "omittedDynamicBlocks": [
+        {
+          "index": "2",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "8",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "15",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "25",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "34",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "44",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "52",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "57",
+          "reason": "spread: ConditionalExpression"
+        }
+      ],
       "errors": []
     },
     {
@@ -178,6 +369,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -188,6 +380,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -198,6 +391,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -208,27 +402,43 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/FurryR/lpp.js",
-      "status": "success",
+      "status": "dynamic_fields",
       "blockCount": 25,
-      "dynamicFieldCount": 0,
+      "dynamicFieldCount": 9,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": [],
       "lppStaticExtraction": true
     },
     {
       "file": "extensions/FurryR/not.js.js",
       "status": "unknown_fields",
-      "blockCount": 17,
-      "dynamicFieldCount": 17,
+      "blockCount": 14,
+      "dynamicFieldCount": 14,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "5",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "9",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -239,6 +449,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -249,6 +460,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -259,6 +471,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -269,6 +482,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -279,6 +493,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -289,6 +504,12 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": null,
+          "reason": "blocks is not a static array"
+        }
+      ],
       "errors": []
     },
     {
@@ -299,26 +520,39 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
       "status": "dynamic_fields",
-      "blockCount": 8,
-      "dynamicFieldCount": 8,
+      "blockCount": 7,
+      "dynamicFieldCount": 7,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/PortFromTurboWarp/stretch.js",
       "status": "dynamic_fields",
-      "blockCount": 9,
-      "dynamicFieldCount": 9,
+      "blockCount": 8,
+      "dynamicFieldCount": 8,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -329,6 +563,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -339,6 +574,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -349,6 +585,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -359,6 +596,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -369,16 +607,39 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/YUEN/FeishuExtension/src/extension.js",
       "status": "dynamic_fields",
-      "blockCount": 10,
-      "dynamicFieldCount": 10,
+      "blockCount": 5,
+      "dynamicFieldCount": 5,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 5,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "2",
+          "reason": "spread: member expression(...)"
+        },
+        {
+          "index": "3",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "8",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "9",
+          "reason": "spread: member expression(...)"
+        }
+      ],
       "errors": []
     },
     {
@@ -389,6 +650,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -399,16 +661,39 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/dannydev/scCOM.js",
       "status": "dynamic_fields",
-      "blockCount": 31,
-      "dynamicFieldCount": 31,
+      "blockCount": 26,
+      "dynamicFieldCount": 26,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 5,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "1",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "5",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "12",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "20",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -419,6 +704,7 @@
       "functionFieldCount": 1,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -429,6 +715,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -439,6 +726,7 @@
       "functionFieldCount": 1,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -449,6 +737,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -459,6 +748,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -469,16 +759,27 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/kukemc/WebHook/extension.js",
       "status": "dynamic_fields",
-      "blockCount": 10,
-      "dynamicFieldCount": 10,
+      "blockCount": 8,
+      "dynamicFieldCount": 8,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 2,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "4",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -489,6 +790,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -499,6 +801,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -509,6 +812,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -519,6 +823,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -529,6 +834,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -539,16 +845,23 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/qxsck/var-and-list.js",
       "status": "dynamic_fields",
-      "blockCount": 43,
-      "dynamicFieldCount": 43,
+      "blockCount": 42,
+      "dynamicFieldCount": 42,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "41",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -559,6 +872,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -569,6 +883,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -579,6 +894,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -589,16 +905,27 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/six-6/regexp.js",
       "status": "dynamic_fields",
-      "blockCount": 22,
-      "dynamicFieldCount": 22,
+      "blockCount": 20,
+      "dynamicFieldCount": 20,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 2,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "11",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -609,6 +936,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -619,6 +947,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -629,6 +958,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -639,16 +969,23 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/BBcode/index.js",
       "status": "unknown_fields",
-      "blockCount": 32,
-      "dynamicFieldCount": 32,
+      "blockCount": 31,
+      "dynamicFieldCount": 31,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "2",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -659,26 +996,55 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/FPS.js",
       "status": "unknown_fields",
-      "blockCount": 12,
-      "dynamicFieldCount": 12,
+      "blockCount": 9,
+      "dynamicFieldCount": 9,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "5",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "9",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/File_Helper/File_Helper.js",
       "status": "unknown_fields",
-      "blockCount": 32,
-      "dynamicFieldCount": 32,
+      "blockCount": 29,
+      "dynamicFieldCount": 29,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "22",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "31",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -689,6 +1055,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -699,36 +1066,87 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/IndexedDB.js",
       "status": "unknown_fields",
-      "blockCount": 25,
-      "dynamicFieldCount": 25,
+      "blockCount": 21,
+      "dynamicFieldCount": 21,
       "functionFieldCount": 1,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 4,
+      "omittedDynamicBlocks": [
+        {
+          "index": "4",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "12",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "15",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "20",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/Input.js",
       "status": "unknown_fields",
-      "blockCount": 33,
-      "dynamicFieldCount": 33,
+      "blockCount": 29,
+      "dynamicFieldCount": 29,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 4,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "16",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "23",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "27",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/Interpreter/Interpreter.js",
       "status": "unknown_fields",
-      "blockCount": 17,
-      "dynamicFieldCount": 18,
+      "blockCount": 14,
+      "dynamicFieldCount": 15,
       "functionFieldCount": 17,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 3,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "8",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "12",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -739,6 +1157,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -749,6 +1168,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -759,16 +1179,23 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/MarkDown/index.js",
       "status": "unknown_fields",
-      "blockCount": 27,
-      "dynamicFieldCount": 27,
+      "blockCount": 26,
+      "dynamicFieldCount": 26,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -779,16 +1206,27 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/More_Mouse.js",
       "status": "unknown_fields",
-      "blockCount": 33,
-      "dynamicFieldCount": 34,
+      "blockCount": 31,
+      "dynamicFieldCount": 32,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 2,
+      "omittedDynamicBlocks": [
+        {
+          "index": "6",
+          "reason": "template literal with dynamic expression"
+        },
+        {
+          "index": "23",
+          "reason": "template literal with dynamic expression"
+        }
+      ],
       "errors": []
     },
     {
@@ -799,6 +1237,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -809,16 +1248,23 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/wit_cat/Zip/extension.js",
       "status": "unknown_fields",
-      "blockCount": 12,
-      "dynamicFieldCount": 12,
+      "blockCount": 11,
+      "dynamicFieldCount": 11,
       "functionFieldCount": 0,
       "unknownFieldCount": 1,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 1,
+      "omittedDynamicBlocks": [
+        {
+          "index": "1",
+          "reason": "string concatenation"
+        }
+      ],
       "errors": []
     },
     {
@@ -829,6 +1275,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -839,6 +1286,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -849,6 +1297,7 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
@@ -859,16 +1308,87 @@
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
       "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlocks": [],
       "errors": []
     },
     {
       "file": "extensions/x10clkz/Biter.js",
       "status": "dynamic_fields",
-      "blockCount": 17,
-      "dynamicFieldCount": 17,
+      "blockCount": 0,
+      "dynamicFieldCount": 0,
       "functionFieldCount": 0,
       "unknownFieldCount": 0,
-      "omittedDynamicBlockCount": 0,
+      "omittedDynamicBlockCount": 17,
+      "omittedDynamicBlocks": [
+        {
+          "index": "0",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "1",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "2",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "3",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "4",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "5",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "6",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "7",
+          "reason": "string concatenation"
+        },
+        {
+          "index": "8",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "9",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "10",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "11",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "12",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "13",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "14",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "15",
+          "reason": "call: member expression"
+        },
+        {
+          "index": "16",
+          "reason": "call: member expression"
+        }
+      ],
       "errors": []
     }
   ]

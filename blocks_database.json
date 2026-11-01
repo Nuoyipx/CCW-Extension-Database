@@ -1,30 +1,10 @@
 {
-  "schemaVersion": 6,
-  "extractorVersion": "7.0.0",
-  "generatedAt": "2026-11-01T18:41:37.054Z",
+  "schemaVersion": 7,
+  "extractorVersion": "8.0.0",
+  "generatedAt": "2026-11-01T18:56:14.545Z",
   "sourceCount": 1,
-  "blockCount": 1097,
+  "blockCount": 996,
   "blocks": [
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
     {
       "opcode": "init",
       "func": "clearContainer",
@@ -551,26 +531,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode.js",
-      "index": 17,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "getContentInContainer",
       "blockType": "reporter",
       "text": {
@@ -595,26 +555,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode.js",
-      "index": 19,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -766,26 +706,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode新版",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode新版.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -1311,26 +1231,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode新版",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode新版.js",
-      "index": 17,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "getContentInContainer",
       "blockType": "reporter",
       "text": {
@@ -1355,26 +1255,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Archivecode新版",
-      "extensionId": "Archivecode",
-      "sourceFile": "extensions/Arkos/Archivecode新版.js",
-      "index": 19,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -2299,26 +2179,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "advancedControls",
-      "extensionId": "advancedControls",
-      "sourceFile": "extensions/Arkos/advancedControls.js",
-      "index": 7,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "setThreadVar",
       "blockType": "command",
       "text": {
@@ -2442,26 +2302,6 @@
         "dynamic": [
           "text",
           "arguments.TIMER.defaultValue"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -2612,26 +2452,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 5,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "indexof",
       "blockType": "reporter",
       "text": {
@@ -2734,26 +2554,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 9,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -3200,26 +3000,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 24,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "lenOfJSONList",
       "blockType": "reporter",
       "text": {
@@ -3306,26 +3086,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 28,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -3507,26 +3267,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 36,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -3761,26 +3501,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 44,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "deleteAllTempData",
       "blockType": "command",
       "text": {
@@ -3879,26 +3599,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 49,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "setTempVar",
       "blockType": "command",
       "text": {
@@ -3981,26 +3681,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 53,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -4287,26 +3967,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 63,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "clearTempCon",
       "blockType": "command",
       "text": {
@@ -4560,46 +4220,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 72,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 73,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "mirrorSprite",
       "blockType": "command",
       "text": {
@@ -4741,26 +4361,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "arkosExtension",
-      "extensionId": "hcnTest",
-      "sourceFile": "extensions/Arkos/arkosExtension.js",
-      "index": 79,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "getLayer",
       "blockType": "reporter",
       "text": {
@@ -4806,26 +4406,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "moreDataTypes",
-      "extensionId": "test",
-      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -5004,26 +4584,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "moreDataTypes",
-      "extensionId": "test",
-      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "index": 7,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "deleteAllTempData",
       "blockType": "command",
       "text": {
@@ -5191,26 +4751,6 @@
         "dynamic": [
           "text",
           "arguments.NAME.defaultValue"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "moreDataTypes",
-      "extensionId": "test",
-      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "index": 15,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -5880,26 +5420,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "moreDataTypes",
-      "extensionId": "test",
-      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "index": 34,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "addItemToList2",
       "blockType": "command",
       "text": {
@@ -6431,26 +5951,6 @@
         "unknown": [
           "hideFromPalette"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "moreDataTypes",
-      "extensionId": "test",
-      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "index": 49,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -7701,46 +7201,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "disableMonitor": true,
       "opcode": "newV3",
       "blockType": "reporter",
@@ -7899,26 +7359,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 7,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -8318,26 +7758,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 20,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "disableMonitor": true,
       "opcode": "newV2",
       "blockType": "reporter",
@@ -8560,26 +7980,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 28,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -8928,26 +8328,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 40,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -9419,26 +8799,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Three",
-      "extensionId": "DilemmaGX.3dm",
-      "sourceFile": "extensions/DilemmaGX/3DMath/Three.js",
-      "index": 56,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "disableMonitor": true,
       "opcode": "spr3DsetPosition",
       "blockType": "command",
@@ -9830,26 +9190,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "Animator",
-      "extensionId": "Animator",
-      "sourceFile": "extensions/DilemmaGX/Animator/Animator.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "Animate",
       "blockType": "reporter",
       "text": {
@@ -9994,26 +9334,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Animator",
-      "extensionId": "Animator",
-      "sourceFile": "extensions/DilemmaGX/Animator/Animator.js",
-      "index": 6,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -10450,26 +9770,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 2,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "isCloneOrIsOriginal",
       "blockType": "Boolean",
       "filter": [
@@ -10621,26 +9921,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 8,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -10861,26 +10141,6 @@
         "dynamic": [
           "text",
           "arguments.MSG.defaultValue"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 15,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -11129,26 +10389,6 @@
         "dynamic": [
           "text",
           "arguments.ID.defaultValue"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 25,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -11412,26 +10652,6 @@
         "unknown": [
           "hideFromPalette"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 34,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -11721,26 +10941,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 44,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "getNearestClone",
       "blockType": "reporter",
       "filter": [
@@ -12026,26 +11226,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 52,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "calcDistanceToClone",
       "blockType": "reporter",
       "filter": [
@@ -12189,26 +11369,6 @@
         "dynamic": [
           "text",
           "arguments.ID.defaultValue"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "spread: ConditionalExpression",
-      "extensionName": "dollytest",
-      "extensionId": "witCat.dollyPro",
-      "sourceFile": "extensions/DollyPro/dollytest.js",
-      "index": 57,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -13242,10 +12402,14 @@
     {
       "opcode": "documentation",
       "blockType": "button",
-      "text": null,
+      "text": {
+        "$dynamic": "LPP button lazy text"
+      },
       "arguments": {},
       "fieldStatus": {
-        "dynamic": [],
+        "dynamic": [
+          "text"
+        ],
         "functions": [],
         "unknown": [],
         "spreads": []
@@ -13260,11 +12424,18 @@
     {
       "opcode": null,
       "blockType": "label",
-      "text": null,
+      "text": {
+        "$dynamic": "LPP lazy category label"
+      },
       "arguments": {},
-      "category": null,
+      "category": {
+        "$dynamic": "LPP lazy category label"
+      },
       "fieldStatus": {
-        "dynamic": [],
+        "dynamic": [
+          "text",
+          "category"
+        ],
         "functions": [],
         "unknown": [],
         "spreads": []
@@ -13333,11 +12504,18 @@
     {
       "opcode": null,
       "blockType": "label",
-      "text": null,
+      "text": {
+        "$dynamic": "LPP lazy category label"
+      },
       "arguments": {},
-      "category": null,
+      "category": {
+        "$dynamic": "LPP lazy category label"
+      },
       "fieldStatus": {
-        "dynamic": [],
+        "dynamic": [
+          "text",
+          "category"
+        ],
         "functions": [],
         "unknown": [],
         "spreads": []
@@ -13460,11 +12638,18 @@
     {
       "opcode": null,
       "blockType": "label",
-      "text": null,
+      "text": {
+        "$dynamic": "LPP lazy category label"
+      },
       "arguments": {},
-      "category": null,
+      "category": {
+        "$dynamic": "LPP lazy category label"
+      },
       "fieldStatus": {
-        "dynamic": [],
+        "dynamic": [
+          "text",
+          "category"
+        ],
         "functions": [],
         "unknown": [],
         "spreads": []
@@ -13587,11 +12772,18 @@
     {
       "opcode": null,
       "blockType": "label",
-      "text": null,
+      "text": {
+        "$dynamic": "LPP lazy category label"
+      },
       "arguments": {},
-      "category": null,
+      "category": {
+        "$dynamic": "LPP lazy category label"
+      },
       "fieldStatus": {
-        "dynamic": [],
+        "dynamic": [
+          "text",
+          "category"
+        ],
         "functions": [],
         "unknown": [],
         "spreads": []
@@ -13721,26 +12913,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "not.js",
-      "extensionId": "FurryR.NotJS",
-      "sourceFile": "extensions/FurryR/not.js.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "parseJSON",
       "blockType": "reporter",
       "text": {
@@ -13814,26 +12986,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "not.js",
-      "extensionId": "FurryR.NotJS",
-      "sourceFile": "extensions/FurryR/not.js.js",
-      "index": 5,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -13915,26 +13067,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "not.js",
-      "extensionId": "FurryR.NotJS",
-      "sourceFile": "extensions/FurryR/not.js.js",
-      "index": 9,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -14807,26 +13939,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "clippingblending",
-      "extensionId": "clippingblending",
-      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "setClipbox",
       "blockType": "command",
       "text": {
@@ -15055,26 +14167,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "stretch",
-      "extensionId": "stretch",
-      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -16277,66 +15369,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "spread: member expression(...)",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "index": 2,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "index": 3,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "cardCreate",
       "blockType": "command",
       "text": {
@@ -16465,86 +15497,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "index": 8,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "spread: member expression(...)",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
-      "index": 9,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "scCOM",
-      "extensionId": "DannyDevNet",
-      "sourceFile": "extensions/dannydev/scCOM.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "scCOM",
-      "extensionId": "DannyDevNet",
-      "sourceFile": "extensions/dannydev/scCOM.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "http",
       "blockType": "reporter",
       "text": {
@@ -16639,26 +15591,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "scCOM",
-      "extensionId": "DannyDevNet",
-      "sourceFile": "extensions/dannydev/scCOM.js",
-      "index": 5,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -16829,26 +15761,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "scCOM",
-      "extensionId": "DannyDevNet",
-      "sourceFile": "extensions/dannydev/scCOM.js",
-      "index": 12,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -17050,26 +15962,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "scCOM",
-      "extensionId": "DannyDevNet",
-      "sourceFile": "extensions/dannydev/scCOM.js",
-      "index": 20,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -17355,7 +16247,7 @@
       "opcode": "help",
       "blockType": "reporter",
       "text": {
-        "$dynamic": "binary expression"
+        "$dynamic": "string concatenation"
       },
       "extensionName": "scCOM",
       "extensionId": "DannyDevNet",
@@ -18327,26 +17219,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "WebHook",
-      "extensionId": "extension",
-      "sourceFile": "extensions/kukemc/WebHook/extension.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "setMethod",
       "blockType": "command",
       "text": {
@@ -18426,26 +17298,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "WebHook",
-      "extensionId": "extension",
-      "sourceFile": "extensions/kukemc/WebHook/extension.js",
-      "index": 4,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -22833,26 +21685,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "var-and-list",
-      "extensionId": "qxsckvarandlist",
-      "sourceFile": "extensions/qxsck/var-and-list.js",
-      "index": 41,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "forEach",
       "blockType": "conditional",
       "text": {
@@ -24074,26 +22906,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "regexp",
-      "extensionId": "RegExpVI",
-      "sourceFile": "extensions/six-6/regexp.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "str",
       "blockType": "reporter",
       "text": {
@@ -24420,26 +23232,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "regexp",
-      "extensionId": "RegExpVI",
-      "sourceFile": "extensions/six-6/regexp.js",
-      "index": 11,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -24776,26 +23568,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "index",
-      "extensionId": "WitCatBBcode",
-      "sourceFile": "extensions/wit_cat/BBcode/index.js",
-      "index": 2,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -25849,26 +24621,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "FPS",
-      "extensionId": "WitCatFPS",
-      "sourceFile": "extensions/wit_cat/FPS.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "scratch",
       "blockType": "reporter",
       "text": {
@@ -25940,26 +24692,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "FPS",
-      "extensionId": "WitCatFPS",
-      "sourceFile": "extensions/wit_cat/FPS.js",
-      "index": 5,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "web",
       "blockType": "reporter",
       "text": {
@@ -26024,26 +24756,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "FPS",
-      "extensionId": "WitCatFPS",
-      "sourceFile": "extensions/wit_cat/FPS.js",
-      "index": 9,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -26128,26 +24840,6 @@
         "unknown": [
           "onClick"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "File_Helper",
-      "extensionId": "WitCatFileHelper",
-      "sourceFile": "extensions/wit_cat/File_Helper/File_Helper.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -26723,26 +25415,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "File_Helper",
-      "extensionId": "WitCatFileHelper",
-      "sourceFile": "extensions/wit_cat/File_Helper/File_Helper.js",
-      "index": 22,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "arrayjoin",
       "blockType": "reporter",
       "text": {
@@ -26980,26 +25652,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "File_Helper",
-      "extensionId": "WitCatFileHelper",
-      "sourceFile": "extensions/wit_cat/File_Helper/File_Helper.js",
-      "index": 31,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -27333,26 +25985,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "IndexedDB",
-      "extensionId": "WitCatIndexedDB",
-      "sourceFile": "extensions/wit_cat/IndexedDB.js",
-      "index": 4,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "load",
       "blockType": "reporter",
       "text": {
@@ -27557,26 +26189,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "IndexedDB",
-      "extensionId": "WitCatIndexedDB",
-      "sourceFile": "extensions/wit_cat/IndexedDB.js",
-      "index": 12,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "showvar",
       "blockType": "command",
       "text": {
@@ -27636,26 +26248,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "IndexedDB",
-      "extensionId": "WitCatIndexedDB",
-      "sourceFile": "extensions/wit_cat/IndexedDB.js",
-      "index": 15,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -27799,26 +26391,6 @@
       }
     },
     {
-      "$dynamic": "binary expression",
-      "extensionName": "IndexedDB",
-      "extensionId": "WitCatIndexedDB",
-      "sourceFile": "extensions/wit_cat/IndexedDB.js",
-      "index": 20,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "cache",
       "blockType": "command",
       "text": {
@@ -27950,26 +26522,6 @@
         "unknown": [
           "onClick"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Input",
-      "extensionId": "WitCatInput",
-      "sourceFile": "extensions/wit_cat/Input.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -28426,26 +26978,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Input",
-      "extensionId": "WitCatInput",
-      "sourceFile": "extensions/wit_cat/Input.js",
-      "index": 16,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "ok",
       "blockType": "hat",
       "text": {
@@ -28622,26 +27154,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Input",
-      "extensionId": "WitCatInput",
-      "sourceFile": "extensions/wit_cat/Input.js",
-      "index": 23,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "isinput",
       "blockType": "Boolean",
       "text": {
@@ -28711,26 +27223,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Input",
-      "extensionId": "WitCatInput",
-      "sourceFile": "extensions/wit_cat/Input.js",
-      "index": 27,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -28884,26 +27376,6 @@
         "unknown": [
           "onClick"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Interpreter",
-      "extensionId": "WitCatInterpreter",
-      "sourceFile": "extensions/wit_cat/Interpreter/Interpreter.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -29135,26 +27607,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Interpreter",
-      "extensionId": "WitCatInterpreter",
-      "sourceFile": "extensions/wit_cat/Interpreter/Interpreter.js",
-      "index": 8,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "asyncMarkUp",
       "blockType": "command",
       "text": {
@@ -29245,26 +27697,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "Interpreter",
-      "extensionId": "WitCatInterpreter",
-      "sourceFile": "extensions/wit_cat/Interpreter/Interpreter.js",
-      "index": 12,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -29420,26 +27852,6 @@
         "unknown": [
           "onClick"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "index",
-      "extensionId": "WitCatMarkDowns",
-      "sourceFile": "extensions/wit_cat/MarkDown/index.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -30471,26 +28883,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "More_Mouse",
-      "extensionId": "WitCatMouse",
-      "sourceFile": "extensions/wit_cat/More_Mouse.js",
-      "index": 6,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "title",
       "blockType": "command",
       "text": {
@@ -30953,26 +29345,6 @@
       }
     },
     {
-      "$dynamic": "template literal with dynamic expression",
-      "extensionName": "More_Mouse",
-      "extensionId": "WitCatMouse",
-      "sourceFile": "extensions/wit_cat/More_Mouse.js",
-      "index": 23,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
       "opcode": "down",
       "blockType": "reporter",
       "text": {
@@ -31318,26 +29690,6 @@
         "unknown": [
           "onClick"
         ],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "extension",
-      "extensionId": "extension",
-      "sourceFile": "extensions/wit_cat/Zip/extension.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
         "spreads": []
       }
     },
@@ -31954,346 +30306,6 @@
       "fieldStatus": {
         "dynamic": [
           "text"
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 0,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 1,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 2,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 3,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 4,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 5,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 6,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "binary expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 7,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 8,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 9,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 10,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 11,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 12,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 13,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 14,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 15,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
-        ],
-        "functions": [],
-        "unknown": [],
-        "spreads": []
-      }
-    },
-    {
-      "$dynamic": "call: member expression",
-      "extensionName": "Biter",
-      "extensionId": "Biter",
-      "sourceFile": "extensions/x10clkz/Biter.js",
-      "index": 16,
-      "opcode": null,
-      "text": null,
-      "arguments": {},
-      "tooltip": null,
-      "tooltip_en": null,
-      "fieldStatus": {
-        "dynamic": [
-          ""
         ],
         "functions": [],
         "unknown": [],
@@ -33251,17 +31263,18 @@
   },
   "quality": {
     "missingFields": {
-      "opcode": 134,
-      "text": 106,
-      "text_en": 1097,
-      "blockType": 102,
-      "category": 1097,
-      "category_en": 1097,
+      "opcode": 33,
+      "text": 0,
+      "text_en": 996,
+      "blockType": 1,
+      "category": 992,
+      "category_en": 996,
       "arguments": 0
     },
-    "dynamicFieldCount": 1090,
+    "dynamicFieldCount": 998,
+    "blocksWithDynamicFields": 876,
     "functionFieldCount": 29,
     "unknownFieldCount": 45,
-    "omittedDynamicBlockCount": 1
+    "omittedDynamicBlockCount": 102
   }
 }
