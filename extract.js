@@ -1,348 +1,227 @@
-
 'use strict';
 
 /**
- * CCW Extension Database Extractor v6
+ * CCW Extension Database Extractor
+ * Version: 7.0.0
  *
- * Static analysis only.
- * Extension source code is parsed, never executed.
+ * 静态分析扩展源码，不执行任何扩展代码。
  */
 
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const cp = require('child_process');
+const { execFileSync } = require('child_process');
 const parser = require('@babel/parser');
 
-const EXTRACTOR_VERSION = '6.0.0';
-const SCHEMA_VERSION = 5;
+const EXTRACTOR_VERSION = '7.0.0';
+const SCHEMA_VERSION = 6;
 
-const DATABASE_FILE = 'blocks_database.json';
-const REPORT_FILE = 'extraction_report.json';
-const VERSION_FILE = 'version_report.json';
+const ROOT = process.cwd();
+const SOURCES_FILE = path.join(ROOT, 'sources.txt');
 
-const EXCLUDED_DIRS = new Set([
-  '.git', 'node_modules', '__pycache__', 'dist',
-  'build', 'assets', 'coverage', '.next', 'vendor'
-]);
+const OUTPUT_DATABASE = path.join(ROOT, 'blocks_database.json');
+const OUTPUT_REPORT = path.join(ROOT, 'extraction_report.json');
+const OUTPUT_VERSION = path.join(ROOT, 'version_report.json');
 
-const EXCLUDED_FILES = new Set([
-  'webpack.config.js', 'vite.config.js',
-  '.eslintrc.js', 'babel.config.js', 'jest.config.js'
-]);
-
-const ENUM_GROUPS = new Set([
-  'BlockType', 'ArgumentType', 'TargetType',
-  'MenuType', 'Cast', 'BlockShape', 'ConnectionType'
-]);
-
-const MARKERS = {
-  unknown: '$expression',
-  dynamic: '$dynamic',
-  function: '$function',
-  spread: '$dynamicSpread'
+const ENUM_VALUES = {
+  BlockType: {
+    BOOLEAN: 'Boolean',
+    BUTTON: 'button',
+    COMMAND: 'command',
+    CONDITIONAL: 'conditional',
+    EVENT: 'event',
+    HAT: 'hat',
+    LOOP: 'loop',
+    REPORTER: 'reporter',
+    LABEL: 'label'
+  },
+  ArgumentType: {
+    ANGLE: 'angle',
+    BOOLEAN: 'Boolean',
+    COLOR: 'color',
+    IMAGE: 'image',
+    MATRIX: 'matrix',
+    NUMBER: 'number',
+    STRING: 'string',
+    NOTE: 'note',
+    TEXT: 'string'
+  },
+  TargetType: {
+    SPRITE: 'sprite',
+    STAGE: 'stage'
+  }
 };
 
-function marker(kind, expression) {
-  return { [MARKERS[kind]]: expression || '<unknown>' };
+const DYNAMIC = value => ({ $dynamic: value || 'dynamic expression' });
+const UNKNOWN = value => ({ $expression: value || 'unknown expression' });
+const FUNCTION = value => ({ $function: value || 'function' });
+
+function isObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-function isMarker(value, kind) {
-  return Boolean(
-    value &&
-    typeof value === 'object' &&
-    Object.prototype.hasOwnProperty.call(value, MARKERS[kind])
-  );
+function isMarker(value) {
+  return isObject(value) &&
+    ('$dynamic' in value || '$expression' in value || '$function' in value);
 }
 
-function hasMarker(value, kind) {
-  if (isMarker(value, kind)) return true;
-
-  if (Array.isArray(value)) {
-    return value.some(item => hasMarker(item, kind));
-  }
-
-  if (value && typeof value === 'object') {
-    return Object.values(value).some(
-      item => hasMarker(item, kind)
-    );
-  }
-
-  return false;
+function clone(value) {
+  return JSON.parse(JSON.stringify(value));
 }
 
-function now() {
-  return new Date().toISOString();
-}
-
-function memberPath(node) {
+function getSource(node) {
   if (!node) return '';
-
-  if (node.type === 'Identifier') return node.name;
-  if (node.type === 'ThisExpression') return 'this';
-
-  if (
-    node.type === 'StringLiteral' ||
-    node.type === 'NumericLiteral'
-  ) {
-    return String(node.value);
-  }
-
-  if (
-    node.type === 'MemberExpression' ||
-    node.type === 'OptionalMemberExpression'
-  ) {
-    const left = memberPath(node.object);
-    const right = node.computed
-      ? memberPath(node.property)
-      : node.property.name;
-
-    return left && right !== undefined
-      ? `${left}.${right}`
-      : left;
-  }
-
-  return '';
-}
-
-function sourceOf(node) {
-  if (!node) return '<unknown>';
-
-  if (node.type === 'Identifier') return node.name;
-  if (node.type === 'ThisExpression') return 'this';
-
-  if (node.type === 'StringLiteral') {
-    return JSON.stringify(node.value);
-  }
-
-  if (node.type === 'NumericLiteral') {
-    return String(node.value);
-  }
-
-  if (node.type === 'BooleanLiteral') {
-    return String(node.value);
-  }
-
-  if (
-    node.type === 'MemberExpression' ||
-    node.type === 'OptionalMemberExpression'
-  ) {
-    return memberPath(node);
-  }
-
-  if (
-    node.type === 'CallExpression' ||
-    node.type === 'OptionalCallExpression'
-  ) {
-    return `${sourceOf(node.callee)}(...)`;
-  }
-
-  if (node.type === 'TemplateLiteral') {
-    return '`' + node.quasis
-      .map(q => q.value.cooked || '')
-      .join('${...}') + '`';
-  }
-
-  if (
-    node.type === 'ArrowFunctionExpression' ||
-    node.type === 'FunctionExpression' ||
-    node.type === 'ObjectMethod' ||
-    node.type === 'ClassMethod'
-  ) {
-    return '<function>';
-  }
-
-  return node.type || '<expression>';
-}
-
-function isUnknown(value) {
-  return hasMarker(value, 'unknown') ||
-    hasMarker(value, 'spread');
-}
-
-function isTranslationKey(value) {
-  return typeof value === 'string' &&
-    /^[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)+$/.test(value);
-}
-
-function walk(node, callback) {
-  if (!node || typeof node !== 'object') return;
-
-  if (typeof node.type === 'string') callback(node);
-
-  for (const [key, value] of Object.entries(node)) {
-    if ([
-      'loc', 'start', 'end', 'leadingComments',
-      'trailingComments', 'innerComments', 'extra'
-    ].includes(key)) continue;
-
-    if (Array.isArray(value)) {
-      value.forEach(child => walk(child, callback));
-    } else if (value && typeof value === 'object') {
-      walk(value, callback);
-    }
-  }
+  return node.extra && node.extra.raw
+    ? node.extra.raw
+    : node.type;
 }
 
 /**
- * Walk a function body without entering nested functions.
+ * 将字符串和注释之外的全角分号转换为普通分号。
  */
-function walkFunctionBody(node, callback, isRoot = true) {
-  if (!node || typeof node !== 'object') return;
+function normalizeFullWidthSemicolons(source) {
+  let output = '';
+  let state = 'normal';
+  let quote = '';
+  let escaped = false;
 
-  if (!isRoot && [
-    'FunctionDeclaration',
-    'FunctionExpression',
-    'ArrowFunctionExpression',
-    'ClassMethod',
-    'ObjectMethod'
-  ].includes(node.type)) {
-    return;
-  }
+  for (let i = 0; i < source.length; i++) {
+    const c = source[i];
+    const next = source[i + 1];
 
-  if (typeof node.type === 'string') callback(node);
-
-  for (const [key, value] of Object.entries(node)) {
-    if ([
-      'loc', 'start', 'end', 'leadingComments',
-      'trailingComments', 'innerComments', 'extra'
-    ].includes(key)) continue;
-
-    if (Array.isArray(value)) {
-      value.forEach(child =>
-        walkFunctionBody(child, callback, false)
-      );
-    } else if (value && typeof value === 'object') {
-      walkFunctionBody(value, callback, false);
+    if (state === 'lineComment') {
+      output += c;
+      if (c === '\n') state = 'normal';
+      continue;
     }
+
+    if (state === 'blockComment') {
+      output += c;
+      if (c === '*' && next === '/') {
+        output += next;
+        i++;
+        state = 'normal';
+      }
+      continue;
+    }
+
+    if (state === 'string' || state === 'template') {
+      output += c;
+
+      if (escaped) {
+        escaped = false;
+        continue;
+      }
+
+      if (c === '\\') {
+        escaped = true;
+        continue;
+      }
+
+      if (c === quote) {
+        state = 'normal';
+        quote = '';
+      }
+      continue;
+    }
+
+    if (c === '/' && next === '/') {
+      output += '//';
+      i++;
+      state = 'lineComment';
+      continue;
+    }
+
+    if (c === '/' && next === '*') {
+      output += '/*';
+      i++;
+      state = 'blockComment';
+      continue;
+    }
+
+    if (c === '"' || c === "'") {
+      state = 'string';
+      quote = c;
+      output += c;
+      continue;
+    }
+
+    if (c === '`') {
+      state = 'template';
+      quote = '`';
+      output += c;
+      continue;
+    }
+
+    output += c === '；' ? ';' : c;
   }
+
+  return output;
 }
 
-function parseSource(source) {
-  const options = {
+function parseSource(source, filename) {
+  const normalized = normalizeFullWidthSemicolons(source);
+
+  return parser.parse(normalized, {
     sourceType: 'unambiguous',
     allowReturnOutsideFunction: true,
     errorRecovery: false,
     plugins: [
       'jsx',
+      'typescript',
       'classProperties',
       'classPrivateProperties',
       'classPrivateMethods',
-      'optionalChaining',
       'objectRestSpread',
+      'optionalChaining',
       'dynamicImport',
-      'decorators-legacy',
-      'typescript',
-      'importAttributes',
-      'topLevelAwait'
+      'decorators-legacy'
     ]
-  };
-
-  try {
-    return {
-      ast: parser.parse(source, options),
-      normalized: false
-    };
-  } catch (firstError) {
-    if (!source.includes('；')) throw firstError;
-
-    const normalized = normalizeFullWidthSemicolons(source);
-
-    if (normalized === source) throw firstError;
-
-    return {
-      ast: parser.parse(normalized, options),
-      normalized: true
-    };
-  }
+  });
 }
 
-function normalizeFullWidthSemicolons(source) {
-  let state = 'code';
-  let result = '';
-  let escaped = false;
+function memberName(node) {
+  if (!node) return null;
 
-  for (let i = 0; i < source.length; i++) {
-    const ch = source[i];
-    const next = source[i + 1];
+  if (node.type === 'Identifier') return node.name;
 
-    if (state === 'code') {
-      if (ch === "'") state = 'single';
-      else if (ch === '"') state = 'double';
-      else if (ch === '`') state = 'template';
-      else if (ch === '/' && next === '/') state = 'lineComment';
-      else if (ch === '/' && next === '*') state = 'blockComment';
+  if (node.type === 'StringLiteral') return node.value;
 
-      result += ch === '；' ? ';' : ch;
-      continue;
-    }
+  if (node.type === 'MemberExpression' ||
+      node.type === 'OptionalMemberExpression') {
+    const left = memberName(node.object);
+    const right = node.computed
+      ? memberName(node.property)
+      : node.property.name;
 
-    if (
-      state === 'single' ||
-      state === 'double' ||
-      state === 'template'
-    ) {
-      result += ch;
-
-      if (escaped) {
-        escaped = false;
-      } else if (ch === '\\') {
-        escaped = true;
-      } else if (
-        (state === 'single' && ch === "'") ||
-        (state === 'double' && ch === '"') ||
-        (state === 'template' && ch === '`')
-      ) {
-        state = 'code';
-      }
-
-      continue;
-    }
-
-    result += ch;
-
-    if (state === 'lineComment' && ch === '\n') {
-      state = 'code';
-    }
-
-    if (
-      state === 'blockComment' &&
-      ch === '*' &&
-      next === '/'
-    ) {
-      result += '/';
-      i++;
-      state = 'code';
-    }
+    return left && right ? `${left}.${right}` : null;
   }
 
-  return result;
+  return null;
 }
 
-function findMessage(messages, key) {
-  if (key === null || key === undefined) return undefined;
+function expressionName(node) {
+  if (!node) return 'unknown';
 
-  const text = String(key);
+  if (node.type === 'Identifier') return node.name;
 
-  if (Object.prototype.hasOwnProperty.call(messages, text)) {
-    return messages[text];
+  if (node.type === 'ThisExpression') return 'this';
+
+  if (node.type === 'MemberExpression') {
+    return memberName(node) || 'member expression';
   }
 
-  const lower = text.toLowerCase();
+  if (node.type === 'CallExpression') {
+    return `${expressionName(node.callee)}(...)`;
+  }
 
-  const found = Object.keys(messages).find(
-    item => item.toLowerCase() === lower
-  );
-
-  return found === undefined ? undefined : messages[found];
+  return node.type;
 }
 
-function evaluate(node, env, depth = 0) {
-  if (!node || depth > 40) {
-    return marker('unknown', sourceOf(node));
-  }
+function evaluate(node, env = {}, context = {}, depth = 0) {
+  if (!node || depth > 35) return UNKNOWN('maximum evaluation depth');
 
-  const next = child => evaluate(child, env, depth + 1);
+  const next = child => evaluate(child, env, context, depth + 1);
 
   switch (node.type) {
     case 'StringLiteral':
@@ -354,36 +233,23 @@ function evaluate(node, env, depth = 0) {
       return null;
 
     case 'BigIntLiteral':
-      return node.value;
+      return Number(node.value);
 
-    case 'Identifier': {
+    case 'Identifier':
       if (node.name === 'undefined') return null;
-      if (node.name === 'NaN') return NaN;
-      if (node.name === 'Infinity') return Infinity;
-
-      if (
-        Object.prototype.hasOwnProperty.call(
-          env.symbols,
-          node.name
-        )
-      ) {
-        return env.symbols[node.name];
+      if (node.name === 'NaN') return null;
+      if (Object.prototype.hasOwnProperty.call(env, node.name)) {
+        return env[node.name];
       }
-
-      if ([
-        'EVENT', 'COMMAND', 'REPORTER', 'BOOLEAN',
-        'HAT', 'CONDITIONAL', 'LOOP', 'STRING',
-        'NUMBER', 'ANGLE', 'COLOR', 'MATRIX',
-        'IMAGE', 'LABEL'
-      ].includes(node.name)) {
-        return node.name;
-      }
-
-      return marker('unknown', node.name);
-    }
+      return UNKNOWN(node.name);
 
     case 'ThisExpression':
-      return marker('dynamic', 'this');
+      return DYNAMIC('this');
+
+    case 'ArrowFunctionExpression':
+    case 'FunctionExpression':
+    case 'FunctionDeclaration':
+      return FUNCTION('function');
 
     case 'ArrayExpression': {
       const result = [];
@@ -400,12 +266,7 @@ function evaluate(node, env, depth = 0) {
           if (Array.isArray(spread)) {
             result.push(...spread);
           } else {
-            result.push(
-              marker(
-                'spread',
-                sourceOf(element.argument)
-              )
-            );
+            result.push(DYNAMIC(`spread: ${expressionName(element.argument)}`));
           }
         } else {
           result.push(next(element));
@@ -418,55 +279,32 @@ function evaluate(node, env, depth = 0) {
     case 'ObjectExpression': {
       const result = {};
 
-      for (const prop of node.properties) {
-        if (prop.type === 'SpreadElement') {
-          const spread = next(prop.argument);
+      for (const property of node.properties) {
+        if (property.type === 'SpreadElement') {
+          const spread = next(property.argument);
 
-          if (
-            spread &&
-            typeof spread === 'object' &&
-            !Array.isArray(spread) &&
-            !isUnknown(spread)
-          ) {
+          if (isObject(spread) && !isMarker(spread)) {
             Object.assign(result, spread);
           } else {
-            result.$spread = sourceOf(prop.argument);
+            result.$spread = expressionName(property.argument);
           }
-
           continue;
         }
 
-        if (prop.type === 'ObjectMethod') {
-          const key = prop.computed
-            ? null
-            : (prop.key.name ?? prop.key.value);
+        if (property.type !== 'ObjectProperty' &&
+            property.type !== 'ObjectMethod') continue;
 
-          if (key !== null && key !== undefined) {
-            result[String(key)] = marker(
-              'function',
-              sourceOf(prop)
-            );
-          }
+        const key = property.computed
+          ? next(property.key)
+          : property.key.name !== undefined
+            ? property.key.name
+            : property.key.value;
 
-          continue;
-        }
+        if (typeof key !== 'string' && typeof key !== 'number') continue;
 
-        if (prop.type !== 'ObjectProperty') continue;
-
-        const key = prop.computed
-          ? evaluate(prop.key, env, depth + 1)
-          : (prop.key.name ?? prop.key.value);
-
-        if (
-          key === null ||
-          key === undefined ||
-          typeof key === 'object'
-        ) {
-          result.$computed = sourceOf(prop.key);
-          continue;
-        }
-
-        result[String(key)] = next(prop.value);
+        result[key] = property.type === 'ObjectMethod'
+          ? FUNCTION('object method')
+          : next(property.value);
       }
 
       return result;
@@ -476,575 +314,406 @@ function evaluate(node, env, depth = 0) {
       let result = '';
 
       for (let i = 0; i < node.quasis.length; i++) {
-        result += node.quasis[i].value.cooked ??
-          node.quasis[i].value.raw;
+        result += node.quasis[i].value.cooked || '';
 
         if (i < node.expressions.length) {
           const value = next(node.expressions[i]);
 
-          if (
-            value &&
-            typeof value === 'object'
-          ) {
-            return marker(
-              'dynamic',
-              sourceOf(node)
-            );
+          if (typeof value === 'string' || typeof value === 'number') {
+            result += value;
+          } else {
+            return DYNAMIC('template literal with dynamic expression');
           }
-
-          result += String(value);
         }
       }
 
       return result;
     }
 
-    case 'MemberExpression':
-    case 'OptionalMemberExpression': {
-      const fullPath = memberPath(node);
-      const parts = fullPath.split('.');
-
-      if (
-        parts.length >= 2 &&
-        ENUM_GROUPS.has(parts[parts.length - 2])
-      ) {
-        return parts[parts.length - 1];
-      }
-
-      if (node.object.type === 'ThisExpression') {
-        return marker('dynamic', fullPath);
-      }
-
-      const base = next(node.object);
-
-      const property = node.computed
-        ? next(node.property)
-        : node.property.name;
-
-      if (
-        base &&
-        typeof base === 'object' &&
-        !Array.isArray(base) &&
-        typeof property !== 'object' &&
-        Object.prototype.hasOwnProperty.call(base, property)
-      ) {
-        return base[property];
-      }
-
-      return marker('unknown', fullPath);
-    }
-
-    case 'CallExpression':
-    case 'OptionalCallExpression':
-      return evaluateCall(node, env, depth);
-
-    case 'ArrowFunctionExpression':
-    case 'FunctionExpression':
-    case 'ObjectMethod':
-    case 'ClassMethod':
-      return marker('function', sourceOf(node));
-
     case 'UnaryExpression': {
       const value = next(node.argument);
 
-      if (value && typeof value === 'object') {
-        return marker('dynamic', sourceOf(node));
+      if (isMarker(value)) return value;
+
+      switch (node.operator) {
+        case '!': return !value;
+        case '+': return Number(value);
+        case '-': return -Number(value);
+        case '~': return ~Number(value);
+        case 'void': return null;
+        default: return UNKNOWN(`unary ${node.operator}`);
       }
-
-      if (node.operator === '-') return -Number(value);
-      if (node.operator === '+') return Number(value);
-      if (node.operator === '!') return !value;
-      if (node.operator === '~') return ~Number(value);
-      if (node.operator === 'void') return null;
-
-      return marker('unknown', sourceOf(node));
     }
 
     case 'BinaryExpression':
     case 'LogicalExpression': {
       const left = next(node.left);
-
-      if (node.operator === '&&') {
-        if (typeof left === 'object') {
-          return marker('dynamic', sourceOf(node));
-        }
-        return left ? next(node.right) : left;
-      }
-
-      if (node.operator === '||') {
-        if (typeof left === 'object') {
-          return marker('dynamic', sourceOf(node));
-        }
-        return left || next(node.right);
-      }
-
-      if (node.operator === '??') {
-        if (typeof left === 'object') {
-          return marker('dynamic', sourceOf(node));
-        }
-        return left ?? next(node.right);
-      }
-
       const right = next(node.right);
 
-      if (
-        (left && typeof left === 'object') ||
-        (right && typeof right === 'object')
-      ) {
-        return marker('dynamic', sourceOf(node));
+      if (isMarker(left) || isMarker(right)) {
+        return DYNAMIC('binary expression');
       }
 
-      switch (node.operator) {
-        case '+':
-          return typeof left === 'string' ||
-            typeof right === 'string'
-            ? String(left) + String(right)
-            : Number(left) + Number(right);
-        case '-':
-          return Number(left) - Number(right);
-        case '*':
-          return Number(left) * Number(right);
-        case '/':
-          return Number(left) / Number(right);
-        case '%':
-          return Number(left) % Number(right);
-        default:
-          return marker('unknown', sourceOf(node));
+      try {
+        switch (node.operator) {
+          case '+': return left + right;
+          case '-': return left - right;
+          case '*': return left * right;
+          case '/': return left / right;
+          case '%': return left % right;
+          case '**': return left ** right;
+          case '===': return left === right;
+          case '!==': return left !== right;
+          case '==': return left == right; // 静态分析
+          case '!=': return left != right;
+          case '>': return left > right;
+          case '<': return left < right;
+          case '>=': return left >= right;
+          case '<=': return left <= right;
+          case '&&': return left && right;
+          case '||': return left || right;
+          case '??': return left ?? right;
+          default: return UNKNOWN(`operator ${node.operator}`);
+        }
+      } catch {
+        return UNKNOWN('binary expression');
       }
     }
 
     case 'ConditionalExpression': {
       const test = next(node.test);
 
-      if (test && typeof test === 'object') {
-        return marker('dynamic', sourceOf(node));
+      if (isMarker(test)) return DYNAMIC('conditional expression');
+
+      return test ? next(node.consequent) : next(node.alternate);
+    }
+
+    case 'MemberExpression':
+    case 'OptionalMemberExpression': {
+      const fullName = memberName(node);
+
+      if (fullName) {
+        const parts = fullName.split('.');
+        const enumIndex = parts.length - 2;
+        const enumName = parts[enumIndex];
+        const member = parts[parts.length - 1];
+
+        if (ENUM_VALUES[enumName] &&
+            Object.prototype.hasOwnProperty.call(ENUM_VALUES[enumName], member)) {
+          return ENUM_VALUES[enumName][member];
+        }
+
+        if (parts.length === 2 &&
+            Object.prototype.hasOwnProperty.call(env, parts[0])) {
+          const object = env[parts[0]];
+
+          if (isObject(object) &&
+              Object.prototype.hasOwnProperty.call(object, parts[1])) {
+            return object[parts[1]];
+          }
+        }
       }
 
-      return next(test ? node.consequent : node.alternate);
+      const object = next(node.object);
+      const property = node.computed
+        ? next(node.property)
+        : node.property.name;
+
+      if (isObject(object) && !isMarker(object) &&
+          Object.prototype.hasOwnProperty.call(object, property)) {
+        return object[property];
+      }
+
+      if (Array.isArray(object) && property === 'length') {
+        return object.length;
+      }
+
+      return UNKNOWN(fullName || 'member expression');
     }
+
+    case 'CallExpression':
+    case 'OptionalCallExpression':
+      return evaluateCall(node, env, context, depth + 1);
 
     case 'TSAsExpression':
     case 'TSTypeAssertion':
-    case 'TypeCastExpression':
     case 'TSNonNullExpression':
     case 'ParenthesizedExpression':
       return next(node.expression);
 
-    case 'SequenceExpression':
-      return node.expressions.length
-        ? next(node.expressions[node.expressions.length - 1])
-        : null;
+    case 'SpreadElement':
+      return next(node.argument);
 
     default:
-      return marker('unknown', sourceOf(node));
+      return UNKNOWN(node.type);
   }
-}
-
-function evaluateCall(node, env, depth) {
-  const callee = memberPath(node.callee);
-  const method = callee.split('.').pop();
-
-  if (!node.arguments.length) {
-    return marker('dynamic', sourceOf(node));
-  }
-
-  const first = node.arguments[0];
-  const firstValue = evaluate(first, env, depth + 1);
-
-  if ([
-    'formatMessage',
-    'fm',
-    'translate',
-    'format'
-  ].includes(method)) {
-    let id = null;
-    let fallback;
-
-    if (typeof firstValue === 'string') {
-      id = firstValue;
-    } else if (
-      firstValue &&
-      typeof firstValue === 'object' &&
-      !isUnknown(firstValue)
-    ) {
-      id = firstValue.id ??
-        firstValue.ID ??
-        firstValue.key ??
-        null;
-
-      fallback = firstValue.default ??
-        firstValue.defaultMessage ??
-        firstValue.description;
-    }
-
-    if (id === null) {
-      return marker('dynamic', sourceOf(node));
-    }
-
-    const prefix = method === 'fm'
-      ? env.extensionId
-      : null;
-
-    const fullId = prefix &&
-      !String(id).startsWith(`${prefix}.`)
-      ? `${prefix}.${id}`
-      : String(id);
-
-    const translated =
-      findMessage(env.messages, fullId) ??
-      findMessage(env.messages, id);
-
-    if (translated !== undefined) return translated;
-
-    if (fallback !== undefined) return fallback;
-
-    return fullId;
-  }
-
-  if (
-    method === '__dataNameOrObjMsg' &&
-    typeof firstValue === 'string'
-  ) {
-    const id = `defaultValue.${firstValue}Name`;
-    const fullId = env.extensionId
-      ? `${env.extensionId}.${id}`
-      : id;
-
-    return findMessage(env.messages, fullId) ??
-      findMessage(env.messages, id) ??
-      marker('dynamic', sourceOf(node));
-  }
-
-  if (
-    method === 'concat' &&
-    node.callee.object
-  ) {
-    const base = evaluate(node.callee.object, env, depth + 1);
-
-    if (Array.isArray(base)) {
-      const result = [...base];
-
-      for (const argument of node.arguments) {
-        const value = evaluate(argument, env, depth + 1);
-
-        if (Array.isArray(value)) result.push(...value);
-        else result.push(value);
-      }
-
-      return result;
-    }
-  }
-
-  return marker('dynamic', sourceOf(node));
 }
 
 /**
- * Parse local default imports such as:
- * import l10n from './l10n.js'
- *
- * Imported source is parsed but never executed.
+ * 只处理可安全静态推导的函数调用。
+ * 不执行源码中的任何函数。
  */
-function loadImportedDefault(filePath, depth = 0) {
-  if (depth > 3 || !fs.existsSync(filePath)) {
-    return marker('unknown', `import:${filePath}`);
-  }
+function evaluateCall(node, env, context, depth) {
+  const callee = node.callee;
+  const name = memberName(callee) || expressionName(callee);
 
-  try {
-    const parsed = parseSource(
-      fs.readFileSync(filePath, 'utf8')
-    );
-
-    const symbols = buildTopLevelSymbols(
-      parsed.ast,
-      path.dirname(filePath),
-      depth + 1
-    );
-
-    for (const statement of parsed.ast.program.body) {
-      if (statement.type !== 'ExportDefaultDeclaration') {
-        continue;
-      }
-
-      return evaluate(
-        statement.declaration,
-        {
-          symbols,
-          messages: {},
-          extensionId: null
-        }
-      );
+  // Biter：this.b(blockObject, function)
+  // 只解析第一个参数，绝不处理第二个函数。
+  if (name === 'this.b' || name === 'b') {
+    if (node.arguments.length >= 1) {
+      return evaluate(node.arguments[0], env, context, depth + 1);
     }
-  } catch (_) {
-    return marker('unknown', `import:${filePath}`);
   }
 
-  return marker('unknown', `import:${filePath}`);
+  // Feishu：cloneReporterBlocks(...)
+  if (name.endsWith('cloneReporterBlocks') ||
+      name === 'cloneReporterBlocks') {
+    return expandCloneReporterBlocks(node, env, context, depth + 1);
+  }
+
+  // 常见本地化函数
+  const isTranslation =
+    /(^|\.)(formatMessage|fm|translate|getText|format)$/.test(name);
+
+  if (isTranslation) {
+    const first = node.arguments[0];
+
+    if (first && first.type === 'StringLiteral') {
+      const key = first.value;
+      const translated = context.messages && context.messages[key];
+
+      if (translated !== undefined) return translated;
+
+      return DYNAMIC(`translation:${key}`);
+    }
+
+    if (first && first.type === 'ObjectExpression') {
+      const object = evaluate(first, env, context, depth + 1);
+
+      if (isObject(object)) {
+        const key = object.id || object.default || object.message;
+
+        if (typeof key === 'string') {
+          const translated = context.messages && context.messages[key];
+
+          if (translated !== undefined) return translated;
+
+          return DYNAMIC(`translation:${key}`);
+        }
+      }
+    }
+
+    return DYNAMIC(`translation call: ${name}`);
+  }
+
+  // 静态字符串拼接
+  if (name.endsWith('.concat') || name === 'concat') {
+    const object = callee.type === 'MemberExpression'
+      ? evaluate(callee.object, env, context, depth + 1)
+      : null;
+
+    const args = node.arguments.map(arg =>
+      evaluate(arg, env, context, depth + 1)
+    );
+
+    if (typeof object === 'string' &&
+        args.every(v => typeof v === 'string' || typeof v === 'number')) {
+      return object + args.join('');
+    }
+  }
+
+  return DYNAMIC(`call: ${name}`);
 }
 
-function buildTopLevelSymbols(ast, directory, importDepth = 0) {
-  const symbols = {};
+function expandCloneReporterBlocks(node, env, context, depth) {
+  const args = node.arguments;
+
+  const sourceBlocks = evaluate(args[0], env, context, depth + 1);
+  const blockTypes = evaluate(args[1], env, context, depth + 1);
+  const hiddenTypes = args[2]
+    ? evaluate(args[2], env, context, depth + 1)
+    : [];
+
+  const beforeBlockType = args[3]
+    ? evaluate(args[3], env, context, depth + 1)
+    : null;
+
+  if (!Array.isArray(sourceBlocks) || !Array.isArray(blockTypes)) {
+    return DYNAMIC('cloneReporterBlocks arguments are not static arrays');
+  }
+
+  if (!blockTypes.every(type => typeof type === 'string')) {
+    return DYNAMIC('cloneReporterBlocks blockTypes are dynamic');
+  }
+
+  const hidden = Array.isArray(hiddenTypes) ? hiddenTypes : [];
+  const result = [];
+
+  for (const block of sourceBlocks) {
+    if (!isObject(block) || typeof block.opcode !== 'string') continue;
+
+    for (const type of blockTypes) {
+      if (!type) continue;
+
+      const copy = clone(block);
+
+      if (beforeBlockType !== type) {
+        copy.opcode = `${copy.opcode}${type}`;
+      }
+
+      copy.blockType = type;
+      copy.hideFromPalette = hidden.includes(type);
+
+      result.push(copy);
+    }
+  }
+
+  return result;
+}
+
+/**
+ * 提取可静态读取的语言字典。
+ */
+function extractMessages(ast) {
+  const messages = {};
+
+  function walk(node) {
+    if (!node || typeof node !== 'object') return;
+
+    if (node.type === 'ObjectExpression') {
+      const properties = {};
+
+      for (const property of node.properties) {
+        if (property.type !== 'ObjectProperty') continue;
+
+        const key = property.key.name !== undefined
+          ? property.key.name
+          : property.key.value;
+
+        if (typeof key !== 'string') continue;
+
+        const value = property.value;
+
+        if (value.type === 'StringLiteral') {
+          properties[key] = value.value;
+        } else if (
+          value.type === 'ArrayExpression' &&
+          value.elements.every(e => e && e.type === 'StringLiteral')
+        ) {
+          properties[key] = value.elements.map(e => e.value);
+        }
+      }
+
+      Object.assign(messages, properties);
+    }
+
+    for (const key of Object.keys(node)) {
+      if (key === 'loc' || key === 'start' || key === 'end') continue;
+
+      const value = node[key];
+
+      if (Array.isArray(value)) {
+        for (const child of value) {
+          if (child && typeof child.type === 'string') walk(child);
+        }
+      } else if (value && typeof value.type === 'string') {
+        walk(value);
+      }
+    }
+  }
+
+  walk(ast);
+  return messages;
+}
+
+function buildTopLevelSymbols(ast, context) {
+  const env = {};
 
   for (const statement of ast.program.body) {
+    if (statement.type === 'VariableDeclaration') {
+      for (const declaration of statement.declarations) {
+        if (declaration.id.type !== 'Identifier') continue;
+
+        env[declaration.id.name] = evaluate(
+          declaration.init,
+          env,
+          context
+        );
+      }
+    }
+
     if (statement.type === 'ImportDeclaration') {
-      const defaultSpecifier = statement.specifiers.find(
-        specifier => specifier.type === 'ImportDefaultSpecifier'
-      );
-
-      if (!defaultSpecifier) continue;
-
-      const importedPath = path.resolve(
-        directory,
-        statement.source.value
-      );
-
-      symbols[defaultSpecifier.local.name] =
-        loadImportedDefault(importedPath, importDepth);
-    }
-  }
-
-  const declarations = [];
-
-  for (const statement of ast.program.body) {
-    if (statement.type !== 'VariableDeclaration') continue;
-
-    for (const declaration of statement.declarations) {
-      if (
-        declaration.id.type === 'Identifier' &&
-        declaration.init
-      ) {
-        declarations.push(declaration);
-      }
-    }
-  }
-
-  for (let pass = 0; pass < 8; pass++) {
-    let changed = false;
-
-    for (const declaration of declarations) {
-      const name = declaration.id.name;
-
-      if (
-        Object.prototype.hasOwnProperty.call(symbols, name)
-      ) continue;
-
-      const value = evaluate(
-        declaration.init,
-        {
-          symbols,
-          messages: {},
-          extensionId: null
-        }
-      );
-
-      if (!isUnknown(value)) {
-        symbols[name] = value;
-        changed = true;
-      }
-    }
-
-    if (!changed) break;
-  }
-
-  return symbols;
-}
-
-function addLocaleObject(target, localeObject, env) {
-  if (
-    !localeObject ||
-    typeof localeObject !== 'object' ||
-    Array.isArray(localeObject)
-  ) return;
-
-  for (const [key, value] of Object.entries(localeObject)) {
-    if (typeof value === 'string') {
-      target[key] = value;
-    }
-  }
-}
-
-function extractMessages(ast, symbols, extensionId) {
-  const tables = {
-    'zh-cn': {},
-    en: {}
-  };
-
-  const env = {
-    symbols,
-    messages: {},
-    extensionId
-  };
-
-  // Runtime.getFormatMessage({ 'zh-cn': {...}, en: {...} })
-  walk(ast, node => {
-    if (
-      node.type !== 'CallExpression' ||
-      !node.arguments.length ||
-      memberPath(node.callee).split('.').pop() !==
-        'getFormatMessage'
-    ) return;
-
-    const value = evaluate(
-      node.arguments[0],
-      env
-    );
-
-    if (!value || typeof value !== 'object') return;
-
-    for (const [locale, dictionary] of Object.entries(value)) {
-      const normalized = locale.toLowerCase();
-
-      if (normalized.startsWith('zh')) {
-        addLocaleObject(tables['zh-cn'], dictionary, env);
-      } else if (normalized.startsWith('en')) {
-        addLocaleObject(tables.en, dictionary, env);
-      }
-    }
-  });
-
-  // initFormatMessage(importedDictionary)
-  walk(ast, node => {
-    if (
-      node.type !== 'CallExpression' ||
-      memberPath(node.callee).split('.').pop() !==
-        'initFormatMessage' ||
-      !node.arguments.length
-    ) return;
-
-    const dictionary = evaluate(
-      node.arguments[0],
-      env
-    );
-
-    if (
-      !dictionary ||
-      typeof dictionary !== 'object' ||
-      Array.isArray(dictionary)
-    ) return;
-
-    for (const [key, pair] of Object.entries(dictionary)) {
-      if (
-        !Array.isArray(pair) ||
-        pair.length < 2 ||
-        typeof pair[0] !== 'string' ||
-        typeof pair[1] !== 'string'
-      ) continue;
-
-      const fullKey = extensionId
-        ? `${extensionId}.${key}`
-        : key;
-
-      tables['zh-cn'][fullKey] = pair[0];
-      tables.en[fullKey] = pair[1];
-    }
-  });
-
-  return tables;
-}
-
-function getMethodBody(node) {
-  if (
-    node.type === 'ClassMethod' ||
-    node.type === 'ObjectMethod'
-  ) {
-    return node.body;
-  }
-
-  if (
-    node.type === 'ObjectProperty' &&
-    node.value &&
-    (
-      node.value.type === 'FunctionExpression' ||
-      node.value.type === 'ArrowFunctionExpression'
-    )
-  ) {
-    return node.value.body;
-  }
-
-  return null;
-}
-
-function collectReturnObjects(body) {
-  const results = [];
-
-  if (!body) return results;
-
-  if (body.type === 'ObjectExpression') {
-    results.push(body);
-    return results;
-  }
-
-  walkFunctionBody(body, node => {
-    if (
-      node.type === 'ReturnStatement' &&
-      node.argument &&
-      node.argument.type === 'ObjectExpression'
-    ) {
-      results.push(node.argument);
-    }
-  });
-
-  return results;
-}
-
-function buildLocalSymbols(body, env) {
-  const declarations = [];
-
-  walkFunctionBody(body, node => {
-    if (
-      node.type === 'VariableDeclarator' &&
-      node.id.type === 'Identifier' &&
-      node.init
-    ) {
-      declarations.push(node);
-    }
-  });
-
-  const symbols = { ...env.symbols };
-
-  for (let pass = 0; pass < 10; pass++) {
-    let changed = false;
-
-    for (const declaration of declarations) {
-      const name = declaration.id.name;
-
-      const value = evaluate(
-        declaration.init,
-        {
-          ...env,
-          symbols
-        }
-      );
-
-      if (
-        !Object.prototype.hasOwnProperty.call(symbols, name) ||
-        isUnknown(symbols[name])
-      ) {
-        if (!isUnknown(value)) {
-          symbols[name] = value;
-          changed = true;
+      for (const specifier of statement.specifiers) {
+        if (specifier.type === 'ImportDefaultSpecifier') {
+          env[specifier.local.name] = DYNAMIC('imported default');
+        } else if (specifier.type === 'ImportSpecifier') {
+          env[specifier.local.name] = DYNAMIC('imported symbol');
         }
       }
     }
-
-    if (!changed) break;
   }
 
-  return symbols;
+  return env;
 }
 
-function extractInfo(ast, baseSymbols, messages, extensionId) {
-  const candidates = [];
+function collectLocalSymbols(functionNode, parentEnv, context) {
+  const env = { ...parentEnv };
 
-  walk(ast, node => {
-    const isGetInfo =
-      (
-        node.type === 'ClassMethod' ||
-        node.type === 'ObjectMethod'
-      ) &&
+  if (!functionNode || !functionNode.body) return env;
+
+  function walk(node) {
+    if (!node || typeof node !== 'object') return;
+
+    if (node !== functionNode.body &&
+        (
+          node.type === 'FunctionDeclaration' ||
+          node.type === 'FunctionExpression' ||
+          node.type === 'ArrowFunctionExpression'
+        )) {
+      return;
+    }
+
+    if (node.type === 'VariableDeclarator' &&
+        node.id.type === 'Identifier') {
+      env[node.id.name] = evaluate(node.init, env, context);
+    }
+
+    for (const key of Object.keys(node)) {
+      if (key === 'loc' || key === 'start' || key === 'end') continue;
+
+      const value = node[key];
+
+      if (Array.isArray(value)) {
+        for (const child of value) {
+          if (child && typeof child.type === 'string') walk(child);
+        }
+      } else if (value && typeof value.type === 'string') {
+        walk(value);
+      }
+    }
+  }
+
+  walk(functionNode.body);
+  return env;
+}
+
+function findGetInfoMethods(ast) {
+  const found = [];
+
+  function walk(node) {
+    if (!node || typeof node !== 'object') return;
+
+    if (
+      (node.type === 'ClassMethod' ||
+       node.type === 'ObjectMethod' ||
+       node.type === 'ClassPrivateMethod') &&
       node.key &&
-      node.key.name === 'getInfo';
+      node.key.name === 'getInfo'
+    ) {
+      found.push(node);
+    }
 
-    const isGetInfoProperty =
+    if (
       node.type === 'ObjectProperty' &&
       node.key &&
       node.key.name === 'getInfo' &&
@@ -1052,739 +721,914 @@ function extractInfo(ast, baseSymbols, messages, extensionId) {
       (
         node.value.type === 'FunctionExpression' ||
         node.value.type === 'ArrowFunctionExpression'
-      );
+      )
+    ) {
+      found.push(node.value);
+    }
 
-    if (!isGetInfo && !isGetInfoProperty) return;
+    for (const key of Object.keys(node)) {
+      if (key === 'loc' || key === 'start' || key === 'end') continue;
 
-    const body = getMethodBody(node);
-    if (!body) return;
+      const value = node[key];
 
-    const env = {
-      symbols: buildLocalSymbols(
-        body,
-        {
-          symbols: baseSymbols,
-          messages,
-          extensionId
+      if (Array.isArray(value)) {
+        for (const child of value) {
+          if (child && typeof child.type === 'string') walk(child);
         }
-      ),
-      messages,
-      extensionId
-    };
-
-    for (const objectNode of collectReturnObjects(body)) {
-      const info = evaluate(objectNode, env);
-
-      if (
-        info &&
-        typeof info === 'object' &&
-        !Array.isArray(info)
-      ) {
-        candidates.push(info);
+      } else if (value && typeof value.type === 'string') {
+        walk(value);
       }
     }
-  });
+  }
 
-  return candidates.find(
-    candidate => Array.isArray(candidate.blocks)
-  ) || candidates[0] || null;
+  walk(ast);
+  return found;
 }
 
-function collectDiagnostics(value, currentPath = '', output = {}) {
-  if (!output.unknown) output.unknown = [];
-  if (!output.dynamic) output.dynamic = [];
-  if (!output.functions) output.functions = [];
-  if (!output.spreads) output.spreads = [];
+function collectReturnObjects(functionNode) {
+  const results = [];
 
-  if (Array.isArray(value)) {
-    value.forEach((item, index) => {
-      collectDiagnostics(
-        item,
-        `${currentPath}[${index}]`,
-        output
-      );
-    });
+  function walk(node) {
+    if (!node || typeof node !== 'object') return;
 
-    return output;
+    if (node !== functionNode.body &&
+        (
+          node.type === 'FunctionDeclaration' ||
+          node.type === 'FunctionExpression' ||
+          node.type === 'ArrowFunctionExpression'
+        )) {
+      return;
+    }
+
+    if (node.type === 'ReturnStatement' && node.argument) {
+      results.push(node.argument);
+      return;
+    }
+
+    for (const key of Object.keys(node)) {
+      if (key === 'loc' || key === 'start' || key === 'end') continue;
+
+      const value = node[key];
+
+      if (Array.isArray(value)) {
+        for (const child of value) {
+          if (child && typeof child.type === 'string') walk(child);
+        }
+      } else if (value && typeof value.type === 'string') {
+        walk(value);
+      }
+    }
   }
 
-  if (!value || typeof value !== 'object') {
-    return output;
+  if (functionNode.body && functionNode.body.type === 'BlockStatement') {
+    walk(functionNode.body);
+  } else if (functionNode.body) {
+    results.push(functionNode.body);
   }
 
-  if (isMarker(value, 'unknown')) {
-    output.unknown.push({
-      path: currentPath,
-      expression: value.$expression
-    });
-    return output;
+  return results;
+}
+
+function findProperty(object, key) {
+  if (!isObject(object)) return undefined;
+  return object[key];
+}
+
+function getInfoObjects(ast, env, context) {
+  const methods = findGetInfoMethods(ast);
+  const objects = [];
+
+  for (const method of methods) {
+    const localEnv = collectLocalSymbols(method, env, context);
+    const returns = collectReturnObjects(method);
+
+    for (const expression of returns) {
+      const value = evaluate(expression, localEnv, context);
+
+      if (isObject(value)) objects.push(value);
+    }
   }
 
-  if (isMarker(value, 'dynamic')) {
-    output.dynamic.push({
-      path: currentPath,
-      expression: value.$dynamic
-    });
-    return output;
+  return objects;
+}
+
+function normalizeBlock(block, extension, filePath, index) {
+  if (!isObject(block)) {
+    return {
+      index,
+      invalidBlock: true,
+      raw: block
+    };
   }
 
-  if (isMarker(value, 'function')) {
-    output.functions.push({
-      path: currentPath,
-      expression: value.$function
-    });
-    return output;
+  const result = clone(block);
+
+  result.extensionName = extension.name;
+  result.extensionId = extension.id;
+  result.sourceFile = filePath;
+  result.index = index;
+
+  if (typeof result.opcode !== 'string') {
+    result.opcode = null;
   }
 
-  if (isMarker(value, 'spread')) {
-    output.spreads.push({
-      path: currentPath,
-      expression: value.$dynamicSpread
-    });
-    return output;
+  if (typeof result.text !== 'string') {
+    if (result.text === undefined) result.text = null;
   }
 
-  for (const [key, item] of Object.entries(value)) {
-    collectDiagnostics(
-      item,
-      currentPath ? `${currentPath}.${key}` : key,
-      output
+  if (typeof result.text_en !== 'string' &&
+      result.text_en !== null &&
+      result.text_en !== undefined) {
+    result.text_en = null;
+  }
+
+  if (typeof result.category !== 'string' &&
+      result.category !== null &&
+      result.category !== undefined) {
+    result.category = null;
+  }
+
+  if (typeof result.category_en !== 'string' &&
+      result.category_en !== null &&
+      result.category_en !== undefined) {
+    result.category_en = null;
+  }
+
+  if (result.arguments === undefined) {
+    result.arguments = {};
+  }
+
+  if (result.tooltip === undefined) result.tooltip = null;
+  if (result.tooltip_en === undefined) result.tooltip_en = null;
+
+  return result;
+}
+
+function getExtensionInfo(info, relativePath) {
+  const basename = path.basename(relativePath, path.extname(relativePath));
+
+  const id = typeof info.id === 'string'
+    ? info.id
+    : basename;
+
+  const name = typeof info.name === 'string'
+    ? info.name
+    : basename;
+
+  return { id, name };
+}
+
+/**
+ * LPP 专用静态注册链分析。
+ *
+ * 只识别 Extension.register / Category.register / Button /
+ * Reporter / Command 的结构，不执行任何函数。
+ */
+function evaluateLppExpression(node, env, depth = 0) {
+  if (!node || depth > 60) return DYNAMIC('LPP expression depth');
+
+  if (node.type === 'ParenthesizedExpression') {
+    return evaluateLppExpression(node.expression, env, depth + 1);
+  }
+
+  if (node.type === 'Identifier') {
+    return env[node.name] || UNKNOWN(node.name);
+  }
+
+  if (node.type === 'StringLiteral') return node.value;
+
+  if (node.type === 'ArrayExpression') {
+    return node.elements.map(element =>
+      evaluateLppExpression(element, env, depth + 1)
     );
   }
 
-  return output;
-}
+  if (node.type === 'NewExpression') {
+    const name = expressionName(node.callee);
+    const args = node.arguments.map(arg =>
+      arg.type === 'ArrowFunctionExpression' ||
+      arg.type === 'FunctionExpression'
+        ? FUNCTION('LPP lazy function')
+        : evaluateLppExpression(arg, env, depth + 1)
+    );
 
-function removeFunctions(value) {
-  if (isMarker(value, 'function')) return undefined;
-
-  if (Array.isArray(value)) {
-    return value.map(item => {
-      const cleaned = removeFunctions(item);
-      return cleaned === undefined ? null : cleaned;
-    });
-  }
-
-  if (value && typeof value === 'object') {
-    const result = {};
-
-    for (const [key, item] of Object.entries(value)) {
-      const cleaned = removeFunctions(item);
-
-      if (cleaned !== undefined) {
-        result[key] = cleaned;
-      }
+    if (name.endsWith('Extension')) {
+      return { __lpp: 'Extension', blocks: [] };
     }
 
-    return result;
+    if (name.endsWith('Category')) {
+      return {
+        __lpp: 'Category',
+        label: args[0] || DYNAMIC('category label'),
+        entries: []
+      };
+    }
+
+    if (name.endsWith('Button')) {
+      return {
+        __lpp: 'Button',
+        args
+      };
+    }
+
+    return {
+      __lpp: 'Block',
+      type: name,
+      args
+    };
   }
 
-  return value;
+  if (node.type === 'CallExpression') {
+    const callee = node.callee;
+
+    if (callee.type === 'MemberExpression' &&
+        callee.property.name === 'register') {
+      const target = evaluateLppExpression(
+        callee.object,
+        env,
+        depth + 1
+      );
+
+      const args = node.arguments.map(arg =>
+        evaluateLppExpression(arg, env, depth + 1)
+      );
+
+      if (isObject(target) && target.__lpp === 'Extension') {
+        const item = args[0];
+
+        if (item && item.__lpp === 'Category') {
+          target.blocks.push(item);
+        } else if (item && item.__lpp === 'Button') {
+          target.blocks.push(item);
+        }
+
+        return target;
+      }
+
+      if (isObject(target) && target.__lpp === 'Category') {
+        const opcode = args[0];
+        const block = args[1];
+
+        if (typeof opcode === 'string' && isObject(block)) {
+          target.entries.push({
+            opcode,
+            block
+          });
+        }
+
+        return target;
+      }
+
+      return target;
+    }
+
+    const name = expressionName(callee);
+
+    if (
+      name.includes('Reporter') ||
+      name.includes('Command') ||
+      name.includes('Boolean') ||
+      name.includes('Hat') ||
+      name.includes('Loop')
+    ) {
+      return {
+        __lpp: 'Block',
+        type: name,
+        args: node.arguments.map(arg =>
+          arg.type === 'ArrowFunctionExpression' ||
+          arg.type === 'FunctionExpression'
+            ? FUNCTION('LPP block function')
+            : evaluateLppExpression(arg, env, depth + 1)
+        )
+      };
+    }
+
+    return DYNAMIC(`LPP call: ${name}`);
+  }
+
+  if (node.type === 'MemberExpression') {
+    return expressionName(node);
+  }
+
+  if (node.type === 'ArrowFunctionExpression' ||
+      node.type === 'FunctionExpression') {
+    return FUNCTION('LPP lazy function');
+  }
+
+  return DYNAMIC(`LPP ${node.type}`);
 }
 
-function normalizeBlock(
-  block,
-  englishBlock,
-  info,
-  englishInfo,
-  relativePath,
-  repository,
-  category,
-  categoryEn
-) {
-  if (
-    !block ||
-    typeof block !== 'object' ||
-    Array.isArray(block)
-  ) return null;
+function findDefineExtension(ast) {
+  let found = null;
 
-  if (![
-    'opcode', 'blockType', 'text'
-  ].some(key =>
-    Object.prototype.hasOwnProperty.call(block, key)
-  )) {
-    return null;
+  function walk(node) {
+    if (!node || typeof node !== 'object' || found) return;
+
+    if (
+      node.type === 'FunctionDeclaration' &&
+      node.id &&
+      node.id.name === 'defineExtension'
+    ) {
+      found = node;
+      return;
+    }
+
+    if (
+      node.type === 'VariableDeclarator' &&
+      node.id.type === 'Identifier' &&
+      node.id.name === 'defineExtension' &&
+      node.init &&
+      (
+        node.init.type === 'ArrowFunctionExpression' ||
+        node.init.type === 'FunctionExpression'
+      )
+    ) {
+      found = node.init;
+      return;
+    }
+
+    for (const key of Object.keys(node)) {
+      if (key === 'loc' || key === 'start' || key === 'end') continue;
+
+      const value = node[key];
+
+      if (Array.isArray(value)) {
+        for (const child of value) walk(child);
+      } else if (value && typeof value.type === 'string') {
+        walk(value);
+      }
+    }
   }
 
-  const cleanBlock = removeFunctions(block);
-  const cleanEnglish = englishBlock &&
-    typeof englishBlock === 'object'
-    ? removeFunctions(englishBlock)
-    : null;
+  walk(ast);
+  return found;
+}
 
-  const text = cleanBlock.text ?? null;
-  let textEn = cleanEnglish
-    ? (cleanEnglish.text ?? null)
-    : null;
+function extractLppBlocks(ast) {
+  const defineExtension = findDefineExtension(ast);
 
-  if (isTranslationKey(textEn)) textEn = null;
-
-  let finalCategoryEn = categoryEn ?? null;
-
-  // Never expose an untranslated internal key as English text.
-  if (isTranslationKey(finalCategoryEn)) {
-    finalCategoryEn = null;
+  if (!defineExtension) {
+    return {
+      blocks: [],
+      recognized: false
+    };
   }
 
-  const diagnostics = collectDiagnostics(block);
+  const returns = collectReturnObjects(defineExtension);
+  let extension = null;
+
+  for (const expression of returns) {
+    const result = evaluateLppExpression(expression, {});
+
+    if (isObject(result) && result.__lpp === 'Extension') {
+      extension = result;
+      break;
+    }
+  }
+
+  if (!extension) {
+    return {
+      blocks: [],
+      recognized: false
+    };
+  }
+
+  const blocks = [];
+
+  for (const item of extension.blocks) {
+    if (item.__lpp === 'Button') {
+      const id = item.args && item.args.length
+        ? item.args[0]
+        : null;
+
+      blocks.push({
+        opcode: typeof id === 'string' ? id : null,
+        blockType: 'button',
+        text: null,
+        arguments: {},
+        fieldStatus: {
+          dynamic: ['text'],
+          functions: [],
+          unknown: []
+        }
+      });
+
+      continue;
+    }
+
+    if (item.__lpp !== 'Category') continue;
+
+    blocks.push({
+      opcode: null,
+      blockType: 'label',
+      text: null,
+      arguments: {},
+      category: null,
+      fieldStatus: {
+        dynamic: ['text'],
+        functions: [],
+        unknown: []
+      }
+    });
+
+    for (const entry of item.entries) {
+      const typeName = entry.block.type || '';
+
+      let blockType = null;
+
+      if (/Reporter/i.test(typeName)) blockType = 'reporter';
+      else if (/Command/i.test(typeName)) blockType = 'command';
+      else if (/Boolean/i.test(typeName)) blockType = 'Boolean';
+      else if (/Hat/i.test(typeName)) blockType = 'hat';
+      else if (/Loop/i.test(typeName)) blockType = 'loop';
+
+      blocks.push({
+        opcode: entry.opcode,
+        blockType,
+        text: '',
+        arguments: {},
+        fieldStatus: {
+          dynamic: [],
+          functions: [],
+          unknown: blockType ? [] : ['blockType']
+        }
+      });
+    }
+  }
 
   return {
-    extensionId: info.id ?? null,
-    extensionName: info.name ?? null,
-    extensionName_en: englishInfo.name ?? null,
-
-    opcode: cleanBlock.opcode ?? null,
-    func: cleanBlock.func ?? null,
-
-    text,
-    text_en: textEn,
-
-    blockType: cleanBlock.blockType ?? null,
-    arguments: cleanBlock.arguments ?? {},
-
-    branchCount: cleanBlock.branchCount ?? null,
-    terminal: cleanBlock.terminal ?? null,
-    filter: cleanBlock.filter ?? null,
-
-    tooltip: cleanBlock.tooltip ?? null,
-    tooltip_en: cleanEnglish
-      ? (cleanEnglish.tooltip ?? null)
-      : null,
-
-    category: category ?? null,
-    category_en: finalCategoryEn,
-
-    fieldStatus: {
-      dynamic: diagnostics.dynamic,
-      functions: diagnostics.functions,
-      unknown: diagnostics.unknown,
-      dynamicSpreads: diagnostics.spreads
-    },
-
-    sourceFile: relativePath,
-    repository
+    blocks,
+    recognized: blocks.length > 0
   };
 }
 
-function scanFile(filePath, repositoryRoot, repositoryUrl) {
-  const relativePath = path
-    .relative(repositoryRoot, filePath)
+function inspectFields(block) {
+  const status = {
+    dynamic: [],
+    functions: [],
+    unknown: [],
+    spreads: []
+  };
+
+  function walk(value, prefix) {
+    if (isMarker(value)) {
+      if ('$dynamic' in value) status.dynamic.push(prefix);
+      else if ('$function' in value) status.functions.push(prefix);
+      else status.unknown.push(prefix);
+      return;
+    }
+
+    if (Array.isArray(value)) {
+      value.forEach((item, index) => walk(item, `${prefix}[${index}]`));
+      return;
+    }
+
+    if (isObject(value)) {
+      if (value.$spread) status.spreads.push(prefix);
+
+      for (const [key, child] of Object.entries(value)) {
+        if (key === '$spread') continue;
+        walk(child, prefix ? `${prefix}.${key}` : key);
+      }
+    }
+  }
+
+  walk(block, '');
+
+  status.dynamic = [...new Set(status.dynamic)];
+  status.functions = [...new Set(status.functions)];
+  status.unknown = [...new Set(status.unknown)];
+  status.spreads = [...new Set(status.spreads)];
+
+  return status;
+}
+
+function cleanFunctions(value) {
+  if (Array.isArray(value)) {
+    return value.map(cleanFunctions);
+  }
+
+  if (!isObject(value)) return value;
+
+  if ('$function' in value) return null;
+
+  const result = {};
+
+  for (const [key, child] of Object.entries(value)) {
+    if (key === '$function') continue;
+    result[key] = cleanFunctions(child);
+  }
+
+  return result;
+}
+
+function scanFile(filePath, repositoryPath) {
+  const relativePath = path.relative(repositoryPath, filePath)
     .split(path.sep)
     .join('/');
 
-  const report = {
+  const result = {
     file: relativePath,
-    status: 'unknown',
-    blocksFound: 0,
-    unresolvedFieldCount: 0,
+    status: 'no_static_getInfo',
+    blockCount: 0,
     dynamicFieldCount: 0,
     functionFieldCount: 0,
-    unresolvedFields: [],
-    dynamicFields: [],
-    functionFields: [],
-    message: ''
+    unknownFieldCount: 0,
+    omittedDynamicBlockCount: 0,
+    errors: []
   };
 
   try {
-    const parsed = parseSource(
-      fs.readFileSync(filePath, 'utf8')
-    );
+    const source = fs.readFileSync(filePath, 'utf8');
+    const ast = parseSource(source, relativePath);
+    const messages = extractMessages(ast);
+    const context = { messages };
+    const env = buildTopLevelSymbols(ast, context);
 
-    const ast = parsed.ast;
+    const infoObjects = getInfoObjects(ast, env, context);
+    let info = infoObjects[0] || null;
 
-    const symbols = buildTopLevelSymbols(
-      ast,
-      path.dirname(filePath)
-    );
+    let rawBlocks = null;
 
-    const extensionId =
-      typeof symbols.extensionId === 'string'
-        ? symbols.extensionId
-        : null;
-
-    const allMessages = extractMessages(
-      ast,
-      symbols,
-      extensionId
-    );
-
-    const zh = extractInfo(
-      ast,
-      symbols,
-      allMessages['zh-cn'],
-      extensionId
-    );
-
-    const en = extractInfo(
-      ast,
-      symbols,
-      allMessages.en,
-      extensionId
-    ) || zh;
-
-    if (parsed.normalized) {
-      report.normalizationNote =
-        'Full-width semicolons outside strings/comments were normalized.';
+    if (info) {
+      rawBlocks = findProperty(info, 'blocks');
     }
 
-    if (!zh) {
-      report.status = 'no_static_getInfo';
-      report.message =
-        'No statically readable getInfo() return object.';
-      return { blocks: [], report };
+    // LPP：blocks: this.extension.export()
+    if (
+      !Array.isArray(rawBlocks) &&
+      /FurryR[\\/]lpp\.js$/i.test(filePath)
+    ) {
+      const lpp = extractLppBlocks(ast);
+
+      if (lpp.recognized) {
+        rawBlocks = lpp.blocks;
+        result.lppStaticExtraction = true;
+      }
     }
 
-    if (!Array.isArray(zh.blocks)) {
-      report.status = 'dynamic_blocks';
-      report.message =
-        'The blocks property is not a statically readable array.';
-
-      report.unresolvedFields = collectDiagnostics(
-        zh.blocks,
-        'blocks'
-      ).unknown;
-
-      report.unresolvedFieldCount =
-        report.unresolvedFields.length;
-
-      return { blocks: [], report };
+    if (!info && !rawBlocks) {
+      result.status = 'no_static_getInfo';
+      return { result, blocks: [] };
     }
 
-    const englishBlocks = Array.isArray(en.blocks)
-      ? en.blocks
-      : [];
+    if (!Array.isArray(rawBlocks)) {
+      result.status = 'dynamic_blocks';
+      result.omittedDynamicBlockCount = 1;
+      return { result, blocks: [] };
+    }
 
-    const extracted = [];
+    const extension = getExtensionInfo(info || {}, relativePath);
+    const blocks = [];
 
-    let category = null;
-    let categoryEn = null;
-    let categoryUncertain = false;
+    for (let i = 0; i < rawBlocks.length; i++) {
+      const rawBlock = rawBlocks[i];
 
-    for (let i = 0; i < zh.blocks.length; i++) {
-      const block = zh.blocks[i];
-      const englishBlock = englishBlocks[i] ?? null;
+      // 分类分隔符不是积木元数据。
+      if (typeof rawBlock === 'string') continue;
 
-      if (typeof block === 'string' && block.startsWith('---')) {
-        category = block.slice(3);
-
-        categoryEn =
-          typeof englishBlock === 'string' &&
-          englishBlock.startsWith('---')
-            ? englishBlock.slice(3)
-            : null;
-
-        categoryUncertain = false;
+      if (!isObject(rawBlock)) {
+        result.omittedDynamicBlockCount++;
         continue;
       }
 
-      if (isMarker(block, 'spread')) {
-        report.dynamicFields.push({
-          path: `blocks[${i}]`,
-          expression: block.$dynamicSpread
-        });
-
-        category = null;
-        categoryEn = null;
-        categoryUncertain = true;
-        continue;
-      }
-
-      const diagnostics = collectDiagnostics(
-        block,
-        `blocks[${i}]`
-      );
-
-      report.unresolvedFields.push(
-        ...diagnostics.unknown
-      );
-
-      report.dynamicFields.push(
-        ...diagnostics.dynamic
-      );
-
-      report.functionFields.push(
-        ...diagnostics.functions
-      );
-
-      report.dynamicFields.push(
-        ...diagnostics.spreads
-      );
-
+      const fieldStatus = inspectFields(rawBlock);
       const normalized = normalizeBlock(
-        block,
-        englishBlock,
-        zh,
-        en,
+        cleanFunctions(rawBlock),
+        extension,
         relativePath,
-        repositoryUrl,
-        categoryUncertain ? null : category,
-        categoryUncertain ? null : categoryEn
+        i
       );
 
-      if (normalized) extracted.push(normalized);
+      normalized.fieldStatus = fieldStatus;
+
+      result.dynamicFieldCount += fieldStatus.dynamic.length;
+      result.functionFieldCount += fieldStatus.functions.length;
+      result.unknownFieldCount += fieldStatus.unknown.length;
+
+      blocks.push(normalized);
     }
 
-    report.blocksFound = extracted.length;
+    result.blockCount = blocks.length;
 
-    report.unresolvedFieldCount =
-      report.unresolvedFields.length;
-
-    report.dynamicFieldCount =
-      report.dynamicFields.length;
-
-    report.functionFieldCount =
-      report.functionFields.length;
-
-    if (report.unresolvedFieldCount > 0) {
-      report.status = 'partial';
-      report.message =
-        `${report.unresolvedFieldCount} unknown field(s).`;
-    } else if (report.dynamicFieldCount > 0) {
-      report.status = 'dynamic_fields';
-      report.message =
-        `${report.dynamicFieldCount} runtime-dependent field(s).`;
+    if (result.unknownFieldCount > 0) {
+      result.status = 'unknown_fields';
+    } else if (
+      result.dynamicFieldCount > 0 ||
+      result.omittedDynamicBlockCount > 0
+    ) {
+      result.status = 'dynamic_fields';
     } else {
-      report.status = 'success';
+      result.status = 'success';
     }
 
-    return {
-      blocks: extracted,
-      report
-    };
-  } catch (error) {
-    report.status = 'error';
-    report.message = String(
-      error && error.message ? error.message : error
-    ).slice(0, 1000);
+    return { result, blocks };
 
-    return {
-      blocks: [],
-      report
-    };
+  } catch (error) {
+    result.status = 'error';
+    result.errors.push({
+      message: error.message,
+      name: error.name
+    });
+
+    return { result, blocks: [] };
   }
 }
 
 function readSources() {
-  if (!fs.existsSync('sources.txt')) {
-    throw new Error('sources.txt was not found.');
+  if (!fs.existsSync(SOURCES_FILE)) {
+    throw new Error('找不到 sources.txt');
   }
 
-  return fs.readFileSync('sources.txt', 'utf8')
+  return fs.readFileSync(SOURCES_FILE, 'utf8')
     .split(/\r?\n/)
     .map(line => line.trim())
     .filter(line => line && !line.startsWith('#'));
 }
 
-function listJsFiles(root) {
-  const files = [];
+function cloneRepository(url, destination) {
+  execFileSync(
+    'git',
+    ['clone', '--depth', '1', url, destination],
+    { stdio: 'inherit' }
+  );
+}
 
-  function visit(directory) {
-    const entries = fs.readdirSync(directory, {
-      withFileTypes: true
-    }).sort((a, b) => a.name.localeCompare(b.name));
+function findJavaScriptFiles(directory) {
+  const results = [];
 
-    for (const entry of entries) {
-      const fullPath = path.join(directory, entry.name);
+  const ignoredDirectories = new Set([
+    '.git',
+    'node_modules',
+    'dist',
+    'build',
+    'coverage',
+    'test',
+    'tests',
+    '__tests__'
+  ]);
+
+  function walk(current) {
+    if (!fs.existsSync(current)) return;
+
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const fullPath = path.join(current, entry.name);
 
       if (entry.isDirectory()) {
-        if (!EXCLUDED_DIRS.has(entry.name)) {
-          visit(fullPath);
-        }
-      } else if (
-        entry.isFile() &&
-        entry.name.endsWith('.js') &&
-        !EXCLUDED_FILES.has(entry.name)
-      ) {
-        files.push(fullPath);
+        if (!ignoredDirectories.has(entry.name)) walk(fullPath);
+        continue;
       }
+
+      if (!entry.isFile()) continue;
+      if (!/\.(js|cjs|mjs)$/.test(entry.name)) continue;
+
+      results.push(fullPath);
     }
   }
 
-  visit(root);
-  return files;
+  walk(directory);
+  return results;
 }
 
-function cloneRepository(url, destination) {
-  cp.execFileSync(
-    'git',
-    ['clone', '--depth', '1', url, destination],
-    { stdio: 'pipe' }
-  );
+function buildDuplicateReport(blocks) {
+  const globalMap = new Map();
+  const namespacedMap = new Map();
+
+  for (const block of blocks) {
+    if (typeof block.opcode !== 'string' || !block.opcode) continue;
+
+    const globalKey = block.opcode;
+    const namespaceKey =
+      `${block.extensionId || 'unknown'}::${block.opcode}`;
+
+    if (!globalMap.has(globalKey)) globalMap.set(globalKey, []);
+    if (!namespacedMap.has(namespaceKey)) namespacedMap.set(namespaceKey, []);
+
+    globalMap.get(globalKey).push(block);
+    namespacedMap.get(namespaceKey).push(block);
+  }
+
+  function duplicates(map) {
+    const result = [];
+
+    for (const [key, values] of map.entries()) {
+      if (values.length < 2) continue;
+
+      result.push({
+        key,
+        count: values.length,
+        files: [...new Set(values.map(v => v.sourceFile))]
+      });
+    }
+
+    return result;
+  }
+
+  return {
+    global: duplicates(globalMap),
+    namespaced: duplicates(namespacedMap)
+  };
+}
+
+function countMissingFields(blocks) {
+  const fields = [
+    'opcode',
+    'text',
+    'text_en',
+    'blockType',
+    'category',
+    'category_en',
+    'arguments'
+  ];
+
+  const result = {};
+
+  for (const field of fields) {
+    result[field] = blocks.filter(block =>
+      block[field] === null || block[field] === undefined
+    ).length;
+  }
+
+  return result;
 }
 
 function main() {
-  console.log(
-    `Starting CCW Extension Database Extractor v${EXTRACTOR_VERSION}...`
-  );
-
-  console.log(
-    'Static analysis only: extension source code will not be executed.'
-  );
-
   const sources = readSources();
 
-  if (!sources.length) {
-    throw new Error(
-      'No source repositories found in sources.txt.'
-    );
-  }
+  const tempRoot = fs.mkdtempSync(
+    path.join(os.tmpdir(), 'ccw-extension-db-')
+  );
 
   const allBlocks = [];
-  const allReports = [];
-  const versionReports = [];
-
-  const temp = fs.mkdtempSync(
-    path.join(os.tmpdir(), 'ccw-extension-')
-  );
+  const fileReports = [];
+  const repositoryReports = [];
 
   try {
-    sources.forEach((url, index) => {
-      console.log(`Cloning source ${index + 1}: ${url}`);
-
-      const repo = path.join(temp, `source_${index}`);
-
-      try {
-        cloneRepository(url, repo);
-      } catch (error) {
-        allReports.push({
-          repository: url,
-          status: 'clone_error',
-          blocksFound: 0,
-          unresolvedFieldCount: 0,
-          dynamicFieldCount: 0,
-          functionFieldCount: 0,
-          unresolvedFields: [],
-          dynamicFields: [],
-          functionFields: [],
-          message: String(
-            error.message || error
-          ).slice(0, 1000)
-        });
-
-        return;
-      }
-
-      const commit = cp.execFileSync(
-        'git',
-        ['-C', repo, 'rev-parse', 'HEAD'],
-        { encoding: 'utf8' }
-      ).trim();
-
-      versionReports.push({
-        repository: url,
-        commit,
-        extractorVersion: EXTRACTOR_VERSION,
-        versionStatus: 'default_branch_only',
-        note:
-          'Only the repository default branch was scanned.'
-      });
-
-      const extensionsRoot = path.join(
-        repo,
-        'extensions'
+    for (let sourceIndex = 0; sourceIndex < sources.length; sourceIndex++) {
+      const sourceUrl = sources[sourceIndex];
+      const repositoryPath = path.join(
+        tempRoot,
+        `repository-${sourceIndex}`
       );
 
-      if (
-        !fs.existsSync(extensionsRoot) ||
-        !fs.statSync(extensionsRoot).isDirectory()
-      ) {
-        allReports.push({
-          repository: url,
-          status: 'missing_extensions_directory',
-          blocksFound: 0,
-          unresolvedFieldCount: 0,
-          dynamicFieldCount: 0,
-          functionFieldCount: 0,
-          unresolvedFields: [],
-          dynamicFields: [],
-          functionFields: [],
-          message:
-            'The repository has no extensions/ directory.'
+      console.log(`\n[${sourceIndex + 1}/${sources.length}] ${sourceUrl}`);
+
+      try {
+        cloneRepository(sourceUrl, repositoryPath);
+
+        const extensionDirectory = path.join(
+          repositoryPath,
+          'extensions'
+        );
+
+        const scanDirectory = fs.existsSync(extensionDirectory)
+          ? extensionDirectory
+          : repositoryPath;
+
+        const files = findJavaScriptFiles(scanDirectory);
+        const repositoryBlocks = [];
+        const repositoryFileReports = [];
+
+        for (const file of files) {
+          const scanned = scanFile(file, repositoryPath);
+
+          repositoryFileReports.push(scanned.result);
+          repositoryBlocks.push(...scanned.blocks);
+        }
+
+        allBlocks.push(...repositoryBlocks);
+        fileReports.push(...repositoryFileReports);
+
+        repositoryReports.push({
+          source: sourceUrl,
+          fileCount: files.length,
+          blockCount: repositoryBlocks.length
         });
 
-        return;
+      } catch (error) {
+        repositoryReports.push({
+          source: sourceUrl,
+          error: error.message
+        });
       }
+    }
 
-      for (const file of listJsFiles(extensionsRoot)) {
-        const result = scanFile(file, repo, url);
+    const statusCounts = {};
+    for (const report of fileReports) {
+      statusCounts[report.status] =
+        (statusCounts[report.status] || 0) + 1;
+    }
 
-        result.report.repository = url;
+    const successfulFiles = statusCounts.success || 0;
+    const dynamicFiles = statusCounts.dynamic_blocks || 0;
+    const dynamicFieldFiles = statusCounts.dynamic_fields || 0;
+    const unknownFiles = statusCounts.unknown_fields || 0;
+    const errorFiles = statusCounts.error || 0;
+    const unrecognizedFiles = statusCounts.no_static_getInfo || 0;
 
-        allReports.push(result.report);
-        allBlocks.push(...result.blocks);
+    const dynamicFieldCount = fileReports.reduce(
+      (sum, item) => sum + item.dynamicFieldCount,
+      0
+    );
 
-        console.log(
-          `${result.report.status}: ${result.report.file} ` +
-          `(${result.report.blocksFound} blocks, ` +
-          `${result.report.unresolvedFieldCount} unknown, ` +
-          `${result.report.dynamicFieldCount} dynamic)`
-        );
+    const functionFieldCount = fileReports.reduce(
+      (sum, item) => sum + item.functionFieldCount,
+      0
+    );
+
+    const unknownFieldCount = fileReports.reduce(
+      (sum, item) => sum + item.unknownFieldCount,
+      0
+    );
+
+    const omittedDynamicBlockCount = fileReports.reduce(
+      (sum, item) => sum + item.omittedDynamicBlockCount,
+      0
+    );
+
+    const database = {
+      schemaVersion: SCHEMA_VERSION,
+      extractorVersion: EXTRACTOR_VERSION,
+      generatedAt: new Date().toISOString(),
+      sourceCount: sources.length,
+      blockCount: allBlocks.length,
+      blocks: allBlocks,
+      duplicateOpcodes: buildDuplicateReport(allBlocks),
+      quality: {
+        missingFields: countMissingFields(allBlocks),
+        dynamicFieldCount,
+        functionFieldCount,
+        unknownFieldCount,
+        omittedDynamicBlockCount
       }
-    });
-  } finally {
-    fs.rmSync(temp, {
-      recursive: true,
-      force: true
-    });
-  }
-
-  const globalOpcodeMap = {};
-  const namespacedOpcodeMap = {};
-
-  for (const block of allBlocks) {
-    if (
-      typeof block.opcode !== 'string' ||
-      !block.opcode
-    ) continue;
-
-    const location = {
-      extensionId: block.extensionId,
-      sourceFile: block.sourceFile,
-      repository: block.repository
     };
 
-    (globalOpcodeMap[block.opcode] ||= []).push(location);
+    const extractionReport = {
+      schemaVersion: SCHEMA_VERSION,
+      extractorVersion: EXTRACTOR_VERSION,
+      generatedAt: new Date().toISOString(),
 
-    const namespace = [
-      block.repository,
-      block.extensionId || '<no-extension-id>',
-      block.opcode
-    ].join('::');
+      sourceCount: sources.length,
+      fileCount: fileReports.length,
+      blockCount: allBlocks.length,
 
-    (namespacedOpcodeMap[namespace] ||= []).push(location);
+      successfulFiles,
+      dynamicFiles,
+      dynamicFieldFiles,
+      unknownFiles,
+      unrecognizedFiles,
+      errorFiles,
+
+      dynamicFieldCount,
+      functionFieldCount,
+      unknownFieldCount,
+      omittedDynamicBlockCount,
+
+      statusCounts,
+      repositories: repositoryReports,
+      files: fileReports
+    };
+
+    const versionReport = {
+      generatedAt: new Date().toISOString(),
+      extractorVersion: EXTRACTOR_VERSION,
+      schemaVersion: SCHEMA_VERSION,
+      sources
+    };
+
+    fs.writeFileSync(
+      OUTPUT_DATABASE,
+      JSON.stringify(database, null, 2) + '\n'
+    );
+
+    fs.writeFileSync(
+      OUTPUT_REPORT,
+      JSON.stringify(extractionReport, null, 2) + '\n'
+    );
+
+    fs.writeFileSync(
+      OUTPUT_VERSION,
+      JSON.stringify(versionReport, null, 2) + '\n'
+    );
+
+    console.log('\n========== Extraction Summary ==========');
+    console.log(`Files: ${fileReports.length}`);
+    console.log(`Blocks: ${allBlocks.length}`);
+    console.log(`Successful: ${successfulFiles}`);
+    console.log(`Dynamic blocks: ${dynamicFiles}`);
+    console.log(`Dynamic fields: ${dynamicFieldFiles}`);
+    console.log(`Unknown fields: ${unknownFiles}`);
+    console.log(`Unrecognized: ${unrecognizedFiles}`);
+    console.log(`Errors: ${errorFiles}`);
+    console.log(`Dynamic field count: ${dynamicFieldCount}`);
+    console.log(`Function field count: ${functionFieldCount}`);
+    console.log(`Unknown field count: ${unknownFieldCount}`);
+    console.log(`Omitted dynamic blocks: ${omittedDynamicBlockCount}`);
+    console.log('========================================');
+
+  } finally {
+    fs.rmSync(tempRoot, { recursive: true, force: true });
   }
-
-  const duplicateOpcodes = Object.fromEntries(
-    Object.entries(globalOpcodeMap).filter(
-      ([, locations]) => locations.length > 1
-    )
-  );
-
-  const duplicateNamespacedOpcodes = Object.fromEntries(
-    Object.entries(namespacedOpcodeMap).filter(
-      ([, locations]) => locations.length > 1
-    )
-  );
-
-  const statusCounts = {};
-
-  let unresolvedFieldCount = 0;
-  let dynamicFieldCount = 0;
-  let functionFieldCount = 0;
-
-  for (const report of allReports) {
-    statusCounts[report.status] =
-      (statusCounts[report.status] || 0) + 1;
-
-    unresolvedFieldCount +=
-      report.unresolvedFieldCount || 0;
-
-    dynamicFieldCount +=
-      report.dynamicFieldCount || 0;
-
-    functionFieldCount +=
-      report.functionFieldCount || 0;
-  }
-
-  const missingFields = {
-    opcode: 0,
-    text: 0,
-    text_en: 0,
-    blockType: 0,
-    arguments: 0,
-    category: 0,
-    category_en: 0
-  };
-
-  for (const block of allBlocks) {
-    for (const field of Object.keys(missingFields)) {
-      const value = block[field];
-
-      if (
-        value === null ||
-        value === undefined ||
-        value === ''
-      ) {
-        missingFields[field]++;
-      }
-    }
-  }
-
-  const generatedAt = now();
-
-  const database = {
-    schemaVersion: SCHEMA_VERSION,
-    extractorVersion: EXTRACTOR_VERSION,
-    generatedAt,
-
-    sourceCount: sources.length,
-    fileCount: allReports.length,
-    blockCount: allBlocks.length,
-
-    unresolvedFieldCount,
-    dynamicFieldCount,
-    functionFieldCount,
-
-    blocks: allBlocks,
-
-    duplicateOpcodes,
-    duplicateNamespacedOpcodes,
-
-    quality: {
-      missingFields
-    }
-  };
-
-  const extractionReport = {
-    schemaVersion: SCHEMA_VERSION,
-    extractorVersion: EXTRACTOR_VERSION,
-    generatedAt,
-
-    fileCount: allReports.length,
-    blockCount: allBlocks.length,
-
-    unresolvedFieldCount,
-    dynamicFieldCount,
-    functionFieldCount,
-
-    successfulFiles: statusCounts.success || 0,
-    partialFiles: statusCounts.partial || 0,
-    dynamicFiles: statusCounts.dynamic_blocks || 0,
-    dynamicFieldFiles: statusCounts.dynamic_fields || 0,
-    unrecognizedFiles:
-      statusCounts.no_static_getInfo || 0,
-    errorFiles: statusCounts.error || 0,
-
-    statusCounts,
-    files: allReports
-  };
-
-  fs.writeFileSync(
-    DATABASE_FILE,
-    JSON.stringify(database, null, 2),
-    'utf8'
-  );
-
-  fs.writeFileSync(
-    REPORT_FILE,
-    JSON.stringify(extractionReport, null, 2),
-    'utf8'
-  );
-
-  fs.writeFileSync(
-    VERSION_FILE,
-    JSON.stringify(versionReports, null, 2),
-    'utf8'
-  );
-
-  console.log('');
-  console.log('Extraction completed.');
-  console.log(`Files: ${allReports.length}`);
-  console.log(`Blocks: ${allBlocks.length}`);
-  console.log(`Unknown fields: ${unresolvedFieldCount}`);
-  console.log(`Dynamic fields: ${dynamicFieldCount}`);
-  console.log(`Function fields: ${functionFieldCount}`);
-  console.log(`Errors: ${statusCounts.error || 0}`);
 }
 
 main();
