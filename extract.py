@@ -1,5 +1,4 @@
 
-import ast
 import json
 import re
 import subprocess
@@ -67,9 +66,13 @@ def tokenize(source):
 
 def decode_string(token):
     if token.startswith("`"):
-        return token[1:-1]
+        body = token[1:-1]
 
-    body = token[1:-1]
+        if "${" in body:
+            return None
+
+    else:
+        body = token[1:-1]
 
     replacements = {
         r"\n": "\n",
@@ -98,15 +101,94 @@ def decode_string(token):
     return body
 
 
+def matching_brace(tokens, start):
+    if start >= len(tokens) or tokens[start] != "{":
+        return None
+
+    depth = 0
+
+    for index in range(start, len(tokens)):
+        if tokens[index] == "{":
+            depth += 1
+
+        elif tokens[index] == "}":
+            depth -= 1
+
+            if depth == 0:
+                return index
+
+    return None
+
+
+def lookup_message(messages, locale, message_id):
+    dictionary = messages.get(locale, {})
+
+    if message_id in dictionary:
+        return dictionary[message_id]
+
+    # Some extensions have inconsistent capitalization in message IDs.
+    target = message_id.lower()
+
+    for key, value in dictionary.items():
+        if str(key).lower() == target:
+            return value
+
+    return None
+
+
+def extract_message_tables(tokens):
+    messages = {}
+
+    for i, token in enumerate(tokens):
+        if token != "getFormatMessage":
+            continue
+
+        start = None
+
+        for j in range(i + 1, min(i + 12, len(tokens))):
+            if tokens[j] == "{":
+                start = j
+                break
+
+            if tokens[j] == ";":
+                break
+
+        if start is None:
+            continue
+
+        end = matching_brace(tokens, start)
+
+        if end is None:
+            continue
+
+        parser = JSParser(tokens[start:end + 1])
+
+        try:
+            result = parser.parse_object()
+
+            if isinstance(result, dict):
+                for locale, dictionary in result.items():
+                    if isinstance(dictionary, dict):
+                        messages[str(locale).lower()] = dictionary
+
+        except Exception:
+            continue
+
+    return messages
+
+
 class JSParser:
-    def __init__(self, tokens, symbols=None):
+    def __init__(self, tokens, symbols=None, messages=None, locale="zh-cn"):
         self.tokens = tokens
         self.pos = 0
         self.symbols = symbols or {}
+        self.messages = messages or {}
+        self.locale = locale.lower()
 
     def peek(self):
         if self.pos >= len(self.tokens):
             return None
+
         return self.tokens[self.pos]
 
     def take(self):
@@ -133,51 +215,100 @@ class JSParser:
 
             if token == "(":
                 paren += 1
+
             elif token == ")":
                 if paren == 0:
                     break
+
                 paren -= 1
 
             elif token == "[":
                 bracket += 1
+
             elif token == "]":
                 if bracket == 0:
                     break
+
                 bracket -= 1
 
             elif token == "{":
                 brace += 1
+
             elif token == "}":
                 if brace == 0:
                     break
+
                 brace -= 1
 
             self.pos += 1
 
         return self.tokens[start:self.pos]
 
-    def parse_expression(self, stops):
-        token = self.peek()
-
-        if token is None:
-            return None
-
-        if token == "{":
-            return self.parse_object()
-
-        if token == "[":
-            return self.parse_array()
-
-        expression = self.collect_expression(stops)
-
+    def evaluate_expression(self, expression):
         if not expression:
             return None
+
+        # Split top-level string concatenation.
+        parts = []
+        current = []
+
+        paren = 0
+        bracket = 0
+        brace = 0
+
+        for token in expression:
+            if token == "+" and paren == 0 and bracket == 0 and brace == 0:
+                parts.append(current)
+                current = []
+                continue
+
+            current.append(token)
+
+            if token == "(":
+                paren += 1
+            elif token == ")":
+                paren -= 1
+            elif token == "[":
+                bracket += 1
+            elif token == "]":
+                bracket -= 1
+            elif token == "{":
+                brace += 1
+            elif token == "}":
+                brace -= 1
+
+        parts.append(current)
+
+        if len(parts) > 1:
+            values = []
+
+            for part in parts:
+                value = self.evaluate_expression(part)
+
+                if isinstance(value, dict) and "$expression" in value:
+                    return {
+                        "$expression": " ".join(expression)
+                    }
+
+                if value is None:
+                    return {
+                        "$expression": " ".join(expression)
+                    }
+
+                values.append(str(value))
+
+            return "".join(values)
 
         if len(expression) == 1:
             value = expression[0]
 
             if value.startswith(("'", '"', "`")):
-                return decode_string(value)
+                decoded = decode_string(value)
+
+                if decoded is not None:
+                    return decoded
+
+                return {"$expression": value}
 
             if value == "true":
                 return True
@@ -194,14 +325,53 @@ class JSParser:
             if value in self.symbols:
                 return self.symbols[value]
 
+        # Resolve this.formatMessage('message.id').
+        if (
+            len(expression) == 6
+            and expression[0] == "this"
+            and expression[1] == "."
+            and expression[2] == "formatMessage"
+            and expression[3] == "("
+            and expression[5] == ")"
+        ):
+            message_token = expression[4]
+
+            if message_token.startswith(("'", '"')):
+                message_id = decode_string(message_token)
+
+                translated = lookup_message(
+                    self.messages,
+                    self.locale,
+                    message_id,
+                )
+
+                if translated is not None:
+                    return translated
+
         return {
             "$expression": " ".join(expression)
         }
 
+    def parse_expression(self, stops):
+        token = self.peek()
+
+        if token is None:
+            return None
+
+        if token == "{":
+            return self.parse_object()
+
+        if token == "[":
+            return self.parse_array()
+
+        expression = self.collect_expression(stops)
+
+        return self.evaluate_expression(expression)
+
     def parse_object(self):
         result = {}
 
-        self.take()  # {
+        self.take()
 
         while self.pos < len(self.tokens):
             token = self.peek()
@@ -218,6 +388,7 @@ class JSParser:
                 break
 
             if token == "...":
+                self.take()
                 self.collect_expression({",", "}"})
                 continue
 
@@ -228,6 +399,7 @@ class JSParser:
 
             if key == "[":
                 self.collect_expression({"]"})
+
                 if self.peek() == "]":
                     self.take()
 
@@ -243,13 +415,11 @@ class JSParser:
             else:
                 if key in self.symbols:
                     result[str(key)] = self.symbols[key]
-
                 else:
                     result[str(key)] = {
                         "$expression": str(key)
                     }
 
-                # Skip method bodies and other shorthand syntax.
                 if self.peek() == "(":
                     self.collect_expression({",", "}"})
 
@@ -261,7 +431,7 @@ class JSParser:
     def parse_array(self):
         result = []
 
-        self.take()  # [
+        self.take()
 
         while self.pos < len(self.tokens):
             token = self.peek()
@@ -297,25 +467,6 @@ class JSParser:
         return result
 
 
-def matching_brace(tokens, start):
-    if start >= len(tokens) or tokens[start] != "{":
-        return None
-
-    depth = 0
-
-    for index in range(start, len(tokens)):
-        if tokens[index] == "{":
-            depth += 1
-
-        elif tokens[index] == "}":
-            depth -= 1
-
-            if depth == 0:
-                return index
-
-    return None
-
-
 def find_getinfo_bodies(tokens):
     bodies = []
 
@@ -331,7 +482,6 @@ def find_getinfo_bodies(tokens):
         if j >= len(tokens) or tokens[j] != "(":
             continue
 
-        # Find the end of the parameter list.
         depth = 0
         end_params = None
 
@@ -349,7 +499,6 @@ def find_getinfo_bodies(tokens):
         if end_params is None:
             continue
 
-        # Find the method or arrow-function body.
         body_start = None
 
         for k in range(end_params + 1, min(end_params + 12, len(tokens))):
@@ -375,7 +524,7 @@ def find_getinfo_bodies(tokens):
     return bodies
 
 
-def collect_local_symbols(body):
+def collect_local_symbols(body, messages, locale):
     symbols = {}
 
     for i, token in enumerate(body):
@@ -396,6 +545,8 @@ def collect_local_symbols(body):
         parser = JSParser(
             body[i + 3:],
             symbols,
+            messages,
+            locale,
         )
 
         try:
@@ -410,8 +561,12 @@ def collect_local_symbols(body):
     return symbols
 
 
-def extract_info_from_body(body):
-    symbols = collect_local_symbols(body)
+def extract_info_from_body(body, messages, locale):
+    symbols = collect_local_symbols(
+        body,
+        messages,
+        locale,
+    )
 
     for i, token in enumerate(body):
         if token != "return":
@@ -426,6 +581,8 @@ def extract_info_from_body(body):
         parser = JSParser(
             body[i + 1:],
             symbols,
+            messages,
+            locale,
         )
 
         try:
@@ -440,12 +597,16 @@ def extract_info_from_body(body):
     return None
 
 
-def extract_getinfo(source):
+def extract_getinfo(source, messages, locale):
     tokens = tokenize(source)
     bodies = find_getinfo_bodies(tokens)
 
     for body in bodies:
-        info = extract_info_from_body(body)
+        info = extract_info_from_body(
+            body,
+            messages,
+            locale,
+        )
 
         if info is not None:
             return info
@@ -472,7 +633,16 @@ def contains_expression(value):
     return False
 
 
-def normalize_block(block, info, source_file, repository):
+def normalize_block(
+    block,
+    english_block,
+    info,
+    english_info,
+    source_file,
+    repository,
+    category,
+    category_en,
+):
     if not isinstance(block, dict):
         return None
 
@@ -482,16 +652,26 @@ def normalize_block(block, info, source_file, repository):
     ):
         return None
 
+    text_en = None
+
+    if isinstance(english_block, dict):
+        text_en = english_block.get("text")
+
     return {
         "extensionId": info.get("id"),
         "extensionName": info.get("name"),
+        "extensionName_en": english_info.get("name"),
         "opcode": block.get("opcode"),
+        "func": block.get("func"),
         "text": block.get("text"),
+        "text_en": text_en,
         "blockType": block.get("blockType"),
         "arguments": block.get("arguments", {}),
         "branchCount": block.get("branchCount"),
         "terminal": block.get("terminal"),
         "filter": block.get("filter"),
+        "category": category,
+        "category_en": category_en,
         "sourceFile": source_file,
         "repository": repository,
     }
@@ -515,9 +695,33 @@ def scan_file(file_path, repository_root, repository_url):
             errors="replace",
         )
 
-        info = extract_getinfo(source)
+        tokens = tokenize(source)
 
-        if not info:
+        messages = extract_message_tables(tokens)
+
+        info_zh = extract_getinfo(
+            source,
+            messages,
+            "zh-cn",
+        )
+
+        info_en = extract_getinfo(
+            source,
+            messages,
+            "en",
+        )
+
+        if not info_zh:
+            info_zh = extract_getinfo(
+                source,
+                messages,
+                "en",
+            )
+
+        if not info_en:
+            info_en = info_zh
+
+        if not info_zh:
             report["status"] = "no_static_getInfo"
             report["message"] = (
                 "No statically readable getInfo() return object."
@@ -525,15 +729,9 @@ def scan_file(file_path, repository_root, repository_url):
 
             return [], report
 
-        blocks = info.get("blocks")
+        blocks = info_zh.get("blocks")
 
-        if isinstance(blocks, dict) and "$expression" in blocks:
-            report["status"] = "dynamic_blocks"
-            report["message"] = (
-                "The blocks property is generated by an expression."
-            )
-
-            return [], report
+        english_blocks = info_en.get("blocks", [])
 
         if not isinstance(blocks, list):
             report["status"] = "dynamic_blocks"
@@ -543,17 +741,50 @@ def scan_file(file_path, repository_root, repository_url):
 
             return [], report
 
+        if not isinstance(english_blocks, list):
+            english_blocks = []
+
         extracted = []
 
-        for block in blocks:
-            if isinstance(block, dict) and "$spread" in block:
+        current_category = None
+        current_category_en = None
+
+        unresolved = False
+
+        for index, block in enumerate(blocks):
+            english_block = (
+                english_blocks[index]
+                if index < len(english_blocks)
+                else None
+            )
+
+            # Category separators such as "---容器操作".
+            if isinstance(block, str) and block.startswith("---"):
+                current_category = block[3:]
+
+                if isinstance(english_block, str) and english_block.startswith("---"):
+                    current_category_en = english_block[3:]
+                else:
+                    current_category_en = current_category
+
                 continue
+
+            if isinstance(block, dict) and "$spread" in block:
+                unresolved = True
+                continue
+
+            if contains_expression(block):
+                unresolved = True
 
             normalized = normalize_block(
                 block,
-                info,
+                english_block,
+                info_zh,
+                info_en,
                 relative_path,
                 repository_url,
+                current_category,
+                current_category_en,
             )
 
             if normalized:
@@ -561,15 +792,11 @@ def scan_file(file_path, repository_root, repository_url):
 
         report["blocksFound"] = len(extracted)
 
-        if any(
-            contains_expression(block)
-            for block in blocks
-        ):
+        if unresolved:
             report["status"] = "partial"
             report["message"] = (
                 "Some block entries contain unresolved expressions."
             )
-
         else:
             report["status"] = "success"
 
@@ -785,6 +1012,7 @@ def main():
     generated_at = now()
 
     database = {
+        "schemaVersion": 2,
         "generatedAt": generated_at,
         "sourceCount": len(sources),
         "fileCount": len(all_reports),
