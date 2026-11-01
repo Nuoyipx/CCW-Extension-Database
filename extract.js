@@ -93,6 +93,8 @@ function memberName(node) {
 
   if (node.type === 'Identifier') return node.name;
 
+  if (node.type === 'ThisExpression') return 'this';
+
   if (node.type === 'StringLiteral') return node.value;
 
   if (
@@ -100,7 +102,6 @@ function memberName(node) {
     node.type === 'OptionalMemberExpression'
   ) {
     const left = memberName(node.object);
-
     const right = node.computed
       ? memberName(node.property)
       : node.property.name;
