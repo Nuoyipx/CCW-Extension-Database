@@ -14,6 +14,7 @@ const MISSING_FILE = 'unresolved_blocks.json';
 const QUALITY_FILE = 'quality_report.json';
 const USABLE_FILE = 'usable_blocks.json';
 const MAX_IMPORT_DEPTH = 4;
+const MAX_LOCALE_FILES = 40;
 const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
 
 const EXCLUDED_DIRS = new Set(['.git', 'node_modules', '__pycache__', 'dist', 'build', 'assets', 'coverage']);
@@ -307,6 +308,22 @@ function extractMessages(ast) {
       if (typeof en === 'string') tables.en[String(key)] ??= en;
     }
   });
+  // Common format: { key: { 'zh-CN': '涓枃', 'en-US': 'English' } } is handled above.
+  // Also support language dictionaries under named exports with `zh_CN` and `en_US` keys.
+  walk(ast, node => {
+    if (node.type !== 'ObjectExpression') return;
+    for (const prop of node.properties) {
+      if (prop.type !== 'ObjectProperty' || prop.value.type !== 'ObjectExpression') continue;
+      const raw = String(prop.key.name ?? prop.key.value ?? '').toLowerCase().replace(/_/g, '-');
+      const target = ['zh-cn','zh'].includes(raw) ? 'zh-cn' : ['en','en-us'].includes(raw) ? 'en' : null;
+      if (!target) continue;
+      for (const entry of prop.value.properties) {
+        if (entry.type !== 'ObjectProperty' || entry.value.type !== 'StringLiteral') continue;
+        const key = entry.key.name ?? entry.key.value;
+        if (key != null) tables[target][String(key)] ??= entry.value.value;
+      }
+    }
+  });
   return tables;
 }
 function collectLocalSymbols(body, env) {
@@ -394,11 +411,35 @@ function resolveImportSymbols(ast, filename, repositoryRoot, cache, depth) {
   }
   return imported;
 }
+// Load translation dictionaries from nearby modules without executing extension code.
+// This handles projects that keep their `this.fm(key)` translations in l10n.js.
+function collectAdjacentMessages(filePath, repositoryRoot) {
+  const tables = { 'zh-cn': {}, en: {} };
+  if (!filePath || !repositoryRoot) return tables;
+  const dir = path.dirname(filePath);
+  const candidates = [path.join(dir, 'l10n.js'), path.join(dir, 'locales.js'),
+    path.join(dir, 'translations.js'), path.join(dir, 'i18n.js'),
+    path.join(dir, 'locales', 'index.js'), path.join(dir, 'l10n', 'index.js')];
+  let read = 0;
+  for (const filename of candidates) {
+    if (read >= MAX_LOCALE_FILES || !filename.startsWith(repositoryRoot + path.sep)) continue;
+    if (!fs.existsSync(filename) || !fs.statSync(filename).isFile()) continue;
+    read++;
+    try {
+      const ast = parseSource(fs.readFileSync(filename, 'utf8'));
+      const messages = extractMessages(ast);
+      for (const language of ['zh-cn', 'en']) Object.assign(tables[language], messages[language]);
+    } catch (_) { /* Do not block extraction for a malformed optional locale file. */ }
+  }
+  return tables;
+}
 function extractInfo(source, locale, filePath, repositoryRoot) {
   const ast = parseSource(source);
   const imported = resolveImportSymbols(ast, filePath, repositoryRoot, new Set([filePath]), 0);
   const symbols = { ...imported, ...buildSymbols(ast) };
   const allMessages = extractMessages(ast);
+  const adjacent = collectAdjacentMessages(filePath, repositoryRoot);
+  for (const language of ['zh-cn', 'en']) allMessages[language] = { ...adjacent[language], ...allMessages[language] };
   const env = { symbols, messages: allMessages[locale] || {} };
   return { info: findGetInfoReturns(ast, env), messages: allMessages };
 }
@@ -709,4 +750,4 @@ function main() {
   console.log(`Duplicate opcodes: ${Object.keys(duplicates).length}`);
 }
 if (require.main === module) main();
-module.exports = { identity, isUnresolved, evaluate, mergeRecord, mergeWithBaseline, extractMessages, quality };
+module.exports = { identity, isUnresolved, evaluate, mergeRecord, mergeWithBaseline, extractMessages, collectAdjacentMessages, quality };
