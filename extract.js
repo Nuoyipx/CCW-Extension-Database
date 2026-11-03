@@ -12,6 +12,7 @@ const VERSION_FILE = 'version_report.json';
 const DIFF_FILE = 'extraction_diff.json';
 const MISSING_FILE = 'unresolved_blocks.json';
 const QUALITY_FILE = 'quality_report.json';
+const USABLE_FILE = 'usable_blocks.json';
 const MAX_IMPORT_DEPTH = 4;
 const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
 
@@ -43,6 +44,22 @@ function isUnresolved(value) {
   if (Array.isArray(value)) return value.some(isUnresolved);
   if (value && typeof value === 'object') return Object.prototype.hasOwnProperty.call(value, '$expression') || Object.values(value).some(isUnresolved);
   return false;
+}
+function messageLookup(key, env) {
+  if (typeof key !== 'string') return null;
+  if (Object.prototype.hasOwnProperty.call(env.messages, key)) return env.messages[key];
+  return null;
+}
+function resolveTranslationArg(arg, env) {
+  if (typeof arg === 'string') return messageLookup(arg, env) ?? arg;
+  if (arg && typeof arg === 'object' && !isUnresolved(arg)) {
+    const key = arg.id ?? arg.key ?? arg.messageId;
+    const translated = messageLookup(key, env);
+    if (typeof translated === 'string') return translated;
+    const fallback = arg.defaultMessage ?? arg.default ?? arg.message ?? arg.text;
+    if (typeof fallback === 'string') return fallback;
+  }
+  return null;
 }
 function evaluate(node, env, depth = 0) {
   if (!node || depth > 24) return unresolved(node);
@@ -113,6 +130,18 @@ function evaluate(node, env, depth = 0) {
           if (id && Object.prototype.hasOwnProperty.call(env.messages, id)) return env.messages[id];
           if (typeof fallback === 'string') return fallback;
         }
+      }
+      // Many CCW extensions use this.fm('key') or this.formatMessage('key').
+      // Only resolve keys found in statically collected locale dictionaries;
+      // never assume an unknown translation key is user-facing block text.
+      if (callee.type === 'MemberExpression' &&
+          ['fm', 'formatMessage', 'translate', 't'].includes(callee.property.name) &&
+          node.arguments.length) {
+        const arg = next(node.arguments[0]);
+        const translated = resolveTranslationArg(arg, env);
+        if (typeof translated === 'string' &&
+            (callee.property.name !== 'fm' || messageLookup(arg, env) !== null ||
+             (arg && typeof arg === 'object' && !isUnresolved(arg)))) return translated;
       }
       const name = sourceOf(callee);
       if (['Scratch.translate', 'translate', 'formatMessage', 'Scratch.translate.formatMessage'].includes(name) && node.arguments.length) {
@@ -258,6 +287,24 @@ function extractMessages(ast) {
         const id = entry.key.name ?? entry.key.value;
         if (entry.value.type === 'StringLiteral') tables[target][String(id)] = entry.value.value;
       }
+    }
+  });
+  // Dictionaries may store language variants under each key instead of each locale.
+  walk(ast, node => {
+    if (node.type !== 'ObjectExpression') return;
+    for (const prop of node.properties) {
+      if (prop.type !== 'ObjectProperty' || prop.computed || prop.value.type !== 'ObjectExpression') continue;
+      const key = prop.key.name ?? prop.key.value;
+      if (key === undefined) continue;
+      const variants = {};
+      for (const entry of prop.value.properties) {
+        if (entry.type !== 'ObjectProperty' || entry.computed || entry.value.type !== 'StringLiteral') continue;
+        variants[String(entry.key.name ?? entry.key.value).toLowerCase()] = entry.value.value;
+      }
+      const zh = variants['zh-cn'] ?? variants['zh'] ?? variants['zh_cn'];
+      const en = variants['en'] ?? variants['en-us'] ?? variants['en_us'];
+      if (typeof zh === 'string') tables['zh-cn'][String(key)] ??= zh;
+      if (typeof en === 'string') tables.en[String(key)] ??= en;
     }
   });
   return tables;
@@ -522,7 +569,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction v9 (static AST mode)...');
+  console.log('Starting CCW extension extraction v10 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
@@ -596,7 +643,19 @@ function main() {
     }
     if (!block.opcode) specialEntries.push({ index, sourceFile: block.sourceFile, blockType: block.blockType, text: block.text });
   }
-  const qualityReport = { generatedAt, blockCount: allBlocks.length, fieldStats,
+  const isUsable = b => typeof b.extensionId === 'string' && b.extensionId.length > 0 &&
+    typeof b.opcode === 'string' && b.opcode.length > 0 &&
+    typeof b.text === 'string' && b.text.length > 0 &&
+    typeof b.blockType === 'string' && b.blockType.length > 0;
+  const usable = allBlocks.filter(isUsable);
+  const excluded = allBlocks.filter(b => !isUsable(b)).map(b => ({
+    sourceFile: b.sourceFile, extensionId: b.extensionId, opcode: b.opcode,
+    reasons: ['extensionId', 'opcode', 'text', 'blockType'].filter(k => typeof b[k] !== 'string' || !b[k])
+  }));
+  fs.writeFileSync(USABLE_FILE, JSON.stringify({ schemaVersion: 1, generatedAt,
+    blockCount: usable.length, blocks: usable, excludedCount: excluded.length,
+    excluded, note: 'Convenience view only. Full historical records remain in blocks_database.json.' }, null, 2), 'utf8');
+  const qualityReport = { generatedAt, blockCount: allBlocks.length, usableBlockCount: usable.length, excludedFromUsable: excluded.length, fieldStats,
     unresolvedExamples, missingOpcodeEntries: specialEntries,
     note: 'Absent tooltip is not necessarily an extraction error. Missing opcode can indicate a label/button/separator.' };
   fs.writeFileSync(QUALITY_FILE, JSON.stringify(qualityReport, null, 2), 'utf8');
