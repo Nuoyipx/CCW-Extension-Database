@@ -537,13 +537,33 @@ function mergeWithBaseline(current, baseline) {
     positions.get(key).push(merged.length);
     merged.push(block);
   }
+  // Match non-opcode labels by their ordinal within a source/extension, even if
+  // localized text changed between runs. This prevents false historical growth.
+  const specialPositions = new Map();
+  const specialKey = b => JSON.stringify([b.repository || '', b.sourceFile || '', b.extensionId || '', 'no-opcode']);
+  current.forEach((b, i) => {
+    if (b.opcode) return;
+    const key = specialKey(b);
+    if (!specialPositions.has(key)) specialPositions.set(key, []);
+    specialPositions.get(key).push(i);
+  });
+  const specialSeen = new Map();
   const seen = new Map();
   for (const oldBlock of baseline) {
     const key = identity(oldBlock), ordinal = seen.get(key) || 0;
     seen.set(key, ordinal + 1);
     const candidates = positions.get(key) || [];
-    if (ordinal < candidates.length) {
-      const index = candidates[ordinal];
+    let index = ordinal < candidates.length ? candidates[ordinal] : undefined;
+    if (!oldBlock.opcode) {
+      const group = specialKey(oldBlock);
+      const slot = specialSeen.get(group) || 0;
+      specialSeen.set(group, slot + 1);
+      const possible = specialPositions.get(group) || [];
+      // A label's location is more stable than its translated text. Avoid
+      // matching two old entries to the same current entry.
+      if (slot < possible.length) index = possible[slot];
+    }
+    if (index !== undefined) {
       const replacement = mergeRecord(oldBlock, merged[index]);
       if (JSON.stringify(replacement) !== JSON.stringify(merged[index])) updated.push({ identity: key, reason: 'restored richer baseline fields' });
       merged[index] = replacement;
@@ -569,7 +589,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction v10 (static AST mode)...');
+  console.log('Starting CCW extension extraction v11 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
@@ -604,6 +624,8 @@ function main() {
   if (merged.length < baseline.length) throw new Error('Regression guard: merged records fell below baseline.');
   if (MINIMUM_QUALITY && merged.length < MINIMUM_QUALITY) throw new Error('Below MINIMUM_QUALITY threshold.');
   const extractedCount = allBlocks.length;
+  const recoveredByFile = {};
+  for (const item of recovered) recoveredByFile[item.sourceFile || '(unknown)'] = (recoveredByFile[item.sourceFile || '(unknown)'] || 0) + 1;
   const unresolvedFiles = allReports.filter(r => !['success'].includes(r.status)).map(r => ({
     file: r.file, status: r.status, blocksFound: r.blocksFound, reason: r.message, issues: r.issues || [], unresolvedFieldDetails: r.unresolvedFieldDetails || []
   }));
@@ -626,7 +648,7 @@ function main() {
     errorFiles: statusCounts.error || 0, statusCounts, files: allReports
   };
   const diff = { generatedAt, baselineCount: baseline.length, extractedThisRun: extractedCount, finalCount: allBlocks.length,
-    newRecords: added, recoveredFromBaseline: recovered, enrichedRecords: updated,
+    newRecords: added, recoveredFromBaseline: recovered, recoveredByFile, enrichedRecords: updated,
     note: 'Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current.' };
   const fieldStats = {};
   const unresolvedExamples = [];
@@ -655,7 +677,16 @@ function main() {
   fs.writeFileSync(USABLE_FILE, JSON.stringify({ schemaVersion: 1, generatedAt,
     blockCount: usable.length, blocks: usable, excludedCount: excluded.length,
     excluded, note: 'Convenience view only. Full historical records remain in blocks_database.json.' }, null, 2), 'utf8');
-  const qualityReport = { generatedAt, blockCount: allBlocks.length, usableBlockCount: usable.length, excludedFromUsable: excluded.length, fieldStats,
+  const unresolvedByFile = {};
+  for (const block of allBlocks) {
+    const file = block.sourceFile || '(unknown)';
+    const entry = (unresolvedByFile[file] ||= { records: 0, unresolvedText: 0, unresolvedEnglishText: 0, unresolvedCoreFields: 0 });
+    entry.records++;
+    if (isUnresolved(block.text)) entry.unresolvedText++;
+    if (isUnresolved(block.text_en)) entry.unresolvedEnglishText++;
+    entry.unresolvedCoreFields += ['extensionId','opcode','text','blockType','arguments'].filter(k => isUnresolved(block[k])).length;
+  }
+  const qualityReport = { generatedAt, blockCount: allBlocks.length, usableBlockCount: usable.length, excludedFromUsable: excluded.length, fieldStats, unresolvedByFile, recoveredByFile,
     unresolvedExamples, missingOpcodeEntries: specialEntries,
     note: 'Absent tooltip is not necessarily an extraction error. Missing opcode can indicate a label/button/separator.' };
   fs.writeFileSync(QUALITY_FILE, JSON.stringify(qualityReport, null, 2), 'utf8');
@@ -677,4 +708,5 @@ function main() {
   console.log(`Errors: ${statusCounts.error || 0}`);
   console.log(`Duplicate opcodes: ${Object.keys(duplicates).length}`);
 }
-main();
+if (require.main === module) main();
+module.exports = { identity, isUnresolved, evaluate, mergeRecord, mergeWithBaseline, extractMessages, quality };
