@@ -10,6 +10,8 @@ const DATABASE_FILE = 'blocks_database.json';
 const REPORT_FILE = 'extraction_report.json';
 const VERSION_FILE = 'version_report.json';
 const DIFF_FILE = 'extraction_diff.json';
+const MISSING_FILE = 'unresolved_blocks.json';
+const MAX_IMPORT_DEPTH = 4;
 const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
 
 const EXCLUDED_DIRS = new Set(['.git', 'node_modules', '__pycache__', 'dist', 'build', 'assets', 'coverage']);
@@ -132,6 +134,11 @@ function evaluate(node, env, depth = 0) {
           return mapped;
         }
       }
+      if (name === 'Array.of') return node.arguments.map(next);
+      if (name === 'Array.from' && node.arguments.length) {
+        const input = next(node.arguments[0]);
+        if (Array.isArray(input) && input.length <= 1000) return input;
+      }
       if (callee.type === 'MemberExpression' && ['filter', 'slice'].includes(callee.property.name)) {
         const base = next(callee.object);
         if (Array.isArray(base) && callee.property.name === 'slice' && node.arguments.every(a => !isUnresolved(next(a)))) return base.slice(...node.arguments.map(next));
@@ -169,6 +176,9 @@ function evaluate(node, env, depth = 0) {
       if (node.operator === '??') return left === null || left === undefined ? next(node.right) : left;
       return unresolved(node);
     }
+    case 'SequenceExpression': return node.expressions.length ? next(node.expressions[node.expressions.length - 1]) : null;
+    case 'ArrayPattern': return unresolved(node);
+    case 'ObjectPattern': return unresolved(node);
     case 'ParenthesizedExpression':
     case 'TSAsExpression': case 'TypeCastExpression': return next(node.expression);
     default: return unresolved(node);
@@ -233,6 +243,35 @@ function extractMessages(ast) {
   });
   return tables;
 }
+function collectLocalSymbols(body, env) {
+  const symbols = { ...env.symbols };
+  const localEnv = () => ({ ...env, symbols });
+  // Interpret only simple, side-effect-free AST statements. Never execute extension JS.
+  function process(statements) {
+    for (const stmt of statements || []) {
+      if (stmt.type === 'VariableDeclaration') {
+        for (const decl of stmt.declarations) if (decl.id.type === 'Identifier' && decl.init) {
+          symbols[decl.id.name] = evaluate(decl.init, localEnv());
+        }
+      } else if (stmt.type === 'ExpressionStatement') {
+        const expr = stmt.expression;
+        if (expr.type === 'AssignmentExpression' && expr.operator === '=' && expr.left.type === 'Identifier') {
+          symbols[expr.left.name] = evaluate(expr.right, localEnv());
+        } else if (expr.type === 'CallExpression' && expr.callee.type === 'MemberExpression' && expr.callee.object.type === 'Identifier') {
+          const target = expr.callee.object.name;
+          const method = expr.callee.property.name;
+          const array = symbols[target];
+          if (Array.isArray(array) && ['push', 'unshift'].includes(method)) {
+            const items = expr.arguments.map(arg => evaluate(arg, localEnv()));
+            symbols[target] = method === 'push' ? [...array, ...items] : [...items, ...array];
+          }
+        }
+      } else if (stmt.type === 'BlockStatement') process(stmt.body);
+    }
+  }
+  if (body && body.type === 'BlockStatement') process(body.body);
+  return symbols;
+}
 function findGetInfoReturns(ast, env) {
   const candidates = [];
   walk(ast, node => {
@@ -241,15 +280,12 @@ function findGetInfoReturns(ast, env) {
     if (!isMethod && !isProperty) return;
     const body = isMethod ? node.body : node.value.body;
     if (!body) return;
-    const localSymbols = { ...env.symbols };
-    walk(body, child => {
-      if (child.type === 'VariableDeclarator' && child.id.type === 'Identifier' && child.init) {
-        const val = evaluate(child.init, { ...env, symbols: localSymbols });
-        if (!isUnresolved(val)) localSymbols[child.id.name] = val;
-      }
-      if (child.type === 'ReturnStatement' && child.argument)
-        candidates.push({ argument: child.argument, symbols: { ...localSymbols } });
-    });
+    const localSymbols = collectLocalSymbols(body, env);
+    if (body.type === 'BlockStatement') {
+      // Prefer direct returns to returns nested in other function bodies.
+      for (const statement of body.body) if (statement.type === 'ReturnStatement' && statement.argument)
+        candidates.push({ argument: statement.argument, symbols: localSymbols });
+    } else candidates.push({ argument: body, symbols: localSymbols });
   });
   for (const { argument, symbols } of candidates) {
     const info = evaluate(argument, { ...env, symbols });
@@ -257,12 +293,45 @@ function findGetInfoReturns(ast, env) {
   }
   return null;
 }
-function extractInfo(source, locale) {
-  const ast = parser.parse(source, {
+function parseSource(source) {
+  return parser.parse(source, {
     sourceType: 'unambiguous', allowReturnOutsideFunction: true,
     plugins: ['jsx', 'classProperties', 'classPrivateProperties', 'classPrivateMethods', 'optionalChaining', 'objectRestSpread', 'dynamicImport', 'decorators-legacy', 'typescript']
   });
-  const symbols = buildSymbols(ast);
+}
+function resolveImportSymbols(ast, filename, repositoryRoot, cache, depth) {
+  const imported = {};
+  if (!filename || depth >= MAX_IMPORT_DEPTH) return imported;
+  for (const node of ast.program.body) {
+    if (node.type !== 'ImportDeclaration' || !node.source.value.startsWith('.')) continue;
+    const candidate = path.resolve(path.dirname(filename), node.source.value);
+    const options = [candidate, candidate + '.js', path.join(candidate, 'index.js')];
+    const target = options.find(f => fs.existsSync(f) && fs.statSync(f).isFile());
+    if (!target || !target.startsWith(repositoryRoot + path.sep) || cache.has(target)) continue;
+    cache.add(target);
+    try {
+      const dependency = parseSource(fs.readFileSync(target, 'utf8'));
+      const available = { ...resolveImportSymbols(dependency, target, repositoryRoot, cache, depth + 1), ...buildSymbols(dependency) };
+      for (const spec of node.specifiers) {
+        if (spec.type === 'ImportSpecifier') {
+          const original = spec.imported.name || spec.imported.value;
+          if (Object.prototype.hasOwnProperty.call(available, original)) imported[spec.local.name] = available[original];
+        } else if (spec.type === 'ImportDefaultSpecifier') {
+          const declaration = dependency.program.body.find(n => n.type === 'ExportDefaultDeclaration');
+          if (declaration) {
+            const val = evaluate(declaration.declaration, { symbols: available, messages: {} });
+            if (!isUnresolved(val)) imported[spec.local.name] = val;
+          }
+        }
+      }
+    } catch (_) { /* Dependency is not statically readable. */ }
+  }
+  return imported;
+}
+function extractInfo(source, locale, filePath, repositoryRoot) {
+  const ast = parseSource(source);
+  const imported = resolveImportSymbols(ast, filePath, repositoryRoot, new Set([filePath]), 0);
+  const symbols = { ...imported, ...buildSymbols(ast) };
   const allMessages = extractMessages(ast);
   const env = { symbols, messages: allMessages[locale] || {} };
   return { info: findGetInfoReturns(ast, env), messages: allMessages };
@@ -296,8 +365,8 @@ function scanFile(filePath, repositoryRoot, repositoryUrl) {
   const report = { file: relativePath, status: 'unknown', blocksFound: 0, message: '' };
   try {
     const source = fs.readFileSync(filePath, 'utf8');
-    const zh = extractInfo(source, 'zh-cn').info;
-    const en = extractInfo(source, 'en').info || zh;
+    const zh = extractInfo(source, 'zh-cn', filePath, repositoryRoot).info;
+    const en = extractInfo(source, 'en', filePath, repositoryRoot).info || zh;
     if (!zh) {
       report.status = 'no_static_getInfo';
       report.message = 'No statically readable getInfo() return object.';
@@ -311,6 +380,7 @@ function scanFile(filePath, repositoryRoot, repositoryUrl) {
       return { blocks: [], report };
     }
     const extracted = [];
+    const issues = [];
     let category = null, categoryEn = null, unresolvedFound = false;
     for (let i = 0; i < blocks.length; i++) {
       const block = blocks[i];
@@ -320,12 +390,13 @@ function scanFile(filePath, repositoryRoot, repositoryUrl) {
         categoryEn = typeof englishBlock === 'string' && englishBlock.startsWith('---') ? englishBlock.slice(3) : category;
         continue;
       }
-      if (block && typeof block === 'object' && block.$spread) { unresolvedFound = true; continue; }
-      if (isUnresolved(block)) unresolvedFound = true;
+      if (block && typeof block === 'object' && block.$spread) { unresolvedFound = true; issues.push({ index: i, reason: 'unresolved_spread', expression: block.$spread }); continue; }
+      if (isUnresolved(block)) { unresolvedFound = true; issues.push({ index: i, reason: 'unresolved_fields', opcode: block && block.opcode || null }); }
       const normalized = normalizeBlock(block, englishBlock, zh, en, relativePath, repositoryUrl, category, categoryEn);
       if (normalized) extracted.push(normalized);
     }
     report.blocksFound = extracted.length;
+    if (issues.length) report.issues = issues;
     if (unresolvedFound) {
       report.status = 'partial';
       report.message = 'Some block entries contain unresolved expressions.';
@@ -426,7 +497,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction (static AST mode)...');
+  console.log('Starting CCW extension extraction v8 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
@@ -461,6 +532,9 @@ function main() {
   if (merged.length < baseline.length) throw new Error('Regression guard: merged records fell below baseline.');
   if (MINIMUM_QUALITY && merged.length < MINIMUM_QUALITY) throw new Error('Below MINIMUM_QUALITY threshold.');
   const extractedCount = allBlocks.length;
+  const unresolvedFiles = allReports.filter(r => !['success'].includes(r.status)).map(r => ({
+    file: r.file, status: r.status, blocksFound: r.blocksFound, reason: r.message, issues: r.issues || []
+  }));
   allBlocks.splice(0, allBlocks.length, ...merged);
   const opcodeMap = {};
   for (const block of allBlocks) {
@@ -483,6 +557,7 @@ function main() {
     newRecords: added, recoveredFromBaseline: recovered, enrichedRecords: updated,
     note: 'Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current.' };
   // Write the database last, after all reports are prepared.
+  fs.writeFileSync(MISSING_FILE, JSON.stringify({ generatedAt, unresolvedFiles }, null, 2), 'utf8');
   fs.writeFileSync(DIFF_FILE, JSON.stringify(diff, null, 2), 'utf8');
   fs.writeFileSync(DATABASE_FILE, JSON.stringify(database, null, 2), 'utf8');
   fs.writeFileSync(REPORT_FILE, JSON.stringify(extractionReport, null, 2), 'utf8');
