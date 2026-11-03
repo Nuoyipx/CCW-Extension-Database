@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-03T21:22:15.478Z",
+  "generatedAt": "2026-11-03T21:30:38.119Z",
   "extractedThisRun": 951,
-  "baselineCount": 893,
-  "recoveredFromBaseline": 53,
+  "baselineCount": 1004,
+  "recoveredFromBaseline": 56,
   "fileCount": 72,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 356,
-  "successfulFiles": 27,
-  "partialFiles": 23,
+  "unresolvedCoreFields": 258,
+  "successfulFiles": 28,
+  "partialFiles": 22,
   "dynamicFiles": 1,
   "unrecognizedFiles": 20,
   "errorFiles": 1,
   "statusCounts": {
-    "success": 27,
+    "success": 28,
     "no_static_getInfo": 20,
-    "partial": 23,
+    "partial": 22,
     "dynamic_blocks": 1,
     "error": 1
   },
@@ -24,6 +24,7 @@
       "status": "success",
       "blocksFound": 10,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -31,6 +32,7 @@
       "status": "success",
       "blocksFound": 22,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -38,6 +40,7 @@
       "status": "success",
       "blocksFound": 22,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -45,6 +48,7 @@
       "status": "success",
       "blocksFound": 21,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -52,6 +56,7 @@
       "status": "success",
       "blocksFound": 69,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -388,6 +393,1541 @@
           "opcode": "ifListItemExist"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "typeOf",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "typeOf",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "checkType",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "checkType",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "strictlyEqual",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "strictlyEqual",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getObjFromJson",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getObjFromJson",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getObjFromJson",
+          "field": "arguments",
+          "expression": {
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "`{${...}}`"
+              }
+            }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "JSONOf",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "JSONOf",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "copyFrom",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "copyFrom",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "deleteAllTempData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "deleteAllTempData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "listAllData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "listAllData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "delTempData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "delTempData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "delTempData",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "ifTempDataExist",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "ifTempDataExist",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "ifTempDataExist",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setTempData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setTempData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setTempData",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "DATA_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "100"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "getTempData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "getTempData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "getTempData",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "getNewObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "getNewObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "getNewList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "getNewList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "createListWithLength",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "createListWithLength",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "setPropOfObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "setPropOfObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "setPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "ITEM_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "getPropOfObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "getPropOfObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "getPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "delPropOfObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "delPropOfObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "delPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "sizeOfObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "sizeOfObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "sizeOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "ifObjectPropExist",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "ifObjectPropExist",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "ifObjectPropExist",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 20,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 20,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 21,
+          "opcode": "setPropOfObjectAndReturn",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 21,
+          "opcode": "setPropOfObjectAndReturn",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 21,
+          "opcode": "setPropOfObjectAndReturn",
+          "field": "arguments",
+          "expression": {
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": "{\"a\":1}"
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "ITEM_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 22,
+          "opcode": "createObjFromKeyValue",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 22,
+          "opcode": "createObjFromKeyValue",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 23,
+          "opcode": "getAllProperties",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 23,
+          "opcode": "getAllProperties",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 24,
+          "opcode": "getSubObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 24,
+          "opcode": "getSubObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 25,
+          "opcode": "clear",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 25,
+          "opcode": "clear",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 25,
+          "opcode": "clear",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 26,
+          "opcode": "mergeObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 26,
+          "opcode": "mergeObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 26,
+          "opcode": "mergeObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": "{\"key\":\"value\"}"
+            }
+          }
+        },
+        {
+          "index": 27,
+          "opcode": "getPropOfObjectByIdx",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 27,
+          "opcode": "getPropOfObjectByIdx",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 27,
+          "opcode": "getPropOfObjectByIdx",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "OPTION": {
+              "type": "STRING",
+              "menu": "OBJECT_GET_OPTION"
+            }
+          }
+        },
+        {
+          "index": 28,
+          "opcode": "setProtoOfObj",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 28,
+          "opcode": "setProtoOfObj",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 28,
+          "opcode": "setProtoOfObj",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "`${...}2`"
+              }
+            }
+          }
+        },
+        {
+          "index": 29,
+          "opcode": "addItemToList2",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 29,
+          "opcode": "addItemToList2",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 29,
+          "opcode": "addItemToList2",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_ADD_OR_REMOVE"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 30,
+          "opcode": "insertItemIntoList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 30,
+          "opcode": "insertItemIntoList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 30,
+          "opcode": "insertItemIntoList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 31,
+          "opcode": "indexOf",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 31,
+          "opcode": "indexOf",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 31,
+          "opcode": "indexOf",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            },
+            "N": {
+              "type": "NUMBER",
+              "defaultValue": -1
+            }
+          }
+        },
+        {
+          "index": 32,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 32,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 33,
+          "opcode": "addItemToListAndReturn",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 33,
+          "opcode": "addItemToListAndReturn",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 33,
+          "opcode": "addItemToListAndReturn",
+          "field": "arguments",
+          "expression": {
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": "[1,2]"
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_ADD_OR_REMOVE"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 34,
+          "opcode": "pop",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 34,
+          "opcode": "pop",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 35,
+          "opcode": "mergeList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 35,
+          "opcode": "mergeList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 36,
+          "opcode": "slice",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 36,
+          "opcode": "slice",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 37,
+          "opcode": "split",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 37,
+          "opcode": "split",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 38,
+          "opcode": "join",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 38,
+          "opcode": "join",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 39,
+          "opcode": "opList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 39,
+          "opcode": "opList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 39,
+          "opcode": "opList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_OP"
+            }
+          }
+        },
+        {
+          "index": 40,
+          "opcode": "sortListByProp",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 40,
+          "opcode": "sortListByProp",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 41,
+          "opcode": "getScratchList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 41,
+          "opcode": "getScratchList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 42,
+          "opcode": "setScratchList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 42,
+          "opcode": "setScratchList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 43,
+          "opcode": "setAutoCreate",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 43,
+          "opcode": "setAutoCreate",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 43,
+          "opcode": "setAutoCreate",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 44,
+          "opcode": "setShowPrefix",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 44,
+          "opcode": "setShowPrefix",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 45,
+          "opcode": "allowInputJSON",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 45,
+          "opcode": "allowInputJSON",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 45,
+          "opcode": "allowInputJSON",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 46,
+          "opcode": "indexStart",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 46,
+          "opcode": "indexStart",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 46,
+          "opcode": "indexStart",
+          "field": "arguments",
+          "expression": {
+            "IDX": {
+              "type": "STRING",
+              "menu": "1OR0",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 47,
+          "opcode": "setCase",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 47,
+          "opcode": "setCase",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 47,
+          "opcode": "setCase",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 48,
+          "opcode": "newEmptyObjOrArray",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 48,
+          "opcode": "newEmptyObjOrArray",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 49,
+          "opcode": "getCountOfTempData",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 49,
+          "opcode": "getCountOfTempData",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 50,
+          "opcode": "getListItemIdxByItem",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 50,
+          "opcode": "getListItemIdxByItem",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 50,
+          "opcode": "getListItemIdxByItem",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 51,
+          "opcode": "createOrClearObject",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 51,
+          "opcode": "createOrClearObject",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 51,
+          "opcode": "createOrClearObject",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 52,
+          "opcode": "createOrClearList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 52,
+          "opcode": "createOrClearList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 52,
+          "opcode": "createOrClearList",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 53,
+          "opcode": "addItemToList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 53,
+          "opcode": "addItemToList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 53,
+          "opcode": "addItemToList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 54,
+          "opcode": "setItemOfList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 54,
+          "opcode": "setItemOfList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 54,
+          "opcode": "setItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 55,
+          "opcode": "delItemOfList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 55,
+          "opcode": "delItemOfList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 55,
+          "opcode": "delItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            }
+          }
+        },
+        {
+          "index": 56,
+          "opcode": "getItemOfList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 56,
+          "opcode": "getItemOfList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 56,
+          "opcode": "getItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            }
+          }
+        },
+        {
+          "index": 57,
+          "opcode": "lengthOfList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 57,
+          "opcode": "lengthOfList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 57,
+          "opcode": "lengthOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 58,
+          "opcode": "ifListItemExist",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 58,
+          "opcode": "ifListItemExist",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 58,
+          "opcode": "ifListItemExist",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.fm(...)"
+              }
+            }
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -504,6 +2044,552 @@
           "opcode": "colorAt"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "convertTime",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "convertTime",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "isLogin",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "isLogin",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "cloneCount",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "cloneCount",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getStageInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getStageInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "colorToHex",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "colorToHex",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "colorAt",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "colorAt",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -511,6 +2597,7 @@
       "status": "success",
       "blocksFound": 2,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -518,6 +2605,7 @@
       "status": "success",
       "blocksFound": 26,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -525,6 +2613,7 @@
       "status": "success",
       "blocksFound": 62,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -539,75 +2628,15 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/DilemmaGX/rxfs/rxFS.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 12,
-      "message": "Some block entries contain unresolved expressions.",
-      "issues": [
-        {
-          "index": 0,
-          "reason": "unresolved_fields",
-          "opcode": "start"
-        },
-        {
-          "index": 1,
-          "reason": "unresolved_fields",
-          "opcode": "folder"
-        },
-        {
-          "index": 2,
-          "reason": "unresolved_fields",
-          "opcode": "sync"
-        },
-        {
-          "index": 3,
-          "reason": "unresolved_fields",
-          "opcode": "del"
-        },
-        {
-          "index": 4,
-          "reason": "unresolved_fields",
-          "opcode": "webin"
-        },
-        {
-          "index": 5,
-          "reason": "unresolved_fields",
-          "opcode": "open"
-        },
-        {
-          "index": 7,
-          "reason": "unresolved_fields",
-          "opcode": "clean"
-        },
-        {
-          "index": 8,
-          "reason": "unresolved_fields",
-          "opcode": "in"
-        },
-        {
-          "index": 9,
-          "reason": "unresolved_fields",
-          "opcode": "out"
-        },
-        {
-          "index": 10,
-          "reason": "unresolved_fields",
-          "opcode": "list"
-        },
-        {
-          "index": 11,
-          "reason": "unresolved_fields",
-          "opcode": "search"
-        },
-        {
-          "index": 12,
-          "reason": "unresolved_fields",
-          "opcode": "searchin"
-        }
-      ],
+      "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -623,41 +2652,6 @@
         },
         {
           "index": 1,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 2,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 3,
-          "reason": "unresolved_fields",
-          "opcode": "isCloneOrIsOriginal"
-        },
-        {
-          "index": 4,
-          "reason": "unresolved_fields",
-          "opcode": "getCloneTargetPropertyWithSpriteName"
-        },
-        {
-          "index": 5,
-          "reason": "unresolved_fields",
-          "opcode": "getCloneTargetPropertyWithSpriteName2"
-        },
-        {
-          "index": 6,
-          "reason": "unresolved_fields",
-          "opcode": "getOriginalTargetPropertyWithSpriteName"
-        },
-        {
-          "index": 7,
-          "reason": "unresolved_fields",
-          "opcode": "getOriginalTargetPropertyWithSpriteName2"
-        },
-        {
-          "index": 8,
           "reason": "unresolved_fields",
           "opcode": null
         },
@@ -682,134 +2676,14 @@
           "opcode": "dispatchWhenCloneDeleted"
         },
         {
-          "index": 13,
-          "reason": "unresolved_fields",
-          "opcode": "broadcastToClone"
-        },
-        {
-          "index": 14,
-          "reason": "unresolved_fields",
-          "opcode": "receiveMyBroadcast"
-        },
-        {
-          "index": 15,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 16,
-          "reason": "unresolved_fields",
-          "opcode": "presetPropertyForTheNextClone"
-        },
-        {
-          "index": 17,
-          "reason": "unresolved_fields",
-          "opcode": "presetSingleDataForTheNextClone"
-        },
-        {
           "index": 18,
           "reason": "unresolved_fields",
           "opcode": "presetDataforTheNextCloneInJSONFormat"
         },
         {
-          "index": 19,
-          "reason": "unresolved_fields",
-          "opcode": "presetGroupForTheNextClone"
-        },
-        {
-          "index": 21,
-          "reason": "unresolved_fields",
-          "opcode": "createCloneAndSpecifyID"
-        },
-        {
-          "index": 22,
-          "reason": "unresolved_fields",
-          "opcode": "getJustCreatedCloneID"
-        },
-        {
-          "index": 23,
-          "reason": "unresolved_fields",
-          "opcode": "deleteCloneByID"
-        },
-        {
-          "index": 24,
-          "reason": "unresolved_fields",
-          "opcode": "ifCloneExists"
-        },
-        {
-          "index": 25,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 26,
-          "reason": "unresolved_fields",
-          "opcode": "getMyProperty"
-        },
-        {
-          "index": 27,
-          "reason": "unresolved_fields",
-          "opcode": "getMyValueByKey"
-        },
-        {
-          "index": 28,
-          "reason": "unresolved_fields",
-          "opcode": "setOrChangeMyValueWithKey"
-        },
-        {
-          "index": 30,
-          "reason": "unresolved_fields",
-          "opcode": "getClonePropertyWithID"
-        },
-        {
-          "index": 31,
-          "reason": "unresolved_fields",
-          "opcode": "getValueOfCloneIDWithKey"
-        },
-        {
-          "index": 32,
-          "reason": "unresolved_fields",
-          "opcode": "setOrChangeValueOfCloneIDWithKey"
-        },
-        {
           "index": 33,
           "reason": "unresolved_fields",
           "opcode": "setCloneProperty"
-        },
-        {
-          "index": 34,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 35,
-          "reason": "unresolved_fields",
-          "opcode": "addOrRemoveMyselfFromGroup"
-        },
-        {
-          "index": 36,
-          "reason": "unresolved_fields",
-          "opcode": "addOrRemoveIDFromGroup"
-        },
-        {
-          "index": 37,
-          "reason": "unresolved_fields",
-          "opcode": "ifCloneInGroup"
-        },
-        {
-          "index": 39,
-          "reason": "unresolved_fields",
-          "opcode": "getGroupInfo"
-        },
-        {
-          "index": 40,
-          "reason": "unresolved_fields",
-          "opcode": "getClonePropertyInGroup"
-        },
-        {
-          "index": 41,
-          "reason": "unresolved_fields",
-          "opcode": "importGroupIntoList"
         },
         {
           "index": 42,
@@ -822,34 +2696,9 @@
           "opcode": "cloneIDOfForEach"
         },
         {
-          "index": 44,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 45,
-          "reason": "unresolved_fields",
-          "opcode": "getNearestClone"
-        },
-        {
-          "index": 46,
-          "reason": "unresolved_fields",
-          "opcode": "isTouchingClone"
-        },
-        {
           "index": 47,
           "reason": "unresolved_fields",
           "opcode": "isCloneTouchingClone"
-        },
-        {
-          "index": 48,
-          "reason": "unresolved_fields",
-          "opcode": "getTouchingID"
-        },
-        {
-          "index": 49,
-          "reason": "unresolved_fields",
-          "opcode": "importTouchingIDsIntoList"
         },
         {
           "index": 50,
@@ -860,31 +2709,6 @@
           "index": 51,
           "reason": "unresolved_fields",
           "opcode": "pickTarget"
-        },
-        {
-          "index": 52,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 53,
-          "reason": "unresolved_fields",
-          "opcode": "calcDistanceToClone"
-        },
-        {
-          "index": 54,
-          "reason": "unresolved_fields",
-          "opcode": "calcDistanceBetweenClones"
-        },
-        {
-          "index": 55,
-          "reason": "unresolved_fields",
-          "opcode": "moveToClone"
-        },
-        {
-          "index": 56,
-          "reason": "unresolved_fields",
-          "opcode": "moveStepsToClone"
         },
         {
           "index": 57,
@@ -909,6 +2733,7 @@
           "opcode": "cancelAccessTransfer"
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -921,53 +2746,9 @@
           "index": 0,
           "reason": "unresolved_fields",
           "opcode": null
-        },
-        {
-          "index": 1,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 2,
-          "reason": "unresolved_fields",
-          "opcode": "moveToRandom"
-        },
-        {
-          "index": 3,
-          "reason": "unresolved_fields",
-          "opcode": "pointTowardRandom"
-        },
-        {
-          "index": 4,
-          "reason": "unresolved_fields",
-          "opcode": "setEffect"
-        },
-        {
-          "index": 5,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 6,
-          "reason": "unresolved_fields",
-          "opcode": "letterOf"
-        },
-        {
-          "index": 7,
-          "reason": "unresolved_fields",
-          "opcode": "mathOp"
-        },
-        {
-          "index": 8,
-          "reason": "unresolved_fields",
-          "opcode": "randomInt"
-        },
-        {
-          "index": 9,
-          "reason": "unresolved_fields",
-          "opcode": "isEven"
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -975,6 +2756,7 @@
       "status": "success",
       "blocksFound": 1,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -982,6 +2764,7 @@
       "status": "success",
       "blocksFound": 5,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -989,6 +2772,7 @@
       "status": "success",
       "blocksFound": 21,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -996,6 +2780,7 @@
       "status": "success",
       "blocksFound": 5,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1017,6 +2802,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1031,6 +2817,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1045,6 +2832,7 @@
       "status": "success",
       "blocksFound": 8,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1094,6 +2882,7 @@
       "status": "success",
       "blocksFound": 21,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1148,6 +2937,136 @@
           "opcode": "getY"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "changeStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "changeStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "setStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "setStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "changeStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "changeStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "changeStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "changeStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "getY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "getY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1197,6 +3116,120 @@
           "opcode": "getAdditiveBlend"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "clearClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "clearClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "getClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "getClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "setAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "setAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1204,6 +3237,7 @@
       "status": "success",
       "blocksFound": 5,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1308,6 +3342,784 @@
           "opcode": "createUpdateTexture"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "arguments",
+          "expression": {
+            "SHOULD": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHOULD_MENU"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.REPORTER"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            }
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE3": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE3": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE4": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "MATRIX": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "[[], []]"
+            }
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "ARRAY": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "[]"
+            }
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "TEXTURE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            }
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.REPORTER"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            }
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            },
+            "TEXTURE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "dc7f14b8438834de154cebaf827b6b4d.svg"
+            }
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1322,6 +4134,7 @@
       "status": "success",
       "blocksFound": 22,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1329,6 +4142,7 @@
       "status": "success",
       "blocksFound": 5,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1336,6 +4150,7 @@
       "status": "success",
       "blocksFound": 48,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1343,6 +4158,7 @@
       "status": "success",
       "blocksFound": 42,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1350,6 +4166,7 @@
       "status": "success",
       "blocksFound": 9,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1357,6 +4174,7 @@
       "status": "success",
       "blocksFound": 19,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1364,6 +4182,7 @@
       "status": "success",
       "blocksFound": 12,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1371,6 +4190,7 @@
       "status": "success",
       "blocksFound": 5,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1410,6 +4230,142 @@
           "opcode": "get"
         }
       ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "date",
+          "field": "arguments",
+          "expression": {
+            "YEAR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getFullYear(...)"
+              }
+            },
+            "MONTH": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "BinaryExpression"
+              }
+            },
+            "DATE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getDate(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "time",
+          "field": "arguments",
+          "expression": {
+            "YEAR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getFullYear(...)"
+              }
+            },
+            "MONTH": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "BinaryExpression"
+              }
+            },
+            "DATE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getDate(...)"
+              }
+            },
+            "HOUR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getHours(...)"
+              }
+            },
+            "MINUTE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getMinutes(...)"
+              }
+            },
+            "SECOND": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getSeconds(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "after2000",
+          "field": "arguments",
+          "expression": {
+            "DAYS": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "ThisExpression.diff(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "diff2000",
+          "field": "arguments",
+          "expression": {
+            "TIME": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "diff",
+          "field": "arguments",
+          "expression": {
+            "TIME1": {
+              "type": "string",
+              "defaultValue": "2000-01-23T12:34:56"
+            },
+            "TIME2": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            },
+            "UNIT": {
+              "type": "string",
+              "menu": "DiffUnits",
+              "defaultValue": "days"
+            }
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "get",
+          "field": "arguments",
+          "expression": {
+            "TIME": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            },
+            "UNIT": {
+              "type": "string",
+              "menu": "Units",
+              "defaultValue": "date"
+            }
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1417,6 +4373,7 @@
       "status": "success",
       "blocksFound": 20,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1445,6 +4402,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1480,6 +4438,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1494,6 +4453,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1501,6 +4461,7 @@
       "status": "success",
       "blocksFound": 6,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1520,6 +4481,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1534,6 +4496,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1578,6 +4541,7 @@
           "opcode": "setInfo"
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1599,6 +4563,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1632,6 +4597,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1639,6 +4605,7 @@
       "status": "success",
       "blocksFound": 3,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1653,6 +4620,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1667,6 +4635,7 @@
       "status": "success",
       "blocksFound": 11,
       "message": "",
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1751,6 +4720,7 @@
           "opcode": null
         }
       ],
+      "unresolvedFieldDetails": [],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -1818,6 +4788,128 @@
           "reason": "unresolved_spread",
           "expression": {
             "$expression": "ThisExpression.cloneReporterBlocks(...)"
+          }
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "switchRequest",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "switchRequest",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "switchRequest",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "cardCreate",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "cardCreate",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "cardCreate",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "cardSet",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "cardSet",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "cardSet",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "cardJoin",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "cardJoin",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "cardJoin",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "cardRemove",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "cardRemove",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "cardRemove",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
           }
         }
       ],

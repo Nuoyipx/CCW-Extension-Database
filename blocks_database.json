@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-11-03T21:22:15.478Z",
+  "generatedAt": "2026-11-03T21:30:38.119Z",
   "extractedThisRun": 951,
-  "baselineCount": 893,
-  "recoveredFromBaseline": 53,
+  "baselineCount": 1004,
+  "recoveredFromBaseline": 56,
   "sourceCount": 1,
   "fileCount": 72,
-  "blockCount": 1004,
+  "blockCount": 1007,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 356,
+  "unresolvedCoreFields": 258,
   "blocks": [
     {
       "extensionId": "advancedControls",
@@ -301,7 +301,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -335,7 +335,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -369,7 +369,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -403,7 +403,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -429,7 +429,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -459,7 +459,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -479,7 +479,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -505,7 +505,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -539,7 +539,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -569,7 +569,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -599,7 +599,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -629,7 +629,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -663,7 +663,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -697,7 +697,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -731,7 +731,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -761,7 +761,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -774,9 +774,7 @@
       "tooltip": null,
       "tooltip_en": null,
       "text": "获得容器[container]中名为[key]的内容",
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text_en": "ArchiveCodeExt.getContentInContainer",
       "blockType": "reporter",
       "arguments": {
         "container": {
@@ -792,7 +790,7 @@
       "terminal": null,
       "filter": null,
       "category": "🔧 JSON处理",
-      "category_en": "🔧 JSON处理",
+      "category_en": "ArchiveCodeExt.info2",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -825,7 +823,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -858,7 +856,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -883,7 +881,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -908,7 +906,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -933,7 +931,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -959,7 +957,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -993,7 +991,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1027,7 +1025,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1061,7 +1059,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1087,7 +1085,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1117,7 +1115,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1137,7 +1135,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1163,7 +1161,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1197,7 +1195,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1227,7 +1225,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1257,7 +1255,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1287,7 +1285,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1321,7 +1319,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1355,7 +1353,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1389,7 +1387,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1419,7 +1417,7 @@
       "terminal": null,
       "filter": null,
       "category": "🏺 容器操作",
-      "category_en": "🏺 容器操作",
+      "category_en": "ArchiveCodeExt.info1",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1432,9 +1430,7 @@
       "tooltip": null,
       "tooltip_en": null,
       "text": "获得容器[container]中名为[key]的内容",
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text_en": "ArchiveCodeExt.getContentInContainer",
       "blockType": "reporter",
       "arguments": {
         "container": {
@@ -1450,7 +1446,7 @@
       "terminal": null,
       "filter": null,
       "category": "🔧 JSON处理",
-      "category_en": "🔧 JSON处理",
+      "category_en": "ArchiveCodeExt.info2",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1483,7 +1479,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1516,7 +1512,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1541,7 +1537,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1566,7 +1562,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -1591,7 +1587,7 @@
       "terminal": null,
       "filter": null,
       "category": "💡 附加积木",
-      "category_en": "💡 附加积木",
+      "category_en": "ArchiveCodeExt.info3",
       "sourceFile": "extensions/Arkos/Archivecode新版.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -9844,12 +9840,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.start",
+      "text_en": "rc.rxblocks.rxfs.start",
       "blockType": "command",
       "arguments": {
         "STR": {
@@ -9873,12 +9865,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.folder",
+      "text_en": "rc.rxblocks.rxfs.folder",
       "blockType": "command",
       "arguments": {
         "STR": {
@@ -9887,9 +9875,7 @@
         },
         "STR2": {
           "type": "string",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "rc.rxblocks.rxfs.folder_default"
         }
       },
       "branchCount": null,
@@ -9908,12 +9894,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.sync",
+      "text_en": "rc.rxblocks.rxfs.sync",
       "blockType": "command",
       "arguments": {
         "STR": {
@@ -9941,12 +9923,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.del",
+      "text_en": "rc.rxblocks.rxfs.del",
       "blockType": "command",
       "arguments": {
         "STR": {
@@ -9968,18 +9946,10 @@
       "extensionName_en": "rxFS",
       "opcode": "webin",
       "func": null,
-      "tooltip": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "tooltip_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "tooltip": "rc.rxblocks.rxfs.webin.tip",
+      "tooltip_en": "rc.rxblocks.rxfs.webin.tip",
+      "text": "rc.rxblocks.rxfs.webin",
+      "text_en": "rc.rxblocks.rxfs.webin",
       "blockType": "reporter",
       "arguments": {
         "STR": {
@@ -10003,12 +9973,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.open",
+      "text_en": "rc.rxblocks.rxfs.open",
       "blockType": "reporter",
       "arguments": {
         "STR": {
@@ -10032,12 +9998,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.clean",
+      "text_en": "rc.rxblocks.rxfs.clean",
       "blockType": "command",
       "arguments": {},
       "branchCount": null,
@@ -10056,12 +10018,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.in",
+      "text_en": "rc.rxblocks.rxfs.in",
       "blockType": "command",
       "arguments": {
         "STR": {
@@ -10085,12 +10043,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.out",
+      "text_en": "rc.rxblocks.rxfs.out",
       "blockType": "reporter",
       "arguments": {},
       "branchCount": null,
@@ -10109,12 +10063,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.list",
+      "text_en": "rc.rxblocks.rxfs.list",
       "blockType": "reporter",
       "arguments": {
         "STR": {
@@ -10138,12 +10088,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.search",
+      "text_en": "rc.rxblocks.rxfs.search",
       "blockType": "reporter",
       "arguments": {
         "STR": {
@@ -10167,12 +10113,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "rc.rxblocks.rxfs.searchin",
+      "text_en": "rc.rxblocks.rxfs.searchin",
       "blockType": "reporter",
       "arguments": {
         "STR": {
@@ -10190,22 +10132,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": null,
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "button.showBlock",
+      "text_en": "button.showBlock",
       "blockType": "button",
       "arguments": {},
       "branchCount": null,
@@ -10218,22 +10152,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": null,
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "button.hideBlock",
+      "text_en": "button.hideBlock",
       "blockType": "button",
       "arguments": {},
       "branchCount": null,
@@ -10246,22 +10172,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "isCloneOrIsOriginal",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.isCloneOrIsOriginal",
+      "text_en": "block.isCloneOrIsOriginal",
       "blockType": "BOOLEAN",
       "arguments": {
         "TYPE": {
@@ -10274,29 +10192,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "tag.utils",
+      "category_en": "tag.utils",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getCloneTargetPropertyWithSpriteName",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getCloneTargetPropertyWithSpriteName",
+      "text_en": "block.getCloneTargetPropertyWithSpriteName",
       "blockType": "REPORTER",
       "arguments": {
         "TARGET": {
@@ -10311,29 +10221,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.utils",
+      "category_en": "tag.utils",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getCloneTargetPropertyWithSpriteName2",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getCloneTargetPropertyWithSpriteName",
+      "text_en": "block.getCloneTargetPropertyWithSpriteName",
       "blockType": "REPORTER",
       "arguments": {
         "TARGET": {
@@ -10348,29 +10250,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.utils",
+      "category_en": "tag.utils",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getOriginalTargetPropertyWithSpriteName",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getOriginalTargetPropertyWithSpriteName",
+      "text_en": "block.getOriginalTargetPropertyWithSpriteName",
       "blockType": "REPORTER",
       "arguments": {
         "TARGET": {
@@ -10385,29 +10279,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.utils",
+      "category_en": "tag.utils",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getOriginalTargetPropertyWithSpriteName2",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getOriginalTargetPropertyWithSpriteName",
+      "text_en": "block.getOriginalTargetPropertyWithSpriteName",
       "blockType": "REPORTER",
       "arguments": {
         "TARGET": {
@@ -10422,29 +10308,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.utils",
+      "category_en": "tag.utils",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "initTheClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.initTheClone",
+      "text_en": "block.initTheClone",
       "blockType": "EVENT",
       "arguments": {},
       "branchCount": null,
@@ -10452,29 +10330,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "beforeDeletionOfTheClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.beforeDeletionOfTheClone",
+      "text_en": "block.beforeDeletionOfTheClone",
       "blockType": "EVENT",
       "arguments": {},
       "branchCount": null,
@@ -10482,29 +10352,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "dispatchWhenCloned",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.dispatchWhenCloned",
+      "text_en": "block.dispatchWhenCloned",
       "blockType": "HAT",
       "arguments": {
         "TARGET": {
@@ -10518,29 +10380,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "dispatchWhenCloneDeleted",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.dispatchWhenCloneDeleted",
+      "text_en": "block.dispatchWhenCloneDeleted",
       "blockType": "HAT",
       "arguments": {
         "TARGET": {
@@ -10554,29 +10408,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "broadcastToClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.broadcastToClone",
+      "text_en": "block.broadcastToClone",
       "blockType": "COMMAND",
       "arguments": {
         "MENU": {
@@ -10589,15 +10435,11 @@
         },
         "MSG": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.MSGName"
         },
         "data": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.MSGInfo"
         }
       },
       "branchCount": null,
@@ -10605,36 +10447,26 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "receiveMyBroadcast",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.receiveMyBroadcast",
+      "text_en": "block.receiveMyBroadcast",
       "blockType": "HAT",
       "arguments": {
         "MSG": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.MSGName"
         },
         "data": {
           "type": "ccw_hat_parameter"
@@ -10646,29 +10478,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.event",
+      "category_en": "tag.event",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "presetPropertyForTheNextClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.presetPropertyForTheNextClone",
+      "text_en": "block.presetPropertyForTheNextClone",
       "blockType": "COMMAND",
       "arguments": {
         "PROPERTY": {
@@ -10684,36 +10508,26 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.cloneAndDelete",
+      "category_en": "tag.cloneAndDelete",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "presetSingleDataForTheNextClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.presetSingleDataForTheNextClone",
+      "text_en": "block.presetSingleDataForTheNextClone",
       "blockType": "COMMAND",
       "arguments": {
         "KEY": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.HP"
         },
         "VALUE": {
           "type": "STRING",
@@ -10723,99 +10537,71 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.cloneAndDelete",
+      "category_en": "tag.cloneAndDelete",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "presetDataforTheNextCloneInJSONFormat",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.presetDataforTheNextCloneInJSONFormat",
+      "text_en": "block.presetDataforTheNextCloneInJSONFormat",
       "blockType": "COMMAND",
       "arguments": {
         "DATA_JSON": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.presetJSON"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.cloneAndDelete",
+      "category_en": "tag.cloneAndDelete",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "presetGroupForTheNextClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.presetGroupForTheNextClone",
+      "text_en": "block.presetGroupForTheNextClone",
       "blockType": "COMMAND",
       "arguments": {
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "tag.cloneAndDelete",
+      "category_en": "tag.cloneAndDelete",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "createCloneAndSpecifyID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.createCloneAndSpecifyID",
+      "text_en": "block.createCloneAndSpecifyID",
       "blockType": "COMMAND",
       "arguments": {
         "TARGET": {
@@ -10824,9 +10610,7 @@
         },
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         }
       },
       "branchCount": null,
@@ -10839,22 +10623,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getJustCreatedCloneID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getJustCreatedCloneID",
+      "text_en": "block.getJustCreatedCloneID",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
@@ -10867,29 +10643,19 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "deleteCloneByID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.deleteCloneByID",
+      "text_en": "block.deleteCloneByID",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         }
       },
       "branchCount": null,
@@ -10902,29 +10668,19 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "ifCloneExists",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.ifCloneExists",
+      "text_en": "block.ifCloneExists",
       "blockType": "BOOLEAN",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         }
       },
       "branchCount": null,
@@ -10937,22 +10693,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getMyProperty",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getMyProperty",
+      "text_en": "block.getMyProperty",
       "blockType": "REPORTER",
       "arguments": {
         "PROPERTY": {
@@ -10963,71 +10711,51 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.data",
+      "category_en": "tag.data",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getMyValueByKey",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getMyValueByKey",
+      "text_en": "block.getMyValueByKey",
       "blockType": "REPORTER",
       "arguments": {
         "KEY": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.HP"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.data",
+      "category_en": "tag.data",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "setOrChangeMyValueWithKey",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.setOrChangeMyValueWithKey",
+      "text_en": "block.setOrChangeMyValueWithKey",
       "blockType": "COMMAND",
       "arguments": {
         "KEY": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.HP"
         },
         "OP": {
           "type": "STRING",
@@ -11041,36 +10769,26 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.data",
+      "category_en": "tag.data",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getClonePropertyWithID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getClonePropertyWithID",
+      "text_en": "block.getClonePropertyWithID",
       "blockType": "REPORTER",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "PROPERTY": {
           "type": "STRING",
@@ -11088,35 +10806,23 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getValueOfCloneIDWithKey",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getValueOfCloneIDWithKey",
+      "text_en": "block.getValueOfCloneIDWithKey",
       "blockType": "REPORTER",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "KEY": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.HP"
         }
       },
       "branchCount": null,
@@ -11129,35 +10835,23 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "setOrChangeValueOfCloneIDWithKey",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.setOrChangeValueOfCloneIDWithKey",
+      "text_en": "block.setOrChangeValueOfCloneIDWithKey",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "KEY": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.HP"
         },
         "OP": {
           "type": "STRING",
@@ -11178,29 +10872,19 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "setCloneProperty",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.setCloneProperty",
+      "text_en": "block.setCloneProperty",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "PROPERTY": {
           "type": "STRING",
@@ -11225,22 +10909,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "addOrRemoveMyselfFromGroup",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.addOrRemoveMyselfFromGroup",
+      "text_en": "block.addOrRemoveMyselfFromGroup",
       "blockType": "COMMAND",
       "arguments": {
         "OP": {
@@ -11249,9 +10925,7 @@
         },
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": null,
@@ -11259,29 +10933,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.group",
+      "category_en": "tag.group",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "addOrRemoveIDFromGroup",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.addOrRemoveIDFromGroup",
+      "text_en": "block.addOrRemoveIDFromGroup",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
@@ -11294,37 +10960,27 @@
         },
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.group",
+      "category_en": "tag.group",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "ifCloneInGroup",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.ifCloneInGroup",
+      "text_en": "block.ifCloneInGroup",
       "blockType": "BOOLEAN",
       "arguments": {
         "ID": {
@@ -11333,44 +10989,32 @@
         },
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.group",
+      "category_en": "tag.group",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getGroupInfo",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getGroupInfo",
+      "text_en": "block.getGroupInfo",
       "blockType": "REPORTER",
       "arguments": {
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         },
         "PROPERTY": {
           "type": "STRING",
@@ -11387,29 +11031,19 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getClonePropertyInGroup",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getClonePropertyInGroup",
+      "text_en": "block.getClonePropertyInGroup",
       "blockType": "REPORTER",
       "arguments": {
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         },
         "INDEX": {
           "type": "NUMBER",
@@ -11430,29 +11064,19 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "importGroupIntoList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.importGroupIntoList",
+      "text_en": "block.importGroupIntoList",
       "blockType": "COMMAND",
       "arguments": {
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         },
         "OP": {
           "type": "STRING",
@@ -11473,33 +11097,23 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "forEachWithGroup",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
       "text": [
-        {
-          "$expression": "ThisExpression.formatMessage(...)"
-        }
+        "block.forEachWithGroup"
       ],
       "text_en": [
-        {
-          "$expression": "ThisExpression.formatMessage(...)"
-        }
+        "block.forEachWithGroup"
       ],
       "blockType": "CONDITIONAL",
       "arguments": {
         "GROUP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": 1,
@@ -11512,22 +11126,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "cloneIDOfForEach",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.cloneIDOfForEach",
+      "text_en": "block.cloneIDOfForEach",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
@@ -11540,22 +11146,14 @@
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getNearestClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getNearestClone",
+      "text_en": "block.getNearestClone",
       "blockType": "REPORTER",
       "arguments": {
         "TYPE": {
@@ -11568,9 +11166,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         }
       },
       "branchCount": null,
@@ -11578,29 +11174,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "isTouchingClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.isTouchingClone",
+      "text_en": "block.isTouchingClone",
       "blockType": "BOOLEAN",
       "arguments": {
         "ID": {
@@ -11621,29 +11209,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "isCloneTouchingClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.isCloneTouchingClone",
+      "text_en": "block.isCloneTouchingClone",
       "blockType": "BOOLEAN",
       "arguments": {
         "ID": {
@@ -11662,29 +11242,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "getTouchingID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.getTouchingID",
+      "text_en": "block.getTouchingID",
       "blockType": "REPORTER",
       "arguments": {
         "MENU": {
@@ -11693,9 +11265,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         },
         "TYPE": {
           "type": "STRING",
@@ -11707,29 +11277,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "importTouchingIDsIntoList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.importTouchingIDsIntoList",
+      "text_en": "block.importTouchingIDsIntoList",
       "blockType": "COMMAND",
       "arguments": {
         "MENU": {
@@ -11738,9 +11300,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.enemy"
         },
         "OP": {
           "type": "STRING",
@@ -11756,29 +11316,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "isCloneTouchingCoord",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.isCloneTouchingCoord",
+      "text_en": "block.isCloneTouchingCoord",
       "blockType": "BOOLEAN",
       "arguments": {
         "X": {
@@ -11801,29 +11353,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "pickTarget",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.pickTarget",
+      "text_en": "block.pickTarget",
       "blockType": "REPORTER",
       "arguments": {
         "X": {
@@ -11838,36 +11382,26 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.sensing",
+      "category_en": "tag.sensing",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "calcDistanceToClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.calcDistanceToClone",
+      "text_en": "block.calcDistanceToClone",
       "blockType": "REPORTER",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "MENU": {
           "type": "STRING",
@@ -11879,29 +11413,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "calcDistanceBetweenClones",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.calcDistanceBetweenClones",
+      "text_en": "block.calcDistanceBetweenClones",
       "blockType": "REPORTER",
       "arguments": {
         "ID1": {
@@ -11920,29 +11446,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "moveToClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.moveToClone",
+      "text_en": "block.moveToClone",
       "blockType": "COMMAND",
       "arguments": {
         "MOTION": {
@@ -11951,9 +11469,7 @@
         },
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         }
       },
       "branchCount": null,
@@ -11961,36 +11477,26 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "moveStepsToClone",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.moveStepsToClone",
+      "text_en": "block.moveStepsToClone",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         },
         "MOTION": {
           "type": "STRING",
@@ -12006,64 +11512,46 @@
       "filter": [
         "SPRITE"
       ],
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "setMyID",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.setMyID",
+      "text_en": "block.setMyID",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.player"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "transferAccessToTargetXYToDollyDataKey",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.transferAccessToTargetXYToDollyDataKey",
+      "text_en": "block.transferAccessToTargetXYToDollyDataKey",
       "blockType": "COMMAND",
       "arguments": {
         "X_NAME": {
@@ -12076,65 +11564,47 @@
         },
         "DIR_NAME": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.formatMessage(...)"
-          }
+          "defaultValue": "defaultValue.direction"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "witCat.dollyPro",
-      "extensionName": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "extensionName": "name",
+      "extensionName_en": "name",
       "opcode": "cancelAccessTransfer",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text": "block.cancelAccessTransfer",
+      "text_en": "block.cancelAccessTransfer",
       "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "tag.motion",
+      "category_en": "tag.motion",
       "sourceFile": "extensions/DollyPro/dollytest.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": null,
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "👋 信息",
+      "text_en": "👋 Info",
       "blockType": "BUTTON",
       "arguments": {},
       "branchCount": null,
@@ -12147,22 +11617,14 @@
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "moveToRandom",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "移到随机位置",
+      "text_en": "move to random position",
       "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
@@ -12170,29 +11632,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "🛠 实用工具",
+      "category_en": "🛠 Utilities",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "pointTowardRandom",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "面向随机方向",
+      "text_en": "point toward random direction",
       "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
@@ -12200,29 +11654,21 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "🛠 实用工具",
+      "category_en": "🛠 Utilities",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "setEffect",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "将 [EFFECT] 特效设为 [VAL]",
+      "text_en": "set [EFFECT] effect to [VAL]",
       "blockType": "COMMAND",
       "arguments": {
         "EFFECT": {
@@ -12239,36 +11685,26 @@
       "filter": [
         "SPRITE"
       ],
-      "category": null,
-      "category_en": null,
+      "category": "🛠 实用工具",
+      "category_en": "🛠 Utilities",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "letterOf",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "[TEXT] 的第 [INDEX] 个字符",
+      "text_en": "letter [INDEX] of [TEXT]",
       "blockType": "REPORTER",
       "arguments": {
         "TEXT": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "translate(...)"
-          }
+          "defaultValue": "abcdef"
         },
         "INDEX": {
           "type": "NUMBER",
@@ -12278,29 +11714,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔢 数学",
+      "category_en": "🔢 Math",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "mathOp",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "[OP] [A] 和 [B]",
+      "text_en": "[OP] of [A] and [B]",
       "blockType": "REPORTER",
       "arguments": {
         "OP": {
@@ -12319,29 +11747,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔢 数学",
+      "category_en": "🔢 Math",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "randomInt",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "随机整数 [MIN] 到 [MAX]",
+      "text_en": "random integer from [MIN] to [MAX]",
       "blockType": "REPORTER",
       "arguments": {
         "MIN": {
@@ -12356,29 +11776,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔢 数学",
+      "category_en": "🔢 Math",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "isEven",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "translate(...)"
-      },
-      "text_en": {
-        "$expression": "translate(...)"
-      },
+      "text": "[NUM] 是偶数？",
+      "text_en": "[NUM] is even?",
       "blockType": "BOOLEAN",
       "arguments": {
         "NUM": {
@@ -12389,19 +11801,15 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔢 数学",
+      "category_en": "🔢 Math",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "exampleExtension",
-      "extensionName": {
-        "$expression": "translate(...)"
-      },
-      "extensionName_en": {
-        "$expression": "translate(...)"
-      },
+      "extensionName": "示例扩展",
+      "extensionName_en": "Example Extension",
       "opcode": "hiddenBoolDemo",
       "func": null,
       "tooltip": null,
@@ -12418,8 +11826,8 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔢 数学",
+      "category_en": "🔢 Math",
       "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -23178,9 +22586,7 @@
       "tooltip": null,
       "tooltip_en": null,
       "text": "将blob[text]命名为[name]并下载",
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text_en": "WitCatFileHelper.downloadblob",
       "blockType": "command",
       "arguments": {
         "text": {
@@ -27105,9 +26511,7 @@
       "tooltip": null,
       "tooltip_en": null,
       "text": "鼠标滚轮速度",
-      "text_en": {
-        "$expression": "ThisExpression.formatMessage(...)"
-      },
+      "text_en": "WitCatMouse.mousewheel",
       "blockType": "reporter",
       "arguments": {},
       "branchCount": null,
@@ -28506,6 +27910,90 @@
       "category": null,
       "category_en": null,
       "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": "witCat.dollyPro",
+      "extensionName": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "extensionName_en": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "text_en": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "blockType": "button",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": "witCat.dollyPro",
+      "extensionName": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "extensionName_en": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "text_en": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      },
+      "blockType": "button",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": "exampleExtension",
+      "extensionName": {
+        "$expression": "translate(...)"
+      },
+      "extensionName_en": {
+        "$expression": "translate(...)"
+      },
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": {
+        "$expression": "translate(...)"
+      },
+      "text_en": {
+        "$expression": "translate(...)"
+      },
+      "blockType": "BUTTON",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/example/example-ext.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
