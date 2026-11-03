@@ -281,7 +281,7 @@ function extractMessages(ast) {
     if (node.type !== 'ObjectExpression') return;
     for (const prop of node.properties) {
       if (prop.type !== 'ObjectProperty') continue;
-      const locale = String(prop.key.name ?? prop.key.value ?? '').toLowerCase();
+      const locale = String(prop.key.name ?? prop.key.value ?? '').toLowerCase().replace(/_/g, '-');
       if (!['zh-cn', 'zh', 'en', 'en-us'].includes(locale) || prop.value.type !== 'ObjectExpression') continue;
       const target = locale.startsWith('zh') ? 'zh-cn' : 'en';
       for (const entry of prop.value.properties) {
@@ -417,20 +417,32 @@ function resolveImportSymbols(ast, filename, repositoryRoot, cache, depth) {
 function collectAdjacentMessages(filePath, repositoryRoot) {
   const tables = { 'zh-cn': {}, en: {} };
   if (!filePath || !repositoryRoot) return tables;
-  const dir = path.dirname(filePath);
-  const candidates = [path.join(dir, 'l10n.js'), path.join(dir, 'locales.js'),
-    path.join(dir, 'translations.js'), path.join(dir, 'i18n.js'),
-    path.join(dir, 'locales', 'index.js'), path.join(dir, 'l10n', 'index.js')];
-  let read = 0;
-  for (const filename of candidates) {
-    if (read >= MAX_LOCALE_FILES || !filename.startsWith(repositoryRoot + path.sep)) continue;
-    if (!fs.existsSync(filename) || !fs.statSync(filename).isFile()) continue;
-    read++;
-    try {
-      const ast = parseSource(fs.readFileSync(filename, 'utf8'));
-      const messages = extractMessages(ast);
-      for (const language of ['zh-cn', 'en']) Object.assign(tables[language], messages[language]);
-    } catch (_) { /* Do not block extraction for a malformed optional locale file. */ }
+  const root = path.resolve(repositoryRoot);
+  const dir = path.dirname(path.resolve(filePath));
+  // Search the extension's own directory, a same-name subdirectory and its
+  // immediate parent. Never search unrelated extensions or execute source JS.
+  const stem = path.basename(filePath, '.js');
+  const directories = [dir, path.join(dir, stem), path.join(dir, 'locales'),
+    path.join(dir, 'l10n'), path.dirname(dir)];
+  const names = ['l10n.js','locales.js','translations.js','i18n.js',
+    'lang.js','messages.js','index.js','zh-cn.js','zh_CN.js',
+    'en.js','en-us.js','en_US.js'];
+  const visited = new Set();
+  for (const directory of directories) {
+    for (const name of names) {
+      if (visited.size >= MAX_LOCALE_FILES) break;
+      const filename = path.resolve(directory, name);
+      if (filename === path.resolve(filePath) || visited.has(filename) ||
+          !(filename.startsWith(root + path.sep))) continue;
+      visited.add(filename);
+      try {
+        if (!fs.statSync(filename).isFile()) continue;
+        const ast = parseSource(fs.readFileSync(filename, 'utf8'));
+        const messages = extractMessages(ast);
+        for (const language of ['zh-cn', 'en'])
+          Object.assign(tables[language], messages[language]);
+      } catch (_) { /* Optional language files may not exist or parse. */ }
+    }
   }
   return tables;
 }
@@ -496,9 +508,24 @@ function translationDiagnostics(source, filePath, repositoryRoot, report) {
     if (target.startsWith(repositoryRoot + path.sep) && fs.existsSync(target))
       localeFiles.push(path.relative(repositoryRoot, target).split(path.sep).join('/'));
   }
+  const available = collectAdjacentMessages(filePath, repositoryRoot);
+  const sourceMessages = (() => {
+    try { return extractMessages(parseSource(source)); }
+    catch (_) { return { 'zh-cn': {}, en: {} }; }
+  })();
+  for (const lang of ['zh-cn', 'en']) Object.assign(available[lang], sourceMessages[lang]);
+  const detailedCalls = calls.slice(0, 150).map(call => {
+    const key = /^(['"])(.*?)\1$/.exec(call.argument)?.[2] ?? null;
+    const zh = key !== null && Object.prototype.hasOwnProperty.call(available['zh-cn'], key);
+    const en = key !== null && Object.prototype.hasOwnProperty.call(available.en, key);
+    return { ...call, key, zhFound: zh, enFound: en,
+      reason: key === null ? 'dynamic_translation_key' :
+        (!zh && !en ? 'translation_key_not_found' :
+         (!zh || !en ? 'language_variant_missing' : 'translation_found_but_not_resolved')) };
+  });
   return [{ file: report.file, unresolvedTextCount: relevant.filter(x => x.field === 'text').length,
     unresolvedTextEnglishCount: relevant.filter(x => x.field === 'text_en').length,
-    localeFiles, translationCalls: calls.slice(0, 150),
+    localeFiles, translationCalls: detailedCalls,
     unresolved: relevant.map(x => ({opcode:x.opcode,field:x.field,expression:x.expression})) }];
 }
 function scanFile(filePath, repositoryRoot, repositoryUrl) {
