@@ -9,6 +9,9 @@ const parser = require('@babel/parser');
 const DATABASE_FILE = 'blocks_database.json';
 const REPORT_FILE = 'extraction_report.json';
 const VERSION_FILE = 'version_report.json';
+const DIFF_FILE = 'extraction_diff.json';
+const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
+
 const EXCLUDED_DIRS = new Set(['.git', 'node_modules', '__pycache__', 'dist', 'build', 'assets', 'coverage']);
 const EXCLUDED_FILES = new Set(['webpack.config.js', 'vite.config.js', '.eslintrc.js', 'babel.config.js', 'jest.config.js']);
 const UNRESOLVED = (source) => ({ $expression: source || '<unknown>' });
@@ -90,8 +93,9 @@ function evaluate(node, env, depth = 0) {
       const objectName = node.object.type === 'Identifier' ? node.object.name : null;
       const property = node.computed ? keyOf(node.property, env) : node.property.name;
       if (objectName && ['BlockType', 'ArgumentType', 'TargetType', 'MenuType', 'Cast'].includes(objectName) && property) return property;
+      if (node.object.type === 'MemberExpression' && ['Scratch.BlockType', 'Scratch.ArgumentType', 'Scratch.TargetType'].includes(sourceOf(node.object)) && property) return property;
       const base = next(node.object);
-      if (base && typeof base === 'object' && !Array.isArray(base) && property in base) return base[property];
+      if (base && typeof base === 'object' && property !== null && property in base) return base[property];
       return unresolved(node);
     }
     case 'CallExpression': {
@@ -114,6 +118,23 @@ function evaluate(node, env, depth = 0) {
           const rest = node.arguments.map(next);
           return base.concat(...rest);
         }
+      }
+      if (callee.type === 'MemberExpression' && callee.property.name === 'map') {
+        const base = next(callee.object);
+        const fn = node.arguments[0];
+        if (Array.isArray(base) && fn && (fn.type === 'ArrowFunctionExpression' || fn.type === 'FunctionExpression') && fn.params.length && fn.params[0].type === 'Identifier' && base.length <= 1000) {
+          const mapped = base.map((item, index) => {
+            const scoped = { ...env, symbols: { ...env.symbols, [fn.params[0].name]: item } };
+            if (fn.params[1] && fn.params[1].type === 'Identifier') scoped.symbols[fn.params[1].name] = index;
+            const body = fn.body.type === 'BlockStatement' ? fn.body.body.find(x => x.type === 'ReturnStatement')?.argument : fn.body;
+            return body ? evaluate(body, scoped, depth + 1) : unresolved(fn);
+          });
+          return mapped;
+        }
+      }
+      if (callee.type === 'MemberExpression' && ['filter', 'slice'].includes(callee.property.name)) {
+        const base = next(callee.object);
+        if (Array.isArray(base) && callee.property.name === 'slice' && node.arguments.every(a => !isUnresolved(next(a)))) return base.slice(...node.arguments.map(next));
       }
       return unresolved(node);
     }
@@ -335,10 +356,80 @@ function listJsFiles(root) {
 function cloneRepository(url, destination) {
   cp.execFileSync('git', ['clone', '--depth', '1', url, destination], { stdio: 'pipe' });
 }
+// Preserve previous records even when a new static analysis cannot recover them.
+// Identity includes sourceFile because the same extension may have multiple versions.
+function identity(block) {
+  const parts = [block.repository || '', block.sourceFile || '', block.extensionId || '', block.opcode || ''];
+  if (!block.opcode) parts.push(JSON.stringify(block.text || ''), String(block.blockType || ''));
+  return JSON.stringify(parts);
+}
+function quality(value) {
+  if (value === null || value === undefined) return 0;
+  if (typeof value === 'string') return value.trim() ? 2 : 0;
+  if (typeof value === 'number' || typeof value === 'boolean') return 1;
+  if (Array.isArray(value)) return value.reduce((n, v) => n + quality(v), 0);
+  if (typeof value === 'object') {
+    if ('$expression' in value || '$spread' in value) return -2;
+    return Object.values(value).reduce((n, v) => n + quality(v), 0);
+  }
+  return 0;
+}
+function mergeRecord(oldRecord, newRecord) {
+  const merged = { ...oldRecord, ...newRecord };
+  for (const key of new Set([...Object.keys(oldRecord), ...Object.keys(newRecord)])) {
+    const before = oldRecord[key], after = newRecord[key];
+    if (quality(before) > quality(after)) merged[key] = before;
+    else if (before && after && typeof before === 'object' && typeof after === 'object' && !Array.isArray(before) && !Array.isArray(after) && !('$expression' in before) && !('$expression' in after)) {
+      merged[key] = { ...before, ...after };
+      for (const field of Object.keys(before)) if (quality(before[field]) > quality(after[field])) merged[key][field] = before[field];
+    }
+  }
+  return merged;
+}
+function mergeWithBaseline(current, baseline) {
+  const merged = [], positions = new Map(), added = [], recovered = [], updated = [];
+  for (const block of current) {
+    const key = identity(block);
+    if (!positions.has(key)) positions.set(key, []);
+    positions.get(key).push(merged.length);
+    merged.push(block);
+  }
+  const seen = new Map();
+  for (const oldBlock of baseline) {
+    const key = identity(oldBlock), ordinal = seen.get(key) || 0;
+    seen.set(key, ordinal + 1);
+    const candidates = positions.get(key) || [];
+    if (ordinal < candidates.length) {
+      const index = candidates[ordinal];
+      const replacement = mergeRecord(oldBlock, merged[index]);
+      if (JSON.stringify(replacement) !== JSON.stringify(merged[index])) updated.push({ identity: key, reason: 'restored richer baseline fields' });
+      merged[index] = replacement;
+    } else {
+      recovered.push({ identity: key, extensionId: oldBlock.extensionId, opcode: oldBlock.opcode, sourceFile: oldBlock.sourceFile });
+      merged.push(oldBlock);
+    }
+  }
+  const oldCounts = new Map();
+  for (const b of baseline) oldCounts.set(identity(b), (oldCounts.get(identity(b)) || 0) + 1);
+  const newCounts = new Map();
+  for (const b of current) {
+    const key = identity(b), count = (newCounts.get(key) || 0) + 1;
+    newCounts.set(key, count);
+    if (count > (oldCounts.get(key) || 0)) added.push({ identity: key, extensionId: b.extensionId, opcode: b.opcode, sourceFile: b.sourceFile });
+  }
+  return { merged, added, recovered, updated };
+}
+function readBaseline() {
+  if (!fs.existsSync(DATABASE_FILE)) return [];
+  const data = JSON.parse(fs.readFileSync(DATABASE_FILE, 'utf8').replace(/^\uFEFF/, ''));
+  if (!data || !Array.isArray(data.blocks)) throw new Error('Existing database has no blocks array; refusing to overwrite it.');
+  return data.blocks;
+}
 function main() {
   console.log('Starting CCW extension extraction (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
+  const baseline = readBaseline();
   const allBlocks = [], allReports = [], versionReports = [];
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'ccw-extension-'));
   try {
@@ -366,6 +457,11 @@ function main() {
       }
     });
   } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  const { merged, added, recovered, updated } = mergeWithBaseline(allBlocks, baseline);
+  if (merged.length < baseline.length) throw new Error('Regression guard: merged records fell below baseline.');
+  if (MINIMUM_QUALITY && merged.length < MINIMUM_QUALITY) throw new Error('Below MINIMUM_QUALITY threshold.');
+  const extractedCount = allBlocks.length;
+  allBlocks.splice(0, allBlocks.length, ...merged);
   const opcodeMap = {};
   for (const block of allBlocks) {
     if (typeof block.opcode === 'string' && block.opcode) (opcodeMap[block.opcode] ||= []).push({ sourceFile: block.sourceFile, repository: block.repository });
@@ -376,20 +472,25 @@ function main() {
   const statusCounts = {};
   for (const report of allReports) statusCounts[report.status] = (statusCounts[report.status] || 0) + 1;
   const generatedAt = now();
-  const database = { schemaVersion: 3, generatedAt, sourceCount: sources.length, fileCount: allReports.length, blockCount: allBlocks.length, uniqueBlockTypes: uniqueTypes.size, unresolvedCoreFields: unresolvedFields, blocks: allBlocks, duplicateOpcodes: duplicates };
+  const database = { schemaVersion: 4, generatedAt, extractedThisRun: extractedCount, baselineCount: baseline.length, recoveredFromBaseline: recovered.length, sourceCount: sources.length, fileCount: allReports.length, blockCount: allBlocks.length, uniqueBlockTypes: uniqueTypes.size, unresolvedCoreFields: unresolvedFields, blocks: allBlocks, duplicateOpcodes: duplicates };
   const extractionReport = {
-    generatedAt, fileCount: allReports.length, uniqueBlockTypes: uniqueTypes.size, unresolvedCoreFields: unresolvedFields,
+    generatedAt, extractedThisRun: extractedCount, baselineCount: baseline.length, recoveredFromBaseline: recovered.length, fileCount: allReports.length, uniqueBlockTypes: uniqueTypes.size, unresolvedCoreFields: unresolvedFields,
     successfulFiles: statusCounts.success || 0, partialFiles: statusCounts.partial || 0,
     dynamicFiles: statusCounts.dynamic_blocks || 0, unrecognizedFiles: statusCounts.no_static_getInfo || 0,
     errorFiles: statusCounts.error || 0, statusCounts, files: allReports
   };
+  const diff = { generatedAt, baselineCount: baseline.length, extractedThisRun: extractedCount, finalCount: allBlocks.length,
+    newRecords: added, recoveredFromBaseline: recovered, enrichedRecords: updated,
+    note: 'Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current.' };
+  // Write the database last, after all reports are prepared.
+  fs.writeFileSync(DIFF_FILE, JSON.stringify(diff, null, 2), 'utf8');
   fs.writeFileSync(DATABASE_FILE, JSON.stringify(database, null, 2), 'utf8');
   fs.writeFileSync(REPORT_FILE, JSON.stringify(extractionReport, null, 2), 'utf8');
   fs.writeFileSync(VERSION_FILE, JSON.stringify(versionReports, null, 2), 'utf8');
   console.log('\nExtraction finished.');
   console.log(`Repositories: ${sources.length}`);
   console.log(`Files scanned: ${allReports.length}`);
-  console.log(`Blocks extracted: ${allBlocks.length}`);
+  console.log(`Blocks extracted this run: ${extractedCount}; preserved from baseline: ${recovered.length}; final: ${allBlocks.length}`);
   console.log(`Unique block types: ${uniqueTypes.size}; unresolved core fields: ${unresolvedFields}`);
   console.log(`Successful files: ${statusCounts.success || 0}`);
   console.log(`Partial files: ${statusCounts.partial || 0}`);
