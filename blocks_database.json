@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-11-03T21:39:44.000Z",
+  "generatedAt": "2026-11-03T21:44:02.179Z",
   "extractedThisRun": 951,
   "baselineCount": 1009,
   "recoveredFromBaseline": 58,
@@ -8,7 +8,7 @@
   "fileCount": 72,
   "blockCount": 1009,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 238,
+  "unresolvedCoreFields": 174,
   "blocks": [
     {
       "extensionId": "advancedControls",
@@ -4114,22 +4114,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "typeOf",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[VALUE]的类型",
+      "text_en": "type of [VALUE]",
       "blockType": "REPORTER",
       "arguments": {
         "VALUE": {
@@ -4139,29 +4131,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "checkType",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[VALUE]是[TYPE]？",
+      "text_en": "is[VALUE][TYPE]?",
       "blockType": "BOOLEAN",
       "arguments": {
         "VALUE": {
@@ -4175,29 +4159,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "strictlyEqual",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[A]就是[B]",
+      "text_en": "[A]is exactly[B]",
       "blockType": "BOOLEAN",
       "arguments": {
         "A": {
@@ -4210,64 +4186,46 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getObjFromJson",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️[VALUE]解析为对象",
+      "text_en": "🗄️parse JSON [VALUE] to object",
       "blockType": "REPORTER",
       "arguments": {
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "`{${...}}`"
-          }
+          "defaultValue": "{\"a\":1,\"b\":2}"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "JSONOf",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "对象[VALUE]转JSON字符串",
+      "text_en": "convert object[VALUE] to JSON",
       "blockType": "REPORTER",
       "arguments": {
         "VALUE": {
@@ -4277,29 +4235,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "copyFrom",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️[OP]复制对象[OBJ]",
+      "text_en": "🗄️[OP]object[OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "OP": {
@@ -4313,162 +4263,116 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔧常用工具",
+      "category_en": "🔧Common Tools",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "deleteAllTempData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "删除所有数据",
+      "text_en": "delete all data",
       "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "💾临时数据",
+      "category_en": "💾Temporary Data",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "listAllData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "已有数据名称",
+      "text_en": "names of existing data",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "💾临时数据",
+      "category_en": "💾Temporary Data",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "delTempData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "删除名为[NAME]的数据",
+      "text_en": "delete data named[NAME]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "数据"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "💾临时数据",
+      "category_en": "💾Temporary Data",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "ifTempDataExist",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "存在名为[NAME]的数据？",
+      "text_en": "data named[NAME]exists?",
       "blockType": "BOOLEAN",
       "arguments": {
         "NAME": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "数据"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "💾临时数据",
+      "category_en": "💾Temporary Data",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setTempData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "名为[NAME]的数据[OP][VALUE]",
+      "text_en": "data named[NAME][OP][VALUE]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "数据"
         },
         "OP": {
           "type": "STRING",
@@ -4489,29 +4393,19 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getTempData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "名为[NAME]的数据",
+      "text_en": "data named[NAME]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "数据"
         }
       },
       "branchCount": null,
@@ -4524,78 +4418,54 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getNewObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️空对象",
+      "text_en": "🗄️ empty object",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "🗄️对象/列表",
+      "category_en": "🗄️Object/List",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getNewList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️空列表",
+      "text_en": "🗄️ empty list",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "🗄️对象/列表",
+      "category_en": "🗄️Object/List",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "createListWithLength",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️含[N]个[VALUE]的列表",
+      "text_en": "🗄️list with [N]of[VALUE]",
       "blockType": "REPORTER",
       "arguments": {
         "N": {
@@ -4610,29 +4480,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "🗄️对象/列表",
+      "category_en": "🗄️Object/List",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setPropOfObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[NAME_OR_OBJ]的[PROP][OP][VALUE]",
+      "text_en": "[PROP] of [NAME_OR_OBJ][OP][VALUE]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4643,9 +4505,7 @@
         },
         "PROP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "属性"
         },
         "OP": {
           "type": "STRING",
@@ -4653,9 +4513,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
@@ -4668,22 +4526,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getPropOfObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[NAME_OR_OBJ]的[PROP]",
+      "text_en": "[PROP]of[NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4694,9 +4544,7 @@
         },
         "PROP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "属性"
         }
       },
       "branchCount": null,
@@ -4709,22 +4557,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "delPropOfObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "删除[NAME_OR_OBJ]的[PROP]",
+      "text_en": "delete [PROP] of [NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4735,9 +4575,7 @@
         },
         "PROP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "属性"
         }
       },
       "branchCount": null,
@@ -4750,22 +4588,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "sizeOfObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[NAME_OR_OBJ]的内容数",
+      "text_en": "size of [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4785,22 +4615,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "ifObjectPropExist",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[NAME_OR_OBJ]包含[PROP]？",
+      "text_en": "[NAME_OR_OBJ] has [PROP]?",
       "blockType": "BOOLEAN",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4811,9 +4633,7 @@
         },
         "PROP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "属性"
         }
       },
       "branchCount": null,
@@ -4826,12 +4646,8 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": null,
       "func": null,
       "tooltip": null,
@@ -4854,22 +4670,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setPropOfObjectAndReturn",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️[OBJ]的[PROP][OP][VALUE]并返回",
+      "text_en": "🗄️[PROP] of [OBJ][OP][VALUE]and return",
       "blockType": "REPORTER",
       "arguments": {
         "OBJ": {
@@ -4878,9 +4686,7 @@
         },
         "PROP": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "属性"
         },
         "OP": {
           "type": "STRING",
@@ -4888,9 +4694,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
@@ -4903,22 +4707,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "createObjFromKeyValue",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️根据键[KEYS]值[VALUES]列表创建对象",
+      "text_en": "🗄️create object from lists of keys[KEYS]values[VALUES]",
       "blockType": "REPORTER",
       "arguments": {
         "KEYS": {
@@ -4940,22 +4736,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getAllProperties",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️对象[NAME_OR_OBJ]的所有[OPTION]的列表",
+      "text_en": "🗄️get [OPTION] list of object [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -4977,22 +4765,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getSubObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️根据键[KEYS]获取[OBJ]的[TYPE]",
+      "text_en": "🗄️get [TYPE] from [OBJ] by keys[KEYS]",
       "blockType": "REPORTER",
       "arguments": {
         "OBJ": {
@@ -5018,22 +4798,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "clear",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "清空[NAME]中的内容",
+      "text_en": "clear contents of[NAME]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
@@ -5053,22 +4825,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "mergeObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "给[NAME_OR_OBJ]追加🗄️[OBJ]里的内容",
+      "text_en": "add contents of🗄️[OBJ] to [NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5092,22 +4856,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getPropOfObjectByIdx",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "对象[NAME_OR_OBJ]第[IDX]项的[OPTION]",
+      "text_en": "[OPTION] of item [IDX] of object [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5135,22 +4891,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setProtoOfObj",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "⚠️对象[NAME_OR_OBJ]的原型设为🗄️[OBJ]",
+      "text_en": "⚠️set prototype of [NAME_OR_OBJ] to 🗄️[OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5176,22 +4924,14 @@
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "addItemToList2",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "向[NAME_OR_OBJ][OP][VALUE]",
+      "text_en": "[VALUE][OP][NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5206,37 +4946,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "insertItemIntoList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "在列表[NAME_OR_OBJ]第[IDX]项前插入[VALUE]",
+      "text_en": "insert [VALUE] at [IDX] of list [NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5251,37 +4981,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "indexOf",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]中[VALUE]第[N]次出现的位置",
+      "text_en": "item # of [N]th occurrence of [VALUE] in [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5292,9 +5012,7 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         },
         "N": {
           "type": "NUMBER",
@@ -5304,19 +5022,15 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": null,
       "func": null,
       "tooltip": null,
@@ -5332,29 +5046,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "addItemToListAndReturn",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️向[OBJ][OP][VALUE]并返回",
+      "text_en": "🗄️[VALUE][OP]list[OBJ]and return",
       "blockType": "REPORTER",
       "arguments": {
         "OBJ": {
@@ -5367,37 +5073,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "pop",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "从[LIST]弹出第[IDX]项",
+      "text_en": "pop item[IDX] from [LIST]",
       "blockType": "REPORTER",
       "arguments": {
         "LIST": {
@@ -5412,29 +5108,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "mergeList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️[OP][LIST1][LIST2]",
+      "text_en": "🗄️[OP][LIST1][LIST2]",
       "blockType": "REPORTER",
       "arguments": {
         "OP": {
@@ -5453,29 +5141,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "slice",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️取列表[NAME_OR_OBJ][A]~[B]项",
+      "text_en": "get items [A]~[B]from list[NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5494,29 +5174,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "split",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️以[CH]切割[STR]为列表",
+      "text_en": "🗄️split[STR]by[CH]as a list",
       "blockType": "REPORTER",
       "arguments": {
         "CH": {
@@ -5531,29 +5203,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "join",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "用[CH]连接列表[NAME_OR_OBJ]为字符串",
+      "text_en": "join list[NAME_OR_OBJ] with[CH] as a string",
       "blockType": "REPORTER",
       "arguments": {
         "CH": {
@@ -5568,29 +5232,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "opList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将列表[NAME_OR_OBJ][OP]",
+      "text_en": "[OP]list[NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5607,29 +5263,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "sortListByProp",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将列表[NAME_OR_OBJ]里的每个对象以属性[PROP][OP]",
+      "text_en": "[OP]list[NAME_OR_OBJ]containing objects by property[PROP]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5648,29 +5296,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getScratchList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️原版列表[NAME]",
+      "text_en": "🗄️Scratch list[NAME]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME": {
@@ -5681,29 +5321,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setScratchList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将原版列表[NAME]指向🗄️列表[OBJ]",
+      "text_en": "set Scratch list[NAME]to🗄️[OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
@@ -5718,29 +5350,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "📃列表专用",
+      "category_en": "📃List Dedicated",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setAutoCreate",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "设置的对象不存在时自动创建[ON]",
+      "text_en": "auto create when object not exist[ON]",
       "blockType": "COMMAND",
       "arguments": {
         "ON": {
@@ -5754,29 +5378,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setShowPrefix",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "返回值显示前缀[ON]",
+      "text_en": "show prefix[ON]",
       "blockType": "COMMAND",
       "arguments": {
         "ON": {
@@ -5788,29 +5404,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "allowInputJSON",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "允许传入JSON[ON]",
+      "text_en": "allow JSON input[ON]",
       "blockType": "COMMAND",
       "arguments": {
         "ON": {
@@ -5824,29 +5432,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "indexStart",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表索引从[IDX]开始",
+      "text_en": "list index start from [IDX]",
       "blockType": "COMMAND",
       "arguments": {
         "IDX": {
@@ -5860,29 +5460,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setCase",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表查找区分大小写[ON]",
+      "text_en": "case sensitive [ON] for list searches",
       "blockType": "COMMAND",
       "arguments": {
         "ON": {
@@ -5896,29 +5488,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "newEmptyObjOrArray",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "🗄️返回一个[OPTION]",
+      "text_en": "🗄️create an [OPTION]",
       "blockType": "REPORTER",
       "arguments": {
         "OPTION": {
@@ -5929,57 +5513,41 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getCountOfTempData",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "数据量",
+      "text_en": "data count",
       "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getListItemIdxByItem",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]中第一个[VALUE]的编号",
+      "text_en": "item # of [VALUE] in list [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -5990,37 +5558,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "createOrClearObject",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将数据[NAME]设为空对象",
+      "text_en": "set data[NAME]to an empty object",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
@@ -6033,29 +5591,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "createOrClearList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将数据[NAME]设为空列表",
+      "text_en": "set data[NAME] to an empty list",
       "blockType": "COMMAND",
       "arguments": {
         "NAME": {
@@ -6068,29 +5618,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "addItemToList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "向列表[NAME_OR_OBJ]加入[VALUE]",
+      "text_en": "add [VALUE] to list [NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6101,37 +5643,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "setItemOfList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]第[IDX]项[OP][VALUE]",
+      "text_en": "item [IDX] of list [NAME_OR_OBJ][OP][VALUE]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6150,37 +5682,27 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "delItemOfList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "删除列表[NAME_OR_OBJ]第[IDX]项",
+      "text_en": "delete item [IDX] of list [NAME_OR_OBJ]",
       "blockType": "COMMAND",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6197,29 +5719,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "getItemOfList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]第[IDX]项",
+      "text_en": "item [IDX] of list [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6236,29 +5750,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "lengthOfList",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]长度",
+      "text_en": "length of list [NAME_OR_OBJ]",
       "blockType": "REPORTER",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6271,29 +5777,21 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "extensionId": "test",
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "高级数据结构",
+      "extensionName_en": "Advanced Data Structure",
       "opcode": "ifListItemExist",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "列表[NAME_OR_OBJ]包含[VALUE]？",
+      "text_en": "list [NAME_OR_OBJ] contains [VALUE]?",
       "blockType": "BOOLEAN",
       "arguments": {
         "NAME_OR_OBJ": {
@@ -6304,16 +5802,14 @@
         },
         "VALUE": {
           "type": "STRING",
-          "defaultValue": {
-            "$expression": "ThisExpression.fm(...)"
-          }
+          "defaultValue": "东西"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": "",
-      "category_en": "",
+      "category": "⚙️ 扩展设置（会通过舞台注释保存在作品中）",
+      "category_en": "⚙️ Settings (will be saved in stage's comment)",
       "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },

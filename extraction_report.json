@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-03T21:39:44.000Z",
+  "generatedAt": "2026-11-03T21:44:02.179Z",
   "extractedThisRun": 951,
   "baselineCount": 1009,
   "recoveredFromBaseline": 58,
   "fileCount": 72,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 238,
+  "unresolvedCoreFields": 174,
   "successfulFiles": 28,
   "partialFiles": 22,
   "dynamicFiles": 1,
@@ -72,81 +72,6 @@
       "blocksFound": 59,
       "message": "Some block entries contain unresolved expressions.",
       "issues": [
-        {
-          "index": 0,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 1,
-          "reason": "unresolved_fields",
-          "opcode": "typeOf"
-        },
-        {
-          "index": 2,
-          "reason": "unresolved_fields",
-          "opcode": "checkType"
-        },
-        {
-          "index": 3,
-          "reason": "unresolved_fields",
-          "opcode": "strictlyEqual"
-        },
-        {
-          "index": 4,
-          "reason": "unresolved_fields",
-          "opcode": "getObjFromJson"
-        },
-        {
-          "index": 5,
-          "reason": "unresolved_fields",
-          "opcode": "JSONOf"
-        },
-        {
-          "index": 6,
-          "reason": "unresolved_fields",
-          "opcode": "copyFrom"
-        },
-        {
-          "index": 7,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 8,
-          "reason": "unresolved_fields",
-          "opcode": "deleteAllTempData"
-        },
-        {
-          "index": 9,
-          "reason": "unresolved_fields",
-          "opcode": "listAllData"
-        },
-        {
-          "index": 10,
-          "reason": "unresolved_fields",
-          "opcode": "delTempData"
-        },
-        {
-          "index": 11,
-          "reason": "unresolved_fields",
-          "opcode": "ifTempDataExist"
-        },
-        {
-          "index": 13,
-          "reason": "unresolved_fields",
-          "opcode": "setTempData"
-        },
-        {
-          "index": 14,
-          "reason": "unresolved_fields",
-          "opcode": "getTempData"
-        },
-        {
-          "index": 15,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
         {
           "index": 16,
           "reason": "unresolved_fields",
@@ -233,11 +158,6 @@
           "opcode": "setProtoOfObj"
         },
         {
-          "index": 34,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
           "index": 35,
           "reason": "unresolved_fields",
           "opcode": "addItemToList2"
@@ -308,19 +228,9 @@
           "opcode": "setScratchList"
         },
         {
-          "index": 49,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
           "index": 50,
           "reason": "unresolved_fields",
           "opcode": "setAutoCreate"
-        },
-        {
-          "index": 51,
-          "reason": "unresolved_fields",
-          "opcode": "setShowPrefix"
         },
         {
           "index": 52,
@@ -336,16 +246,6 @@
           "index": 54,
           "reason": "unresolved_fields",
           "opcode": "setCase"
-        },
-        {
-          "index": 55,
-          "reason": "unresolved_fields",
-          "opcode": "newEmptyObjOrArray"
-        },
-        {
-          "index": 56,
-          "reason": "unresolved_fields",
-          "opcode": "getCountOfTempData"
         },
         {
           "index": 57,
@@ -395,335 +295,6 @@
       ],
       "unresolvedFieldDetails": [
         {
-          "index": 0,
-          "opcode": "typeOf",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 0,
-          "opcode": "typeOf",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "checkType",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "checkType",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 2,
-          "opcode": "strictlyEqual",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 2,
-          "opcode": "strictlyEqual",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "getObjFromJson",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "getObjFromJson",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "getObjFromJson",
-          "field": "arguments",
-          "expression": {
-            "VALUE": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "`{${...}}`"
-              }
-            }
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "JSONOf",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "JSONOf",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 5,
-          "opcode": "copyFrom",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 5,
-          "opcode": "copyFrom",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 6,
-          "opcode": "deleteAllTempData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 6,
-          "opcode": "deleteAllTempData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 7,
-          "opcode": "listAllData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 7,
-          "opcode": "listAllData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 8,
-          "opcode": "delTempData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 8,
-          "opcode": "delTempData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 8,
-          "opcode": "delTempData",
-          "field": "arguments",
-          "expression": {
-            "NAME": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            }
-          }
-        },
-        {
-          "index": 9,
-          "opcode": "ifTempDataExist",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 9,
-          "opcode": "ifTempDataExist",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 9,
-          "opcode": "ifTempDataExist",
-          "field": "arguments",
-          "expression": {
-            "NAME": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            }
-          }
-        },
-        {
-          "index": 10,
-          "opcode": "setTempData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 10,
-          "opcode": "setTempData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 10,
-          "opcode": "setTempData",
-          "field": "arguments",
-          "expression": {
-            "NAME": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            },
-            "OP": {
-              "type": "STRING",
-              "menu": "DATA_SET_OPTION"
-            },
-            "VALUE": {
-              "type": "STRING",
-              "defaultValue": "100"
-            }
-          }
-        },
-        {
-          "index": 11,
-          "opcode": "getTempData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 11,
-          "opcode": "getTempData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 11,
-          "opcode": "getTempData",
-          "field": "arguments",
-          "expression": {
-            "NAME": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            }
-          }
-        },
-        {
-          "index": 12,
-          "opcode": "getNewObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 12,
-          "opcode": "getNewObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 13,
-          "opcode": "getNewList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 13,
-          "opcode": "getNewList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 14,
-          "opcode": "createListWithLength",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 14,
-          "opcode": "createListWithLength",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 15,
-          "opcode": "setPropOfObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 15,
-          "opcode": "setPropOfObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 15,
           "opcode": "setPropOfObject",
           "field": "arguments",
@@ -736,9 +307,7 @@
             },
             "PROP": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "属性"
             },
             "OP": {
               "type": "STRING",
@@ -746,26 +315,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 16,
-          "opcode": "getPropOfObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 16,
-          "opcode": "getPropOfObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -781,26 +332,8 @@
             },
             "PROP": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "属性"
             }
-          }
-        },
-        {
-          "index": 17,
-          "opcode": "delPropOfObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 17,
-          "opcode": "delPropOfObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -816,26 +349,8 @@
             },
             "PROP": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "属性"
             }
-          }
-        },
-        {
-          "index": 18,
-          "opcode": "sizeOfObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 18,
-          "opcode": "sizeOfObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -854,22 +369,6 @@
         {
           "index": 19,
           "opcode": "ifObjectPropExist",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 19,
-          "opcode": "ifObjectPropExist",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 19,
-          "opcode": "ifObjectPropExist",
           "field": "arguments",
           "expression": {
             "NAME_OR_OBJ": {
@@ -880,9 +379,7 @@
             },
             "PROP": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "属性"
             }
           }
         },
@@ -903,113 +400,6 @@
           }
         },
         {
-          "index": 21,
-          "opcode": "setPropOfObjectAndReturn",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 21,
-          "opcode": "setPropOfObjectAndReturn",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 21,
-          "opcode": "setPropOfObjectAndReturn",
-          "field": "arguments",
-          "expression": {
-            "OBJ": {
-              "type": "STRING",
-              "defaultValue": "{\"a\":1}"
-            },
-            "PROP": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            },
-            "OP": {
-              "type": "STRING",
-              "menu": "ITEM_SET_OPTION"
-            },
-            "VALUE": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            }
-          }
-        },
-        {
-          "index": 22,
-          "opcode": "createObjFromKeyValue",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 22,
-          "opcode": "createObjFromKeyValue",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 23,
-          "opcode": "getAllProperties",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 23,
-          "opcode": "getAllProperties",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 24,
-          "opcode": "getSubObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 24,
-          "opcode": "getSubObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 25,
-          "opcode": "clear",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 25,
-          "opcode": "clear",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 25,
           "opcode": "clear",
           "field": "arguments",
@@ -1020,22 +410,6 @@
                 "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
               }
             }
-          }
-        },
-        {
-          "index": 26,
-          "opcode": "mergeObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 26,
-          "opcode": "mergeObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1053,22 +427,6 @@
               "type": "STRING",
               "defaultValue": "{\"key\":\"value\"}"
             }
-          }
-        },
-        {
-          "index": 27,
-          "opcode": "getPropOfObjectByIdx",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 27,
-          "opcode": "getPropOfObjectByIdx",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1095,22 +453,6 @@
         {
           "index": 28,
           "opcode": "setProtoOfObj",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 28,
-          "opcode": "setProtoOfObj",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 28,
-          "opcode": "setProtoOfObj",
           "field": "arguments",
           "expression": {
             "NAME_OR_OBJ": {
@@ -1130,22 +472,6 @@
         {
           "index": 29,
           "opcode": "addItemToList2",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 29,
-          "opcode": "addItemToList2",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 29,
-          "opcode": "addItemToList2",
           "field": "arguments",
           "expression": {
             "NAME_OR_OBJ": {
@@ -1160,26 +486,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 30,
-          "opcode": "insertItemIntoList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 30,
-          "opcode": "insertItemIntoList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1199,26 +507,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 31,
-          "opcode": "indexOf",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 31,
-          "opcode": "indexOf",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1234,9 +524,7 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             },
             "N": {
               "type": "NUMBER",
@@ -1261,139 +549,6 @@
           }
         },
         {
-          "index": 33,
-          "opcode": "addItemToListAndReturn",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 33,
-          "opcode": "addItemToListAndReturn",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 33,
-          "opcode": "addItemToListAndReturn",
-          "field": "arguments",
-          "expression": {
-            "OBJ": {
-              "type": "STRING",
-              "defaultValue": "[1,2]"
-            },
-            "OP": {
-              "type": "STRING",
-              "menu": "LIST_ADD_OR_REMOVE"
-            },
-            "VALUE": {
-              "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
-            }
-          }
-        },
-        {
-          "index": 34,
-          "opcode": "pop",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 34,
-          "opcode": "pop",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 35,
-          "opcode": "mergeList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 35,
-          "opcode": "mergeList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 36,
-          "opcode": "slice",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 36,
-          "opcode": "slice",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 37,
-          "opcode": "split",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 37,
-          "opcode": "split",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 38,
-          "opcode": "join",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 38,
-          "opcode": "join",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 39,
-          "opcode": "opList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 39,
-          "opcode": "opList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 39,
           "opcode": "opList",
           "field": "arguments",
@@ -1411,70 +566,6 @@
           }
         },
         {
-          "index": 40,
-          "opcode": "sortListByProp",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 40,
-          "opcode": "sortListByProp",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 41,
-          "opcode": "getScratchList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 41,
-          "opcode": "getScratchList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 42,
-          "opcode": "setScratchList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 42,
-          "opcode": "setScratchList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 43,
-          "opcode": "setAutoCreate",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 43,
-          "opcode": "setAutoCreate",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 43,
           "opcode": "setAutoCreate",
           "field": "arguments",
@@ -1489,38 +580,6 @@
           }
         },
         {
-          "index": 44,
-          "opcode": "setShowPrefix",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 44,
-          "opcode": "setShowPrefix",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 45,
-          "opcode": "allowInputJSON",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 45,
-          "opcode": "allowInputJSON",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 45,
           "opcode": "allowInputJSON",
           "field": "arguments",
@@ -1532,22 +591,6 @@
                 "$expression": "ConditionalExpression"
               }
             }
-          }
-        },
-        {
-          "index": 46,
-          "opcode": "indexStart",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 46,
-          "opcode": "indexStart",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1567,22 +610,6 @@
         {
           "index": 47,
           "opcode": "setCase",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 47,
-          "opcode": "setCase",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 47,
-          "opcode": "setCase",
           "field": "arguments",
           "expression": {
             "ON": {
@@ -1595,54 +622,6 @@
           }
         },
         {
-          "index": 48,
-          "opcode": "newEmptyObjOrArray",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 48,
-          "opcode": "newEmptyObjOrArray",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 49,
-          "opcode": "getCountOfTempData",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 49,
-          "opcode": "getCountOfTempData",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 50,
-          "opcode": "getListItemIdxByItem",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 50,
-          "opcode": "getListItemIdxByItem",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 50,
           "opcode": "getListItemIdxByItem",
           "field": "arguments",
@@ -1655,26 +634,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 51,
-          "opcode": "createOrClearObject",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 51,
-          "opcode": "createOrClearObject",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1693,22 +654,6 @@
         {
           "index": 52,
           "opcode": "createOrClearList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 52,
-          "opcode": "createOrClearList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 52,
-          "opcode": "createOrClearList",
           "field": "arguments",
           "expression": {
             "NAME": {
@@ -1717,22 +662,6 @@
                 "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
               }
             }
-          }
-        },
-        {
-          "index": 53,
-          "opcode": "addItemToList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 53,
-          "opcode": "addItemToList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1748,26 +677,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 54,
-          "opcode": "setItemOfList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 54,
-          "opcode": "setItemOfList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1791,26 +702,8 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
-          }
-        },
-        {
-          "index": 55,
-          "opcode": "delItemOfList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 55,
-          "opcode": "delItemOfList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1833,22 +726,6 @@
         {
           "index": 56,
           "opcode": "getItemOfList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 56,
-          "opcode": "getItemOfList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 56,
-          "opcode": "getItemOfList",
           "field": "arguments",
           "expression": {
             "NAME_OR_OBJ": {
@@ -1866,22 +743,6 @@
         {
           "index": 57,
           "opcode": "lengthOfList",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 57,
-          "opcode": "lengthOfList",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 57,
-          "opcode": "lengthOfList",
           "field": "arguments",
           "expression": {
             "NAME_OR_OBJ": {
@@ -1890,22 +751,6 @@
                 "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
               }
             }
-          }
-        },
-        {
-          "index": 58,
-          "opcode": "ifListItemExist",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 58,
-          "opcode": "ifListItemExist",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -1921,9 +766,7 @@
             },
             "VALUE": {
               "type": "STRING",
-              "defaultValue": {
-                "$expression": "ThisExpression.fm(...)"
-              }
+              "defaultValue": "东西"
             }
           }
         }
