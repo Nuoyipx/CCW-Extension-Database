@@ -13,6 +13,7 @@ const DIFF_FILE = 'extraction_diff.json';
 const MISSING_FILE = 'unresolved_blocks.json';
 const QUALITY_FILE = 'quality_report.json';
 const USABLE_FILE = 'usable_blocks.json';
+const DIAGNOSTICS_FILE = 'translation_diagnostics.json';
 const MAX_IMPORT_DEPTH = 4;
 const MAX_LOCALE_FILES = 40;
 const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
@@ -467,6 +468,39 @@ function normalizeBlock(block, englishBlock, info, englishInfo, relativePath, re
     repository
   };
 }
+// Record source-level evidence for unresolved translated block labels.
+// Never evaluate the extension; this diagnostic only reads Babel AST nodes.
+function translationDiagnostics(source, filePath, repositoryRoot, report) {
+  if (!report.unresolvedFieldDetails?.length) return [];
+  const relevant = report.unresolvedFieldDetails.filter(x => ['text', 'text_en'].includes(x.field));
+  if (!relevant.length) return [];
+  const calls = [];
+  try {
+    const ast = parseSource(source);
+    walk(ast, node => {
+      if (node.type !== 'CallExpression') return;
+      const name = sourceOf(node.callee);
+      if (!/(?:^|\.)(?:fm|formatMessage|translate|t)$/.test(name)) return;
+      const arg = node.arguments[0];
+      const raw = arg && Number.isInteger(arg.start) && Number.isInteger(arg.end)
+        ? source.slice(arg.start, arg.end).slice(0, 300) : sourceOf(arg);
+      calls.push({ line: node.loc?.start?.line ?? null, callee: name,
+        argument: raw, expression: source.slice(node.start, node.end).slice(0, 350) });
+    });
+  } catch (_) { /* The extraction report already records parse errors. */ }
+  const dir = path.dirname(filePath);
+  const localeFiles = [];
+  for (const name of ['l10n.js','locales.js','translations.js','i18n.js',
+    'locales/index.js','l10n/index.js','lang.js','messages.js']) {
+    const target = path.resolve(dir, name);
+    if (target.startsWith(repositoryRoot + path.sep) && fs.existsSync(target))
+      localeFiles.push(path.relative(repositoryRoot, target).split(path.sep).join('/'));
+  }
+  return [{ file: report.file, unresolvedTextCount: relevant.filter(x => x.field === 'text').length,
+    unresolvedTextEnglishCount: relevant.filter(x => x.field === 'text_en').length,
+    localeFiles, translationCalls: calls.slice(0, 150),
+    unresolved: relevant.map(x => ({opcode:x.opcode,field:x.field,expression:x.expression})) }];
+}
 function scanFile(filePath, repositoryRoot, repositoryUrl) {
   const relativePath = path.relative(repositoryRoot, filePath).split(path.sep).join('/');
   const report = { file: relativePath, status: 'unknown', blocksFound: 0, message: '' };
@@ -510,6 +544,7 @@ function scanFile(filePath, repositoryRoot, repositoryUrl) {
         .map(field => ({ index, opcode: typeof record.opcode === 'string' ? record.opcode : null,
           field, expression: record[field] })));
     if (report.unresolvedFieldDetails.length && !unresolvedFound) unresolvedFound = true;
+    report.translationDiagnostics = translationDiagnostics(source, filePath, repositoryRoot, report);
     if (unresolvedFound) {
       report.status = 'partial';
       report.message = 'Some block entries contain unresolved expressions.';
@@ -630,7 +665,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction v11 (static AST mode)...');
+  console.log('Starting CCW extension extraction v13 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
@@ -661,6 +696,8 @@ function main() {
       }
     });
   } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  const translationDetails = allReports.flatMap(r => r.translationDiagnostics || []);
+  for (const report of allReports) delete report.translationDiagnostics;
   const { merged, added, recovered, updated } = mergeWithBaseline(allBlocks, baseline);
   if (merged.length < baseline.length) throw new Error('Regression guard: merged records fell below baseline.');
   if (MINIMUM_QUALITY && merged.length < MINIMUM_QUALITY) throw new Error('Below MINIMUM_QUALITY threshold.');
@@ -731,6 +768,9 @@ function main() {
     unresolvedExamples, missingOpcodeEntries: specialEntries,
     note: 'Absent tooltip is not necessarily an extraction error. Missing opcode can indicate a label/button/separator.' };
   fs.writeFileSync(QUALITY_FILE, JSON.stringify(qualityReport, null, 2), 'utf8');
+  fs.writeFileSync(DIAGNOSTICS_FILE, JSON.stringify({generatedAt,
+    fileCount: translationDetails.length, files: translationDetails,
+    note: 'Static source call sites only; arguments are not executed. Use to implement source-specific translation rules.'}, null, 2), 'utf8');
   // Write the database last, after all reports are prepared.
   fs.writeFileSync(MISSING_FILE, JSON.stringify({ generatedAt, unresolvedFiles }, null, 2), 'utf8');
   fs.writeFileSync(DIFF_FILE, JSON.stringify(diff, null, 2), 'utf8');
@@ -750,4 +790,4 @@ function main() {
   console.log(`Duplicate opcodes: ${Object.keys(duplicates).length}`);
 }
 if (require.main === module) main();
-module.exports = { identity, isUnresolved, evaluate, mergeRecord, mergeWithBaseline, extractMessages, collectAdjacentMessages, quality };
+module.exports = { identity, isUnresolved, evaluate, mergeRecord, mergeWithBaseline, extractMessages, collectAdjacentMessages, translationDiagnostics, quality };
