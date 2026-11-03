@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-03T21:15:29.515Z",
-  "extractedThisRun": 886,
-  "baselineCount": 858,
-  "recoveredFromBaseline": 7,
+  "generatedAt": "2026-11-03T21:22:15.478Z",
+  "extractedThisRun": 951,
+  "baselineCount": 893,
+  "recoveredFromBaseline": 53,
   "fileCount": 72,
-  "uniqueBlockTypes": 781,
-  "unresolvedCoreFields": 254,
+  "uniqueBlockTypes": 876,
+  "unresolvedCoreFields": 356,
   "successfulFiles": 27,
-  "partialFiles": 22,
-  "dynamicFiles": 2,
+  "partialFiles": 23,
+  "dynamicFiles": 1,
   "unrecognizedFiles": 20,
   "errorFiles": 1,
   "statusCounts": {
     "success": 27,
     "no_static_getInfo": 20,
-    "dynamic_blocks": 2,
-    "partial": 22,
+    "partial": 23,
+    "dynamic_blocks": 1,
     "error": 1
   },
   "files": [
@@ -63,9 +63,331 @@
     },
     {
       "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
-      "status": "dynamic_blocks",
-      "blocksFound": 0,
-      "message": "The blocks property is not a static array.",
+      "status": "partial",
+      "blocksFound": 59,
+      "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "typeOf"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "checkType"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "strictlyEqual"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "getObjFromJson"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "JSONOf"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "copyFrom"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "deleteAllTempData"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "listAllData"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "delTempData"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "ifTempDataExist"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "setTempData"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "getTempData"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": "getNewObject"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": "getNewList"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "createListWithLength"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "setPropOfObject"
+        },
+        {
+          "index": 21,
+          "reason": "unresolved_fields",
+          "opcode": "getPropOfObject"
+        },
+        {
+          "index": 22,
+          "reason": "unresolved_fields",
+          "opcode": "delPropOfObject"
+        },
+        {
+          "index": 23,
+          "reason": "unresolved_fields",
+          "opcode": "sizeOfObject"
+        },
+        {
+          "index": 24,
+          "reason": "unresolved_fields",
+          "opcode": "ifObjectPropExist"
+        },
+        {
+          "index": 25,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 26,
+          "reason": "unresolved_fields",
+          "opcode": "setPropOfObjectAndReturn"
+        },
+        {
+          "index": 27,
+          "reason": "unresolved_fields",
+          "opcode": "createObjFromKeyValue"
+        },
+        {
+          "index": 28,
+          "reason": "unresolved_fields",
+          "opcode": "getAllProperties"
+        },
+        {
+          "index": 29,
+          "reason": "unresolved_fields",
+          "opcode": "getSubObject"
+        },
+        {
+          "index": 30,
+          "reason": "unresolved_fields",
+          "opcode": "clear"
+        },
+        {
+          "index": 31,
+          "reason": "unresolved_fields",
+          "opcode": "mergeObject"
+        },
+        {
+          "index": 32,
+          "reason": "unresolved_fields",
+          "opcode": "getPropOfObjectByIdx"
+        },
+        {
+          "index": 33,
+          "reason": "unresolved_fields",
+          "opcode": "setProtoOfObj"
+        },
+        {
+          "index": 34,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 35,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToList2"
+        },
+        {
+          "index": 36,
+          "reason": "unresolved_fields",
+          "opcode": "insertItemIntoList"
+        },
+        {
+          "index": 37,
+          "reason": "unresolved_fields",
+          "opcode": "indexOf"
+        },
+        {
+          "index": 38,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 39,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToListAndReturn"
+        },
+        {
+          "index": 40,
+          "reason": "unresolved_fields",
+          "opcode": "pop"
+        },
+        {
+          "index": 41,
+          "reason": "unresolved_fields",
+          "opcode": "mergeList"
+        },
+        {
+          "index": 42,
+          "reason": "unresolved_fields",
+          "opcode": "slice"
+        },
+        {
+          "index": 43,
+          "reason": "unresolved_fields",
+          "opcode": "split"
+        },
+        {
+          "index": 44,
+          "reason": "unresolved_fields",
+          "opcode": "join"
+        },
+        {
+          "index": 45,
+          "reason": "unresolved_fields",
+          "opcode": "opList"
+        },
+        {
+          "index": 46,
+          "reason": "unresolved_fields",
+          "opcode": "sortListByProp"
+        },
+        {
+          "index": 47,
+          "reason": "unresolved_fields",
+          "opcode": "getScratchList"
+        },
+        {
+          "index": 48,
+          "reason": "unresolved_fields",
+          "opcode": "setScratchList"
+        },
+        {
+          "index": 49,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 50,
+          "reason": "unresolved_fields",
+          "opcode": "setAutoCreate"
+        },
+        {
+          "index": 51,
+          "reason": "unresolved_fields",
+          "opcode": "setShowPrefix"
+        },
+        {
+          "index": 52,
+          "reason": "unresolved_fields",
+          "opcode": "allowInputJSON"
+        },
+        {
+          "index": 53,
+          "reason": "unresolved_fields",
+          "opcode": "indexStart"
+        },
+        {
+          "index": 54,
+          "reason": "unresolved_fields",
+          "opcode": "setCase"
+        },
+        {
+          "index": 55,
+          "reason": "unresolved_fields",
+          "opcode": "newEmptyObjOrArray"
+        },
+        {
+          "index": 56,
+          "reason": "unresolved_fields",
+          "opcode": "getCountOfTempData"
+        },
+        {
+          "index": 57,
+          "reason": "unresolved_fields",
+          "opcode": "getListItemIdxByItem"
+        },
+        {
+          "index": 58,
+          "reason": "unresolved_fields",
+          "opcode": "createOrClearObject"
+        },
+        {
+          "index": 59,
+          "reason": "unresolved_fields",
+          "opcode": "createOrClearList"
+        },
+        {
+          "index": 60,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToList"
+        },
+        {
+          "index": 61,
+          "reason": "unresolved_fields",
+          "opcode": "setItemOfList"
+        },
+        {
+          "index": 62,
+          "reason": "unresolved_fields",
+          "opcode": "delItemOfList"
+        },
+        {
+          "index": 63,
+          "reason": "unresolved_fields",
+          "opcode": "getItemOfList"
+        },
+        {
+          "index": 64,
+          "reason": "unresolved_fields",
+          "opcode": "lengthOfList"
+        },
+        {
+          "index": 65,
+          "reason": "unresolved_fields",
+          "opcode": "ifListItemExist"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -80,6 +402,108 @@
       "status": "partial",
       "blocksFound": 20,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "getNetWorkTimeInfo"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "convertTime"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "isLogin"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "getFile"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "getComment"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "cloneCount"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "getStageInfo"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "spritesList"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "targetTouchingTarget"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "touchingPoint"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "touchingRect"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "pointInRect"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "touchingLine"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": "touchingRay"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": "amIOnTheTop"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "amIOnTheTopAtMouse"
+        },
+        {
+          "index": 19,
+          "reason": "unresolved_fields",
+          "opcode": "amIclicked"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "whenKeyDown"
+        },
+        {
+          "index": 22,
+          "reason": "unresolved_fields",
+          "opcode": "colorToHex"
+        },
+        {
+          "index": 23,
+          "reason": "unresolved_fields",
+          "opcode": "colorAt"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -108,6 +532,13 @@
       "status": "partial",
       "blocksFound": 6,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -115,6 +546,68 @@
       "status": "partial",
       "blocksFound": 12,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "start"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "folder"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "sync"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "del"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "webin"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "open"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "clean"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "in"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "out"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "list"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "search"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "searchin"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -122,6 +615,300 @@
       "status": "partial",
       "blocksFound": 50,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "isCloneOrIsOriginal"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "getCloneTargetPropertyWithSpriteName"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "getCloneTargetPropertyWithSpriteName2"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "getOriginalTargetPropertyWithSpriteName"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "getOriginalTargetPropertyWithSpriteName2"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "initTheClone"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "beforeDeletionOfTheClone"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "dispatchWhenCloned"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "dispatchWhenCloneDeleted"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "broadcastToClone"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "receiveMyBroadcast"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": "presetPropertyForTheNextClone"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": "presetSingleDataForTheNextClone"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "presetDataforTheNextCloneInJSONFormat"
+        },
+        {
+          "index": 19,
+          "reason": "unresolved_fields",
+          "opcode": "presetGroupForTheNextClone"
+        },
+        {
+          "index": 21,
+          "reason": "unresolved_fields",
+          "opcode": "createCloneAndSpecifyID"
+        },
+        {
+          "index": 22,
+          "reason": "unresolved_fields",
+          "opcode": "getJustCreatedCloneID"
+        },
+        {
+          "index": 23,
+          "reason": "unresolved_fields",
+          "opcode": "deleteCloneByID"
+        },
+        {
+          "index": 24,
+          "reason": "unresolved_fields",
+          "opcode": "ifCloneExists"
+        },
+        {
+          "index": 25,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 26,
+          "reason": "unresolved_fields",
+          "opcode": "getMyProperty"
+        },
+        {
+          "index": 27,
+          "reason": "unresolved_fields",
+          "opcode": "getMyValueByKey"
+        },
+        {
+          "index": 28,
+          "reason": "unresolved_fields",
+          "opcode": "setOrChangeMyValueWithKey"
+        },
+        {
+          "index": 30,
+          "reason": "unresolved_fields",
+          "opcode": "getClonePropertyWithID"
+        },
+        {
+          "index": 31,
+          "reason": "unresolved_fields",
+          "opcode": "getValueOfCloneIDWithKey"
+        },
+        {
+          "index": 32,
+          "reason": "unresolved_fields",
+          "opcode": "setOrChangeValueOfCloneIDWithKey"
+        },
+        {
+          "index": 33,
+          "reason": "unresolved_fields",
+          "opcode": "setCloneProperty"
+        },
+        {
+          "index": 34,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 35,
+          "reason": "unresolved_fields",
+          "opcode": "addOrRemoveMyselfFromGroup"
+        },
+        {
+          "index": 36,
+          "reason": "unresolved_fields",
+          "opcode": "addOrRemoveIDFromGroup"
+        },
+        {
+          "index": 37,
+          "reason": "unresolved_fields",
+          "opcode": "ifCloneInGroup"
+        },
+        {
+          "index": 39,
+          "reason": "unresolved_fields",
+          "opcode": "getGroupInfo"
+        },
+        {
+          "index": 40,
+          "reason": "unresolved_fields",
+          "opcode": "getClonePropertyInGroup"
+        },
+        {
+          "index": 41,
+          "reason": "unresolved_fields",
+          "opcode": "importGroupIntoList"
+        },
+        {
+          "index": 42,
+          "reason": "unresolved_fields",
+          "opcode": "forEachWithGroup"
+        },
+        {
+          "index": 43,
+          "reason": "unresolved_fields",
+          "opcode": "cloneIDOfForEach"
+        },
+        {
+          "index": 44,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 45,
+          "reason": "unresolved_fields",
+          "opcode": "getNearestClone"
+        },
+        {
+          "index": 46,
+          "reason": "unresolved_fields",
+          "opcode": "isTouchingClone"
+        },
+        {
+          "index": 47,
+          "reason": "unresolved_fields",
+          "opcode": "isCloneTouchingClone"
+        },
+        {
+          "index": 48,
+          "reason": "unresolved_fields",
+          "opcode": "getTouchingID"
+        },
+        {
+          "index": 49,
+          "reason": "unresolved_fields",
+          "opcode": "importTouchingIDsIntoList"
+        },
+        {
+          "index": 50,
+          "reason": "unresolved_fields",
+          "opcode": "isCloneTouchingCoord"
+        },
+        {
+          "index": 51,
+          "reason": "unresolved_fields",
+          "opcode": "pickTarget"
+        },
+        {
+          "index": 52,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 53,
+          "reason": "unresolved_fields",
+          "opcode": "calcDistanceToClone"
+        },
+        {
+          "index": 54,
+          "reason": "unresolved_fields",
+          "opcode": "calcDistanceBetweenClones"
+        },
+        {
+          "index": 55,
+          "reason": "unresolved_fields",
+          "opcode": "moveToClone"
+        },
+        {
+          "index": 56,
+          "reason": "unresolved_fields",
+          "opcode": "moveStepsToClone"
+        },
+        {
+          "index": 57,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 58,
+          "reason": "unresolved_fields",
+          "opcode": "setMyID"
+        },
+        {
+          "index": 59,
+          "reason": "unresolved_fields",
+          "opcode": "transferAccessToTargetXYToDollyDataKey"
+        },
+        {
+          "index": 60,
+          "reason": "unresolved_fields",
+          "opcode": "cancelAccessTransfer"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -129,6 +916,58 @@
       "status": "partial",
       "blocksFound": 9,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "moveToRandom"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "pointTowardRandom"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "setEffect"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "letterOf"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "mathOp"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "randomInt"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "isEven"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -171,13 +1010,27 @@
       "status": "partial",
       "blocksFound": 14,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/kukemc/I18n/extension.js",
       "status": "partial",
-      "blocksFound": 27,
+      "blocksFound": 28,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -248,6 +1101,53 @@
       "status": "partial",
       "blocksFound": 8,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setStretch"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretch"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "setStretchX"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "setStretchY"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretchX"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretchY"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "getX"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "getY"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -255,6 +1155,48 @@
       "status": "partial",
       "blocksFound": 7,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setClipbox"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "clearClipbox"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "getClipbox"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "setBlend"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "getBlend"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "setAdditiveBlend"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "getAdditiveBlend"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -269,6 +1211,103 @@
       "status": "partial",
       "blocksFound": 19,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setAutoReRender"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "allLoadedShaders"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "removeShader"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "reloadShader"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "applyShader"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "detachShader"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "setNumber"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "setVec2"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "setVec3"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "setVec4"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "setMatrix"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": "setArray"
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": "setTexture"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "allTextures"
+        },
+        {
+          "index": 19,
+          "reason": "unresolved_fields",
+          "opcode": "deleteAllTextures"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "deleteTexture"
+        },
+        {
+          "index": 21,
+          "reason": "unresolved_fields",
+          "opcode": "createUpdateTexture"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -339,6 +1378,38 @@
       "status": "partial",
       "blocksFound": 11,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "date"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "time"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "after2000"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "diff2000"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "diff"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "get"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -367,6 +1438,13 @@
       "status": "partial",
       "blocksFound": 31,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -395,6 +1473,13 @@
       "status": "partial",
       "blocksFound": 29,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -402,6 +1487,13 @@
       "status": "partial",
       "blocksFound": 9,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -416,6 +1508,18 @@
       "status": "partial",
       "blocksFound": 21,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -423,6 +1527,13 @@
       "status": "partial",
       "blocksFound": 29,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -430,6 +1541,43 @@
       "status": "partial",
       "blocksFound": 14,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "run"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "runreturn"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "taskOn"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "taskOnWithReturn"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "expressions"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "setInfo"
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -444,6 +1592,13 @@
       "status": "partial",
       "blocksFound": 26,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -465,6 +1620,18 @@
       "status": "partial",
       "blocksFound": 31,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -479,6 +1646,13 @@
       "status": "partial",
       "blocksFound": 11,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -500,6 +1674,83 @@
       "status": "partial",
       "blocksFound": 0,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -512,8 +1763,64 @@
     {
       "file": "extensions/YUEN/FeishuExtension/src/extension.js",
       "status": "partial",
-      "blocksFound": 0,
+      "blocksFound": 5,
       "message": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "switchRequest"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ThisExpression.cloneReporterBlocks(...)"
+          }
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "cardCreate"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "cardSet"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "cardJoin"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "cardRemove"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ThisExpression.cloneReporterBlocks(...)"
+          }
+        }
+      ],
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
