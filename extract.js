@@ -11,6 +11,7 @@ const REPORT_FILE = 'extraction_report.json';
 const VERSION_FILE = 'version_report.json';
 const DIFF_FILE = 'extraction_diff.json';
 const MISSING_FILE = 'unresolved_blocks.json';
+const QUALITY_FILE = 'quality_report.json';
 const MAX_IMPORT_DEPTH = 4;
 const MINIMUM_QUALITY = Number(process.env.MINIMUM_QUALITY || 0);
 
@@ -103,16 +104,25 @@ function evaluate(node, env, depth = 0) {
     case 'CallExpression': {
       const callee = node.callee;
       const isFormat = callee.type === 'MemberExpression' && callee.property.name === 'formatMessage';
-      if (isFormat && node.arguments.length && node.arguments[0].type === 'StringLiteral') {
-        const id = node.arguments[0].value;
-        const translated = env.messages[id] ?? env.messages[id.toLowerCase()];
-        if (translated !== undefined) return translated;
+      if (isFormat && node.arguments.length) {
+        const first = next(node.arguments[0]);
+        if (typeof first === 'string') return env.messages[first] ?? first;
+        if (first && typeof first === 'object' && !isUnresolved(first)) {
+          const id = first.id || first.key;
+          const fallback = first.defaultMessage ?? first.default ?? first.message;
+          if (id && Object.prototype.hasOwnProperty.call(env.messages, id)) return env.messages[id];
+          if (typeof fallback === 'string') return fallback;
+        }
       }
       const name = sourceOf(callee);
       if (['Scratch.translate', 'translate', 'formatMessage', 'Scratch.translate.formatMessage'].includes(name) && node.arguments.length) {
         const arg = next(node.arguments[0]);
         if (typeof arg === 'string') return env.messages[arg] ?? arg;
-        if (arg && typeof arg === 'object' && typeof arg.default === 'string') return env.messages[arg.id] ?? arg.default;
+        if (arg && typeof arg === 'object') {
+          const fallback = arg.defaultMessage ?? arg.default ?? arg.message;
+          if (arg.id && typeof env.messages[arg.id] === 'string') return env.messages[arg.id];
+          if (typeof fallback === 'string') return fallback;
+        }
       }
       if (callee.type === 'MemberExpression' && callee.property.name === 'concat') {
         const base = next(callee.object);
@@ -132,6 +142,14 @@ function evaluate(node, env, depth = 0) {
             return body ? evaluate(body, scoped, depth + 1) : unresolved(fn);
           });
           return mapped;
+        }
+      }
+      if (callee.type === 'MemberExpression' && ['join', 'at'].includes(callee.property.name)) {
+        const base = next(callee.object);
+        const args = node.arguments.map(next);
+        if (Array.isArray(base) && args.every(a => !isUnresolved(a))) {
+          if (callee.property.name === 'join') return base.join(args.length ? String(args[0]) : ',');
+          if (callee.property.name === 'at') return base.at(Number(args[0]));
         }
       }
       if (name === 'Array.of') return node.arguments.map(next);
@@ -176,6 +194,7 @@ function evaluate(node, env, depth = 0) {
       if (node.operator === '??') return left === null || left === undefined ? next(node.right) : left;
       return unresolved(node);
     }
+    case 'ObjectProperty': return next(node.value);
     case 'SequenceExpression': return node.expressions.length ? next(node.expressions[node.expressions.length - 1]) : null;
     case 'ArrayPattern': return unresolved(node);
     case 'ObjectPattern': return unresolved(node);
@@ -397,6 +416,12 @@ function scanFile(filePath, repositoryRoot, repositoryUrl) {
     }
     report.blocksFound = extracted.length;
     if (issues.length) report.issues = issues;
+    report.unresolvedFieldDetails = extracted.flatMap((record, index) =>
+      ['extensionId', 'opcode', 'text', 'text_en', 'blockType', 'arguments', 'tooltip', 'tooltip_en']
+        .filter(field => isUnresolved(record[field]))
+        .map(field => ({ index, opcode: typeof record.opcode === 'string' ? record.opcode : null,
+          field, expression: record[field] })));
+    if (report.unresolvedFieldDetails.length && !unresolvedFound) unresolvedFound = true;
     if (unresolvedFound) {
       report.status = 'partial';
       report.message = 'Some block entries contain unresolved expressions.';
@@ -497,7 +522,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction v8 (static AST mode)...');
+  console.log('Starting CCW extension extraction v9 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
@@ -533,7 +558,7 @@ function main() {
   if (MINIMUM_QUALITY && merged.length < MINIMUM_QUALITY) throw new Error('Below MINIMUM_QUALITY threshold.');
   const extractedCount = allBlocks.length;
   const unresolvedFiles = allReports.filter(r => !['success'].includes(r.status)).map(r => ({
-    file: r.file, status: r.status, blocksFound: r.blocksFound, reason: r.message, issues: r.issues || []
+    file: r.file, status: r.status, blocksFound: r.blocksFound, reason: r.message, issues: r.issues || [], unresolvedFieldDetails: r.unresolvedFieldDetails || []
   }));
   allBlocks.splice(0, allBlocks.length, ...merged);
   const opcodeMap = {};
@@ -556,6 +581,25 @@ function main() {
   const diff = { generatedAt, baselineCount: baseline.length, extractedThisRun: extractedCount, finalCount: allBlocks.length,
     newRecords: added, recoveredFromBaseline: recovered, enrichedRecords: updated,
     note: 'Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current.' };
+  const fieldStats = {};
+  const unresolvedExamples = [];
+  const specialEntries = [];
+  for (const [index, block] of allBlocks.entries()) {
+    for (const field of ['extensionId', 'opcode', 'text', 'text_en', 'blockType', 'arguments', 'tooltip', 'tooltip_en']) {
+      const value = block[field];
+      const stats = (fieldStats[field] ||= { resolved: 0, absent: 0, expression: 0 });
+      if (isUnresolved(value)) {
+        stats.expression++;
+        if (unresolvedExamples.length < 300) unresolvedExamples.push({ index, field, sourceFile: block.sourceFile, opcode: block.opcode, expression: value });
+      } else if (value === null || value === undefined || value === '') stats.absent++;
+      else stats.resolved++;
+    }
+    if (!block.opcode) specialEntries.push({ index, sourceFile: block.sourceFile, blockType: block.blockType, text: block.text });
+  }
+  const qualityReport = { generatedAt, blockCount: allBlocks.length, fieldStats,
+    unresolvedExamples, missingOpcodeEntries: specialEntries,
+    note: 'Absent tooltip is not necessarily an extraction error. Missing opcode can indicate a label/button/separator.' };
+  fs.writeFileSync(QUALITY_FILE, JSON.stringify(qualityReport, null, 2), 'utf8');
   // Write the database last, after all reports are prepared.
   fs.writeFileSync(MISSING_FILE, JSON.stringify({ generatedAt, unresolvedFiles }, null, 2), 'utf8');
   fs.writeFileSync(DIFF_FILE, JSON.stringify(diff, null, 2), 'utf8');
