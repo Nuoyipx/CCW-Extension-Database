@@ -1,11 +1,14 @@
 {
-  "schemaVersion": 3,
-  "generatedAt": "2026-11-03T21:10:14.736Z",
+  "schemaVersion": 4,
+  "generatedAt": "2026-11-03T21:15:29.515Z",
+  "extractedThisRun": 886,
+  "baselineCount": 858,
+  "recoveredFromBaseline": 7,
   "sourceCount": 1,
   "fileCount": 72,
-  "blockCount": 858,
+  "blockCount": 893,
   "uniqueBlockTypes": 781,
-  "unresolvedCoreFields": 435,
+  "unresolvedCoreFields": 254,
   "blocks": [
     {
       "extensionId": "advancedControls",
@@ -10225,14 +10228,10 @@
       "tooltip_en": null,
       "text": "获取 api.cocrea.world/[PATH]",
       "text_en": "Fetch api.cocrea.world/[PATH]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "PATH": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "search/user?keyword=fath11"
         }
       },
@@ -10254,14 +10253,10 @@
       "tooltip_en": null,
       "text": "[COMMENT]",
       "text_en": "[COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.HAT"
-      },
+      "blockType": "HAT",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -10283,14 +10278,10 @@
       "tooltip_en": null,
       "text": "[COMMENT]",
       "text_en": "[COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -10312,14 +10303,10 @@
       "tooltip_en": null,
       "text": "[COMMENT]",
       "text_en": "[COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.CONDITIONAL"
-      },
+      "blockType": "CONDITIONAL",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -10341,20 +10328,14 @@
       "tooltip_en": null,
       "text": "[INPUT] // [COMMENT]",
       "text_en": "[INPUT] // [COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         },
         "INPUT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10376,20 +10357,14 @@
       "tooltip_en": null,
       "text": "[INPUT] // [COMMENT]",
       "text_en": "[INPUT] // [COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         },
         "INPUT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.BOOLEAN"
-          }
+          "type": "BOOLEAN"
         }
       },
       "branchCount": null,
@@ -10410,14 +10385,10 @@
       "tooltip_en": null,
       "text": "到大数字 [text]",
       "text_en": "To BigInt [text]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "text": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10439,14 +10410,10 @@
       "tooltip_en": null,
       "text": "到[text]",
       "text_en": "To Number [text]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "text": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10468,20 +10435,14 @@
       "tooltip_en": null,
       "text": "[a] + [b]",
       "text_en": "[a] + [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10503,20 +10464,14 @@
       "tooltip_en": null,
       "text": "[a] - [b]",
       "text_en": "[a] - [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10538,20 +10493,14 @@
       "tooltip_en": null,
       "text": "[a] * [b]",
       "text_en": "[a] * [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10573,20 +10522,14 @@
       "tooltip_en": null,
       "text": "[a] / [b]",
       "text_en": "[a] / [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10608,20 +10551,14 @@
       "tooltip_en": null,
       "text": "[a] ** [b]",
       "text_en": "[a] ** [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10643,20 +10580,14 @@
       "tooltip_en": null,
       "text": "[a] mod [b]",
       "text_en": "[a] mod [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10678,26 +10609,18 @@
       "tooltip_en": null,
       "text": "[a] [sel] [b]",
       "text_en": "[a] [sel] [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "sel": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "+",
           "menu": "op"
         }
@@ -10720,20 +10643,14 @@
       "tooltip_en": null,
       "text": "[a] < [b]",
       "text_en": "[a] < [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10755,20 +10672,14 @@
       "tooltip_en": null,
       "text": "[a] ≤ [b]",
       "text_en": "[a] ≤ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10790,20 +10701,14 @@
       "tooltip_en": null,
       "text": "[a] = [b]",
       "text_en": "[a] = [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10825,20 +10730,14 @@
       "tooltip_en": null,
       "text": "[a] ≠ [b]",
       "text_en": "[a] ≠ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10860,20 +10759,14 @@
       "tooltip_en": null,
       "text": "[a] ≥ [b]",
       "text_en": "[a] ≥ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10895,20 +10788,14 @@
       "tooltip_en": null,
       "text": "[a] > [b]",
       "text_en": "[a] > [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10930,20 +10817,14 @@
       "tooltip_en": null,
       "text": "[a] & [b]",
       "text_en": "[a] & [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -10965,20 +10846,14 @@
       "tooltip_en": null,
       "text": "[a] | [b]",
       "text_en": "[a] | [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11000,20 +10875,14 @@
       "tooltip_en": null,
       "text": "[a] ^ [b]",
       "text_en": "[a] ^ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11035,20 +10904,14 @@
       "tooltip_en": null,
       "text": "[a] << [b]",
       "text_en": "[a] << [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11070,20 +10933,14 @@
       "tooltip_en": null,
       "text": "[a] >> [b]",
       "text_en": "[a] >> [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11105,14 +10962,10 @@
       "tooltip_en": null,
       "text": "~ [a]",
       "text_en": "~ [a]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11134,14 +10987,10 @@
       "tooltip_en": null,
       "text": "// [COMMENT]",
       "text_en": "// [COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.HAT"
-      },
+      "blockType": "HAT",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -11163,14 +11012,10 @@
       "tooltip_en": null,
       "text": "//[COMMENT]",
       "text_en": "//[COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -11192,14 +11037,10 @@
       "tooltip_en": null,
       "text": "//[COMMENT]",
       "text_en": "//[COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.CONDITIONAL"
-      },
+      "blockType": "CONDITIONAL",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         }
       },
@@ -11221,20 +11062,14 @@
       "tooltip_en": null,
       "text": "[INPUT] // [COMMENT]",
       "text_en": "[INPUT] // [COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         },
         "INPUT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11256,20 +11091,14 @@
       "tooltip_en": null,
       "text": "[INPUT] // [COMMENT]",
       "text_en": "[INPUT] // [COMMENT]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "COMMENT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "comment"
         },
         "INPUT": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.BOOLEAN"
-          }
+          "type": "BOOLEAN"
         }
       },
       "branchCount": null,
@@ -11656,10 +11485,62 @@
       "tooltip_en": null,
       "text": "🌍 初始化语言",
       "text_en": "🌍 Language Initialization",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "initI18nForJSON",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "从JSON [JSON] 初始化翻译",
+      "text_en": "initialize translations from JSON [JSON]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "JSON": {
+          "type": "STRING",
+          "defaultValue": "{}"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "initI18nForFile",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "从文件 [FILE] 初始化翻译",
+      "text_en": "initialize translations from file [FILE]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "FILE": {
+          "type": "STRING",
+          "menu": "FILE_LIST"
+        }
+      },
       "branchCount": null,
       "terminal": null,
       "filter": null,
@@ -11680,10 +11561,93 @@
       "tooltip_en": null,
       "text": "💬 文本处理",
       "text_en": "💬 Text Processing",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getI18n",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "i18n [KEY]",
+      "text_en": "i18n [KEY]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "KEY": {
+          "type": "STRING",
+          "defaultValue": "welcome"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getExtraData",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "额外数据 [KEY]",
+      "text_en": "extra data by [KEY]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "KEY": {
+          "type": "STRING",
+          "defaultValue": "version"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "replaceText",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "格式化 [TEXT] 数据源 [DATA]",
+      "text_en": "format [TEXT] data from [DATA]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TEXT": {
+          "type": "STRING",
+          "defaultValue": "Hello, {name}! You are {age} years old."
+        },
+        "DATA": {
+          "type": "STRING",
+          "defaultValue": "{\"name\": \"kukemc\", \"age\": 20}"
+        }
+      },
       "branchCount": null,
       "terminal": null,
       "filter": null,
@@ -11704,10 +11668,182 @@
       "tooltip_en": null,
       "text": "🎭 语言环境设置",
       "text_en": "🎭 Language Environment",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "setLanguage",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "设置语言为 [LANG]",
+      "text_en": "set language to [LANG]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "LANG": {
+          "type": "STRING",
+          "defaultValue": "zh-CN"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getLanguageForI18n",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "当前 i18n 语言",
+      "text_en": "current language",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getLanguageForBrowser",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "浏览器当前语言",
+      "text_en": "current browser language",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getSupportedLanguages",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "支持的全部语言",
+      "text_en": "all supported languages",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "checkLanguageSupport",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "是否支持 [LANG]？",
+      "text_en": "is [LANG] supported?",
+      "blockType": "BOOLEAN",
+      "arguments": {
+        "LANG": {
+          "type": "STRING",
+          "defaultValue": "zh-CN"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "recognitionLanguageName",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "[TEXT] 的语言",
+      "text_en": "language of [TEXT]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TEXT": {
+          "type": "STRING",
+          "defaultValue": "早上好!"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "recognitionLanguageNameAll",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "[TEXT] 的所有可能的语言",
+      "text_en": "all possible languages of [TEXT]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TEXT": {
+          "type": "STRING",
+          "defaultValue": "Good morning! Friends from all over the world"
+        }
+      },
       "branchCount": null,
       "terminal": null,
       "filter": null,
@@ -11728,9 +11864,7 @@
       "tooltip_en": null,
       "text": "🔭 文本翻译",
       "text_en": "🔭 Text Translation",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -11752,10 +11886,82 @@
       "tooltip_en": null,
       "text": "⚠️ 以下积木仅在编辑器生效 ⚠️",
       "text_en": "⚠️ The following blocks are only available in editor ⚠️",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "translateText",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "☁️ 将 [TEXT] 从 [LANG1] 翻译为 [LANG2]",
+      "text_en": "☁️ translate [TEXT] from [LANG1] into [LANG2]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TEXT": {
+          "type": "STRING",
+          "defaultValue": "Hello World!"
+        },
+        "LANG1": {
+          "type": "STRING",
+          "menu": "TRANSLATE_LIST",
+          "defaultValue": "en"
+        },
+        "LANG2": {
+          "type": "STRING",
+          "menu": "TRANSLATE_LIST",
+          "defaultValue": "zh"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "translateTextWithClipboard",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "☁️ 将 [TEXT] 从 [LANG1] 翻译为 [LANG2] 并复制到剪贴板",
+      "text_en": "☁️ translate [TEXT] from [LANG1] into [LANG2] then copy to clipboard",
+      "blockType": "COMMAND",
+      "arguments": {
+        "TEXT": {
+          "type": "STRING",
+          "defaultValue": "Hello World!"
+        },
+        "LANG1": {
+          "type": "STRING",
+          "menu": "TRANSLATE_LIST",
+          "defaultValue": "en"
+        },
+        "LANG2": {
+          "type": "STRING",
+          "menu": "TRANSLATE_LIST",
+          "defaultValue": "zh"
+        }
+      },
       "branchCount": null,
       "terminal": null,
       "filter": null,
@@ -11776,10 +11982,150 @@
       "tooltip_en": null,
       "text": "🪄 单位转换",
       "text_en": "🪄 Unit conversion",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "convertUnit",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "数学单位换算 [NUM] 转换为 [UNIT] 单位",
+      "text_en": "(Mathematical Unit Conversion) convert [NUM] to [UNIT] unit",
+      "blockType": "REPORTER",
+      "arguments": {
+        "NUM": {
+          "type": "NUMBER",
+          "defaultValue": 150000
+        },
+        "UNIT": {
+          "type": "STRING",
+          "menu": "UNIT_LIST",
+          "defaultValue": "cn"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getTimestamp",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "本地时间戳",
+      "text_en": "local Timestamp",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "getTimeZone",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "本地时区",
+      "text_en": "local Time Zone",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "offsetTimeZone",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "将时间 [TIME] 从 [ZONE1] 转换为 [ZONE2]",
+      "text_en": "convert time [TIME] from [ZONE1] to [ZONE2]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TIME": {
+          "type": "NUMBER",
+          "defaultValue": "1609459200"
+        },
+        "ZONE1": {
+          "type": "STRING",
+          "defaultValue": "Asia/Shanghai"
+        },
+        "ZONE2": {
+          "type": "STRING",
+          "defaultValue": "America/New_York"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "formatTimestamp",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "将时间 [TIME] 按 [FORMAT] 格式化",
+      "text_en": "format time [TIME] as [FORMAT]",
+      "blockType": "REPORTER",
+      "arguments": {
+        "TIME": {
+          "type": "NUMBER",
+          "defaultValue": 1609459200
+        },
+        "FORMAT": {
+          "type": "STRING",
+          "defaultValue": "YYYY-MM-DD HH:mm:ss"
+        }
+      },
       "branchCount": null,
       "terminal": null,
       "filter": null,
@@ -11800,9 +12146,7 @@
       "tooltip_en": null,
       "text": "✨ I18n 示例",
       "text_en": "✨ I18n Example",
-      "blockType": {
-        "$expression": "Scratch.BlockType.LABEL"
-      },
+      "blockType": "LABEL",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -11810,6 +12154,238 @@
       "category": null,
       "category_en": null,
       "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": "example",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "i18n 示例",
+      "text_en": "i18n example",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "setMethod",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "设置请求方法 [METHOD]",
+      "text_en": "Set request method to [METHOD]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "METHOD": {
+          "type": "STRING",
+          "menu": "METHOD",
+          "defaultValue": "GET"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "✨ WebHook 参数",
+      "category_en": "✨ WebHook Parameters",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "setHeader",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "设置请求头 [KEY] 值 [VALUE]",
+      "text_en": "Set request header [KEY] to [VALUE]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "KEY": {
+          "type": "STRING",
+          "defaultValue": "Authorization"
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "Bearer token"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "✨ WebHook 参数",
+      "category_en": "✨ WebHook Parameters",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "setBody",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "设置请求参数为 [BODY]",
+      "text_en": "Set request body to [BODY]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "BODY": {
+          "type": "STRING",
+          "defaultValue": "{}"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "✨ WebHook 参数",
+      "category_en": "✨ WebHook Parameters",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "webHookRequest",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "请求Webhook [URL]",
+      "text_en": "Request Webhook [URL]",
+      "blockType": "COMMAND",
+      "arguments": {
+        "URL": {
+          "type": "STRING",
+          "defaultValue": "https://example.com"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "🌍 WebHook 请求",
+      "category_en": "🌍 WebHook Request",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "webHookRequestCompleted",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "当Webhook请求完成时 状态码=[STATUS]",
+      "text_en": "When Webhook request completes with status [STATUS]",
+      "blockType": "HAT",
+      "arguments": {
+        "STATUS": {
+          "type": "ccw_hat_parameter"
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "🌍 WebHook 请求",
+      "category_en": "🌍 WebHook Request",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "checkStatus",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "检查状态码是否为 [CODE]",
+      "text_en": "Check if status code is [CODE]",
+      "blockType": "BOOLEAN",
+      "arguments": {
+        "CODE": {
+          "type": "NUMBER",
+          "defaultValue": 200
+        }
+      },
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "🌍 WebHook 请求",
+      "category_en": "🌍 WebHook Request",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "cancelRequest",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "取消当前请求",
+      "text_en": "Cancel current request",
+      "blockType": "COMMAND",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "🌍 WebHook 请求",
+      "category_en": "🌍 WebHook Request",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "extensionName": "WebHook",
+      "extensionName_en": "WebHook",
+      "opcode": "getRemainingPoints",
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "剩余请求点数",
+      "text_en": "Remaining Request Points",
+      "blockType": "REPORTER",
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "🌍 WebHook 请求",
+      "category_en": "🌍 WebHook Request",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -11822,9 +12398,7 @@
       "tooltip_en": null,
       "text": "true",
       "text_en": "true",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -11844,9 +12418,7 @@
       "tooltip_en": null,
       "text": "false",
       "text_en": "false",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -11866,14 +12438,10 @@
       "tooltip_en": null,
       "text": "[a]",
       "text_en": "[a]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": ""
         }
       },
@@ -11895,14 +12463,10 @@
       "tooltip_en": null,
       "text": "[a]",
       "text_en": "[a]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.BOOLEAN"
-          }
+          "type": "BOOLEAN"
         }
       },
       "branchCount": null,
@@ -11923,20 +12487,14 @@
       "tooltip_en": null,
       "text": "[a] ⩵ [b]",
       "text_en": "[a] ⩵ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "A"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "a"
         }
       },
@@ -11958,20 +12516,14 @@
       "tooltip_en": null,
       "text": "[a] =- [b]",
       "text_en": "[a] =- [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "5"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-5"
         }
       },
@@ -11993,20 +12545,14 @@
       "tooltip_en": null,
       "text": "[a] =± [b]",
       "text_en": "[a] =± [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "5"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-5"
         }
       },
@@ -12028,20 +12574,14 @@
       "tooltip_en": null,
       "text": "[a] ≠ [b]",
       "text_en": "[a] ≠ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "\n"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "\n"
         }
       },
@@ -12063,20 +12603,14 @@
       "tooltip_en": null,
       "text": "[a] ≈ [b]",
       "text_en": "[a] ≈ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "5.5"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "6"
         }
       },
@@ -12098,26 +12632,18 @@
       "tooltip_en": null,
       "text": "[a] ≈ [b] ± [c]",
       "text_en": "[a] ≈ [b] ± [c]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "5"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "6"
         },
         "c": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "1"
         }
       },
@@ -12139,19 +12665,13 @@
       "tooltip_en": null,
       "text": "[a] ^ [b]",
       "text_en": "[a] ^ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.BOOLEAN"
-          }
+          "type": "BOOLEAN"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.BOOLEAN"
-          }
+          "type": "BOOLEAN"
         }
       },
       "branchCount": null,
@@ -12172,20 +12692,14 @@
       "tooltip_en": null,
       "text": "[a] ≥ [b]",
       "text_en": "[a] ≥ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "50"
         }
       },
@@ -12207,20 +12721,14 @@
       "tooltip_en": null,
       "text": "[a] ≤ [b]",
       "text_en": "[a] ≤ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "50"
         }
       },
@@ -12242,26 +12750,18 @@
       "tooltip_en": null,
       "text": "[a] < [b] < [c]",
       "text_en": "[a] < [b] < [c]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "c": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         }
       },
@@ -12283,26 +12783,18 @@
       "tooltip_en": null,
       "text": "[a] ≤ [b] ≤ [c]",
       "text_en": "[a] ≤ [b] ≤ [c]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         },
         "c": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "\n"
         }
       },
@@ -12324,20 +12816,14 @@
       "tooltip_en": null,
       "text": "[a] ⊥ [b]",
       "text_en": "[a] ⊥ [b]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "a": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.ANGLE"
-          },
+          "type": "ANGLE",
           "defaultValue": "0"
         },
         "b": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.ANGLE"
-          },
+          "type": "ANGLE",
           "defaultValue": "90"
         }
       },
@@ -12359,38 +12845,26 @@
       "tooltip_en": null,
       "text": "⎵ ([x1],[y1]) ([x2],[y2]) = [n]",
       "text_en": "⎵ ([x1],[y1]) ([x2],[y2]) = [n]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "x1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-100"
         },
         "y1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "n": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         }
       },
@@ -12412,56 +12886,38 @@
       "tooltip_en": null,
       "text": "⎵ ([x11],[y11]) ([x12],[y12]) = ⎵ ([x21],[y21]) ([x22],[y22])",
       "text_en": "⎵ ([x11],[y11]) ([x12],[y12]) = ⎵ ([x21],[y21]) ([x22],[y22])",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "x11": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-100"
         },
         "y11": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x12": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y12": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-100"
         },
         "x21": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         },
         "y21": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x22": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y22": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         }
       },
@@ -12483,32 +12939,22 @@
       "tooltip_en": null,
       "text": "⎵ ([x1],[y1]) ([x2],[y2])",
       "text_en": "⎵ ([x1],[y1]) ([x2],[y2])",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "x1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "-100"
         },
         "y1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         }
       },
@@ -12530,68 +12976,46 @@
       "tooltip_en": null,
       "text": "[IMAGE] ([x1],[y1]) ([x2],[y2]) ([x3],[y3]) ([x4],[y4]) = [n]",
       "text_en": "[IMAGE] ([x1],[y1]) ([x2],[y2]) ([x3],[y3]) ([x4],[y4]) = [n]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {
         "x1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "x2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "y2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "x3": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "y3": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x4": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y4": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "n": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         },
         "IMAGE": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.IMAGE"
-          },
+          "type": "IMAGE",
           "dataURI": "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI3Ny4wMjc4MSIgaGVpZ2h0PSI1NC44MDY1NCIgdmlld0JveD0iMCwwLDc3LjAyNzgxLDU0LjgwNjU0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAxLjUwNDMsLTE1Mi4yMTk3MykiPjxnIGRhdGEtcGFwZXItZGF0YT0ieyZxdW90O2lzUGFpbnRpbmdMYXllciZxdW90Ozp0cnVlfSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMjI4LjE3ODc4LDE1NS40NzM3NGw0Ni40MDEwMywxOS44ODYxNmwtMjIuNTM3NjQsMjkuMTY2MzZoLTQ2LjYyMTk5eiIvPjwvZz48L2c+PC9zdmc+",
           "flipRTL": true
         }
@@ -12614,62 +13038,42 @@
       "tooltip_en": null,
       "text": "[IMAGE] ([x1],[y1]) ([x2],[y2]) ([x3],[y3]) ([x4],[y4])",
       "text_en": "[IMAGE] ([x1],[y1]) ([x2],[y2]) ([x3],[y3]) ([x4],[y4])",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "x1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "x2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "y2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "x3": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "10"
         },
         "y3": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "x4": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "y4": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "IMAGE": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.IMAGE"
-          },
+          "type": "IMAGE",
           "dataURI": "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI3Ny4wMjc4MSIgaGVpZ2h0PSI1NC44MDY1NCIgdmlld0JveD0iMCwwLDc3LjAyNzgxLDU0LjgwNjU0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAxLjUwNDMsLTE1Mi4yMTk3MykiPjxnIGRhdGEtcGFwZXItZGF0YT0ieyZxdW90O2lzUGFpbnRpbmdMYXllciZxdW90Ozp0cnVlfSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMjI4LjE3ODc4LDE1NS40NzM3NGw0Ni40MDEwMywxOS44ODYxNmwtMjIuNTM3NjQsMjkuMTY2MzZoLTQ2LjYyMTk5eiIvPjwvZz48L2c+PC9zdmc+",
           "flipRTL": true
         }
@@ -12700,29 +13104,21 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "X": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 100
         },
         "Y": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 100
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": null,
       "category_en": null,
@@ -12747,29 +13143,21 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "DX": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 0
         },
         "DY": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 0
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": null,
       "category_en": null,
@@ -12794,23 +13182,17 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "X": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 100
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -12835,23 +13217,17 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "Y": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 100
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -12876,23 +13252,17 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "DX": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 10
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -12917,23 +13287,17 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "DY": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 10
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -12958,16 +13322,12 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -12992,16 +13352,12 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -13026,41 +13382,29 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "X1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "Y1": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "0"
         },
         "X2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         },
         "Y2": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "100"
         }
       },
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": null,
       "category_en": null,
@@ -13085,16 +13429,12 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": null,
       "category_en": null,
@@ -13119,14 +13459,10 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "PROP": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "width",
           "menu": "props"
         }
@@ -13134,9 +13470,7 @@
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": null,
       "category_en": null,
@@ -13161,14 +13495,10 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "BLENDMODE": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "default",
           "menu": "blends"
         }
@@ -13176,9 +13506,7 @@
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -13203,16 +13531,12 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -13237,14 +13561,10 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "STATE": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "on",
           "menu": "states"
         }
@@ -13252,9 +13572,7 @@
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -13279,16 +13597,12 @@
       "text_en": {
         "$expression": "ThisExpression.fm(...)"
       },
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
       "filter": [
-        {
-          "$expression": "Scratch.TargetType.SPRITE"
-        }
+        "SPRITE"
       ],
       "category": "",
       "category_en": "",
@@ -13305,9 +13619,7 @@
       "tooltip_en": null,
       "text": "使用的块总数",
       "text_en": "Total Used Blocks",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -13327,9 +13639,7 @@
       "tooltip_en": null,
       "text": "块种类数",
       "text_en": "Number Of Block Types",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -13349,9 +13659,7 @@
       "tooltip_en": null,
       "text": "段数",
       "text_en": "Number Of Segments",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -13371,9 +13679,7 @@
       "tooltip_en": null,
       "text": "造型数",
       "text_en": "Number Of Costumes",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -13393,9 +13699,7 @@
       "tooltip_en": null,
       "text": "声音数",
       "text_en": "Number Of Sounds",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -17875,14 +18179,10 @@
       "tooltip_en": null,
       "text": "搜索音乐 [name]",
       "text_en": "Search Music [name]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "name": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Let's live"
         }
       },
@@ -17904,14 +18204,10 @@
       "tooltip_en": null,
       "text": "获取音乐url [id]",
       "text_en": "Get music url [id]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "1952657896"
         }
       },
@@ -17933,14 +18229,10 @@
       "tooltip_en": null,
       "text": "获取 [id] 的歌词",
       "text_en": "Get the lyrics of [id]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "1952657896"
         }
       },
@@ -17962,14 +18254,10 @@
       "tooltip_en": null,
       "text": "获取 [id] 的翻译歌词",
       "text_en": "Get [id]'s translated lyrics",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "1952657896"
         }
       },
@@ -17991,14 +18279,10 @@
       "tooltip_en": null,
       "text": "获取 [id] 的封面",
       "text_en": "Get the cover of [id]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "1952657896"
         }
       },
@@ -18020,14 +18304,10 @@
       "tooltip_en": null,
       "text": "从 [url] 播放音乐",
       "text_en": "Play music from [url]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "url": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "https://example.com/music.mp3"
         }
       },
@@ -18049,14 +18329,10 @@
       "tooltip_en": null,
       "text": "获取电台节目 [id]",
       "text_en": "Get radio program [id]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "350080224"
         }
       },
@@ -18078,14 +18354,10 @@
       "tooltip_en": null,
       "text": "电台音乐ID转音乐ID [id]",
       "text_en": "Radio Music ID to Music ID [id]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "id": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "2521984465"
         }
       },
@@ -18107,9 +18379,7 @@
       "tooltip_en": null,
       "text": "播放音乐",
       "text_en": "Play Music",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18129,9 +18399,7 @@
       "tooltip_en": null,
       "text": "暂停音乐",
       "text_en": "Pause Music",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18151,9 +18419,7 @@
       "tooltip_en": null,
       "text": "停止音乐",
       "text_en": "Stop Music",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18173,14 +18439,10 @@
       "tooltip_en": null,
       "text": "跳转到时间 [time] 秒",
       "text_en": "Skip to time [time] seconds",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "time": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 0
         }
       },
@@ -18202,14 +18464,10 @@
       "tooltip_en": null,
       "text": "将音量调到 [volume]",
       "text_en": "Adjust the volume to [volume]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "volume": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": 100
         }
       },
@@ -18231,9 +18489,7 @@
       "tooltip_en": null,
       "text": "是否正在播放音乐?",
       "text_en": "Is music playing?",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18253,9 +18509,7 @@
       "tooltip_en": null,
       "text": "音乐播放时间（秒）",
       "text_en": "Music play time (sec)",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18275,9 +18529,7 @@
       "tooltip_en": null,
       "text": "音乐总时长（秒）",
       "text_en": "Current time lyrics (sec)",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18297,20 +18549,14 @@
       "tooltip_en": null,
       "text": "[lyricsText] 在 [currentTime] 时显示",
       "text_en": "[lyricsText] is shown at [currentTime]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "lyricsText": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "歌词"
         },
         "currentTime": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "时间"
         }
       },
@@ -18332,20 +18578,14 @@
       "tooltip_en": null,
       "text": "[lyricsText] 在 [currentTime] 时是第几行",
       "text_en": "[lyricsText] is in line at [currentTime]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "lyricsText": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "歌词"
         },
         "currentTime": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "时间"
         }
       },
@@ -18367,20 +18607,14 @@
       "tooltip_en": null,
       "text": "[lyricsText] 在 [currentTime] 行时是第几秒",
       "text_en": "[lyricsText] in [currentTime] line is the first second",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "lyricsText": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "歌词"
         },
         "currentTime": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          },
+          "type": "NUMBER",
           "defaultValue": "时间"
         }
       },
@@ -18402,9 +18636,7 @@
       "tooltip_en": null,
       "text": "清空控制台",
       "text_en": "clear console",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18424,14 +18656,10 @@
       "tooltip_en": null,
       "text": "信息 [string]",
       "text_en": "Information [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Information"
         }
       },
@@ -18453,14 +18681,10 @@
       "tooltip_en": null,
       "text": "日志 [string]",
       "text_en": "Journal [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Journal"
         }
       },
@@ -18482,14 +18706,10 @@
       "tooltip_en": null,
       "text": "警告 [string]",
       "text_en": "Warning [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Warning"
         }
       },
@@ -18511,14 +18731,10 @@
       "tooltip_en": null,
       "text": "错误 [string]",
       "text_en": "Error [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Error"
         }
       },
@@ -18540,14 +18756,10 @@
       "tooltip_en": null,
       "text": "调试 [string]",
       "text_en": "Debug [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "debug"
         }
       },
@@ -18569,14 +18781,10 @@
       "tooltip_en": null,
       "text": "创建一个名为 [string] 的分组",
       "text_en": "Create a group named [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "group"
         }
       },
@@ -18598,14 +18806,10 @@
       "tooltip_en": null,
       "text": "创建一个名为 [string] 的折叠分组",
       "text_en": "Create a fold group named [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "group"
         }
       },
@@ -18627,9 +18831,7 @@
       "tooltip_en": null,
       "text": "退出当前分组",
       "text_en": "exit current group",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18649,14 +18851,10 @@
       "tooltip_en": null,
       "text": "启动一个名为 [string] 的计时器",
       "text_en": "Start a timer named [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Time"
         }
       },
@@ -18678,14 +18876,10 @@
       "tooltip_en": null,
       "text": "打印名为 [string] 的计时器所运行的时间",
       "text_en": "print the elapsed time of the timer named [string]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Time"
         }
       },
@@ -18707,14 +18901,10 @@
       "tooltip_en": null,
       "text": "结束名为 [string] 的计时器并以打印从开始到结束所用的时间",
       "text_en": "Ends a timer named [string] and prints the elapsed time from start to end",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "string": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "Time"
         }
       },
@@ -18736,9 +18926,7 @@
       "tooltip_en": null,
       "text": "开始录音",
       "text_en": "Start Recording",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18758,9 +18946,7 @@
       "tooltip_en": null,
       "text": "停止录音",
       "text_en": "Stop Recording",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18780,14 +18966,10 @@
       "tooltip_en": null,
       "text": "停止录音并用 [name] 作为文件名下载",
       "text_en": "Stop recording and download as [name] file",
-      "blockType": {
-        "$expression": "Scratch.BlockType.COMMAND"
-      },
+      "blockType": "COMMAND",
       "arguments": {
         "name": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "defaultValue": "recording.wav"
         }
       },
@@ -18809,9 +18991,7 @@
       "tooltip_en": null,
       "text": "录音？",
       "text_en": "Is Recording?",
-      "blockType": {
-        "$expression": "Scratch.BlockType.BOOLEAN"
-      },
+      "blockType": "BOOLEAN",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -18831,9 +19011,7 @@
       "tooltip_en": null,
       "text": "音频数据",
       "text_en": "Recording data",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {},
       "branchCount": null,
       "terminal": null,
@@ -25729,14 +25907,10 @@
       "tooltip_en": null,
       "text": "[NUM]j",
       "text_en": "[NUM]j",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "NUM": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          }
+          "type": "NUMBER"
         }
       },
       "branchCount": null,
@@ -25757,19 +25931,13 @@
       "tooltip_en": null,
       "text": "[REAL]+[IMAG]j",
       "text_en": "[REAL]+[IMAG]j",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "REAL": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          }
+          "type": "NUMBER"
         },
         "IMAG": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.NUMBER"
-          }
+          "type": "NUMBER"
         }
       },
       "branchCount": null,
@@ -25790,14 +25958,10 @@
       "tooltip_en": null,
       "text": "[A]的实部",
       "text_en": "the real part of [A]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25818,14 +25982,10 @@
       "tooltip_en": null,
       "text": "[A]的虚部",
       "text_en": "the imag part of [A]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25846,19 +26006,13 @@
       "tooltip_en": null,
       "text": "[A]+[B]",
       "text_en": "[A]+[B]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         },
         "B": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25879,19 +26033,13 @@
       "tooltip_en": null,
       "text": "[A]-[B]",
       "text_en": "[A]-[B]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         },
         "B": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25912,19 +26060,13 @@
       "tooltip_en": null,
       "text": "[A]*[B]",
       "text_en": "[A]*[B]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         },
         "B": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25945,19 +26087,13 @@
       "tooltip_en": null,
       "text": "[A]/[B]",
       "text_en": "[A]/[B]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         },
         "B": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -25978,14 +26114,10 @@
       "tooltip_en": null,
       "text": "四舍五入[A]",
       "text_en": "round [A]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -26006,20 +26138,14 @@
       "tooltip_en": null,
       "text": "[FUNC] [A]",
       "text_en": "[FUNC] of [A]",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "FUNC": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          },
+          "type": "STRING",
           "menu": "FUNC"
         },
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -26040,14 +26166,10 @@
       "tooltip_en": null,
       "text": "将[A]转换为a+bj形式",
       "text_en": "convert [A] to a+bj",
-      "blockType": {
-        "$expression": "Scratch.BlockType.REPORTER"
-      },
+      "blockType": "REPORTER",
       "arguments": {
         "A": {
-          "type": {
-            "$expression": "Scratch.ArgumentType.STRING"
-          }
+          "type": "STRING"
         }
       },
       "branchCount": null,
@@ -26056,6 +26178,174 @@
       "category": null,
       "category_en": null,
       "sourceFile": "extensions/wtkzq/complex/Complex.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "🌍 初始化语言",
+      "text_en": "🌍 Language Initialization",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "💬 文本处理",
+      "text_en": "💬 Text Processing",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "🎭 语言环境设置",
+      "text_en": "🎭 Language Environment",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "🔭 文本翻译",
+      "text_en": "🔭 Text Translation",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "⚠️ 以下积木仅在编辑器生效 ⚠️",
+      "text_en": "⚠️ The following blocks are only available in editor ⚠️",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "🪄 单位转换",
+      "text_en": "🪄 Unit conversion",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "extensionName": "I18n",
+      "extensionName_en": "I18n",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": "✨ I18n 示例",
+      "text_en": "✨ I18n Example",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": null,
+      "category_en": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     }
   ],

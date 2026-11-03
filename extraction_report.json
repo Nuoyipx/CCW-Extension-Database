@@ -1,18 +1,21 @@
 {
-  "generatedAt": "2026-11-03T21:10:14.736Z",
+  "generatedAt": "2026-11-03T21:15:29.515Z",
+  "extractedThisRun": 886,
+  "baselineCount": 858,
+  "recoveredFromBaseline": 7,
   "fileCount": 72,
   "uniqueBlockTypes": 781,
-  "unresolvedCoreFields": 435,
-  "successfulFiles": 16,
-  "partialFiles": 33,
+  "unresolvedCoreFields": 254,
+  "successfulFiles": 27,
+  "partialFiles": 22,
   "dynamicFiles": 2,
   "unrecognizedFiles": 20,
   "errorFiles": 1,
   "statusCounts": {
-    "success": 16,
+    "success": 27,
     "no_static_getInfo": 20,
     "dynamic_blocks": 2,
-    "partial": 33,
+    "partial": 22,
     "error": 1
   },
   "files": [
@@ -130,30 +133,30 @@
     },
     {
       "file": "extensions/Fath/CocreaFetch.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 1,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/comment blocks.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/Turbowarp/BigInt.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 21,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/Fath/Turbowarp/comment blocks.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -173,7 +176,7 @@
     {
       "file": "extensions/kukemc/I18n/extension.js",
       "status": "partial",
-      "blocksFound": 7,
+      "blocksFound": 27,
       "message": "Some block entries contain unresolved expressions.",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -186,9 +189,9 @@
     },
     {
       "file": "extensions/kukemc/WebHook/extension.js",
-      "status": "partial",
-      "blocksFound": 0,
-      "message": "Some block entries contain unresolved expressions.",
+      "status": "success",
+      "blocksFound": 8,
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -235,9 +238,9 @@
     },
     {
       "file": "extensions/PortFromTurboWarp/NOname-awa/Morecomparison.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 21,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -256,9 +259,9 @@
     },
     {
       "file": "extensions/Project/Project.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -312,23 +315,23 @@
     },
     {
       "file": "extensions/sipc.ink/CloudMusic/CloudMusic.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 19,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/sipc.ink/Consoles/Consoles.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 12,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
       "file": "extensions/sipc.ink/Recording/Recording.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 5,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
@@ -487,9 +490,9 @@
     },
     {
       "file": "extensions/wtkzq/complex/Complex.js",
-      "status": "partial",
+      "status": "success",
       "blocksFound": 11,
-      "message": "Some block entries contain unresolved expressions.",
+      "message": "",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
