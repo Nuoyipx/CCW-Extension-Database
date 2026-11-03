@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-03T21:30:38.119Z",
+  "generatedAt": "2026-11-03T21:36:09.180Z",
   "extractedThisRun": 951,
-  "baselineCount": 1004,
-  "recoveredFromBaseline": 56,
+  "baselineCount": 1007,
+  "recoveredFromBaseline": 58,
   "fileCount": 72,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 258,
+  "unresolvedCoreFields": 238,
   "successfulFiles": 28,
   "partialFiles": 22,
   "dynamicFiles": 1,
@@ -3346,22 +3346,6 @@
         {
           "index": 0,
           "opcode": "setAutoReRender",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 0,
-          "opcode": "setAutoReRender",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 0,
-          "opcode": "setAutoReRender",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3383,22 +3367,6 @@
         {
           "index": 1,
           "opcode": "allLoadedShaders",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "allLoadedShaders",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "allLoadedShaders",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.REPORTER"
@@ -3407,22 +3375,6 @@
         {
           "index": 2,
           "opcode": "removeShader",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 2,
-          "opcode": "removeShader",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 2,
-          "opcode": "removeShader",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3444,22 +3396,6 @@
         {
           "index": 3,
           "opcode": "reloadShader",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "reloadShader",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "reloadShader",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3476,22 +3412,6 @@
               },
               "menu": "SHADER_MENU"
             }
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "applyShader",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "applyShader",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3524,22 +3444,6 @@
         {
           "index": 5,
           "opcode": "detachShader",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 5,
-          "opcode": "detachShader",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 5,
-          "opcode": "detachShader",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3562,22 +3466,6 @@
               },
               "menu": "DRAWABLES_MENU"
             }
-          }
-        },
-        {
-          "index": 6,
-          "opcode": null,
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 6,
-          "opcode": null,
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3586,22 +3474,6 @@
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.LABEL"
-          }
-        },
-        {
-          "index": 7,
-          "opcode": "setNumber",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 7,
-          "opcode": "setNumber",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3635,22 +3507,6 @@
               },
               "defaultValue": 0
             }
-          }
-        },
-        {
-          "index": 8,
-          "opcode": "setVec2",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 8,
-          "opcode": "setVec2",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3690,22 +3546,6 @@
               },
               "defaultValue": 0
             }
-          }
-        },
-        {
-          "index": 9,
-          "opcode": "setVec3",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 9,
-          "opcode": "setVec3",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3751,22 +3591,6 @@
               },
               "defaultValue": 0
             }
-          }
-        },
-        {
-          "index": 10,
-          "opcode": "setVec4",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 10,
-          "opcode": "setVec4",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3823,22 +3647,6 @@
         {
           "index": 11,
           "opcode": "setMatrix",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 11,
-          "opcode": "setMatrix",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 11,
-          "opcode": "setMatrix",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3867,22 +3675,6 @@
               },
               "defaultValue": "[[], []]"
             }
-          }
-        },
-        {
-          "index": 12,
-          "opcode": "setArray",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 12,
-          "opcode": "setArray",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -3921,22 +3713,6 @@
         {
           "index": 13,
           "opcode": "setTexture",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 13,
-          "opcode": "setTexture",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 13,
-          "opcode": "setTexture",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -3970,41 +3746,9 @@
         {
           "index": 14,
           "opcode": null,
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 14,
-          "opcode": null,
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 14,
-          "opcode": null,
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.LABEL"
-          }
-        },
-        {
-          "index": 15,
-          "opcode": "allTextures",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 15,
-          "opcode": "allTextures",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -4018,41 +3762,9 @@
         {
           "index": 16,
           "opcode": "deleteAllTextures",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 16,
-          "opcode": "deleteAllTextures",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 16,
-          "opcode": "deleteAllTextures",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
-          }
-        },
-        {
-          "index": 17,
-          "opcode": "deleteTexture",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 17,
-          "opcode": "deleteTexture",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -4074,22 +3786,6 @@
               },
               "defaultValue": "Scratch Cat"
             }
-          }
-        },
-        {
-          "index": 18,
-          "opcode": "createUpdateTexture",
-          "field": "text",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
-          }
-        },
-        {
-          "index": 18,
-          "opcode": "createUpdateTexture",
-          "field": "text_en",
-          "expression": {
-            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -4737,51 +4433,11 @@
       "message": "Some block entries contain unresolved expressions.",
       "issues": [
         {
-          "index": 0,
-          "reason": "unresolved_fields",
-          "opcode": "switchRequest"
-        },
-        {
-          "index": 1,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
           "index": 2,
           "reason": "unresolved_spread",
           "expression": {
             "$expression": "ThisExpression.cloneReporterBlocks(...)"
           }
-        },
-        {
-          "index": 3,
-          "reason": "unresolved_fields",
-          "opcode": null
-        },
-        {
-          "index": 4,
-          "reason": "unresolved_fields",
-          "opcode": "cardCreate"
-        },
-        {
-          "index": 5,
-          "reason": "unresolved_fields",
-          "opcode": "cardSet"
-        },
-        {
-          "index": 6,
-          "reason": "unresolved_fields",
-          "opcode": "cardJoin"
-        },
-        {
-          "index": 7,
-          "reason": "unresolved_fields",
-          "opcode": "cardRemove"
-        },
-        {
-          "index": 8,
-          "reason": "unresolved_fields",
-          "opcode": null
         },
         {
           "index": 9,
@@ -4801,43 +4457,11 @@
           }
         },
         {
-          "index": 0,
-          "opcode": "switchRequest",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 0,
-          "opcode": "switchRequest",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 1,
           "opcode": "cardCreate",
           "field": "extensionId",
           "expression": {
             "$expression": "extensionId"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "cardCreate",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 1,
-          "opcode": "cardCreate",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         },
         {
@@ -4849,22 +4473,6 @@
           }
         },
         {
-          "index": 2,
-          "opcode": "cardSet",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 2,
-          "opcode": "cardSet",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 3,
           "opcode": "cardJoin",
           "field": "extensionId",
@@ -4873,43 +4481,11 @@
           }
         },
         {
-          "index": 3,
-          "opcode": "cardJoin",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 3,
-          "opcode": "cardJoin",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
           "index": 4,
           "opcode": "cardRemove",
           "field": "extensionId",
           "expression": {
             "$expression": "extensionId"
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "cardRemove",
-          "field": "text",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
-          }
-        },
-        {
-          "index": 4,
-          "opcode": "cardRemove",
-          "field": "text_en",
-          "expression": {
-            "$expression": "ThisExpression.fm(...)"
           }
         }
       ],

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-11-03T21:30:38.119Z",
+  "generatedAt": "2026-11-03T21:36:09.180Z",
   "extractedThisRun": 951,
-  "baselineCount": 1004,
-  "recoveredFromBaseline": 56,
+  "baselineCount": 1007,
+  "recoveredFromBaseline": 58,
   "sourceCount": 1,
   "fileCount": 72,
-  "blockCount": 1007,
+  "blockCount": 1009,
   "uniqueBlockTypes": 876,
-  "unresolvedCoreFields": 258,
+  "unresolvedCoreFields": 238,
   "blocks": [
     {
       "extensionId": "advancedControls",
@@ -15280,12 +15280,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "[SHOULD] auto re-render",
+      "text_en": "[SHOULD] auto re-render",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15313,12 +15309,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "All loaded shaders",
+      "text_en": "All loaded shaders",
       "blockType": {
         "$expression": "Scratch2.BlockType.REPORTER"
       },
@@ -15339,12 +15331,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Remove [SHADER]",
+      "text_en": "Remove [SHADER]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15372,12 +15360,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Reload [SHADER]",
+      "text_en": "Reload [SHADER]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15405,12 +15389,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Apply [SHADER] to [TARGET]",
+      "text_en": "Apply [SHADER] to [TARGET]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15444,12 +15424,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Detach [SHADER] from [TARGET]",
+      "text_en": "Detach [SHADER] from [TARGET]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15483,12 +15459,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Uniforms",
+      "text_en": "Uniforms",
       "blockType": {
         "$expression": "Scratch2.BlockType.LABEL"
       },
@@ -15509,12 +15481,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set number [UNIFORM] of [TARGET] to [VALUE]",
+      "text_en": "Set number [UNIFORM] of [TARGET] to [VALUE]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15554,12 +15522,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set vector 2 [UNIFORM] of [TARGET] to [VALUE1][VALUE2]",
+      "text_en": "Set vector 2 [UNIFORM] of [TARGET] to [VALUE1][VALUE2]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15605,12 +15569,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set vector 3 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3]",
+      "text_en": "Set vector 3 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15662,12 +15622,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set vector 4 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3][VALUE4]",
+      "text_en": "Set vector 4 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3][VALUE4]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15725,12 +15681,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set matrix [UNIFORM] of [TARGET] to [MATRIX]",
+      "text_en": "Set matrix [UNIFORM] of [TARGET] to [MATRIX]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15770,12 +15722,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set array [UNIFORM] of [TARGET] to [ARRAY]",
+      "text_en": "Set array [UNIFORM] of [TARGET] to [ARRAY]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15815,12 +15763,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Set texture [UNIFORM] of [TARGET] to [TEXTURE]",
+      "text_en": "Set texture [UNIFORM] of [TARGET] to [TEXTURE]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15860,12 +15804,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Textures",
+      "text_en": "Textures",
       "blockType": {
         "$expression": "Scratch2.BlockType.LABEL"
       },
@@ -15886,12 +15826,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "All textures",
+      "text_en": "All textures",
       "blockType": {
         "$expression": "Scratch2.BlockType.REPORTER"
       },
@@ -15912,12 +15848,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Delete all textures",
+      "text_en": "Delete all textures",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15938,12 +15870,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Delete texture called [NAME]",
+      "text_en": "Delete texture called [NAME]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -15971,12 +15899,8 @@
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "Scratch2.translate(...)"
-      },
-      "text_en": {
-        "$expression": "Scratch2.translate(...)"
-      },
+      "text": "Create/Update texture called [NAME] with [TEXTURE]",
+      "text_en": "Create/Update texture called [NAME] with [TEXTURE]",
       "blockType": {
         "$expression": "Scratch2.BlockType.COMMAND"
       },
@@ -27721,22 +27645,14 @@
       "extensionId": {
         "$expression": "extensionId"
       },
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "飞书",
+      "extensionName_en": "Feishu",
       "opcode": "switchRequest",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "[STATE] 请求",
+      "text_en": "[STATE] Request",
       "blockType": "COMMAND",
       "arguments": {
         "STATE": {
@@ -27756,22 +27672,14 @@
       "extensionId": {
         "$expression": "extensionId"
       },
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "飞书",
+      "extensionName_en": "Feishu",
       "opcode": "cardCreate",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "创建卡片 [ID]",
+      "text_en": "Create Card [ID]",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
@@ -27782,8 +27690,8 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔖 卡片",
+      "category_en": "🔖 Card",
       "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -27791,22 +27699,14 @@
       "extensionId": {
         "$expression": "extensionId"
       },
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "飞书",
+      "extensionName_en": "Feishu",
       "opcode": "cardSet",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "设置卡片 [ID] 的 [TYPE] 为 [DATA]",
+      "text_en": "Set Card [ID] `s [TYPE] To [DATA]",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
@@ -27825,8 +27725,8 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔖 卡片",
+      "category_en": "🔖 Card",
       "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -27834,22 +27734,14 @@
       "extensionId": {
         "$expression": "extensionId"
       },
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "飞书",
+      "extensionName_en": "Feishu",
       "opcode": "cardJoin",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "将组件 [TYPE] 参数 [DATA] 添加到卡片 [ID]",
+      "text_en": "Add Commponent [TYPE] Params [DATA] To Card [ID]",
       "blockType": "COMMAND",
       "arguments": {
         "TYPE": {
@@ -27868,8 +27760,8 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔖 卡片",
+      "category_en": "🔖 Card",
       "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
@@ -27877,22 +27769,14 @@
       "extensionId": {
         "$expression": "extensionId"
       },
-      "extensionName": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "extensionName_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "extensionName": "飞书",
+      "extensionName_en": "Feishu",
       "opcode": "cardRemove",
       "func": null,
       "tooltip": null,
       "tooltip_en": null,
-      "text": {
-        "$expression": "ThisExpression.fm(...)"
-      },
-      "text_en": {
-        "$expression": "ThisExpression.fm(...)"
-      },
+      "text": "移除卡片 [ID] 的 [TYPE] 组件",
+      "text_en": "Remove Card [ID] `S [TYPE] Commponent(s)",
       "blockType": "COMMAND",
       "arguments": {
         "ID": {
@@ -27907,9 +27791,61 @@
       "branchCount": null,
       "terminal": null,
       "filter": null,
-      "category": null,
-      "category_en": null,
+      "category": "🔖 卡片",
+      "category_en": "🔖 Card",
       "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": "betterquake",
+      "extensionName": "Better Quake",
+      "extensionName_en": "Better Quake",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": {
+        "$expression": "Scratch2.translate(...)"
+      },
+      "text_en": {
+        "$expression": "Scratch2.translate(...)"
+      },
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "",
+      "category_en": "",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "repository": "https://github.com/Gandi-IDE/custom-extension"
+    },
+    {
+      "extensionId": "betterquake",
+      "extensionName": "Better Quake",
+      "extensionName_en": "Better Quake",
+      "opcode": null,
+      "func": null,
+      "tooltip": null,
+      "tooltip_en": null,
+      "text": {
+        "$expression": "Scratch2.translate(...)"
+      },
+      "text_en": {
+        "$expression": "Scratch2.translate(...)"
+      },
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "arguments": {},
+      "branchCount": null,
+      "terminal": null,
+      "filter": null,
+      "category": "",
+      "category_en": "",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
       "repository": "https://github.com/Gandi-IDE/custom-extension"
     },
     {
