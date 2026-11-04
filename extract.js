@@ -671,6 +671,9 @@ function mergeWithBaseline(current, baseline) {
   });
   const specialSeen = new Map();
   const seen = new Map();
+  // Each current record may match at most one historical record.
+  // In particular, label ordinal fallback must not reuse an index already matched.
+  const matchedCurrent = new Set();
   for (const oldBlock of baseline) {
     const key = identity(oldBlock), ordinal = seen.get(key) || 0;
     seen.set(key, ordinal + 1);
@@ -685,7 +688,9 @@ function mergeWithBaseline(current, baseline) {
       // matching two old entries to the same current entry.
       if (slot < possible.length) index = possible[slot];
     }
+    if (index !== undefined && matchedCurrent.has(index)) index = undefined;
     if (index !== undefined) {
+      matchedCurrent.add(index);
       const replacement = mergeRecord(oldBlock, merged[index]);
       if (JSON.stringify(replacement) !== JSON.stringify(merged[index])) updated.push({ identity: key, reason: 'restored richer baseline fields' });
       merged[index] = replacement;
