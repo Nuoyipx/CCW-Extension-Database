@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "generatedAt": "2026-11-04T14:08:59.768Z",
   "baselineCount": 1009,
   "extractedThisRun": 951,
   "finalCount": 1009,
@@ -468,6 +468,83 @@
     "extensions/kukemc/WebHook/extension.js": 8,
     "extensions/wit_cat/Zip/extension.js": 11
   },
-  "enrichedRecords": [],
+  "enrichedRecords": [
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setAutoReRender\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"allLoadedShaders\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"removeShader\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"reloadShader\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"applyShader\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"detachShader\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"\",\"\\\"Uniforms\\\"\",\"[object Object]\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setNumber\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setVec2\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setVec3\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setVec4\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setMatrix\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setArray\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"setTexture\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"\",\"\\\"Textures\\\"\",\"[object Object]\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"allTextures\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"deleteAllTextures\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"deleteTexture\"]",
+      "reason": "restored richer baseline fields"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"createUpdateTexture\"]",
+      "reason": "restored richer baseline fields"
+    }
+  ],
   "note": "Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current."
 }

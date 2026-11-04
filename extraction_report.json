@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "generatedAt": "2026-11-04T14:08:59.768Z",
   "extractedThisRun": 951,
   "baselineCount": 1009,
   "recoveredFromBaseline": 58,
@@ -2189,6 +2189,22 @@
         {
           "index": 0,
           "opcode": "setAutoReRender",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -2210,6 +2226,22 @@
         {
           "index": 1,
           "opcode": "allLoadedShaders",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.REPORTER"
@@ -2218,6 +2250,14 @@
         {
           "index": 2,
           "opcode": "removeShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -2239,6 +2279,14 @@
         {
           "index": 3,
           "opcode": "reloadShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -2255,6 +2303,14 @@
               },
               "menu": "SHADER_MENU"
             }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2282,6 +2338,14 @@
               },
               "menu": "DRAWABLES_MENU"
             }
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2314,9 +2378,41 @@
         {
           "index": 6,
           "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2350,6 +2446,22 @@
               },
               "defaultValue": 0
             }
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2389,6 +2501,22 @@
               },
               "defaultValue": 0
             }
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2434,6 +2562,22 @@
               },
               "defaultValue": 0
             }
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2490,6 +2634,22 @@
         {
           "index": 11,
           "opcode": "setMatrix",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -2518,6 +2678,22 @@
               },
               "defaultValue": "[[], []]"
             }
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2556,6 +2732,22 @@
         {
           "index": 13,
           "opcode": "setTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
@@ -2589,9 +2781,41 @@
         {
           "index": 14,
           "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2605,9 +2829,41 @@
         {
           "index": 16,
           "opcode": "deleteAllTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
           "field": "blockType",
           "expression": {
             "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {
@@ -2629,6 +2885,22 @@
               },
               "defaultValue": "Scratch Cat"
             }
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         },
         {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T13:57:41.363Z",
-  "fileCount": 4,
+  "generatedAt": "2026-11-04T14:08:59.768Z",
+  "fileCount": 5,
   "files": [
     {
       "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
@@ -15,10 +15,10 @@
           "callee": "ThisExpression.fm",
           "argument": "`defaultValue.${type}Name`",
           "expression": "this.fm(\n      `defaultValue.${type}Name`\n      // 'defaultValue.dataName',\n    )",
-          "key": null,
+          "key": "defaultValue.${type}Name",
           "zhFound": false,
           "enFound": false,
-          "reason": "dynamic_translation_key"
+          "reason": "translation_key_not_found"
         },
         {
           "line": 201,
@@ -955,10 +955,10 @@
           "callee": "ThisExpression.fm",
           "argument": "`tooltip.${block.opcode}`",
           "expression": "this.fm(`tooltip.${block.opcode}`)",
-          "key": null,
+          "key": "tooltip.${block.opcode}",
           "zhFound": false,
           "enFound": false,
-          "reason": "dynamic_translation_key"
+          "reason": "translation_key_not_found"
         },
         {
           "line": 1343,
@@ -2968,6 +2968,494 @@
           "field": "text_en",
           "expression": {
             "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "unresolvedTextCount": 19,
+      "unresolvedTextEnglishCount": 15,
+      "localeFiles": [],
+      "translationCalls": [
+        {
+          "line": 4046,
+          "callee": "Scratch2.translate",
+          "argument": "\"[SHOULD] auto re-render\"",
+          "expression": "Scratch2.translate(\"[SHOULD] auto re-render\")",
+          "key": "[SHOULD] auto re-render",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4058,
+          "callee": "Scratch2.translate",
+          "argument": "\"All loaded shaders\"",
+          "expression": "Scratch2.translate(\"All loaded shaders\")",
+          "key": "All loaded shaders",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4065,
+          "callee": "Scratch2.translate",
+          "argument": "\"Remove [SHADER]\"",
+          "expression": "Scratch2.translate(\"Remove [SHADER]\")",
+          "key": "Remove [SHADER]",
+          "zhFound": false,
+          "enFound": true,
+          "reason": "language_variant_missing"
+        },
+        {
+          "line": 4076,
+          "callee": "Scratch2.translate",
+          "argument": "\"Reload [SHADER]\"",
+          "expression": "Scratch2.translate(\"Reload [SHADER]\")",
+          "key": "Reload [SHADER]",
+          "zhFound": false,
+          "enFound": true,
+          "reason": "language_variant_missing"
+        },
+        {
+          "line": 4088,
+          "callee": "Scratch2.translate",
+          "argument": "\"Apply [SHADER] to [TARGET]\"",
+          "expression": "Scratch2.translate(\"Apply [SHADER] to [TARGET]\")",
+          "key": "Apply [SHADER] to [TARGET]",
+          "zhFound": false,
+          "enFound": true,
+          "reason": "language_variant_missing"
+        },
+        {
+          "line": 4103,
+          "callee": "Scratch2.translate",
+          "argument": "\"Detach [SHADER] from [TARGET]\"",
+          "expression": "Scratch2.translate(\"Detach [SHADER] from [TARGET]\")",
+          "key": "Detach [SHADER] from [TARGET]",
+          "zhFound": false,
+          "enFound": true,
+          "reason": "language_variant_missing"
+        },
+        {
+          "line": 4117,
+          "callee": "Scratch2.translate",
+          "argument": "\"Uniforms\"",
+          "expression": "Scratch2.translate(\"Uniforms\")",
+          "key": "Uniforms",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4122,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set number [UNIFORM] of [TARGET] to [VALUE]\"",
+          "expression": "Scratch2.translate(\n                \"Set number [UNIFORM] of [TARGET] to [VALUE]\"\n              )",
+          "key": "Set number [UNIFORM] of [TARGET] to [VALUE]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4143,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set vector 2 [UNIFORM] of [TARGET] to [VALUE1][VALUE2]\"",
+          "expression": "Scratch2.translate(\n                \"Set vector 2 [UNIFORM] of [TARGET] to [VALUE1][VALUE2]\"\n              )",
+          "key": "Set vector 2 [UNIFORM] of [TARGET] to [VALUE1][VALUE2]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4168,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set vector 3 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3]\"",
+          "expression": "Scratch2.translate(\n                \"Set vector 3 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3]\"\n              )",
+          "key": "Set vector 3 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4197,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set vector 4 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3][VALUE4]\"",
+          "expression": "Scratch2.translate(\n                \"Set vector 4 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3][VALUE4]\"\n              )",
+          "key": "Set vector 4 [UNIFORM] of [TARGET] to [VALUE1][VALUE2][VALUE3][VALUE4]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4230,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set matrix [UNIFORM] of [TARGET] to [MATRIX]\"",
+          "expression": "Scratch2.translate(\n                \"Set matrix [UNIFORM] of [TARGET] to [MATRIX]\"\n              )",
+          "key": "Set matrix [UNIFORM] of [TARGET] to [MATRIX]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4251,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set array [UNIFORM] of [TARGET] to [ARRAY]\"",
+          "expression": "Scratch2.translate(\n                \"Set array [UNIFORM] of [TARGET] to [ARRAY]\"\n              )",
+          "key": "Set array [UNIFORM] of [TARGET] to [ARRAY]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4272,
+          "callee": "Scratch2.translate",
+          "argument": "\"Set texture [UNIFORM] of [TARGET] to [TEXTURE]\"",
+          "expression": "Scratch2.translate(\n                \"Set texture [UNIFORM] of [TARGET] to [TEXTURE]\"\n              )",
+          "key": "Set texture [UNIFORM] of [TARGET] to [TEXTURE]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4292,
+          "callee": "Scratch2.translate",
+          "argument": "\"Textures\"",
+          "expression": "Scratch2.translate(\"Textures\")",
+          "key": "Textures",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4297,
+          "callee": "Scratch2.translate",
+          "argument": "\"All textures\"",
+          "expression": "Scratch2.translate(\"All textures\")",
+          "key": "All textures",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4304,
+          "callee": "Scratch2.translate",
+          "argument": "\"Delete all textures\"",
+          "expression": "Scratch2.translate(\"Delete all textures\")",
+          "key": "Delete all textures",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4310,
+          "callee": "Scratch2.translate",
+          "argument": "\"Delete texture called [NAME]\"",
+          "expression": "Scratch2.translate(\"Delete texture called [NAME]\")",
+          "key": "Delete texture called [NAME]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4321,
+          "callee": "Scratch2.translate",
+          "argument": "\"Create/Update texture called [NAME] with [TEXTURE]\"",
+          "expression": "Scratch2.translate(\n                \"Create/Update texture called [NAME] with [TEXTURE]\"\n              )",
+          "key": "Create/Update texture called [NAME] with [TEXTURE]",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4348,
+          "callee": "Scratch2.translate",
+          "argument": "\"Enable\"",
+          "expression": "Scratch2.translate(\"Enable\")",
+          "key": "Enable",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4352,
+          "callee": "Scratch2.translate",
+          "argument": "\"Disable\"",
+          "expression": "Scratch2.translate(\"Disable\")",
+          "key": "Disable",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4573,
+          "callee": "Scratch2.translate",
+          "argument": "\"me\"",
+          "expression": "Scratch2.translate(\"me\")",
+          "key": "me",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4577,
+          "callee": "Scratch2.translate",
+          "argument": "\"stage\"",
+          "expression": "Scratch2.translate(\"stage\")",
+          "key": "stage",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 4588,
+          "callee": "Scratch2.translate",
+          "argument": "\"example\"",
+          "expression": "Scratch2.translate(\"example\")",
+          "key": "example",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        }
+      ],
+      "unresolved": [
+        {
+          "opcode": "setAutoReRender",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setAutoReRender",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "allLoadedShaders",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "allLoadedShaders",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "removeShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "reloadShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "applyShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "detachShader",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setNumber",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setNumber",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec2",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec2",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec3",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec3",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec4",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setVec4",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setMatrix",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setMatrix",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setArray",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setArray",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "setTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "allTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "allTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "deleteAllTextures",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "deleteAllTextures",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "deleteTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "deleteTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "createUpdateTexture",
+          "field": "text",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
+          }
+        },
+        {
+          "opcode": "createUpdateTexture",
+          "field": "text_en",
+          "expression": {
+            "$expression": "Scratch2.translate(...)"
           }
         }
       ]
