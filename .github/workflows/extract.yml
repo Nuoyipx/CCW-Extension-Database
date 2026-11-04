@@ -1,3 +1,4 @@
+
 name: Extract CCW Extension Database
 
 on:
@@ -7,6 +8,7 @@ on:
     paths:
       - "sources.txt"
       - "extract.js"
+      - "test.js"
       - ".github/workflows/extract.yml"
 
 permissions:
@@ -28,15 +30,27 @@ jobs:
       - name: Install JavaScript parser
         run: npm install --no-save @babel/parser@^7
 
+      - name: Run extractor tests
+        if: hashFiles('test.js') != ''
+        run: node test.js
+
       - name: Run extractor
         run: node extract.js
 
-      - name: Save generated database
+      - name: Save generated database and reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add blocks_database.json extraction_report.json version_report.json
+          git add \
+            blocks_database.json \
+            extraction_report.json \
+            version_report.json \
+            extraction_diff.json \
+            unresolved_blocks.json \
+            quality_report.json \
+            usable_blocks.json \
+            translation_diagnostics.json
 
           if git diff --cached --quiet; then
             echo "No database changes."
