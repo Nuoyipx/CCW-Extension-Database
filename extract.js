@@ -137,13 +137,13 @@ function evaluate(node, env, depth = 0) {
       // Only resolve keys found in statically collected locale dictionaries;
       // never assume an unknown translation key is user-facing block text.
       if (callee.type === 'MemberExpression' &&
-          ['fm', 'formatMessage', 'translate', 't'].includes(callee.property.name) &&
+          ['fm', 'formatMessage', 'translate', 't', 'getMessage', 'getText'].includes(callee.property.name) &&
           node.arguments.length) {
         const arg = next(node.arguments[0]);
         const translated = resolveTranslationArg(arg, env);
-        if (typeof translated === 'string' &&
-            (callee.property.name !== 'fm' || messageLookup(arg, env) !== null ||
-             (arg && typeof arg === 'object' && !isUnresolved(arg)))) return translated;
+         if (typeof translated === 'string' &&
+             (typeof arg === 'string' ? messageLookup(arg, env) !== null :
+              arg && typeof arg === 'object' && !isUnresolved(arg))) return translated;
       }
       const name = sourceOf(callee);
       if (['Scratch.translate', 'translate', 'formatMessage', 'Scratch.translate.formatMessage'].includes(name) && node.arguments.length) {
@@ -309,7 +309,7 @@ function extractMessages(ast) {
       if (typeof en === 'string') tables.en[String(key)] ??= en;
     }
   });
-  // Common format: { key: { 'zh-CN': '涓枃', 'en-US': 'English' } } is handled above.
+  // Common format: { key: { 'zh-CN': '娑擃厽鏋�', 'en-US': 'English' } } is handled above.
   // Also support language dictionaries under named exports with `zh_CN` and `en_US` keys.
   walk(ast, node => {
     if (node.type !== 'ObjectExpression') return;
@@ -325,8 +325,27 @@ function extractMessages(ast) {
       }
     }
   });
+  // Resolve locale dictionaries referenced by variables, without executing JS.
+  // Example: const zh = {hello:'浣犲ソ'}; const locales = {'zh-CN': zh};
+  const symbols = buildSymbols(ast);
+  walk(ast, node => {
+    if (node.type !== 'ObjectExpression') return;
+    for (const prop of node.properties) {
+      if (prop.type !== 'ObjectProperty') continue;
+      const locale = String(prop.key.name ?? prop.key.value ?? '').toLowerCase().replace(/_/g, '-');
+      const target = ['zh-cn', 'zh'].includes(locale) ? 'zh-cn' :
+        ['en', 'en-us'].includes(locale) ? 'en' : null;
+      if (!target) continue;
+      const dictionary = evaluate(prop.value, { symbols, messages: {} });
+      if (!dictionary || typeof dictionary !== 'object' || Array.isArray(dictionary) || isUnresolved(dictionary)) continue;
+      for (const [key, value] of Object.entries(dictionary)) {
+        if (typeof value === 'string') tables[target][key] ??= value;
+      }
+    }
+  });
   return tables;
 }
+
 function collectLocalSymbols(body, env) {
   const symbols = { ...env.symbols };
   const localEnv = () => ({ ...env, symbols });
@@ -515,7 +534,7 @@ function translationDiagnostics(source, filePath, repositoryRoot, report) {
   })();
   for (const lang of ['zh-cn', 'en']) Object.assign(available[lang], sourceMessages[lang]);
   const detailedCalls = calls.slice(0, 150).map(call => {
-    const key = /^(['"])(.*?)\1$/.exec(call.argument)?.[2] ?? null;
+    const key = /^(['"`])([^`]*?)\1$/.exec(call.argument)?.[2] ?? null;
     const zh = key !== null && Object.prototype.hasOwnProperty.call(available['zh-cn'], key);
     const en = key !== null && Object.prototype.hasOwnProperty.call(available.en, key);
     return { ...call, key, zhFound: zh, enFound: en,
@@ -692,7 +711,7 @@ function readBaseline() {
   return data.blocks;
 }
 function main() {
-  console.log('Starting CCW extension extraction v13 (static AST mode)...');
+  console.log('Starting CCW extension extraction v15 (static AST mode)...');
   const sources = readSources();
   if (!sources.length) throw new Error('No source repositories found in sources.txt.');
   const baseline = readBaseline();
