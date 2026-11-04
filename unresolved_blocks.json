@@ -1,0 +1,3103 @@
+{
+  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "unresolvedFiles": [
+    {
+      "file": "extensions/Arkos/moreDataTypes/l10n.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "status": "partial",
+      "blocksFound": 59,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": "getNewObject"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": "getNewList"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "createListWithLength"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "setPropOfObject"
+        },
+        {
+          "index": 21,
+          "reason": "unresolved_fields",
+          "opcode": "getPropOfObject"
+        },
+        {
+          "index": 22,
+          "reason": "unresolved_fields",
+          "opcode": "delPropOfObject"
+        },
+        {
+          "index": 23,
+          "reason": "unresolved_fields",
+          "opcode": "sizeOfObject"
+        },
+        {
+          "index": 24,
+          "reason": "unresolved_fields",
+          "opcode": "ifObjectPropExist"
+        },
+        {
+          "index": 25,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 26,
+          "reason": "unresolved_fields",
+          "opcode": "setPropOfObjectAndReturn"
+        },
+        {
+          "index": 27,
+          "reason": "unresolved_fields",
+          "opcode": "createObjFromKeyValue"
+        },
+        {
+          "index": 28,
+          "reason": "unresolved_fields",
+          "opcode": "getAllProperties"
+        },
+        {
+          "index": 29,
+          "reason": "unresolved_fields",
+          "opcode": "getSubObject"
+        },
+        {
+          "index": 30,
+          "reason": "unresolved_fields",
+          "opcode": "clear"
+        },
+        {
+          "index": 31,
+          "reason": "unresolved_fields",
+          "opcode": "mergeObject"
+        },
+        {
+          "index": 32,
+          "reason": "unresolved_fields",
+          "opcode": "getPropOfObjectByIdx"
+        },
+        {
+          "index": 33,
+          "reason": "unresolved_fields",
+          "opcode": "setProtoOfObj"
+        },
+        {
+          "index": 35,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToList2"
+        },
+        {
+          "index": 36,
+          "reason": "unresolved_fields",
+          "opcode": "insertItemIntoList"
+        },
+        {
+          "index": 37,
+          "reason": "unresolved_fields",
+          "opcode": "indexOf"
+        },
+        {
+          "index": 38,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 39,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToListAndReturn"
+        },
+        {
+          "index": 40,
+          "reason": "unresolved_fields",
+          "opcode": "pop"
+        },
+        {
+          "index": 41,
+          "reason": "unresolved_fields",
+          "opcode": "mergeList"
+        },
+        {
+          "index": 42,
+          "reason": "unresolved_fields",
+          "opcode": "slice"
+        },
+        {
+          "index": 43,
+          "reason": "unresolved_fields",
+          "opcode": "split"
+        },
+        {
+          "index": 44,
+          "reason": "unresolved_fields",
+          "opcode": "join"
+        },
+        {
+          "index": 45,
+          "reason": "unresolved_fields",
+          "opcode": "opList"
+        },
+        {
+          "index": 46,
+          "reason": "unresolved_fields",
+          "opcode": "sortListByProp"
+        },
+        {
+          "index": 47,
+          "reason": "unresolved_fields",
+          "opcode": "getScratchList"
+        },
+        {
+          "index": 48,
+          "reason": "unresolved_fields",
+          "opcode": "setScratchList"
+        },
+        {
+          "index": 50,
+          "reason": "unresolved_fields",
+          "opcode": "setAutoCreate"
+        },
+        {
+          "index": 52,
+          "reason": "unresolved_fields",
+          "opcode": "allowInputJSON"
+        },
+        {
+          "index": 53,
+          "reason": "unresolved_fields",
+          "opcode": "indexStart"
+        },
+        {
+          "index": 54,
+          "reason": "unresolved_fields",
+          "opcode": "setCase"
+        },
+        {
+          "index": 57,
+          "reason": "unresolved_fields",
+          "opcode": "getListItemIdxByItem"
+        },
+        {
+          "index": 58,
+          "reason": "unresolved_fields",
+          "opcode": "createOrClearObject"
+        },
+        {
+          "index": 59,
+          "reason": "unresolved_fields",
+          "opcode": "createOrClearList"
+        },
+        {
+          "index": 60,
+          "reason": "unresolved_fields",
+          "opcode": "addItemToList"
+        },
+        {
+          "index": 61,
+          "reason": "unresolved_fields",
+          "opcode": "setItemOfList"
+        },
+        {
+          "index": 62,
+          "reason": "unresolved_fields",
+          "opcode": "delItemOfList"
+        },
+        {
+          "index": 63,
+          "reason": "unresolved_fields",
+          "opcode": "getItemOfList"
+        },
+        {
+          "index": 64,
+          "reason": "unresolved_fields",
+          "opcode": "lengthOfList"
+        },
+        {
+          "index": 65,
+          "reason": "unresolved_fields",
+          "opcode": "ifListItemExist"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 15,
+          "opcode": "setPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": "属性"
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "ITEM_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "getPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": "属性"
+            }
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "delPropOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": "属性"
+            }
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "sizeOfObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "ifObjectPropExist",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "PROP": {
+              "type": "STRING",
+              "defaultValue": "属性"
+            }
+          }
+        },
+        {
+          "index": 20,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 20,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 25,
+          "opcode": "clear",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 26,
+          "opcode": "mergeObject",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": "{\"key\":\"value\"}"
+            }
+          }
+        },
+        {
+          "index": 27,
+          "opcode": "getPropOfObjectByIdx",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "OPTION": {
+              "type": "STRING",
+              "menu": "OBJECT_GET_OPTION"
+            }
+          }
+        },
+        {
+          "index": 28,
+          "opcode": "setProtoOfObj",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "`${...}2`"
+              }
+            }
+          }
+        },
+        {
+          "index": 29,
+          "opcode": "addItemToList2",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_ADD_OR_REMOVE"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 30,
+          "opcode": "insertItemIntoList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 31,
+          "opcode": "indexOf",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            },
+            "N": {
+              "type": "NUMBER",
+              "defaultValue": -1
+            }
+          }
+        },
+        {
+          "index": 32,
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 32,
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 39,
+          "opcode": "opList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_OP"
+            }
+          }
+        },
+        {
+          "index": 43,
+          "opcode": "setAutoCreate",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 45,
+          "opcode": "allowInputJSON",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 46,
+          "opcode": "indexStart",
+          "field": "arguments",
+          "expression": {
+            "IDX": {
+              "type": "STRING",
+              "menu": "1OR0",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 47,
+          "opcode": "setCase",
+          "field": "arguments",
+          "expression": {
+            "ON": {
+              "type": "STRING",
+              "menu": "ON_OFF",
+              "defaultValue": {
+                "$expression": "ConditionalExpression"
+              }
+            }
+          }
+        },
+        {
+          "index": 50,
+          "opcode": "getListItemIdxByItem",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 51,
+          "opcode": "createOrClearObject",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 52,
+          "opcode": "createOrClearList",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 53,
+          "opcode": "addItemToList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 54,
+          "opcode": "setItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            },
+            "OP": {
+              "type": "STRING",
+              "menu": "LIST_SET_OPTION"
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        },
+        {
+          "index": 55,
+          "opcode": "delItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            }
+          }
+        },
+        {
+          "index": 56,
+          "opcode": "getItemOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "IDX": {
+              "type": "NUMBER",
+              "defaultValue": 1
+            }
+          }
+        },
+        {
+          "index": 57,
+          "opcode": "lengthOfList",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 58,
+          "opcode": "ifListItemExist",
+          "field": "arguments",
+          "expression": {
+            "NAME_OR_OBJ": {
+              "type": "STRING",
+              "defaultValue": {
+                "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+              }
+            },
+            "VALUE": {
+              "type": "STRING",
+              "defaultValue": "东西"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/Arkos/moreDataTypes/SafeObject.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Arkos/moreSensing.js",
+      "status": "partial",
+      "blocksFound": 20,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "getNetWorkTimeInfo"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "convertTime"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "isLogin"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "getFile"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "getComment"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "cloneCount"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "getStageInfo"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "spritesList"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "targetTouchingTarget"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "touchingPoint"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "touchingRect"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "pointInRect"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "touchingLine"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": "touchingRay"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": "amIOnTheTop"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "amIOnTheTopAtMouse"
+        },
+        {
+          "index": 19,
+          "reason": "unresolved_fields",
+          "opcode": "amIclicked"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "whenKeyDown"
+        },
+        {
+          "index": 22,
+          "reason": "unresolved_fields",
+          "opcode": "colorToHex"
+        },
+        {
+          "index": 23,
+          "reason": "unresolved_fields",
+          "opcode": "colorAt"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "getNetWorkTimeInfo",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "convertTime",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "convertTime",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "isLogin",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "isLogin",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "getFile",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getComment",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "cloneCount",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "cloneCount",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getStageInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getStageInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "spritesList",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "targetTouchingTarget",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "touchingPoint",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "touchingRect",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "pointInRect",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "touchingLine",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "touchingRay",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "`${...}\n${...}`"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 14,
+          "opcode": "amIOnTheTop",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "amIclicked",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "tooltip",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "whenKeyDown",
+          "field": "tooltip_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "colorToHex",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "colorToHex",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "colorAt",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 19,
+          "opcode": "colorAt",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/DilemmaGX/Animator/Animator.js",
+      "status": "partial",
+      "blocksFound": 6,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/DollyPro/dollytest.js",
+      "status": "partial",
+      "blocksFound": 50,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "initTheClone"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "beforeDeletionOfTheClone"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "dispatchWhenCloned"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "dispatchWhenCloneDeleted"
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "presetDataforTheNextCloneInJSONFormat"
+        },
+        {
+          "index": 33,
+          "reason": "unresolved_fields",
+          "opcode": "setCloneProperty"
+        },
+        {
+          "index": 42,
+          "reason": "unresolved_fields",
+          "opcode": "forEachWithGroup"
+        },
+        {
+          "index": 43,
+          "reason": "unresolved_fields",
+          "opcode": "cloneIDOfForEach"
+        },
+        {
+          "index": 47,
+          "reason": "unresolved_fields",
+          "opcode": "isCloneTouchingClone"
+        },
+        {
+          "index": 50,
+          "reason": "unresolved_fields",
+          "opcode": "isCloneTouchingCoord"
+        },
+        {
+          "index": 51,
+          "reason": "unresolved_fields",
+          "opcode": "pickTarget"
+        },
+        {
+          "index": 57,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "index": 58,
+          "reason": "unresolved_fields",
+          "opcode": "setMyID"
+        },
+        {
+          "index": 59,
+          "reason": "unresolved_fields",
+          "opcode": "transferAccessToTargetXYToDollyDataKey"
+        },
+        {
+          "index": 60,
+          "reason": "unresolved_fields",
+          "opcode": "cancelAccessTransfer"
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/example/example-ext.js",
+      "status": "partial",
+      "blocksFound": 9,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/FurryR/lpp.js",
+      "status": "dynamic_blocks",
+      "blocksFound": 0,
+      "reason": "The blocks property is not a static array.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/FurryR/not.js.js",
+      "status": "partial",
+      "blocksFound": 14,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/extension.js",
+      "status": "partial",
+      "blocksFound": 28,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/kukemc/I18n/index.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/kukemc/WebHook/index.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/block-info.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/lang.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/main.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Nights/stats.js/src/stats.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/Nights/tilemap/tilemap.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/PortFromTurboWarp/stretch.js",
+      "status": "partial",
+      "blocksFound": 8,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setStretch"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretch"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "setStretchX"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "setStretchY"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretchX"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "changeStretchY"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "getX"
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "getY"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "changeStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "changeStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "setStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "setStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "changeStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "changeStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "changeStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "changeStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "getY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "getY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "status": "partial",
+      "blocksFound": 7,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setClipbox"
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "clearClipbox"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "getClipbox"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "setBlend"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "getBlend"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "setAdditiveBlend"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": "getAdditiveBlend"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "clearClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "clearClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "getClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "getClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "setBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "getBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "setAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "setAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "getAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "status": "partial",
+      "blocksFound": 19,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "setAutoReRender"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "allLoadedShaders"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "removeShader"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "reloadShader"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "applyShader"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "detachShader"
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": "setNumber"
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": "setVec2"
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": "setVec3"
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": "setVec4"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "setMatrix"
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": "setArray"
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": "setTexture"
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 18,
+          "reason": "unresolved_fields",
+          "opcode": "allTextures"
+        },
+        {
+          "index": 19,
+          "reason": "unresolved_fields",
+          "opcode": "deleteAllTextures"
+        },
+        {
+          "index": 20,
+          "reason": "unresolved_fields",
+          "opcode": "deleteTexture"
+        },
+        {
+          "index": 21,
+          "reason": "unresolved_fields",
+          "opcode": "createUpdateTexture"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 0,
+          "opcode": "setAutoReRender",
+          "field": "arguments",
+          "expression": {
+            "SHOULD": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHOULD_MENU"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "allLoadedShaders",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.REPORTER"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "removeShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "reloadShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "applyShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            }
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "detachShader",
+          "field": "arguments",
+          "expression": {
+            "SHADER": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "SHADER_MENU"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "opcode": null,
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 7,
+          "opcode": "setNumber",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "setVec2",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 9,
+          "opcode": "setVec3",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE3": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 10,
+          "opcode": "setVec4",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "VALUE1": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE2": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE3": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            },
+            "VALUE4": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.NUMBER"
+              },
+              "defaultValue": 0
+            }
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 11,
+          "opcode": "setMatrix",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "MATRIX": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "[[], []]"
+            }
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 12,
+          "opcode": "setArray",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "ARRAY": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "[]"
+            }
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 13,
+          "opcode": "setTexture",
+          "field": "arguments",
+          "expression": {
+            "UNIFORM": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Uniform"
+            },
+            "TARGET": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "menu": "DRAWABLES_MENU"
+            },
+            "TEXTURE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            }
+          }
+        },
+        {
+          "index": 14,
+          "opcode": null,
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.LABEL"
+          }
+        },
+        {
+          "index": 15,
+          "opcode": "allTextures",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.REPORTER"
+          }
+        },
+        {
+          "index": 16,
+          "opcode": "deleteAllTextures",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 17,
+          "opcode": "deleteTexture",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            }
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "blockType",
+          "expression": {
+            "$expression": "Scratch2.BlockType.COMMAND"
+          }
+        },
+        {
+          "index": 18,
+          "opcode": "createUpdateTexture",
+          "field": "arguments",
+          "expression": {
+            "NAME": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "Scratch Cat"
+            },
+            "TEXTURE": {
+              "type": {
+                "$expression": "Scratch2.ArgumentType.STRING"
+              },
+              "defaultValue": "dc7f14b8438834de154cebaf827b6b4d.svg"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/qxsck/data-analysis.js",
+      "status": "error",
+      "blocksFound": 0,
+      "reason": "Unexpected character '；'. (6:26)",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/six-6/datetime.js",
+      "status": "partial",
+      "blocksFound": 11,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": "date"
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": "time"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "after2000"
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": "diff2000"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "diff"
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": "get"
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "date",
+          "field": "arguments",
+          "expression": {
+            "YEAR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getFullYear(...)"
+              }
+            },
+            "MONTH": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "BinaryExpression"
+              }
+            },
+            "DATE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getDate(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "time",
+          "field": "arguments",
+          "expression": {
+            "YEAR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getFullYear(...)"
+              }
+            },
+            "MONTH": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "BinaryExpression"
+              }
+            },
+            "DATE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getDate(...)"
+              }
+            },
+            "HOUR": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getHours(...)"
+              }
+            },
+            "MINUTE": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getMinutes(...)"
+              }
+            },
+            "SECOND": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "NewExpression.getSeconds(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "after2000",
+          "field": "arguments",
+          "expression": {
+            "DAYS": {
+              "type": "number",
+              "defaultValue": {
+                "$expression": "ThisExpression.diff(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 5,
+          "opcode": "diff2000",
+          "field": "arguments",
+          "expression": {
+            "TIME": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            }
+          }
+        },
+        {
+          "index": 6,
+          "opcode": "diff",
+          "field": "arguments",
+          "expression": {
+            "TIME1": {
+              "type": "string",
+              "defaultValue": "2000-01-23T12:34:56"
+            },
+            "TIME2": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            },
+            "UNIT": {
+              "type": "string",
+              "menu": "DiffUnits",
+              "defaultValue": "days"
+            }
+          }
+        },
+        {
+          "index": 8,
+          "opcode": "get",
+          "field": "arguments",
+          "expression": {
+            "TIME": {
+              "type": "string",
+              "defaultValue": {
+                "$expression": "ThisExpression.now(...)"
+              }
+            },
+            "UNIT": {
+              "type": "string",
+              "menu": "Units",
+              "defaultValue": "date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/bbcode.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/htmlToBBCode.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/index.js",
+      "status": "partial",
+      "blocksFound": 31,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/MarkDown.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/BBcode/prism.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/base64.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/File_Helper/File_Helper.js",
+      "status": "partial",
+      "blocksFound": 29,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/FPS.js",
+      "status": "partial",
+      "blocksFound": 9,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/IndexedDB.js",
+      "status": "partial",
+      "blocksFound": 21,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/Input.js",
+      "status": "partial",
+      "blocksFound": 29,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/Interpreter/Interpreter.js",
+      "status": "partial",
+      "blocksFound": 14,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": "run"
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": "runreturn"
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": "taskOn"
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": "taskOnWithReturn"
+        },
+        {
+          "index": 7,
+          "reason": "unresolved_fields",
+          "opcode": "expressions"
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": "setInfo"
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/Interpreter/math.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/index.js",
+      "status": "partial",
+      "blocksFound": 26,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/MarkDown.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/MarkDown/prism.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/More_Mouse.js",
+      "status": "partial",
+      "blocksFound": 31,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 17,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/extension.js",
+      "status": "partial",
+      "blocksFound": 11,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 0,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/wit_cat/Zip/index.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/x10clkz/Biter.js",
+      "status": "partial",
+      "blocksFound": 0,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 1,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 2,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 3,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 4,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 5,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 6,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 8,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 10,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 11,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 12,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 13,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 14,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 15,
+          "reason": "unresolved_fields",
+          "opcode": null
+        },
+        {
+          "index": 16,
+          "reason": "unresolved_fields",
+          "opcode": null
+        }
+      ],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/YUEN/FeishuExtension/src/constants.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    },
+    {
+      "file": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "status": "partial",
+      "blocksFound": 5,
+      "reason": "Some block entries contain unresolved expressions.",
+      "issues": [
+        {
+          "index": 2,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ThisExpression.cloneReporterBlocks(...)"
+          }
+        },
+        {
+          "index": 9,
+          "reason": "unresolved_spread",
+          "expression": {
+            "$expression": "ThisExpression.cloneReporterBlocks(...)"
+          }
+        }
+      ],
+      "unresolvedFieldDetails": [
+        {
+          "index": 0,
+          "opcode": "switchRequest",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 1,
+          "opcode": "cardCreate",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 2,
+          "opcode": "cardSet",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 3,
+          "opcode": "cardJoin",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        },
+        {
+          "index": 4,
+          "opcode": "cardRemove",
+          "field": "extensionId",
+          "expression": {
+            "$expression": "extensionId"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/YUEN/FeishuExtension/src/index.js",
+      "status": "no_static_getInfo",
+      "blocksFound": 0,
+      "reason": "No statically readable getInfo() return object.",
+      "issues": [],
+      "unresolvedFieldDetails": []
+    }
+  ]
+}

@@ -1,0 +1,2977 @@
+{
+  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "fileCount": 4,
+  "files": [
+    {
+      "file": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "unresolvedTextCount": 2,
+      "unresolvedTextEnglishCount": 2,
+      "localeFiles": [
+        "extensions/Arkos/moreDataTypes/l10n.js"
+      ],
+      "translationCalls": [
+        {
+          "line": 166,
+          "callee": "ThisExpression.fm",
+          "argument": "`defaultValue.${type}Name`",
+          "expression": "this.fm(\n      `defaultValue.${type}Name`\n      // 'defaultValue.dataName',\n    )",
+          "key": null,
+          "zhFound": false,
+          "enFound": false,
+          "reason": "dynamic_translation_key"
+        },
+        {
+          "line": 201,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.newEmptyObjOrArray\"",
+          "expression": "this.fm(\"block.newEmptyObjOrArray\")",
+          "key": "block.newEmptyObjOrArray",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 218,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getCountOfTempData\"",
+          "expression": "this.fm(\"block.getCountOfTempData\")",
+          "key": "block.getCountOfTempData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 225,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getListItemIdxByItem\"",
+          "expression": "this.fm(\"block.getListItemIdxByItem\")",
+          "key": "block.getListItemIdxByItem",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 234,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 243,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.createOrClearObject\"",
+          "expression": "this.fm(\"block.createOrClearObject\")",
+          "key": "block.createOrClearObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 256,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.createOrClearList\"",
+          "expression": "this.fm(\"block.createOrClearList\")",
+          "key": "block.createOrClearList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 269,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.addItemToList\"",
+          "expression": "this.fm(\"block.addItemToList\")",
+          "key": "block.addItemToList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 277,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 286,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setItemOfList\"",
+          "expression": "this.fm(\"block.setItemOfList\")",
+          "key": "block.setItemOfList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 303,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 312,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.delItemOfList\"",
+          "expression": "this.fm(\"block.delItemOfList\")",
+          "key": "block.delItemOfList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 332,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getItemOfList\"",
+          "expression": "this.fm(\"block.getItemOfList\")",
+          "key": "block.getItemOfList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 350,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.lengthOfList\"",
+          "expression": "this.fm(\"block.lengthOfList\")",
+          "key": "block.lengthOfList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 364,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.ifListItemExist\"",
+          "expression": "this.fm(\"block.ifListItemExist\")",
+          "key": "block.ifListItemExist",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 373,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 379,
+          "callee": "ThisExpression.fm",
+          "argument": "\"tag.list\"",
+          "expression": "this.fm(\"tag.list\")",
+          "key": "tag.list",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 405,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.addItemToList2\"",
+          "expression": "this.fm(\"block.addItemToList2\")",
+          "key": "block.addItemToList2",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 417,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 421,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.defaultProps\"",
+          "expression": "this.fm(\"block.defaultProps\")",
+          "key": "block.defaultProps",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 447,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.insertItemIntoList\"",
+          "expression": "this.fm(\"block.insertItemIntoList\")",
+          "key": "block.insertItemIntoList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 459,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 509,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.indexOf\"",
+          "expression": "this.fm(\"block.indexOf\")",
+          "key": "block.indexOf",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 517,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 562,
+          "callee": "ThisExpression.fm",
+          "argument": "\"button.hideMoreList\"",
+          "expression": "this.fm(\"button.hideMoreList\")",
+          "key": "button.hideMoreList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 562,
+          "callee": "ThisExpression.fm",
+          "argument": "\"button.showMoreList\"",
+          "expression": "this.fm(\"button.showMoreList\")",
+          "key": "button.showMoreList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 574,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.addItemToListAndReturn\"",
+          "expression": "this.fm(\"block.addItemToListAndReturn\")",
+          "key": "block.addItemToListAndReturn",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 586,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 594,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.pop\"",
+          "expression": "this.fm(\"block.pop\")",
+          "key": "block.pop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 612,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.mergeList\"",
+          "expression": "this.fm(\"block.mergeList\")",
+          "key": "block.mergeList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 633,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.slice\"",
+          "expression": "this.fm(\"block.slice\")",
+          "key": "block.slice",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 654,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.split\"",
+          "expression": "this.fm(\"block.split\")",
+          "key": "block.split",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 671,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.join\"",
+          "expression": "this.fm(\"block.join\")",
+          "key": "block.join",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 688,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.opList\"",
+          "expression": "this.fm(\"block.opList\")",
+          "key": "block.opList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 705,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.sortListByProp\"",
+          "expression": "this.fm(\"block.sortListByProp\")",
+          "key": "block.sortListByProp",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 728,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getScratchList\"",
+          "expression": "this.fm(\"block.getScratchList\")",
+          "key": "block.getScratchList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 740,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setScratchList\"",
+          "expression": "this.fm(\"block.setScratchList\")",
+          "key": "block.setScratchList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 755,
+          "callee": "ThisExpression.fm",
+          "argument": "\"tag.complexData\"",
+          "expression": "this.fm(\"tag.complexData\")",
+          "key": "tag.complexData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 761,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getNewObject\"",
+          "expression": "this.fm(\"block.getNewObject\")",
+          "key": "block.getNewObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 763,
+          "callee": "ThisExpression.fm",
+          "argument": "n === 0 ? \"block.getNewObject\" : \"block.createObj\"",
+          "expression": "this.fm(n === 0 ? \"block.getNewObject\" : \"block.createObj\")",
+          "key": null,
+          "zhFound": false,
+          "enFound": false,
+          "reason": "dynamic_translation_key"
+        },
+        {
+          "line": 768,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.defaultObj\"",
+          "expression": "this.fm(\"block.defaultObj\")",
+          "key": "block.defaultObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 783,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getNewList\"",
+          "expression": "this.fm(\"block.getNewList\")",
+          "key": "block.getNewList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 785,
+          "callee": "ThisExpression.fm",
+          "argument": "n === 0 ? \"block.getNewList\" : \"block.createList\"",
+          "expression": "this.fm(n === 0 ? \"block.getNewList\" : \"block.createList\")",
+          "key": null,
+          "zhFound": false,
+          "enFound": false,
+          "reason": "dynamic_translation_key"
+        },
+        {
+          "line": 787,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.defaultList\"",
+          "expression": "this.fm(\"block.defaultList\")",
+          "key": "block.defaultList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 795,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.createListWithLength\"",
+          "expression": "this.fm(\"block.createListWithLength\")",
+          "key": "block.createListWithLength",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 838,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setPropOfObject\"",
+          "expression": "this.fm(\"block.setPropOfObject\")",
+          "key": "block.setPropOfObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 847,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.prop\"",
+          "expression": "this.fm(\"defaultValue.prop\")",
+          "key": "defaultValue.prop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 855,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 859,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.defaultProps\"",
+          "expression": "this.fm(\"block.defaultProps\")",
+          "key": "block.defaultProps",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 869,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getPropOfObject\"",
+          "expression": "this.fm(\"block.getPropOfObject\")",
+          "key": "block.getPropOfObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 877,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.prop\"",
+          "expression": "this.fm(\"defaultValue.prop\")",
+          "key": "defaultValue.prop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 881,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.defaultProps\"",
+          "expression": "this.fm(\"block.defaultProps\")",
+          "key": "block.defaultProps",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 890,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.delPropOfObject\"",
+          "expression": "this.fm(\"block.delPropOfObject\")",
+          "key": "block.delPropOfObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 899,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.prop\"",
+          "expression": "this.fm(\"defaultValue.prop\")",
+          "key": "defaultValue.prop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 908,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.sizeOfObject\"",
+          "expression": "this.fm(\"block.sizeOfObject\")",
+          "key": "block.sizeOfObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 921,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.ifObjectPropExist\"",
+          "expression": "this.fm(\"block.ifObjectPropExist\")",
+          "key": "block.ifObjectPropExist",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 930,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.prop\"",
+          "expression": "this.fm(\"defaultValue.prop\")",
+          "key": "defaultValue.prop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 936,
+          "callee": "ThisExpression.fm",
+          "argument": "\"button.hideMoreObj\"",
+          "expression": "this.fm(\"button.hideMoreObj\")",
+          "key": "button.hideMoreObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 936,
+          "callee": "ThisExpression.fm",
+          "argument": "\"button.showMoreObj\"",
+          "expression": "this.fm(\"button.showMoreObj\")",
+          "key": "button.showMoreObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 948,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setPropOfObjectAndReturn\"",
+          "expression": "this.fm(\"block.setPropOfObjectAndReturn\")",
+          "key": "block.setPropOfObjectAndReturn",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 957,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.prop\"",
+          "expression": "this.fm(\"defaultValue.prop\")",
+          "key": "defaultValue.prop",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 965,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.thing\"",
+          "expression": "this.fm(\"defaultValue.thing\")",
+          "key": "defaultValue.thing",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 973,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.createObjFromKeyValue\"",
+          "expression": "this.fm(\"block.createObjFromKeyValue\")",
+          "key": "block.createObjFromKeyValue",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 992,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getAllProperties\"",
+          "expression": "this.fm(\"block.getAllProperties\")",
+          "key": "block.getAllProperties",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1010,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getSubObject\"",
+          "expression": "this.fm(\"block.getSubObject\")",
+          "key": "block.getSubObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1031,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.clear\"",
+          "expression": "this.fm(\"block.clear\")",
+          "key": "block.clear",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1043,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.mergeObject\"",
+          "expression": "this.fm(\"block.mergeObject\")",
+          "key": "block.mergeObject",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1062,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getPropOfObjectByIdx\"",
+          "expression": "this.fm(\"block.getPropOfObjectByIdx\")",
+          "key": "block.getPropOfObjectByIdx",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1084,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setProtoOfObj\"",
+          "expression": "this.fm(\"block.setProtoOfObj\")",
+          "key": "block.setProtoOfObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1099,
+          "callee": "ThisExpression.fm",
+          "argument": "\"tag.config\"",
+          "expression": "this.fm(\"tag.config\")",
+          "key": "tag.config",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1103,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setAutoCreate\"",
+          "expression": "this.fm(\"block.setAutoCreate\")",
+          "key": "block.setAutoCreate",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1115,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setShowPrefix\"",
+          "expression": "this.fm(\"block.setShowPrefix\")",
+          "key": "block.setShowPrefix",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1127,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.allowInputJSON\"",
+          "expression": "this.fm(\"block.allowInputJSON\")",
+          "key": "block.allowInputJSON",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1139,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.indexStart\"",
+          "expression": "this.fm(\"block.indexStart\")",
+          "key": "block.indexStart",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1151,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setCase\"",
+          "expression": "this.fm(\"block.setCase\")",
+          "key": "block.setCase",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1162,
+          "callee": "ThisExpression.fm",
+          "argument": "\"tag.tools\"",
+          "expression": "this.fm(\"tag.tools\")",
+          "key": "tag.tools",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1167,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.typeOf\"",
+          "expression": "this.fm(\"block.typeOf\")",
+          "key": "block.typeOf",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1179,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.checkType\"",
+          "expression": "this.fm(\"block.checkType\")",
+          "key": "block.checkType",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1194,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.strictlyEqual\"",
+          "expression": "this.fm(\"block.strictlyEqual\")",
+          "key": "block.strictlyEqual",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1208,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getObjFromJson\"",
+          "expression": "this.fm(\"block.getObjFromJson\")",
+          "key": "block.getObjFromJson",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1212,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.JSON\"",
+          "expression": "this.fm(\"defaultValue.JSON\")",
+          "key": "defaultValue.JSON",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1220,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.JSONOf\"",
+          "expression": "this.fm(\"block.JSONOf\")",
+          "key": "block.JSONOf",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1232,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.copyFrom\"",
+          "expression": "this.fm(\"block.copyFrom\")",
+          "key": "block.copyFrom",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1243,
+          "callee": "ThisExpression.fm",
+          "argument": "\"tag.tempVar\"",
+          "expression": "this.fm(\"tag.tempVar\")",
+          "key": "tag.tempVar",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1248,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.deleteAllTempData\"",
+          "expression": "this.fm(\"block.deleteAllTempData\")",
+          "key": "block.deleteAllTempData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1255,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.listAllData\"",
+          "expression": "this.fm(\"block.listAllData\")",
+          "key": "block.listAllData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1261,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.delTempData\"",
+          "expression": "this.fm(\"block.delTempData\")",
+          "key": "block.delTempData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1265,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.dataName\"",
+          "expression": "this.fm(\"defaultValue.dataName\")",
+          "key": "defaultValue.dataName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1273,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.ifTempDataExist\"",
+          "expression": "this.fm(\"block.ifTempDataExist\")",
+          "key": "block.ifTempDataExist",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1277,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.dataName\"",
+          "expression": "this.fm(\"defaultValue.dataName\")",
+          "key": "defaultValue.dataName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1287,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.setTempData\"",
+          "expression": "this.fm(\"block.setTempData\")",
+          "key": "block.setTempData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1291,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.dataName\"",
+          "expression": "this.fm(\"defaultValue.dataName\")",
+          "key": "defaultValue.dataName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1308,
+          "callee": "ThisExpression.fm",
+          "argument": "\"block.getTempData\"",
+          "expression": "this.fm(\"block.getTempData\")",
+          "key": "block.getTempData",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1312,
+          "callee": "ThisExpression.fm",
+          "argument": "\"defaultValue.dataName\"",
+          "expression": "this.fm(\"defaultValue.dataName\")",
+          "key": "defaultValue.dataName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1327,
+          "callee": "ThisExpression.fm",
+          "argument": "`tooltip.${block.opcode}`",
+          "expression": "this.fm(`tooltip.${block.opcode}`)",
+          "key": null,
+          "zhFound": false,
+          "enFound": false,
+          "reason": "dynamic_translation_key"
+        },
+        {
+          "line": 1343,
+          "callee": "ThisExpression.fm",
+          "argument": "\"extensionName\"",
+          "expression": "this.fm(\"extensionName\")",
+          "key": "extensionName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1344,
+          "callee": "ThisExpression.fm",
+          "argument": "\"docsURI\"",
+          "expression": "this.fm(\"docsURI\")",
+          "key": "docsURI",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1358,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.on\"",
+          "expression": "this.fm(\"menu.on\")",
+          "key": "menu.on",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1362,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.off\"",
+          "expression": "this.fm(\"menu.off\")",
+          "key": "menu.off",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1369,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.list\"",
+          "expression": "this.fm(\"menu.list\")",
+          "key": "menu.list",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1373,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.object\"",
+          "expression": "this.fm(\"menu.object\")",
+          "key": "menu.object",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1377,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.listOrObj\"",
+          "expression": "this.fm(\"menu.listOrObj\")",
+          "key": "menu.listOrObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1383,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.addTo\"",
+          "expression": "this.fm(\"menu.addTo\")",
+          "key": "menu.addTo",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1387,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.removeFrom\"",
+          "expression": "this.fm(\"menu.removeFrom\")",
+          "key": "menu.removeFrom",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1391,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.ifNotExistsaddTo\"",
+          "expression": "this.fm(\"menu.ifNotExistsaddTo\")",
+          "key": "menu.ifNotExistsaddTo",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1422,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.shuffle\"",
+          "expression": "this.fm(\"menu.shuffle\")",
+          "key": "menu.shuffle",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1426,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.reverse\"",
+          "expression": "this.fm(\"menu.reverse\")",
+          "key": "menu.reverse",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1430,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.ascSort\"",
+          "expression": "this.fm(\"menu.ascSort\")",
+          "key": "menu.ascSort",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1434,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.descSort\"",
+          "expression": "this.fm(\"menu.descSort\")",
+          "key": "menu.descSort",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1438,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.removeDuplicates\"",
+          "expression": "this.fm(\"menu.removeDuplicates\")",
+          "key": "menu.removeDuplicates",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1444,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.merge\"",
+          "expression": "this.fm(\"menu.merge\")",
+          "key": "menu.merge",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1448,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.union\"",
+          "expression": "this.fm(\"menu.union\")",
+          "key": "menu.union",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1452,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.intersection\"",
+          "expression": "this.fm(\"menu.intersection\")",
+          "key": "menu.intersection",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1456,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.difference\"",
+          "expression": "this.fm(\"menu.difference\")",
+          "key": "menu.difference",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1462,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.ascSort\"",
+          "expression": "this.fm(\"menu.ascSort\")",
+          "key": "menu.ascSort",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1466,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.descSort\"",
+          "expression": "this.fm(\"menu.descSort\")",
+          "key": "menu.descSort",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1472,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.subObj\"",
+          "expression": "this.fm(\"menu.subObj\")",
+          "key": "menu.subObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1476,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.values\"",
+          "expression": "this.fm(\"menu.values\")",
+          "key": "menu.values",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1482,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.keys\"",
+          "expression": "this.fm(\"menu.keys\")",
+          "key": "menu.keys",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1486,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.values\"",
+          "expression": "this.fm(\"menu.values\")",
+          "key": "menu.values",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1490,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.entries\"",
+          "expression": "this.fm(\"menu.entries\")",
+          "key": "menu.entries",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1496,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.shallow\"",
+          "expression": "this.fm(\"menu.shallow\")",
+          "key": "menu.shallow",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1500,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.deep\"",
+          "expression": "this.fm(\"menu.deep\")",
+          "key": "menu.deep",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1506,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.emptyList\"",
+          "expression": "this.fm(\"menu.emptyList\")",
+          "key": "menu.emptyList",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1510,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.emptyObj\"",
+          "expression": "this.fm(\"menu.emptyObj\")",
+          "key": "menu.emptyObj",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1614,
+          "callee": "ThisExpression.fm",
+          "argument": "\"config.tip\"",
+          "expression": "this.fm(\"config.tip\")",
+          "key": "config.tip",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1667,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.set\"",
+          "expression": "this.fm(\"menu.op.set\")",
+          "key": "menu.op.set",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1671,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.add\"",
+          "expression": "this.fm(\"menu.op.add\")",
+          "key": "menu.op.add",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1701,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.set\"",
+          "expression": "this.fm(\"menu.op.set\")",
+          "key": "menu.op.set",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1705,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.add\"",
+          "expression": "this.fm(\"menu.op.add\")",
+          "key": "menu.op.add",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1709,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.insert\"",
+          "expression": "this.fm(\"menu.op.insert\")",
+          "key": "menu.op.insert",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1723,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.set\"",
+          "expression": "this.fm(\"menu.op.set\")",
+          "key": "menu.op.set",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1727,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.op.add\"",
+          "expression": "this.fm(\"menu.op.add\")",
+          "key": "menu.op.add",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1757,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.value\"",
+          "expression": "this.fm(\"menu.value\")",
+          "key": "menu.value",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1787,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.value\"",
+          "expression": "this.fm(\"menu.value\")",
+          "key": "menu.value",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1807,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.value\"",
+          "expression": "this.fm(\"menu.value\")",
+          "key": "menu.value",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1827,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.conInfo.name\"",
+          "expression": "this.fm(\"menu.conInfo.name\")",
+          "key": "menu.conInfo.name",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 1831,
+          "callee": "ThisExpression.fm",
+          "argument": "\"menu.conInfo.value\"",
+          "expression": "this.fm(\"menu.conInfo.value\")",
+          "key": "menu.conInfo.value",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 2660,
+          "callee": "ThisExpression.fm",
+          "argument": "\"warn.cyclicProto\"",
+          "expression": "this.fm(\"warn.cyclicProto\")",
+          "key": "warn.cyclicProto",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 2729,
+          "callee": "ThisExpression.fm",
+          "argument": "\"extensionName\"",
+          "expression": "this.fm(\"extensionName\")",
+          "key": "extensionName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        },
+        {
+          "line": 2731,
+          "callee": "ThisExpression.fm",
+          "argument": "\"extensionName\"",
+          "expression": "this.fm(\"extensionName\")",
+          "key": "extensionName",
+          "zhFound": true,
+          "enFound": true,
+          "reason": "translation_found_but_not_resolved"
+        }
+      ],
+      "unresolved": [
+        {
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        },
+        {
+          "opcode": null,
+          "field": "text_en",
+          "expression": {
+            "$expression": "ConditionalExpression"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/Arkos/moreSensing.js",
+      "unresolvedTextCount": 20,
+      "unresolvedTextEnglishCount": 20,
+      "localeFiles": [],
+      "translationCalls": [
+        {
+          "line": 482,
+          "callee": "ThisExpression.fm",
+          "argument": "'extensionName'",
+          "expression": "this.fm('extensionName')",
+          "key": "extensionName",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 483,
+          "callee": "ThisExpression.fm",
+          "argument": "'docsURI'",
+          "expression": "this.fm('docsURI')",
+          "key": "docsURI",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 493,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.getNetWorkTimeInfo'",
+          "expression": "this.fm('tooltip.getNetWorkTimeInfo')",
+          "key": "tooltip.getNetWorkTimeInfo",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 494,
+          "callee": "ThisExpression.fm",
+          "argument": "'getNetWorkTimeInfo'",
+          "expression": "this.fm('getNetWorkTimeInfo')",
+          "key": "getNetWorkTimeInfo",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 506,
+          "callee": "ThisExpression.fm",
+          "argument": "'convertTime'",
+          "expression": "this.fm('convertTime')",
+          "key": "convertTime",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 529,
+          "callee": "ThisExpression.fm",
+          "argument": "'isLogin'",
+          "expression": "this.fm('isLogin')",
+          "key": "isLogin",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 535,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.getFile'",
+          "expression": "this.fm('tooltip.getFile')",
+          "key": "tooltip.getFile",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 536,
+          "callee": "ThisExpression.fm",
+          "argument": "'getFile'",
+          "expression": "this.fm('getFile')",
+          "key": "getFile",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 548,
+          "callee": "ThisExpression.fm",
+          "argument": "'getComment'",
+          "expression": "this.fm('getComment')",
+          "key": "getComment",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 549,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.getComment'",
+          "expression": "this.fm('tooltip.getComment')",
+          "key": "tooltip.getComment",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 562,
+          "callee": "ThisExpression.fm",
+          "argument": "'cloneCount'",
+          "expression": "this.fm('cloneCount')",
+          "key": "cloneCount",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 568,
+          "callee": "ThisExpression.fm",
+          "argument": "'getStageInfo'",
+          "expression": "this.fm('getStageInfo')",
+          "key": "getStageInfo",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 581,
+          "callee": "ThisExpression.fm",
+          "argument": "'spritesList'",
+          "expression": "this.fm('spritesList')",
+          "key": "spritesList",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 582,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.spritesList'",
+          "expression": "this.fm('tooltip.spritesList')",
+          "key": "tooltip.spritesList",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 590,
+          "callee": "ThisExpression.fm",
+          "argument": "'targetTouchingTarget'",
+          "expression": "this.fm('targetTouchingTarget')",
+          "key": "targetTouchingTarget",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 591,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.targetTouchingTarget'",
+          "expression": "this.fm('tooltip.targetTouchingTarget')",
+          "key": "tooltip.targetTouchingTarget",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 608,
+          "callee": "ThisExpression.fm",
+          "argument": "'touchingPoint'",
+          "expression": "this.fm('touchingPoint')",
+          "key": "touchingPoint",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 609,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.touchingPoint'",
+          "expression": "this.fm('tooltip.touchingPoint')",
+          "key": "tooltip.touchingPoint",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 609,
+          "callee": "ThisExpression.fm",
+          "argument": "'tagNote'",
+          "expression": "this.fm('tagNote')",
+          "key": "tagNote",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 628,
+          "callee": "ThisExpression.fm",
+          "argument": "'touchingRect'",
+          "expression": "this.fm('touchingRect')",
+          "key": "touchingRect",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 629,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.touchingRect'",
+          "expression": "this.fm('tooltip.touchingRect')",
+          "key": "tooltip.touchingRect",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 629,
+          "callee": "ThisExpression.fm",
+          "argument": "'tagNote'",
+          "expression": "this.fm('tagNote')",
+          "key": "tagNote",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 656,
+          "callee": "ThisExpression.fm",
+          "argument": "'pointInRect'",
+          "expression": "this.fm('pointInRect')",
+          "key": "pointInRect",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 657,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.pointInRect'",
+          "expression": "this.fm('tooltip.pointInRect')",
+          "key": "tooltip.pointInRect",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 688,
+          "callee": "ThisExpression.fm",
+          "argument": "'touchingLine'",
+          "expression": "this.fm('touchingLine')",
+          "key": "touchingLine",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 689,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.touchingLine'",
+          "expression": "this.fm('tooltip.touchingLine')",
+          "key": "tooltip.touchingLine",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 689,
+          "callee": "ThisExpression.fm",
+          "argument": "'tagNote'",
+          "expression": "this.fm('tagNote')",
+          "key": "tagNote",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 720,
+          "callee": "ThisExpression.fm",
+          "argument": "'touchingRay'",
+          "expression": "this.fm('touchingRay')",
+          "key": "touchingRay",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 721,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.touchingRay'",
+          "expression": "this.fm('tooltip.touchingRay')",
+          "key": "tooltip.touchingRay",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 721,
+          "callee": "ThisExpression.fm",
+          "argument": "'tagNote'",
+          "expression": "this.fm('tagNote')",
+          "key": "tagNote",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 754,
+          "callee": "ThisExpression.fm",
+          "argument": "'amIOnTheTop'",
+          "expression": "this.fm('amIOnTheTop')",
+          "key": "amIOnTheTop",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 755,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.amIOnTheTop'",
+          "expression": "this.fm('tooltip.amIOnTheTop')",
+          "key": "tooltip.amIOnTheTop",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 770,
+          "callee": "ThisExpression.fm",
+          "argument": "'amIOnTheTopAtMouse'",
+          "expression": "this.fm('amIOnTheTopAtMouse')",
+          "key": "amIOnTheTopAtMouse",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 771,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.amIOnTheTopAtMouse'",
+          "expression": "this.fm('tooltip.amIOnTheTopAtMouse')",
+          "key": "tooltip.amIOnTheTopAtMouse",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 777,
+          "callee": "ThisExpression.fm",
+          "argument": "'amIclicked'",
+          "expression": "this.fm('amIclicked')",
+          "key": "amIclicked",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 778,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.amIclicked'",
+          "expression": "this.fm('tooltip.amIclicked')",
+          "key": "tooltip.amIclicked",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 784,
+          "callee": "ThisExpression.fm",
+          "argument": "'whenKeyDown'",
+          "expression": "this.fm('whenKeyDown')",
+          "key": "whenKeyDown",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 785,
+          "callee": "ThisExpression.fm",
+          "argument": "'tooltip.whenKeyDown'",
+          "expression": "this.fm('tooltip.whenKeyDown')",
+          "key": "tooltip.whenKeyDown",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 802,
+          "callee": "ThisExpression.fm",
+          "argument": "'colorToHex'",
+          "expression": "this.fm('colorToHex')",
+          "key": "colorToHex",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 814,
+          "callee": "ThisExpression.fm",
+          "argument": "'colorAt'",
+          "expression": "this.fm('colorAt')",
+          "key": "colorAt",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 848,
+          "callee": "ThisExpression.fm",
+          "argument": "'milliseconds'",
+          "expression": "this.fm('milliseconds')",
+          "key": "milliseconds",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 849,
+          "callee": "ThisExpression.fm",
+          "argument": "'seconds'",
+          "expression": "this.fm('seconds')",
+          "key": "seconds",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 850,
+          "callee": "ThisExpression.fm",
+          "argument": "'minutes'",
+          "expression": "this.fm('minutes')",
+          "key": "minutes",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 851,
+          "callee": "ThisExpression.fm",
+          "argument": "'hours'",
+          "expression": "this.fm('hours')",
+          "key": "hours",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 852,
+          "callee": "ThisExpression.fm",
+          "argument": "'days'",
+          "expression": "this.fm('days')",
+          "key": "days",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 853,
+          "callee": "ThisExpression.fm",
+          "argument": "'months'",
+          "expression": "this.fm('months')",
+          "key": "months",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 854,
+          "callee": "ThisExpression.fm",
+          "argument": "'years'",
+          "expression": "this.fm('years')",
+          "key": "years",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 860,
+          "callee": "ThisExpression.fm",
+          "argument": "'milliseconds'",
+          "expression": "this.fm('milliseconds')",
+          "key": "milliseconds",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 861,
+          "callee": "ThisExpression.fm",
+          "argument": "'seconds'",
+          "expression": "this.fm('seconds')",
+          "key": "seconds",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 862,
+          "callee": "ThisExpression.fm",
+          "argument": "'minutes'",
+          "expression": "this.fm('minutes')",
+          "key": "minutes",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 863,
+          "callee": "ThisExpression.fm",
+          "argument": "'hours'",
+          "expression": "this.fm('hours')",
+          "key": "hours",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 864,
+          "callee": "ThisExpression.fm",
+          "argument": "'days'",
+          "expression": "this.fm('days')",
+          "key": "days",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 865,
+          "callee": "ThisExpression.fm",
+          "argument": "'months'",
+          "expression": "this.fm('months')",
+          "key": "months",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 866,
+          "callee": "ThisExpression.fm",
+          "argument": "'years'",
+          "expression": "this.fm('years')",
+          "key": "years",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 873,
+          "callee": "ThisExpression.fm",
+          "argument": "'networkTime.tmstp'",
+          "expression": "this.fm('networkTime.tmstp')",
+          "key": "networkTime.tmstp",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 877,
+          "callee": "ThisExpression.fm",
+          "argument": "'networkTime.2000'",
+          "expression": "this.fm('networkTime.2000')",
+          "key": "networkTime.2000",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 881,
+          "callee": "ThisExpression.fm",
+          "argument": "'networkTime.delta'",
+          "expression": "this.fm('networkTime.delta')",
+          "key": "networkTime.delta",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 885,
+          "callee": "ThisExpression.fm",
+          "argument": "'networkTime.UTC'",
+          "expression": "this.fm('networkTime.UTC')",
+          "key": "networkTime.UTC",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 891,
+          "callee": "ThisExpression.fm",
+          "argument": "'keyDown'",
+          "expression": "this.fm('keyDown')",
+          "key": "keyDown",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 895,
+          "callee": "ThisExpression.fm",
+          "argument": "'keyUp'",
+          "expression": "this.fm('keyUp')",
+          "key": "keyUp",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 899,
+          "callee": "ThisExpression.fm",
+          "argument": "'keyPressed'",
+          "expression": "this.fm('keyPressed')",
+          "key": "keyPressed",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 930,
+          "callee": "ThisExpression.fm",
+          "argument": "'width'",
+          "expression": "this.fm('width')",
+          "key": "width",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 934,
+          "callee": "ThisExpression.fm",
+          "argument": "'height'",
+          "expression": "this.fm('height')",
+          "key": "height",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 948,
+          "callee": "ThisExpression.fm",
+          "argument": "'noFile'",
+          "expression": "this.fm('noFile')",
+          "key": "noFile",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 992,
+          "callee": "ThisExpression.fm",
+          "argument": "'folderPrefix'",
+          "expression": "this.fm('folderPrefix')",
+          "key": "folderPrefix",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 1038,
+          "callee": "ThisExpression.fm",
+          "argument": "'me'",
+          "expression": "this.fm('me')",
+          "key": "me",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 1047,
+          "callee": "ThisExpression.fm",
+          "argument": "'mouse'",
+          "expression": "this.fm('mouse')",
+          "key": "mouse",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 1082,
+          "callee": "ThisExpression.fm",
+          "argument": "c.text",
+          "expression": "this.fm(c.text)",
+          "key": null,
+          "zhFound": false,
+          "enFound": false,
+          "reason": "dynamic_translation_key"
+        }
+      ],
+      "unresolved": [
+        {
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getNetWorkTimeInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "convertTime",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "convertTime",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "isLogin",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "isLogin",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getFile",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getFile",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getComment",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getComment",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "cloneCount",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "cloneCount",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getStageInfo",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getStageInfo",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "spritesList",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "spritesList",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "targetTouchingTarget",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "targetTouchingTarget",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingPoint",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingPoint",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "pointInRect",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "pointInRect",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingLine",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingLine",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingRay",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "touchingRay",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIOnTheTop",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIOnTheTop",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIOnTheTopAtMouse",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIclicked",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "amIclicked",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "whenKeyDown",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "whenKeyDown",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "colorToHex",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "colorToHex",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "colorAt",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "colorAt",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/PortFromTurboWarp/stretch.js",
+      "unresolvedTextCount": 8,
+      "unresolvedTextEnglishCount": 8,
+      "localeFiles": [],
+      "translationCalls": [
+        {
+          "line": 105,
+          "callee": "ThisExpression.fm",
+          "argument": "'name'",
+          "expression": "this.fm('name')",
+          "key": "name",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 111,
+          "callee": "ThisExpression.fm",
+          "argument": "'credit'",
+          "expression": "this.fm('credit')",
+          "key": "credit",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 115,
+          "callee": "ThisExpression.fm",
+          "argument": "'setStretch'",
+          "expression": "this.fm('setStretch')",
+          "key": "setStretch",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 131,
+          "callee": "ThisExpression.fm",
+          "argument": "'changeStretch'",
+          "expression": "this.fm('changeStretch')",
+          "key": "changeStretch",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 150,
+          "callee": "ThisExpression.fm",
+          "argument": "'setStretchX'",
+          "expression": "this.fm('setStretchX')",
+          "key": "setStretchX",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 162,
+          "callee": "ThisExpression.fm",
+          "argument": "'setStretchY'",
+          "expression": "this.fm('setStretchY')",
+          "key": "setStretchY",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 174,
+          "callee": "ThisExpression.fm",
+          "argument": "'changeStretchX'",
+          "expression": "this.fm('changeStretchX')",
+          "key": "changeStretchX",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 186,
+          "callee": "ThisExpression.fm",
+          "argument": "'changeStretchY'",
+          "expression": "this.fm('changeStretchY')",
+          "key": "changeStretchY",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 201,
+          "callee": "ThisExpression.fm",
+          "argument": "'getX'",
+          "expression": "this.fm('getX')",
+          "key": "getX",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 208,
+          "callee": "ThisExpression.fm",
+          "argument": "'getY'",
+          "expression": "this.fm('getY')",
+          "key": "getY",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        }
+      ],
+      "unresolved": [
+        {
+          "opcode": "setStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretch",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretch",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretchX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretchX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretchY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "changeStretchY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getX",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getX",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getY",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getY",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    },
+    {
+      "file": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "unresolvedTextCount": 7,
+      "unresolvedTextEnglishCount": 7,
+      "localeFiles": [],
+      "translationCalls": [
+        {
+          "line": 353,
+          "callee": "ThisExpression.fm",
+          "argument": "'name'",
+          "expression": "this.fm('name')",
+          "key": "name",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 359,
+          "callee": "ThisExpression.fm",
+          "argument": "'credit'",
+          "expression": "this.fm('credit')",
+          "key": "credit",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 363,
+          "callee": "ThisExpression.fm",
+          "argument": "'setClipbox'",
+          "expression": "this.fm('setClipbox')",
+          "key": "setClipbox",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 388,
+          "callee": "ThisExpression.fm",
+          "argument": "'clearClipbox'",
+          "expression": "this.fm('clearClipbox')",
+          "key": "clearClipbox",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 395,
+          "callee": "ThisExpression.fm",
+          "argument": "'getClipbox'",
+          "expression": "this.fm('getClipbox')",
+          "key": "getClipbox",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 410,
+          "callee": "ThisExpression.fm",
+          "argument": "'setBlend'",
+          "expression": "this.fm('setBlend')",
+          "key": "setBlend",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 424,
+          "callee": "ThisExpression.fm",
+          "argument": "'getBlend'",
+          "expression": "this.fm('getBlend')",
+          "key": "getBlend",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 433,
+          "callee": "ThisExpression.fm",
+          "argument": "'setAdditiveBlend'",
+          "expression": "this.fm('setAdditiveBlend')",
+          "key": "setAdditiveBlend",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 448,
+          "callee": "ThisExpression.fm",
+          "argument": "'getAdditiveBlend'",
+          "expression": "this.fm('getAdditiveBlend')",
+          "key": "getAdditiveBlend",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 459,
+          "callee": "ThisExpression.fm",
+          "argument": "'on'",
+          "expression": "this.fm('on')",
+          "key": "on",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 460,
+          "callee": "ThisExpression.fm",
+          "argument": "'off'",
+          "expression": "this.fm('off')",
+          "key": "off",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 466,
+          "callee": "ThisExpression.fm",
+          "argument": "'default'",
+          "expression": "this.fm('default')",
+          "key": "default",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 467,
+          "callee": "ThisExpression.fm",
+          "argument": "'additive'",
+          "expression": "this.fm('additive')",
+          "key": "additive",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 468,
+          "callee": "ThisExpression.fm",
+          "argument": "'subtract'",
+          "expression": "this.fm('subtract')",
+          "key": "subtract",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 469,
+          "callee": "ThisExpression.fm",
+          "argument": "'multiply'",
+          "expression": "this.fm('multiply')",
+          "key": "multiply",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 470,
+          "callee": "ThisExpression.fm",
+          "argument": "'invert'",
+          "expression": "this.fm('invert')",
+          "key": "invert",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 476,
+          "callee": "ThisExpression.fm",
+          "argument": "'width'",
+          "expression": "this.fm('width')",
+          "key": "width",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 477,
+          "callee": "ThisExpression.fm",
+          "argument": "'height'",
+          "expression": "this.fm('height')",
+          "key": "height",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 478,
+          "callee": "ThisExpression.fm",
+          "argument": "'min x'",
+          "expression": "this.fm('min x')",
+          "key": "min x",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 479,
+          "callee": "ThisExpression.fm",
+          "argument": "'min y'",
+          "expression": "this.fm('min y')",
+          "key": "min y",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 480,
+          "callee": "ThisExpression.fm",
+          "argument": "'max x'",
+          "expression": "this.fm('max x')",
+          "key": "max x",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        },
+        {
+          "line": 481,
+          "callee": "ThisExpression.fm",
+          "argument": "'max y'",
+          "expression": "this.fm('max y')",
+          "key": "max y",
+          "zhFound": false,
+          "enFound": false,
+          "reason": "translation_key_not_found"
+        }
+      ],
+      "unresolved": [
+        {
+          "opcode": "setClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "clearClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "clearClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getClipbox",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getClipbox",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "setAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getAdditiveBlend",
+          "field": "text",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        },
+        {
+          "opcode": "getAdditiveBlend",
+          "field": "text_en",
+          "expression": {
+            "$expression": "ThisExpression.fm(...)"
+          }
+        }
+      ]
+    }
+  ],
+  "note": "Static source call sites only; arguments are not executed. Use to implement source-specific translation rules."
+}

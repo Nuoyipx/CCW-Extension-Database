@@ -1,0 +1,3413 @@
+{
+  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "blockCount": 1009,
+  "usableBlockCount": 860,
+  "excludedFromUsable": 149,
+  "fieldStats": {
+    "extensionId": {
+      "resolved": 951,
+      "absent": 0,
+      "expression": 58
+    },
+    "opcode": {
+      "resolved": 960,
+      "absent": 49,
+      "expression": 0
+    },
+    "text": {
+      "resolved": 967,
+      "absent": 0,
+      "expression": 42
+    },
+    "text_en": {
+      "resolved": 967,
+      "absent": 0,
+      "expression": 42
+    },
+    "blockType": {
+      "resolved": 980,
+      "absent": 1,
+      "expression": 28
+    },
+    "arguments": {
+      "resolved": 963,
+      "absent": 0,
+      "expression": 46
+    },
+    "tooltip": {
+      "resolved": 1,
+      "absent": 994,
+      "expression": 14
+    },
+    "tooltip_en": {
+      "resolved": 1,
+      "absent": 994,
+      "expression": 14
+    }
+  },
+  "unresolvedByFile": {
+    "extensions/Arkos/advancedControls.js": {
+      "records": 10,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Arkos/Archivecode.js": {
+      "records": 22,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Arkos/Archivecode新版.js": {
+      "records": 22,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Arkos/Archivecode旧版.js": {
+      "records": 21,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Arkos/arkosExtension.js": {
+      "records": 69,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Arkos/moreDataTypes/moreDataTypes.js": {
+      "records": 59,
+      "unresolvedText": 2,
+      "unresolvedEnglishText": 2,
+      "unresolvedCoreFields": 28
+    },
+    "extensions/Arkos/moreSensing.js": {
+      "records": 20,
+      "unresolvedText": 20,
+      "unresolvedEnglishText": 20,
+      "unresolvedCoreFields": 20
+    },
+    "extensions/Arkos/test.js": {
+      "records": 2,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/dannydev/scCOM.js": {
+      "records": 26,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/DilemmaGX/3DMath/Three.js": {
+      "records": 62,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/DilemmaGX/Animator/Animator.js": {
+      "records": 6,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/DilemmaGX/rxfs/rxFS.js": {
+      "records": 12,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/DollyPro/dollytest.js": {
+      "records": 52,
+      "unresolvedText": 2,
+      "unresolvedEnglishText": 2,
+      "unresolvedCoreFields": 2
+    },
+    "extensions/example/example-ext.js": {
+      "records": 10,
+      "unresolvedText": 1,
+      "unresolvedEnglishText": 1,
+      "unresolvedCoreFields": 1
+    },
+    "extensions/Fath/CocreaFetch.js": {
+      "records": 1,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Fath/comment blocks.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Fath/Turbowarp/BigInt.js": {
+      "records": 21,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/Fath/Turbowarp/comment blocks.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/FurryR/not.js.js": {
+      "records": 14,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/kukemc/I18n/extension.js": {
+      "records": 62,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 41
+    },
+    "extensions/kukemc/WebHook/extension.js": {
+      "records": 16,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 8
+    },
+    "extensions/PortFromTurboWarp/NOname-awa/Morecomparison.js": {
+      "records": 21,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/PortFromTurboWarp/stretch.js": {
+      "records": 8,
+      "unresolvedText": 8,
+      "unresolvedEnglishText": 8,
+      "unresolvedCoreFields": 8
+    },
+    "extensions/PortFromTurboWarp/Vadik1/clippingblending.js": {
+      "records": 7,
+      "unresolvedText": 7,
+      "unresolvedEnglishText": 7,
+      "unresolvedCoreFields": 7
+    },
+    "extensions/Project/Project.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/QuakeStudio/BetterQuake/BetterQuake.js": {
+      "records": 21,
+      "unresolvedText": 2,
+      "unresolvedEnglishText": 2,
+      "unresolvedCoreFields": 37
+    },
+    "extensions/qxsck/easy-struct.js": {
+      "records": 22,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/qxsck/matrix.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/qxsck/str-mani.js": {
+      "records": 48,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/qxsck/var-and-list.js": {
+      "records": 42,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/SimonShiki/scopeVar.js": {
+      "records": 9,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/sipc.ink/CloudMusic/CloudMusic.js": {
+      "records": 19,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/sipc.ink/Consoles/Consoles.js": {
+      "records": 12,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/sipc.ink/Recording/Recording.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/six-6/datetime.js": {
+      "records": 11,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 6
+    },
+    "extensions/six-6/regexp.js": {
+      "records": 20,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/BBcode/index.js": {
+      "records": 31,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/File_Helper/File_Helper.js": {
+      "records": 29,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/FPS.js": {
+      "records": 9,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/GamePad.js": {
+      "records": 6,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/IndexedDB.js": {
+      "records": 21,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/Input.js": {
+      "records": 29,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/Interpreter/Interpreter.js": {
+      "records": 14,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/MarkDown/index.js": {
+      "records": 26,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/More_Mouse.js": {
+      "records": 31,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/Sensory_Control.js": {
+      "records": 3,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/wit_cat/Zip/extension.js": {
+      "records": 22,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 11
+    },
+    "extensions/wtkzq/complex/Complex.js": {
+      "records": 11,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 0
+    },
+    "extensions/YUEN/FeishuExtension/src/extension.js": {
+      "records": 5,
+      "unresolvedText": 0,
+      "unresolvedEnglishText": 0,
+      "unresolvedCoreFields": 5
+    }
+  },
+  "recoveredByFile": {
+    "extensions/QuakeStudio/BetterQuake/BetterQuake.js": 2,
+    "extensions/DollyPro/dollytest.js": 2,
+    "extensions/example/example-ext.js": 1,
+    "extensions/kukemc/I18n/extension.js": 34,
+    "extensions/kukemc/WebHook/extension.js": 8,
+    "extensions/wit_cat/Zip/extension.js": 11
+  },
+  "unresolvedExamples": [
+    {
+      "index": 159,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "setPropOfObject",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "PROP": {
+          "type": "STRING",
+          "defaultValue": "属性"
+        },
+        "OP": {
+          "type": "STRING",
+          "menu": "ITEM_SET_OPTION"
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 160,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "getPropOfObject",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "PROP": {
+          "type": "STRING",
+          "defaultValue": "属性"
+        }
+      }
+    },
+    {
+      "index": 161,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "delPropOfObject",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "PROP": {
+          "type": "STRING",
+          "defaultValue": "属性"
+        }
+      }
+    },
+    {
+      "index": 162,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "sizeOfObject",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 163,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "ifObjectPropExist",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "PROP": {
+          "type": "STRING",
+          "defaultValue": "属性"
+        }
+      }
+    },
+    {
+      "index": 164,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 164,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 169,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "clear",
+      "expression": {
+        "NAME": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 170,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "mergeObject",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "OBJ": {
+          "type": "STRING",
+          "defaultValue": "{\"key\":\"value\"}"
+        }
+      }
+    },
+    {
+      "index": 171,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "getPropOfObjectByIdx",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "IDX": {
+          "type": "NUMBER",
+          "defaultValue": 1
+        },
+        "OPTION": {
+          "type": "STRING",
+          "menu": "OBJECT_GET_OPTION"
+        }
+      }
+    },
+    {
+      "index": 172,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "setProtoOfObj",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "`${...}2`"
+          }
+        }
+      }
+    },
+    {
+      "index": 173,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "addItemToList2",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "OP": {
+          "type": "STRING",
+          "menu": "LIST_ADD_OR_REMOVE"
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 174,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "insertItemIntoList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "IDX": {
+          "type": "NUMBER",
+          "defaultValue": 1
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 175,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "indexOf",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        },
+        "N": {
+          "type": "NUMBER",
+          "defaultValue": -1
+        }
+      }
+    },
+    {
+      "index": 176,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 176,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 183,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "opList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "OP": {
+          "type": "STRING",
+          "menu": "LIST_OP"
+        }
+      }
+    },
+    {
+      "index": 187,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "setAutoCreate",
+      "expression": {
+        "ON": {
+          "type": "STRING",
+          "menu": "ON_OFF",
+          "defaultValue": {
+            "$expression": "ConditionalExpression"
+          }
+        }
+      }
+    },
+    {
+      "index": 189,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "allowInputJSON",
+      "expression": {
+        "ON": {
+          "type": "STRING",
+          "menu": "ON_OFF",
+          "defaultValue": {
+            "$expression": "ConditionalExpression"
+          }
+        }
+      }
+    },
+    {
+      "index": 190,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "indexStart",
+      "expression": {
+        "IDX": {
+          "type": "STRING",
+          "menu": "1OR0",
+          "defaultValue": {
+            "$expression": "ConditionalExpression"
+          }
+        }
+      }
+    },
+    {
+      "index": 191,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "setCase",
+      "expression": {
+        "ON": {
+          "type": "STRING",
+          "menu": "ON_OFF",
+          "defaultValue": {
+            "$expression": "ConditionalExpression"
+          }
+        }
+      }
+    },
+    {
+      "index": 194,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "getListItemIdxByItem",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 195,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "createOrClearObject",
+      "expression": {
+        "NAME": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 196,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "createOrClearList",
+      "expression": {
+        "NAME": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 197,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "addItemToList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 198,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "setItemOfList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "IDX": {
+          "type": "NUMBER",
+          "defaultValue": 1
+        },
+        "OP": {
+          "type": "STRING",
+          "menu": "LIST_SET_OPTION"
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 199,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "delItemOfList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "IDX": {
+          "type": "NUMBER",
+          "defaultValue": 1
+        }
+      }
+    },
+    {
+      "index": 200,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "getItemOfList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "IDX": {
+          "type": "NUMBER",
+          "defaultValue": 1
+        }
+      }
+    },
+    {
+      "index": 201,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "lengthOfList",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 202,
+      "field": "arguments",
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "opcode": "ifListItemExist",
+      "expression": {
+        "NAME_OR_OBJ": {
+          "type": "STRING",
+          "defaultValue": {
+            "$expression": "ThisExpression.__dataNameOrObjMsg(...)"
+          }
+        },
+        "VALUE": {
+          "type": "STRING",
+          "defaultValue": "东西"
+        }
+      }
+    },
+    {
+      "index": 203,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getNetWorkTimeInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 203,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getNetWorkTimeInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 203,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getNetWorkTimeInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 203,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getNetWorkTimeInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 204,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "convertTime",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 204,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "convertTime",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 205,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "isLogin",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 205,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "isLogin",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 206,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getFile",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 206,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getFile",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 206,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getFile",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 206,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getFile",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 207,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getComment",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 207,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getComment",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 207,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getComment",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 207,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getComment",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 208,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "cloneCount",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 208,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "cloneCount",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 209,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getStageInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 209,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "getStageInfo",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 210,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "spritesList",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 210,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "spritesList",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 210,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "spritesList",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 210,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "spritesList",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 211,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "targetTouchingTarget",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 211,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "targetTouchingTarget",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 211,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "targetTouchingTarget",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 211,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "targetTouchingTarget",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 212,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingPoint",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 212,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingPoint",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 212,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingPoint",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 212,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingPoint",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 213,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 213,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 213,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRect",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 213,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRect",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 214,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "pointInRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 214,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "pointInRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 214,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "pointInRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 214,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "pointInRect",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 215,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingLine",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 215,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingLine",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 215,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingLine",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 215,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingLine",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 216,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRay",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 216,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRay",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 216,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRay",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 216,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "touchingRay",
+      "expression": {
+        "$expression": "`${...}\n${...}`"
+      }
+    },
+    {
+      "index": 217,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTop",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 217,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTop",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 217,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTop",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 217,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTop",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 218,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTopAtMouse",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 218,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTopAtMouse",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 218,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTopAtMouse",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 218,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIOnTheTopAtMouse",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 219,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIclicked",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 219,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIclicked",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 219,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIclicked",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 219,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "amIclicked",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 220,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "whenKeyDown",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 220,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "whenKeyDown",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 220,
+      "field": "tooltip",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "whenKeyDown",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 220,
+      "field": "tooltip_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "whenKeyDown",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 221,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "colorToHex",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 221,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "colorToHex",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 222,
+      "field": "text",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "colorAt",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 222,
+      "field": "text_en",
+      "sourceFile": "extensions/Arkos/moreSensing.js",
+      "opcode": "colorAt",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 493,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretch",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 493,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretch",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 494,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretch",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 494,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretch",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 495,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretchX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 495,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretchX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 496,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretchY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 496,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "setStretchY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 497,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretchX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 497,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretchX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 498,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretchY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 498,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "changeStretchY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 499,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "getX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 499,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "getX",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 500,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "getY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 500,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/stretch.js",
+      "opcode": "getY",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 501,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 501,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 502,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "clearClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 502,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "clearClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 503,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 503,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getClipbox",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 504,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 504,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 505,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 505,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 506,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setAdditiveBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 506,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "setAdditiveBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 507,
+      "field": "text",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getAdditiveBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 507,
+      "field": "text_en",
+      "sourceFile": "extensions/PortFromTurboWarp/Vadik1/clippingblending.js",
+      "opcode": "getAdditiveBlend",
+      "expression": {
+        "$expression": "ThisExpression.fm(...)"
+      }
+    },
+    {
+      "index": 513,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setAutoReRender",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 513,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setAutoReRender",
+      "expression": {
+        "SHOULD": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "SHOULD_MENU"
+        }
+      }
+    },
+    {
+      "index": 514,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "allLoadedShaders",
+      "expression": {
+        "$expression": "Scratch2.BlockType.REPORTER"
+      }
+    },
+    {
+      "index": 515,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "removeShader",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 515,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "removeShader",
+      "expression": {
+        "SHADER": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "SHADER_MENU"
+        }
+      }
+    },
+    {
+      "index": 516,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "reloadShader",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 516,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "reloadShader",
+      "expression": {
+        "SHADER": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "SHADER_MENU"
+        }
+      }
+    },
+    {
+      "index": 517,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "applyShader",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 517,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "applyShader",
+      "expression": {
+        "SHADER": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "SHADER_MENU"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        }
+      }
+    },
+    {
+      "index": 518,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "detachShader",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 518,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "detachShader",
+      "expression": {
+        "SHADER": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "SHADER_MENU"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        }
+      }
+    },
+    {
+      "index": 519,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 520,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setNumber",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 520,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setNumber",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "VALUE": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        }
+      }
+    },
+    {
+      "index": 521,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec2",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 521,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec2",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "VALUE1": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE2": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        }
+      }
+    },
+    {
+      "index": 522,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec3",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 522,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec3",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "VALUE1": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE2": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE3": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        }
+      }
+    },
+    {
+      "index": 523,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec4",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 523,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setVec4",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "VALUE1": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE2": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE3": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        },
+        "VALUE4": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.NUMBER"
+          },
+          "defaultValue": 0
+        }
+      }
+    },
+    {
+      "index": 524,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setMatrix",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 524,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setMatrix",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "MATRIX": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "[[], []]"
+        }
+      }
+    },
+    {
+      "index": 525,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setArray",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 525,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setArray",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "ARRAY": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "[]"
+        }
+      }
+    },
+    {
+      "index": 526,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setTexture",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 526,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "setTexture",
+      "expression": {
+        "UNIFORM": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Uniform"
+        },
+        "TARGET": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "menu": "DRAWABLES_MENU"
+        },
+        "TEXTURE": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Scratch Cat"
+        }
+      }
+    },
+    {
+      "index": 527,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 528,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "allTextures",
+      "expression": {
+        "$expression": "Scratch2.BlockType.REPORTER"
+      }
+    },
+    {
+      "index": 529,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "deleteAllTextures",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 530,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "deleteTexture",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 530,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "deleteTexture",
+      "expression": {
+        "NAME": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Scratch Cat"
+        }
+      }
+    },
+    {
+      "index": 531,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "createUpdateTexture",
+      "expression": {
+        "$expression": "Scratch2.BlockType.COMMAND"
+      }
+    },
+    {
+      "index": 531,
+      "field": "arguments",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": "createUpdateTexture",
+      "expression": {
+        "NAME": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "Scratch Cat"
+        },
+        "TEXTURE": {
+          "type": {
+            "$expression": "Scratch2.ArgumentType.STRING"
+          },
+          "defaultValue": "dc7f14b8438834de154cebaf827b6b4d.svg"
+        }
+      }
+    },
+    {
+      "index": 694,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "date",
+      "expression": {
+        "YEAR": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getFullYear(...)"
+          }
+        },
+        "MONTH": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "BinaryExpression"
+          }
+        },
+        "DATE": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getDate(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 695,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "time",
+      "expression": {
+        "YEAR": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getFullYear(...)"
+          }
+        },
+        "MONTH": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "BinaryExpression"
+          }
+        },
+        "DATE": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getDate(...)"
+          }
+        },
+        "HOUR": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getHours(...)"
+          }
+        },
+        "MINUTE": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getMinutes(...)"
+          }
+        },
+        "SECOND": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "NewExpression.getSeconds(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 698,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "after2000",
+      "expression": {
+        "DAYS": {
+          "type": "number",
+          "defaultValue": {
+            "$expression": "ThisExpression.diff(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 699,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "diff2000",
+      "expression": {
+        "TIME": {
+          "type": "string",
+          "defaultValue": {
+            "$expression": "ThisExpression.now(...)"
+          }
+        }
+      }
+    },
+    {
+      "index": 700,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "diff",
+      "expression": {
+        "TIME1": {
+          "type": "string",
+          "defaultValue": "2000-01-23T12:34:56"
+        },
+        "TIME2": {
+          "type": "string",
+          "defaultValue": {
+            "$expression": "ThisExpression.now(...)"
+          }
+        },
+        "UNIT": {
+          "type": "string",
+          "menu": "DiffUnits",
+          "defaultValue": "days"
+        }
+      }
+    },
+    {
+      "index": 702,
+      "field": "arguments",
+      "sourceFile": "extensions/six-6/datetime.js",
+      "opcode": "get",
+      "expression": {
+        "TIME": {
+          "type": "string",
+          "defaultValue": {
+            "$expression": "ThisExpression.now(...)"
+          }
+        },
+        "UNIT": {
+          "type": "string",
+          "menu": "Units",
+          "defaultValue": "date"
+        }
+      }
+    },
+    {
+      "index": 946,
+      "field": "extensionId",
+      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "opcode": "switchRequest",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 947,
+      "field": "extensionId",
+      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "opcode": "cardCreate",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 948,
+      "field": "extensionId",
+      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "opcode": "cardSet",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 949,
+      "field": "extensionId",
+      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "opcode": "cardJoin",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 950,
+      "field": "extensionId",
+      "sourceFile": "extensions/YUEN/FeishuExtension/src/extension.js",
+      "opcode": "cardRemove",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 951,
+      "field": "text",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 951,
+      "field": "text_en",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 951,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 952,
+      "field": "text",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 952,
+      "field": "text_en",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 952,
+      "field": "blockType",
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 953,
+      "field": "text",
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 953,
+      "field": "text_en",
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 954,
+      "field": "text",
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 954,
+      "field": "text_en",
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 955,
+      "field": "text",
+      "sourceFile": "extensions/example/example-ext.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "translate(...)"
+      }
+    },
+    {
+      "index": 955,
+      "field": "text_en",
+      "sourceFile": "extensions/example/example-ext.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "translate(...)"
+      }
+    },
+    {
+      "index": 956,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 957,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "initI18nForJSON",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 958,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "initI18nForFile",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 959,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 960,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getI18n",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 961,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getExtraData",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 962,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "replaceText",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 963,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 964,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "setLanguage",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 965,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getLanguageForI18n",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 966,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getLanguageForBrowser",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 967,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getSupportedLanguages",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 968,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "checkLanguageSupport",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 969,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "recognitionLanguageName",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 970,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "recognitionLanguageNameAll",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 971,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 972,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 973,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "translateText",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 974,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "translateTextWithClipboard",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 975,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 976,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "convertUnit",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 977,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getTimestamp",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 978,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "getTimeZone",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 979,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "offsetTimeZone",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 980,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "formatTimestamp",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 981,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 982,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": "example",
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 983,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "setMethod",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 984,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "setHeader",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 985,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "setBody",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 986,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "webHookRequest",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 987,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "webHookRequestCompleted",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 988,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "checkStatus",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 989,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "cancelRequest",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 990,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js",
+      "opcode": "getRemainingPoints",
+      "expression": {
+        "$expression": "extensionId"
+      }
+    },
+    {
+      "index": 991,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 992,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "CreateZip",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 993,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "SetZip",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 994,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "outzip",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 995,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "ExportZip",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 996,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "CreateFold",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 997,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "CreateFile",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 998,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "DeleteFold",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 999,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "DeleteFile",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 1000,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "getzipfiles",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 1001,
+      "field": "extensionId",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "opcode": "zipfile",
+      "expression": {
+        "$expression": "witcat_Zip_extensionId"
+      }
+    },
+    {
+      "index": 1002,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1002,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1003,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1003,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1004,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1004,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1005,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1005,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1006,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1006,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1007,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1007,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    },
+    {
+      "index": 1008,
+      "field": "extensionId",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "kukemcI18nExtensionId"
+      }
+    },
+    {
+      "index": 1008,
+      "field": "blockType",
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "opcode": null,
+      "expression": {
+        "$expression": "Scratch.BlockType.LABEL"
+      }
+    }
+  ],
+  "missingOpcodeEntries": [
+    {
+      "index": 164,
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "blockType": "BUTTON",
+      "text": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 176,
+      "sourceFile": "extensions/Arkos/moreDataTypes/moreDataTypes.js",
+      "blockType": "BUTTON",
+      "text": {
+        "$expression": "ConditionalExpression"
+      }
+    },
+    {
+      "index": 313,
+      "sourceFile": "extensions/DilemmaGX/Animator/Animator.js",
+      "blockType": "button",
+      "text": "📖文档"
+    },
+    {
+      "index": 331,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "blockType": "button",
+      "text": "button.showBlock"
+    },
+    {
+      "index": 332,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "blockType": "button",
+      "text": "button.hideBlock"
+    },
+    {
+      "index": 381,
+      "sourceFile": "extensions/example/example-ext.js",
+      "blockType": "BUTTON",
+      "text": "👋 信息"
+    },
+    {
+      "index": 422,
+      "sourceFile": "extensions/FurryR/not.js.js",
+      "blockType": "button",
+      "text": "打开帮助文档"
+    },
+    {
+      "index": 436,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🌍 初始化语言"
+    },
+    {
+      "index": 439,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "💬 文本处理"
+    },
+    {
+      "index": 443,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🎭 语言环境设置"
+    },
+    {
+      "index": 451,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🔭 文本翻译"
+    },
+    {
+      "index": 452,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "BUTTON",
+      "text": "☁️ 打印支持的语言列表"
+    },
+    {
+      "index": 453,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "⚠️ 以下积木仅在编辑器生效 ⚠️"
+    },
+    {
+      "index": 456,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🪄 单位转换"
+    },
+    {
+      "index": 462,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "✨ I18n 示例"
+    },
+    {
+      "index": 519,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "text": "Uniforms"
+    },
+    {
+      "index": 527,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "text": "Textures"
+    },
+    {
+      "index": 649,
+      "sourceFile": "extensions/SimonShiki/scopeVar.js",
+      "blockType": "label",
+      "text": "✨ 已支持编译模式"
+    },
+    {
+      "index": 725,
+      "sourceFile": "extensions/wit_cat/BBcode/index.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 756,
+      "sourceFile": "extensions/wit_cat/File_Helper/File_Helper.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 785,
+      "sourceFile": "extensions/wit_cat/FPS.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 800,
+      "sourceFile": "extensions/wit_cat/IndexedDB.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 801,
+      "sourceFile": "extensions/wit_cat/IndexedDB.js",
+      "blockType": "button",
+      "text": "💻 管理"
+    },
+    {
+      "index": 821,
+      "sourceFile": "extensions/wit_cat/Input.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 850,
+      "sourceFile": "extensions/wit_cat/Interpreter/Interpreter.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 864,
+      "sourceFile": "extensions/wit_cat/MarkDown/index.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 890,
+      "sourceFile": "extensions/wit_cat/More_Mouse.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 906,
+      "sourceFile": "extensions/wit_cat/More_Mouse.js",
+      "blockType": "button",
+      "text": "上传ico并获得data url"
+    },
+    {
+      "index": 924,
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 951,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "text": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 952,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js",
+      "blockType": {
+        "$expression": "Scratch2.BlockType.LABEL"
+      },
+      "text": {
+        "$expression": "Scratch2.translate(...)"
+      }
+    },
+    {
+      "index": 953,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "blockType": "button",
+      "text": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 954,
+      "sourceFile": "extensions/DollyPro/dollytest.js",
+      "blockType": "button",
+      "text": {
+        "$expression": "ThisExpression.formatMessage(...)"
+      }
+    },
+    {
+      "index": 955,
+      "sourceFile": "extensions/example/example-ext.js",
+      "blockType": "BUTTON",
+      "text": {
+        "$expression": "translate(...)"
+      }
+    },
+    {
+      "index": 956,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🌍 初始化语言"
+    },
+    {
+      "index": 959,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "💬 文本处理"
+    },
+    {
+      "index": 963,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🎭 语言环境设置"
+    },
+    {
+      "index": 971,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🔭 文本翻译"
+    },
+    {
+      "index": 972,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "⚠️ 以下积木仅在编辑器生效 ⚠️"
+    },
+    {
+      "index": 975,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "🪄 单位转换"
+    },
+    {
+      "index": 981,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": "LABEL",
+      "text": "✨ I18n 示例"
+    },
+    {
+      "index": 991,
+      "sourceFile": "extensions/wit_cat/Zip/extension.js",
+      "blockType": "button",
+      "text": "📖拓展教程"
+    },
+    {
+      "index": 1002,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "🌍 初始化语言"
+    },
+    {
+      "index": 1003,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "💬 文本处理"
+    },
+    {
+      "index": 1004,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "🎭 语言环境设置"
+    },
+    {
+      "index": 1005,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "🔭 文本翻译"
+    },
+    {
+      "index": 1006,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "⚠️ 以下积木仅在编辑器生效 ⚠️"
+    },
+    {
+      "index": 1007,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "🪄 单位转换"
+    },
+    {
+      "index": 1008,
+      "sourceFile": "extensions/kukemc/I18n/extension.js",
+      "blockType": {
+        "$expression": "Scratch.BlockType.LABEL"
+      },
+      "text": "✨ I18n 示例"
+    }
+  ],
+  "note": "Absent tooltip is not necessarily an extraction error. Missing opcode can indicate a label/button/separator."
+}

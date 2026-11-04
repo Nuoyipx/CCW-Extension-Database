@@ -1,0 +1,473 @@
+{
+  "generatedAt": "2026-11-04T13:57:41.363Z",
+  "baselineCount": 1009,
+  "extractedThisRun": 951,
+  "finalCount": 1009,
+  "newRecords": [],
+  "recoveredFromBaseline": [
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"\",\"{\\\"$expression\\\":\\\"Scratch2.translate(...)\\\"}\",\"[object Object]\"]",
+      "extensionId": "betterquake",
+      "opcode": null,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/QuakeStudio/BetterQuake/BetterQuake.js\",\"betterquake\",\"\",\"{\\\"$expression\\\":\\\"Scratch2.translate(...)\\\"}\",\"[object Object]\"]",
+      "extensionId": "betterquake",
+      "opcode": null,
+      "sourceFile": "extensions/QuakeStudio/BetterQuake/BetterQuake.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/DollyPro/dollytest.js\",\"witCat.dollyPro\",\"\",\"{\\\"$expression\\\":\\\"ThisExpression.formatMessage(...)\\\"}\",\"button\"]",
+      "extensionId": "witCat.dollyPro",
+      "opcode": null,
+      "sourceFile": "extensions/DollyPro/dollytest.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/DollyPro/dollytest.js\",\"witCat.dollyPro\",\"\",\"{\\\"$expression\\\":\\\"ThisExpression.formatMessage(...)\\\"}\",\"button\"]",
+      "extensionId": "witCat.dollyPro",
+      "opcode": null,
+      "sourceFile": "extensions/DollyPro/dollytest.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/example/example-ext.js\",\"exampleExtension\",\"\",\"{\\\"$expression\\\":\\\"translate(...)\\\"}\",\"BUTTON\"]",
+      "extensionId": "exampleExtension",
+      "opcode": null,
+      "sourceFile": "extensions/example/example-ext.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🌍 初始化语言\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"initI18nForJSON\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "initI18nForJSON",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"initI18nForFile\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "initI18nForFile",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"💬 文本处理\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getI18n\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getI18n",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getExtraData\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getExtraData",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"replaceText\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "replaceText",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🎭 语言环境设置\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"setLanguage\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "setLanguage",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getLanguageForI18n\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getLanguageForI18n",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getLanguageForBrowser\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getLanguageForBrowser",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getSupportedLanguages\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getSupportedLanguages",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"checkLanguageSupport\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "checkLanguageSupport",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"recognitionLanguageName\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "recognitionLanguageName",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"recognitionLanguageNameAll\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "recognitionLanguageNameAll",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🔭 文本翻译\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"⚠️ 以下积木仅在编辑器生效 ⚠️\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"translateText\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "translateText",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"translateTextWithClipboard\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "translateTextWithClipboard",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🪄 单位转换\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"convertUnit\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "convertUnit",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getTimestamp\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getTimestamp",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"getTimeZone\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "getTimeZone",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"offsetTimeZone\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "offsetTimeZone",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"formatTimestamp\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "formatTimestamp",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"✨ I18n 示例\\\"\",\"LABEL\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"example\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": "example",
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"setMethod\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "setMethod",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"setHeader\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "setHeader",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"setBody\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "setBody",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"webHookRequest\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "webHookRequest",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"webHookRequestCompleted\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "webHookRequestCompleted",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"checkStatus\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "checkStatus",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"cancelRequest\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "cancelRequest",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/WebHook/extension.js\",{\"$expression\":\"extensionId\"},\"getRemainingPoints\"]",
+      "extensionId": {
+        "$expression": "extensionId"
+      },
+      "opcode": "getRemainingPoints",
+      "sourceFile": "extensions/kukemc/WebHook/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"\",\"\\\"📖拓展教程\\\"\",\"button\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"CreateZip\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "CreateZip",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"SetZip\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "SetZip",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"outzip\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "outzip",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"ExportZip\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "ExportZip",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"CreateFold\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "CreateFold",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"CreateFile\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "CreateFile",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"DeleteFold\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "DeleteFold",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"DeleteFile\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "DeleteFile",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"getzipfiles\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "getzipfiles",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/wit_cat/Zip/extension.js\",{\"$expression\":\"witcat_Zip_extensionId\"},\"zipfile\"]",
+      "extensionId": {
+        "$expression": "witcat_Zip_extensionId"
+      },
+      "opcode": "zipfile",
+      "sourceFile": "extensions/wit_cat/Zip/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🌍 初始化语言\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"💬 文本处理\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🎭 语言环境设置\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🔭 文本翻译\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"⚠️ 以下积木仅在编辑器生效 ⚠️\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"🪄 单位转换\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    },
+    {
+      "identity": "[\"https://github.com/Gandi-IDE/custom-extension\",\"extensions/kukemc/I18n/extension.js\",{\"$expression\":\"kukemcI18nExtensionId\"},\"\",\"\\\"✨ I18n 示例\\\"\",\"[object Object]\"]",
+      "extensionId": {
+        "$expression": "kukemcI18nExtensionId"
+      },
+      "opcode": null,
+      "sourceFile": "extensions/kukemc/I18n/extension.js"
+    }
+  ],
+  "recoveredByFile": {
+    "extensions/QuakeStudio/BetterQuake/BetterQuake.js": 2,
+    "extensions/DollyPro/dollytest.js": 2,
+    "extensions/example/example-ext.js": 1,
+    "extensions/kukemc/I18n/extension.js": 34,
+    "extensions/kukemc/WebHook/extension.js": 8,
+    "extensions/wit_cat/Zip/extension.js": 11
+  },
+  "enrichedRecords": [],
+  "note": "Recovered records are retained from previous database, not confirmed present in current source. Compare source revisions before treating them as current."
+}
